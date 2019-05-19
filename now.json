@@ -1,0 +1,19 @@
+{
+  "name": "fluidangle-redesign",
+  "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {}
+    }
+  ],
+  "alias": [
+    "redesign.fluidangle.com",
+    "new.fluidangle.com"
+  ],
+  "routes": [
+    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
