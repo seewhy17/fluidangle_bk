@@ -36,8 +36,45 @@
           What we offer
         </span>
         <p class="flow-text">
-          We develop user-centered digital products and services for your customers
+          We develop user-centered digital products <br> and services for your customers
         </p>
+        <p>
+          Our team comprises of brilliant web and mobile app developers. We deliver projects on time and maintain the top-notch code standards. We offer you the best concepts and ideas.
+        </p>
+      </div>
+    </section>
+    <section class="section our-work">
+      <span class="fancy-heading">
+        our Work
+      </span>
+      <div class="content-grid">
+        <div class="a-work grid equal-two">
+          <div class="content-part">
+            <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
+            <p class="work-headline">
+              We ship from any US <br> Online Store
+            </p>
+            <span class="action-word">View case study</span>
+          </div>
+          <div class="image-part">
+            <!-- <img src="/img/heroshe_hero.jpg" alt="heroshe-image"> -->
+            <img src="/img/herose_hero.png" alt="heroshe-image">
+          </div>
+        </div>
+
+        <div class="a-work grid equal-two">
+          <div class="image-part">
+            <!-- <img src="/img/plinkd_hero.jpg" alt="heroshe-image"> -->
+            <img src="/img/plinkd_hero.png" alt="heroshe-image">
+          </div>
+          <div class="content-part">
+            <img src="/svg/PLINKD_logo.svg" class="partner-logo plinkd" alt="PLINKD">
+            <p class="work-headline">
+              One Location <br> Connecting Friends
+            </p>
+            <span class="action-word">View case study</span>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -126,18 +163,20 @@ export default {
       color: $primary;
       font-size: .9rem;
       font-weight: 500;
+      margin-bottom: 1rem;
 
       &:before {
         content: '';
         height: 1.8px;
         width: 6rem;
-        margin-right: 1.5rem;
+        margin-right: 1rem;
         background: $primary;
       }
     }
 
     &.our-offer {
       margin-top: 5rem;
+      padding-bottom: 3rem;
 
       .img-part {
         display: flex;
@@ -158,7 +197,65 @@ export default {
           }
         }
       }
+      .content-part {
+        padding-right: 10vw;
+
+        .flow-text {
+          font-size: 1.15rem;
+          margin-bottom: 1rem;
+
+          &+p {
+            font-size: .75rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+
+    &.our-work {
+      padding: 4rem 10vw;
+
+      .a-work {
+        margin-bottom: 10rem;
+      }
+
+      .fancy-heading {
+        margin-bottom: 4rem;
+      }
+
+      .partner-logo {
+        margin-bottom: 1.5rem;
+
+        &.plinkd {
+          height: 3rem;
+        }
+      }
+
+      .work-headline {
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+      .action-word {
+        text-transform: uppercase;
+        font-size: .8rem;
+        margin-top: 1.5rem;
+        display: block;
+        font-weight: 500;
+        color: $primary;
+      }
+
+      .image-part {
+        img {
+          height: 20rem;
+          margin-top: -3.5rem;
+          object-fit: cover;
+        }
+      }
     }
   }
+}
+
+.partner-logo {
+  height: 2rem;
 }
 </style>
