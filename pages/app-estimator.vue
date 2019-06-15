@@ -373,7 +373,13 @@
                   </small>
                 </div>
                 <div class="radio-button flex">
-                  <input id="multi_tenant" v-model="option_block.signup_login" type="radio" name="design" value="Multi-tenant Accounts">
+                  <input
+                    id="multi_tenant"
+                    v-model="option_block.signup_login"
+                    type="radio"
+                    name="design"
+                    value="Multi-tenant Accounts"
+                  >
                   <span />
                 </div>
               </div>
@@ -393,7 +399,7 @@
                   <label for="subdomains">Subdomains</label>
                   <small style="font-size: 0.5em">In combination with multi-tenant accounts, this would
                     allow your customers to access their account with their
-                    own subdomain, eg <i>www.acme.com</i>  or <i>www.xyz.com</i></small>
+                    own subdomain, eg <i>www.acme.com</i> or <i>www.xyz.com</i></small>
                 </div>
                 <div class="radio-button flex">
                   <input
@@ -428,7 +434,13 @@
                   </small>
                 </div>
                 <div class="radio-button flex">
-                  <input id="security" v-model="option_block.secure" type="radio" name="secure" value="Security not important">
+                  <input
+                    id="security"
+                    v-model="option_block.secure"
+                    type="radio"
+                    name="secure"
+                    value="Security not important"
+                  >
                   <span />
                 </div>
               </div>
@@ -445,7 +457,13 @@
                   </small>
                 </div>
                 <div class="radio-button flex">
-                  <input id="ssl" v-model="option_block.secure" type="radio" name="secure" value="SSL Certificate based Security">
+                  <input
+                    id="ssl"
+                    v-model="option_block.secure"
+                    type="radio"
+                    name="secure"
+                    value="SSL Certificate based Security"
+                  >
                   <span />
                 </div>
               </div>
@@ -478,7 +496,205 @@
                   </small>
                 </div>
                 <div class="radio-button flex">
-                  <input id="two_factor" v-model="option_block.secure" type="radio" name="secure" value="Two Factor Authentication">
+                  <input
+                    id="two_factor"
+                    v-model="option_block.secure"
+                    type="radio"
+                    name="secure"
+                    value="Two Factor Authentication"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="generated-content container card">
+            <div class="center-align title-block generated-content-title-block">
+              <p>
+                What type of user generated content
+                do you want on your app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="dashboard"
+                class="input-block dashboard-block grid two-auto"
+                :class="{selected:isOption('generated_content','Dashboard')}"
+                @click="toggleOption('generated_content','Dashboard')"
+              >
+                <div class="grid no-gap">
+                  <label for="dashboard">Dashboard</label>
+                  <small>A dashboard would usually be the first thing a user sees when logged
+                    in and would summarize data and perhaps show graphs and notices
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="dashboard"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Dashboard"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="activity"
+                class="input-block activity-block grid two-auto"
+                :class="{selected:isOption('generated_content','Activity Feed')}"
+                @click="toggleOption('generated_content','Activity Feed')"
+              >
+                <div class="grid no-gap">
+                  <label for="activity">Activity Feed</label>
+                  <small>An Activity feed would perhaps show what users have
+                    been doing recently
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="activity"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Activity Feed"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="file_upload"
+                class="input-block file_upload-block grid two-auto"
+                :class="{selected:isOption('generated_content','File Upload')}"
+                @click="toggleOption('generated_content','File Upload')"
+              >
+                <div class="grid no-gap">
+                  <label for="file_upload">File Upload</label>
+                  <small>Users should be able to upload file content, eg. images, PDF’s ect
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="file_upload"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="File Upload"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="user_profile"
+                class="input-block user_profile-block grid two-auto"
+                :class="{selected:isOption('generated_content','User Profile')}"
+                @click="toggleOption('generated_content','User Profile')"
+              >
+                <div class="grid no-gap">
+                  <label for="user_profile">User Profile</label>
+                  <small>Users should be able to upload file content, eg. images, PDF’s ect
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="user_profile"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="User Profile"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="transactional_emails"
+                class="input-block transactional_emails-block grid two-auto"
+                :class="{selected:isOption('generated_content','Transactional Emails')}"
+                @click="toggleOption('generated_content','Transactional Emails')"
+              >
+                <div class="grid no-gap">
+                  <label for="transactional_emails">Transactional Emails</label>
+                  <small>Users might receive regular automated emails from the app
+                    to drive engagement or notify them of changes
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="transactional_emails"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Transactional Emails"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="tags_allows"
+                class="input-block tags_allows-block grid two-auto"
+                :class="{selected:isOption('generated_content','Tags allows')}"
+                @click="toggleOption('generated_content','File Upload')"
+              >
+                <div class="grid no-gap">
+                  <label for="tags_allows">Tags allows</label>
+                  <small>Users to categorize information so that others can find
+                    relevant information
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="tags_allows"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Tags allows"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="ratings"
+                class="input-block ratings-block grid two-auto"
+                :class="{selected:isOption('generated_content','Ratings or review')}"
+                @click="toggleOption('generated_content','Ratings or review')"
+              >
+                <div class="grid no-gap">
+                  <label for="ratings">Ratings or review</label>
+                  <small>typical use case for ratings and reviews might be restaurants
+                    reviews or customer satisfaction ratings.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="ratings"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Ratings or review"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="av_processing"
+                class="input-block av_processing-block grid two-auto"
+                :class="{selected:isOption('generated_content','Audio/Video Processing')}"
+                @click="toggleOption('generated_content','Audio/Video Processing')"
+              >
+                <div class="grid no-gap">
+                  <label for="av_processing">Audio/Video Processing</label>
+                  <small>Encoding, modification and storage of audio or video files.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="av_processing"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Audio/Video Processing"
+                  >
                   <span />
                 </div>
               </div>
@@ -506,7 +722,8 @@ export default {
         design: '',
         screen: '',
         signup_login: '',
-        secure: ''
+        secure: '',
+        generated_content: ''
       }
     }
   },
@@ -541,9 +758,11 @@ export default {
   .three {
     grid-template-columns: 0.5fr 1fr auto;
   }
-  .two-auto{
-      grid-template-columns: 1fr auto;
+
+  .two-auto {
+    grid-template-columns: 1fr auto;
   }
+
   .no-gap {
     grid-gap: 0;
   }
@@ -733,7 +952,8 @@ export default {
                 }
               }
             }
-            small{
+
+            small {
               font-weight: normal;
               font-style: normal;
               font-stretch: normal;
