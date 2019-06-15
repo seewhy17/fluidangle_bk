@@ -22,7 +22,7 @@
         </h2>
         <div class="content">
           <section class="platform container card">
-            <div class="center-align platform-title-block">
+            <div class="center-align title-block platform-title-block">
               <h3 class="">
                 Platform
               </h3>
@@ -34,8 +34,8 @@
               <div
                 ref="android"
                 class="input-block android-block grid three"
-                :class="{selected:isPlatform('android')}"
-                @click="togglePlatform('android')"
+                :class="{selected:isOption('platform','android')}"
+                @click="toggleOption('platform','android')"
               >
                 <img
                   src="svg/Android.png"
@@ -45,15 +45,15 @@
                 >
                 <label for="android">Android</label>
                 <div class="radio-button flex">
-                  <input id="android" v-model="platform" type="radio" name="platform" value="android">
+                  <input id="android" v-model="option_block.platform" type="radio" name="platform" value="android">
                   <span />
                 </div>
               </div>
               <div
                 ref="Apple"
                 class="input-block ios-block grid three"
-                :class="{selected:isPlatform('ios')}"
-                @click="togglePlatform('ios')"
+                :class="{selected:isOption('platform','ios')}"
+                @click="toggleOption('platform','ios')"
               >
                 <img
                   src="svg/Apple.png"
@@ -63,15 +63,15 @@
                 >
                 <label for="ios">iOs</label>
                 <div class="radio-button flex">
-                  <input id="ios" v-model="platform" type="radio" name="platform" value="ios">
+                  <input id="ios" v-model="option_block.platform" type="radio" name="platform" value="ios">
                   <span />
                 </div>
               </div>
               <div
                 ref="Windows"
                 class="input-block windows-block grid three"
-                :class="{selected:isPlatform('windows')}"
-                @click="togglePlatform('windows')"
+                :class="{selected:isOption('platform','windows')}"
+                @click="toggleOption('platform','windows')"
               >
                 <img
                   src="svg/Windows.png"
@@ -82,15 +82,15 @@
                 <label for="windows">Windows</label>
 
                 <div class="radio-button flex">
-                  <input id="windows" v-model="platform" type="radio" name="platform" value="windows">
+                  <input id="windows" v-model="option_block.platform" type="radio" name="platform" value="windows">
                   <span />
                 </div>
               </div>
               <div
                 ref="hybrid"
                 class="input-block hybrid-block grid three"
-                :class="{selected:isPlatform('hybrid')}"
-                @click="togglePlatform('hybrid')"
+                :class="{selected:isOption('platform','hybrid')}"
+                @click="toggleOption('platform','hybrid')"
               >
                 <img
                   src="svg/Hybrid.png"
@@ -100,7 +100,175 @@
                 >
                 <label for="hybrid">Hybrid</label>
                 <div class="radio-button flex">
-                  <input id="hybrid" v-model="platform" type="radio" name="platform" value="hybrid">
+                  <input id="hybrid" v-model="option_block" type="radio" name="platform" value="hybrid">
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="design container card">
+            <div class="center-align title-block design-title-block">
+              <h3 class="">
+                Design
+              </h3>
+              <p>
+                What would your UI theme be?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="stock_ui"
+                class="input-block stock-block grid three"
+                :class="{selected:isOption('design','Stock or Template UI')}"
+                @click="toggleOption('design','Stock or Template UI')"
+              >
+                <img
+                  src="svg/layout.png"
+                  srcset="svg/layout@2x.png 2x,
+             svg/layout@3x.png 3x"
+                  alt="Stock or Template UI"
+                >
+                <label for="stock_ui">Stock or Template UI</label>
+                <div class="radio-button flex">
+                  <input id="stock_ui" v-model="option_block.design" type="radio" name="design" value="Stock or Template UI">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="custom_ui"
+                class="input-block custom-ui-block grid three"
+                :class="{selected:isOption('design','Custom Branded UI')}"
+                @click="toggleOption('design','Custom Branded UI')"
+              >
+                <img
+                  src="svg/layout_1.png"
+                  srcset="svg/layout_1@2x.png 2x,
+             svg/layout_1@3x.png 3x"
+                  alt="Custom Branded UI"
+                >
+                <label for="custom_ui">Custom Branded UI</label>
+                <div class="radio-button flex">
+                  <input id="custom_ui" v-model="option_block.design" type="radio" name="design" value="Custom Branded UI">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="animated_ui"
+                class="input-block animated-ui-block grid three"
+                :class="{selected:isOption('design','Animated UI')}"
+                @click="toggleOption('design','Animated UI')"
+              >
+                <img
+                  src="svg/play-button.png"
+                  srcset="svg/play-button@2x.png 2x,
+             svg/play-button@3x.png 3x"
+                  alt="Animated UI"
+                >
+                <label for="animated_ui">Windows</label>
+
+                <div class="radio-button flex">
+                  <input id="animated_ui" v-model="option_block.design" type="radio" name="design" value="Animated UI">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="game_animations"
+                class="input-block game-animations-block grid three"
+                :class="{selected:isOption('design','Game Animations')}"
+                @click="toggleOption('design','Game Animations')"
+              >
+                <img
+                  src="svg/console.png"
+                  srcset="svg/console@2x.png 2x,
+             svg/console@3x.png 3x"
+                  alt="Game Animations "
+                >
+                <label for="game_animations">Game Animations</label>
+                <div class="radio-button flex">
+                  <input id="game_animations" v-model="option_block.design" type="radio" name="design" value="Game Animations">
+                  <span />
+                </div>
+              </div>
+            </div>
+
+            <hr class="option-block-separator container">
+
+            <div class="center-align title-block design-title-block">
+              <p>
+                How many approximate numbers of screens your app have?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="one_six"
+                class="input-block one_six-block grid three"
+                :class="{selected:isOption('screen','1 - 6')}"
+                @click="toggleOption('screen','1 - 6')"
+              >
+                <img
+                  src="svg/responsive_1.png"
+                  srcset="svg/responsive_1@2x.png 2x,
+             svg/responsive_1@3x.png 3x"
+                  alt="one_six"
+                >
+                <label for="one_six">1 - 6</label>
+                <div class="radio-button flex">
+                  <input id="one_six" v-model="option_block.screen" type="radio" name="screen" value="1 - 6">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="seven_twelve"
+                class="input-block seven_twelve-block grid three"
+                :class="{selected:isOption('screen','7 - 12')}"
+                @click="toggleOption('screen','7 - 12')"
+              >
+                <img
+                  src="svg/responsive_1.png"
+                  srcset="svg/responsive_1@2x.png 2x,
+             svg/responsive_1@3x.png 3x"
+                  alt="seven_twelve"
+                >
+                <label for="seven_twelve">7 - 12</label>
+                <div class="radio-button flex">
+                  <input id="seven_twelve" v-model="option_block.screen" type="radio" name="screen" value="7 - 12">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="thirteen_twenty"
+                class="input-block thirteen_twenty-block grid three"
+                :class="{selected:isOption('screen','13 - 20')}"
+                @click="toggleOption('screen','13 - 20')"
+              >
+                <img
+                  src="svg/responsive_1.png"
+                  srcset="svg/responsive_1@2x.png 2x,
+             svg/responsive_1@3x.png 3x"
+                  alt="thirteen_twenty"
+                >
+                <label for="thirteen_twenty">13 - 20</label>
+                <div class="radio-button flex">
+                  <input id="thirteen_twenty" v-model="option_block.screen" type="radio" name="screen" value="13 - 20">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="twenty_plus"
+                class="input-block twenty_plus-block grid three"
+                :class="{selected:isOption('screen','21+')}"
+                @click="toggleOption('screen','21+')"
+              >
+                <img
+                  src="svg/responsive_1.png"
+                  srcset="svg/responsive_1@2x.png 2x,
+             svg/responsive_1@3x.png 3x"
+                  alt="twenty_plus"
+                >
+                <label for="twenty_plus">21+</label>
+                <div class="radio-button flex">
+                  <input id="twenty_plus" v-model="option_block.screen" type="radio" name="screen" value="21+">
                   <span />
                 </div>
               </div>
@@ -116,24 +284,26 @@
 import NavBar from '~/components/partials/customNavBar.vue'
 
 export default {
+
   name: 'AppEstimatorVue',
   components: {
     NavBar
   },
   data: () => {
     return {
-      android: false,
-      platform: ''
+      option_block: {
+        platform: '',
+        design: '',
+        screen: ''
+      }
     }
   },
   methods: {
-    togglePlatform(value) {
-      this.platform = value
-      // eslint-disable-next-line no-console
-      console.log(this.$refs)
+    toggleOption(input, value) {
+      this.option_block[input] = value
     },
-    isPlatform(value) {
-      return this.platform === value
+    isOption(input, value) {
+      return this.option_block[input] === value
     }
   }
 }
@@ -157,7 +327,7 @@ export default {
   }
 
   .three {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr auto;
   }
 
   .page {
@@ -237,13 +407,52 @@ export default {
         }
 
         .content {
-          height: 100vh;
+          min-height: 10vh;
+          padding: {
+            bottom: 5vh;
+          }
+
+          section {
+            /*height: 463px;*/
+            border-radius: 10px;
+            /*box-shadow: 0 3px 20px 0 rgba(81, 63, 152, 0.54);*/
+            background-color: $light;
+            margin: 0 auto;
+            padding: 3% 4%;
+            margin: {
+              bottom: 5%;
+            }
+          }
+
+          section .title-block {
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+
+            h3 {
+              /*width: 168px;*/
+              /*height: 54px;*/
+              line-height: 1.2;
+              font-size: 2.2em;
+              color: #4628a1;
+            }
+
+            p {
+              /*width: 552px;*/
+              /*height: 39px;*/
+              font-size: 1.8em;
+              color: $gray;
+            }
+          }
 
           .options-block {
+            width: 90%;
             margin: {
               top: 4%
             };
             background-color: #ffffff;
+
             .input-block {
               width: 50%;
               color: $gray;
@@ -259,29 +468,33 @@ export default {
               @include breakpoint($max: 767px) {
                 width: 100%;
               }
+
               &:hover {
                 cursor: pointer;
               }
 
               &.selected {
                 border: {
-                  top:0;
-                  left:0;
-                  right:0;
-                  bottom:solid 5px #5d9f4b;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: solid 5px #5d9f4b;
                 }
                 background-color: #ecf8e4;
               }
+
               & > div.flex {
                 align-items: center;
               }
-              & img{
-                justify-self: right;
+
+              & img {
+                justify-self: center;
               }
+
               img + label {
-                margin: {
-                  left: 35%;
-                };
+                /*margin: {*/
+                /*  left: 35%;*/
+                /*};*/
               }
 
               .radio-button {
@@ -304,35 +517,13 @@ export default {
             }
           }
 
-          .platform {
-            height: 463px;
-            border-radius: 10px;
-            /*box-shadow: 0 3px 20px 0 rgba(81, 63, 152, 0.54);*/
-            background-color: $light;
-            margin: 0 auto;
-            padding: 3% 4%;
-          }
-
-          .platform-title-block {
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            letter-spacing: normal;
-
-            h3 {
-              /*width: 168px;*/
-              /*height: 54px;*/
-              line-height: 1.2;
-              font-size: 2.2em;
-              color: #4628a1;
-            }
-
-            p {
-              /*width: 552px;*/
-              /*height: 39px;*/
-              font-size: 1.8em;
-              color: $gray;
-            }
+          .option-block-separator {
+            width: 90%;
+            margin: {
+              top: 3.8em;
+              bottom: 3.8em;
+            };
+            border: solid 1px #c8c7d8;
           }
         }
       }
