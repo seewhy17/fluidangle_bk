@@ -634,7 +634,7 @@
                 ref="tags_allows"
                 class="input-block tags_allows-block grid two-auto"
                 :class="{selected:isOption('generated_content','Tags allows')}"
-                @click="toggleOption('generated_content','File Upload')"
+                @click="toggleOption('generated_content','Tags allows')"
               >
                 <div class="grid no-gap">
                   <label for="tags_allows">Tags allows</label>
@@ -1022,6 +1022,199 @@
                     type="radio"
                     name="billing"
                     value="Product Management"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="types container card">
+            <div class="center-align title-block types-title-block container">
+              <p>
+                What type of Admin, Feedback & Analytics
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="cms_integration"
+                class="input-block cms_integration-block grid two-auto"
+                :class="{selected:isOption('types','Dashboard')}"
+                @click="toggleOption('types','Dashboard')"
+              >
+                <div class="grid no-gap">
+                  <label for="cms_integration">CMS Integration</label>
+                  <small>A content management system would allow editing of significant
+                    parts of the static content of the app without developer intervention.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="cms_integration"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Dashboard"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="user_admin"
+                class="input-block user_admin-block grid two-auto"
+                :class="{selected:isOption('types','User Admin Page')}"
+                @click="toggleOption('types','User Admin Page')"
+              >
+                <div class="grid no-gap">
+                  <label for="user_admin">User Admin Page</label>
+                  <small>Account administrators would be able to
+                    list/add/remove/suspend users.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="user_admin"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="User Admin Page"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="approval"
+                class="input-block approval-block grid two-auto"
+                :class="{selected:isOption('types','Moderation/Content Approval')}"
+                @click="toggleOption('types','Moderation/Content Approval')"
+              >
+                <div class="grid no-gap">
+                  <label for="approval">Moderation/Content Approval</label>
+                  <small>Account administration would oversee content submitted by
+                    users for publication and would have an approval workflow
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="approval"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Moderation/Content Approval"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="intercom"
+                class="input-block intercom-block grid two-auto"
+                :class="{selected:isOption('types','Intercom')}"
+                @click="toggleOption('types','Intercom')"
+              >
+                <div class="grid no-gap">
+                  <label for="intercom">Intercom</label>
+                  <small>A leading third party platform for managing user engagement,
+                    drip emails, feature announcements ect
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="intercom"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Intercom"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="usage_analytics"
+                class="input-block usage_analytics-block grid two-auto"
+                :class="{selected:isOption('types','Usage Analytics')}"
+                @click="toggleOption('types','Usage Analytics')"
+              >
+                <div class="grid no-gap">
+                  <label for="usage_analytics">Usage Analytics</label>
+                  <small>Find out  where your users come from and how they use your app.
+                    We recommend Kissmetrics and Google Analytics
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="usage_analytics"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Usage Analytics"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="crash_reporting"
+                class="input-block crash_reporting-block grid two-auto"
+                :class="{selected:isOption('types','Crash Reporting')}"
+                @click="toggleOption('types','Crash Reporting')"
+              >
+                <div class="grid no-gap">
+                  <label for="crash_reporting">Crash Reporting</label>
+                  <small>When things go wrong you need to know we recommend Sentry.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="crash_reporting"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Crash Reporting"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="performance"
+                class="input-block performance-block grid two-auto"
+                :class="{selected:isOption('types','Performance Monitoring')}"
+                @click="toggleOption('types','Performance Monitoring')"
+              >
+                <div class="grid no-gap">
+                  <label for="performance">Performance Monitoring</label>
+                  <small>As you scale up it is important to know that you are maintaining a
+                    good user experience and making efficient use of your hosting
+                    environment.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="performance"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Performance Monitoring"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="multilingual"
+                class="input-block av_processing-block grid two-auto"
+                :class="{selected:isOption('types','Multilingual Support')}"
+                @click="toggleOption('types','Multilingual Support')"
+              >
+                <div class="grid no-gap">
+                  <label for="multilingual">Multilingual Support</label>
+                  <small>Provide support for multiple languages for your app
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="multilingual"
+                    v-model="option_block.types"
+                    type="radio"
+                    name="types"
+                    value="Multilingual Support"
                   >
                   <span />
                 </div>
