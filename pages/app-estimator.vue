@@ -22,7 +22,7 @@
         </h2>
         <div class="content">
           <section class="platform container card">
-            <div class="center-align title-block platform-title-block">
+            <div class="center-align title-block platform-title-block container">
               <h3 class="">
                 Platform
               </h3>
@@ -108,7 +108,7 @@
           </section>
 
           <section class="design container card">
-            <div class="center-align title-block design-title-block">
+            <div class="center-align title-block design-title-block container">
               <h3 class="">
                 Design
               </h3>
@@ -212,7 +212,7 @@
 
             <hr class="option-block-separator container">
 
-            <div class="center-align title-block design-title-block">
+            <div class="center-align title-block design-title-block container">
               <p>
                 How many approximate numbers of screens your app have?
               </p>
@@ -294,7 +294,7 @@
           </section>
 
           <section class="signup-login-secure container card">
-            <div class="center-align signup-login-block  title-block signup-login-title-block">
+            <div class="center-align signup-login-block  title-block signup-login-title-block container">
               <p>
                 How will your user signup and login into the app?
               </p>
@@ -416,7 +416,7 @@
 
             <hr class="option-block-separator container">
 
-            <div class="center-align title-block secure-title-block">
+            <div class="center-align title-block secure-title-block container">
               <p>
                 How do you wish to secure your app?
               </p>
@@ -510,7 +510,7 @@
           </section>
 
           <section class="generated-content container card">
-            <div class="center-align title-block generated-content-title-block">
+            <div class="center-align title-block generated-content-title-block container">
               <p>
                 What type of user generated content
                 do you want on your app?
@@ -694,6 +694,106 @@
                     type="radio"
                     name="generated_content"
                     value="Audio/Video Processing"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dates-and-locations container card">
+            <div class="center-align title-block generated-content-title-block container">
+              <p>
+                What type of Dates & Locations do you
+                want on your app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="calendaring"
+                class="input-block calendaring-block grid two-auto"
+                :class="{selected:isOption('generated_content','Calendaring')}"
+                @click="toggleOption('generated_content','Calendaring')"
+              >
+                <div class="grid no-gap">
+                  <label for="calendaring">Calendaring</label>
+                  <small>Display and capture of data in a calendar format
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="calendaring"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Calendaring"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="map_data"
+                class="input-block map_data-block grid two-auto"
+                :class="{selected:isOption('generated_content','Display of Map Data/Geolocation')}"
+                @click="toggleOption('generated_content','Display of Map Data/Geolocation')"
+              >
+                <div class="grid no-gap">
+                  <label for="map_data">Display of Map Data/Geolocation</label>
+                  <small>Showing a map with data points, eg. venue locations, driver location
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="map_data"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Display of Map Data/Geolocation"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="custom_map"
+                class="input-block custom_map-block grid two-auto"
+                :class="{selected:isOption('generated_content','Display of custom map markers/regions:')}"
+                @click="toggleOption('generated_content','Display of custom map markers/regions:')"
+              >
+                <div class="grid no-gap">
+                  <label for="custom_map">Display of custom map markers/regions:</label>
+                  <small>Allowing the user to select a map area visually or custom
+                    icons for different location types
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="custom_map"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Display of custom map markers/regions:"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="booking"
+                class="input-block booking-block grid two-auto"
+                :class="{selected:isOption('generated_content','Booking')}"
+                @click="toggleOption('generated_content','Booking')"
+              >
+                <div class="grid no-gap">
+                  <label for="booking">Booking</label>
+                  <small>Electing start and end dates, managing capacity etc.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="booking"
+                    v-model="option_block.generated_content"
+                    type="radio"
+                    name="generated_content"
+                    value="Booking"
                   >
                   <span />
                 </div>
