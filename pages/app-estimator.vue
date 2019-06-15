@@ -902,6 +902,132 @@
               </div>
             </div>
           </section>
+
+          <section class="social-and-engagements container card">
+            <div class="center-align title-block social-and-engagements-title-block container">
+              <p>
+                What type of Billing or eCommerce
+                do you want on the app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="subscription"
+                class="input-block subscription-block grid two-auto"
+                :class="{selected:isOption('billing','Subscription plans')}"
+                @click="toggleOption('billing','Subscription plans')"
+              >
+                <div class="grid no-gap">
+                  <label for="subscription">Subscription plans</label>
+                  <small>Allowing users within the app to send messages to other
+                    account users or groups of users
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="subscription"
+                    v-model="option_block.billing"
+                    type="radio"
+                    name="billing"
+                    value="Subscription plans"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="payment"
+                class="input-block payment-block grid two-auto"
+                :class="{selected:isOption('billing','Payment Processing')}"
+                @click="toggleOption('billing','Payment Processing')"
+              >
+                <div class="grid no-gap">
+                  <label for="payment">Payment Processing</label>
+                  <small>You will process adhoc or regular payment from users and
+                    manage refunds, ect.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="payment"
+                    v-model="option_block.billing"
+                    type="radio"
+                    name="billing"
+                    value="Payment Processing"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="cart"
+                class="input-block subscription-block grid two-auto"
+                :class="{selected:isOption('billing','Shopping Cart')}"
+                @click="toggleOption('billing','Shopping Cart')"
+              >
+                <div class="grid no-gap">
+                  <label for="cart">Shopping Cart</label>
+                  <small>Users will be able to browse products and add them to a cart,
+                    Amazon style
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="cart"
+                    v-model="option_block.billing"
+                    type="radio"
+                    name="billing"
+                    value="Shopping Cart"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="marketplace"
+                class="input-block marketplace-block grid two-auto"
+                :class="{selected:isOption('billing','User Marketplace')}"
+                @click="toggleOption('billing','User Marketplace')"
+              >
+                <div class="grid no-gap">
+                  <label for="cart">User Marketplace</label>
+                  <small>Users will be able to sell products or services to others users
+                    and your revenue model will be based on a commission model.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="marketplace"
+                    v-model="option_block.billing"
+                    type="radio"
+                    name="billing"
+                    value="User Marketplace"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="product"
+                class="input-block product-block grid two-auto"
+                :class="{selected:isOption('billing','Product Management')}"
+                @click="toggleOption('billing','Product Management')"
+                style="width: 100%"
+              >
+                <div class="grid no-gap">
+                  <label for="product">Product Management</label>
+                  <small>Ability to manage data, eg. product listings, availability or other data relevant to your domain.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="product"
+                    v-model="option_block.billing"
+                    type="radio"
+                    name="billing"
+                    value="Product Management"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -927,7 +1053,10 @@ export default {
         secure: '',
         generated_content: '',
         dates_and_locations: '',
-        social_and_engagement: ''
+        social_and_engagement: '',
+        billing: '',
+        types: '',
+        external_api: ''
       }
     }
   },
