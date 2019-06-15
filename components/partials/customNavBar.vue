@@ -8,7 +8,7 @@
         Work
       </nuxt-link>
       <nuxt-link to="/">
-        About
+        About Us
       </nuxt-link>
       <nuxt-link to="/">
         Blog
@@ -43,7 +43,8 @@ nav {
 
     a {
       padding: 0 1rem;
-      text-transform: uppercase;
+      text-transform: none;
+      line-height: 1.19;
       font-size: 0.8rem;
       font-weight: 500;
     }
