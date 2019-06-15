@@ -903,8 +903,8 @@
             </div>
           </section>
 
-          <section class="social-and-engagements container card">
-            <div class="center-align title-block social-and-engagements-title-block container">
+          <section class="billing container card">
+            <div class="center-align title-block billing-title-block container">
               <p>
                 What type of Billing or eCommerce
                 do you want on the app?
@@ -1215,6 +1215,106 @@
                     type="radio"
                     name="types"
                     value="Multilingual Support"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="external-api container card">
+            <div class="center-align title-block external-api-title-block container">
+              <p>
+                What Type of External APIs and Integration
+                do you want for your app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="third_party"
+                class="input-block messaging-block grid two-auto"
+                :class="{selected:isOption('external_api','Connect to one or more third party services')}"
+                @click="toggleOption('external_api','Connect to one or more third party services')"
+              >
+                <div class="grid no-gap">
+                  <label for="third_party">Connect to one or more third party services</label>
+                  <small>Perhaps a data feed that you need to integrate with or a partner app.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="third_party"
+                    v-model="option_block.external_api"
+                    type="radio"
+                    name="external_api"
+                    value="Connect to one or more third party services"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="sms"
+                class="input-block sms-block grid two-auto"
+                :class="{selected:isOption('external_api','SMS Messaging')}"
+                @click="toggleOption('external_api','SMS Messaging')"
+              >
+                <div class="grid no-gap">
+                  <label for="sms">SMS Messaging</label>
+                  <small>Allow your app to send SMS messages
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="sms"
+                    v-model="option_block.external_api"
+                    type="radio"
+                    name="external_api"
+                    value="SMS Messaging"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="api"
+                class="input-block api-block grid two-auto"
+                :class="{selected:isOption('external_api','An API for others to integrate with your app')}"
+                @click="toggleOption('external_api','An API for others to integrate with your app')"
+              >
+                <div class="grid no-gap">
+                  <label for="api">An API for others to integrate with your app</label>
+                  <small>Ability to share pieces of information in a controlled way on
+                    social media accounts to drive engagement.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="api"
+                    v-model="option_block.external_api"
+                    type="radio"
+                    name="external_api"
+                    value="An API for others to integrate with your app"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="number_masking"
+                class="input-block number_masking-block grid two-auto"
+                :class="{selected:isOption('external_api','Phone Number Masking')}"
+                @click="toggleOption('external_api','Phone Number Masking')"
+              >
+                <div class="grid no-gap">
+                  <label for="number_masking">Phone Number Masking</label>
+                  <small>Calls made through your app will have masked numbers
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="number_masking"
+                    v-model="option_block.external_api"
+                    type="radio"
+                    name="external_api"
+                    value="Phone Number Masking"
                   >
                   <span />
                 </div>
