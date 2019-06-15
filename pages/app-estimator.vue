@@ -131,7 +131,13 @@
                 >
                 <label for="stock_ui">Stock or Template UI</label>
                 <div class="radio-button flex">
-                  <input id="stock_ui" v-model="option_block.design" type="radio" name="design" value="Stock or Template UI">
+                  <input
+                    id="stock_ui"
+                    v-model="option_block.design"
+                    type="radio"
+                    name="design"
+                    value="Stock or Template UI"
+                  >
                   <span />
                 </div>
               </div>
@@ -149,7 +155,13 @@
                 >
                 <label for="custom_ui">Custom Branded UI</label>
                 <div class="radio-button flex">
-                  <input id="custom_ui" v-model="option_block.design" type="radio" name="design" value="Custom Branded UI">
+                  <input
+                    id="custom_ui"
+                    v-model="option_block.design"
+                    type="radio"
+                    name="design"
+                    value="Custom Branded UI"
+                  >
                   <span />
                 </div>
               </div>
@@ -186,7 +198,13 @@
                 >
                 <label for="game_animations">Game Animations</label>
                 <div class="radio-button flex">
-                  <input id="game_animations" v-model="option_block.design" type="radio" name="design" value="Game Animations">
+                  <input
+                    id="game_animations"
+                    v-model="option_block.design"
+                    type="radio"
+                    name="design"
+                    value="Game Animations"
+                  >
                   <span />
                 </div>
               </div>
@@ -274,6 +292,198 @@
               </div>
             </div>
           </section>
+
+          <section class="signup-login-secure container card">
+            <div class="center-align signup-login-block  title-block signup-login-title-block">
+              <p>
+                How will your user signup and login into the app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="email_password"
+                class="input-block email-password-block grid three"
+                :class="{selected:isOption('signup_login','Email/Password Sign Up')}"
+                @click="toggleOption('signup_login','Email/Password Sign Up')"
+              >
+                <img
+                  src="svg/email_1.png"
+                  srcset="svg/email_1@2x.png 2x,
+             svg/email_1@3x.png 3x"
+                  alt="Email/Password Sign Up"
+                >
+                <div class="grid no-gap">
+                  <label for="email_password">Email/Password Sign Up</label>
+                  <small>Classic sign up with an email and password</small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="email_password"
+                    v-model="option_block.signup_login"
+                    type="radio"
+                    name="signup_login"
+                    value="Email/Password Sign Up"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="social_networks"
+                class="input-block custom-ui-block grid three"
+                :class="{selected:isOption('signup_login','Social Networks')}"
+                @click="toggleOption('signup_login','Social Networks')"
+              >
+                <img
+                  src="svg/business-affiliate-network.png"
+                  srcset="svg/business-affiliate-network@2x.png 2x,
+             svg/business-affiliate-network@3x.png 3x"
+                  alt="Social Networks"
+                >
+                <div class="grid no-gap">
+                  <label for="social_networks">Social Networks</label>
+                  <small>(Facebook, Twitter, Github, LinkedIn)</small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="social_networks"
+                    v-model="option_block.signup_login"
+                    type="radio"
+                    name="signup_login"
+                    value="Social Networks"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="multi_tenant"
+                class="input-block animated-ui-block grid three"
+                :class="{selected:isOption('signup_login','Multi-tenant Accounts')}"
+                @click="toggleOption('signup_login','Multi-tenant Accounts')"
+              >
+                <img
+                  src="svg/account.png"
+                  srcset="svg/account@2x.png 2x,
+             svg/account@3x.png 3x"
+                  alt="Multi-tenant Accounts"
+                >
+                <div class="grid no-gap">
+                  <label for="multi_tenant">Multi-tenant Accounts</label>
+                  <small>Accounts base signups, each with their own
+                    administrators and users.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input id="multi_tenant" v-model="option_block.signup_login" type="radio" name="design" value="Multi-tenant Accounts">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="subdomains"
+                class="input-block game-animations-block grid three"
+                :class="{selected:isOption('signup_login','Subdomains')}"
+                @click="toggleOption('signup_login','Subdomains')"
+              >
+                <img
+                  src="svg/http.png"
+                  srcset="svg/http@2x.png 2x,
+             svg/http@3x.png 3x"
+                  alt="Subdomains"
+                >
+                <div class="grid no-gap">
+                  <label for="subdomains">Subdomains</label>
+                  <small style="font-size: 0.5em">In combination with multi-tenant accounts, this would
+                    allow your customers to access their account with their
+                    own subdomain, eg <i>www.acme.com</i>  or <i>www.xyz.com</i></small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="subdomains"
+                    v-model="option_block.signup_login"
+                    type="radio"
+                    name="signup_login"
+                    value="Subdomains"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+
+            <hr class="option-block-separator container">
+
+            <div class="center-align title-block secure-title-block">
+              <p>
+                How do you wish to secure your app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="security"
+                class="input-block security-block grid two-auto"
+                :class="{selected:isOption('secure','Security not important')}"
+                @click="toggleOption('secure','Security not important')"
+              >
+                <div class="grid no-gap">
+                  <label for="security">Security not important</label>
+                  <small>for initial MVP versions
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input id="security" v-model="option_block.secure" type="radio" name="secure" value="Security not important">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="ssl"
+                class="input-block ssl-block grid two-auto"
+                :class="{selected:isOption('secure','SSL Certificate based Security')}"
+                @click="toggleOption('secure','SSL Certificate based Security')"
+              >
+                <div class="grid no-gap">
+                  <label for="ssl">SSL Certificate based Security</label>
+                  <small>The industry standard way to ensure your users data is safe
+                    during the use of this app
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input id="ssl" v-model="option_block.secure" type="radio" name="secure" value="SSL Certificate based Security">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="dos"
+                class="input-block dos-block grid two-auto"
+                :class="{selected:isOption('secure','DoS Protection')}"
+                @click="toggleOption('secure','DoS Protection')"
+              >
+                <div class="grid no-gap">
+                  <label for="dos">DoS Protection</label>
+                  <small>For high volume app that with a high public profile, you may
+                    be the target of Denial of Service attacks
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input id="dos" v-model="option_block.secure" type="radio" name="secure" value="DoS Protection">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="two_factor"
+                class="input-block two_factor-block grid two-auto"
+                :class="{selected:isOption('secure','Two Factor Authentication')}"
+                @click="toggleOption('secure','Two Factor Authentication')"
+              >
+                <div class="grid no-gap">
+                  <label for="two_factor">Two Factor Authentication</label>
+                  <small>for initial MVP versions
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input id="two_factor" v-model="option_block.secure" type="radio" name="secure" value="Two Factor Authentication">
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -294,7 +504,9 @@ export default {
       option_block: {
         platform: '',
         design: '',
-        screen: ''
+        screen: '',
+        signup_login: '',
+        secure: ''
       }
     }
   },
@@ -328,6 +540,12 @@ export default {
 
   .three {
     grid-template-columns: 0.5fr 1fr auto;
+  }
+  .two-auto{
+      grid-template-columns: 1fr auto;
+  }
+  .no-gap {
+    grid-gap: 0;
   }
 
   .page {
@@ -514,6 +732,16 @@ export default {
                   background: url("~assets/svg/check-mark.svg") 0 -1px no-repeat;
                 }
               }
+            }
+            small{
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              font-size: 0.7em;
+              line-height: 1.17;
+              letter-spacing: normal;
+              /*text-align: left;*/
+              color: #909090;
             }
           }
 
