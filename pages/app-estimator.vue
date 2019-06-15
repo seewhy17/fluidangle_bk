@@ -33,7 +33,7 @@
             <div class="options-block container flex wrap dir-row">
               <div
                 ref="android"
-                class="input-block android-block first-half first-half-vertical grid three"
+                class="input-block android-block grid three"
                 :class="{selected:isPlatform('android')}"
                 @click="togglePlatform('android')"
               >
@@ -51,7 +51,7 @@
               </div>
               <div
                 ref="Apple"
-                class="input-block ios-block first-half grid three"
+                class="input-block ios-block grid three"
                 :class="{selected:isPlatform('ios')}"
                 @click="togglePlatform('ios')"
               >
@@ -69,7 +69,7 @@
               </div>
               <div
                 ref="Windows"
-                class="input-block windows-block first-half-vertical grid three"
+                class="input-block windows-block grid three"
                 :class="{selected:isPlatform('windows')}"
                 @click="togglePlatform('windows')"
               >
@@ -140,6 +140,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @mixin radius($i) {
+    @if ($i == 1) {
+      border-top-left-radius: 5px;
+    } @else if ($i == 2) {
+      @include breakpoint($min: 767px) {
+        border-top-right-radius: 5px;
+      }
+    } @else if ($i == 3) {
+      @include breakpoint($min: 767px) {
+        border-bottom-left-radius: 5px;
+      }
+    } @else {
+      border-bottom-right-radius: 5px;
+    }
+  }
+
   .three {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -224,43 +240,44 @@ export default {
           height: 100vh;
 
           .options-block {
-            /*width: 446px;*/
-            /*height: 101px;*/
             margin: {
               top: 4%
             };
-            border: solid thin #c8c7d8;
             background-color: #ffffff;
-            border-radius: 5px;
-
             .input-block {
               width: 50%;
               color: $gray;
               padding: 2% 1%;
               /*justify-items: center;*/
               align-items: center;
-
+              border: solid thin #c8c7d8;
+              @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                  @include radius($i)
+                }
+              }
+              @include breakpoint($max: 767px) {
+                width: 100%;
+              }
               &:hover {
                 cursor: pointer;
               }
 
               &.selected {
-                border-bottom: solid 5px #5d9f4b;
+                border: {
+                  top:0;
+                  left:0;
+                  right:0;
+                  bottom:solid 5px #5d9f4b;
+                }
                 background-color: #ecf8e4;
               }
-
-              &.first-half {
-                border-bottom: solid thin #c8c7d8;
-              }
-
-              &.first-half-vertical {
-                border-right: solid thin #c8c7d8;
-              }
-
               & > div.flex {
                 align-items: center;
               }
-
+              & img{
+                justify-self: right;
+              }
               img + label {
                 margin: {
                   left: 35%;
