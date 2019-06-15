@@ -702,7 +702,7 @@
           </section>
 
           <section class="dates-and-locations container card">
-            <div class="center-align title-block generated-content-title-block container">
+            <div class="center-align title-block dates-and-locations-title-block container">
               <p>
                 What type of Dates & Locations do you
                 want on your app?
@@ -725,7 +725,7 @@
                     id="calendaring"
                     v-model="option_block.dates_and_locations"
                     type="radio"
-                    name="generated_content"
+                    name="dates_and_locations"
                     value="Calendaring"
                   >
                   <span />
@@ -747,7 +747,7 @@
                     id="map_data"
                     v-model="option_block.dates_and_locations"
                     type="radio"
-                    name="generated_content"
+                    name="dates_and_locations"
                     value="Display of Map Data/Geolocation"
                   >
                   <span />
@@ -770,7 +770,7 @@
                     id="custom_map"
                     v-model="option_block.dates_and_locations"
                     type="radio"
-                    name="generated_content"
+                    name="dates_and_locations"
                     value="Display of custom map markers/regions:"
                   >
                   <span />
@@ -792,8 +792,110 @@
                     id="booking"
                     v-model="option_block.dates_and_locations"
                     type="radio"
-                    name="generated_content"
+                    name="dates_and_locations"
                     value="Booking"
+                  >
+                  <span />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="social-and-engagements container card">
+            <div class="center-align title-block social-and-engagements-title-block container">
+              <p>
+                What type of Social & Engagement  do
+                you want on your app?
+              </p>
+            </div>
+            <div class="options-block container flex wrap dir-row">
+              <div
+                ref="messaging"
+                class="input-block messaging-block grid two-auto"
+                :class="{selected:isOption('social_and_engagement','Messaging')}"
+                @click="toggleOption('social_and_engagement','Messaging')"
+              >
+                <div class="grid no-gap">
+                  <label for="messaging">Messaging</label>
+                  <small>Allowing users within the app to send messages to other
+                    account users or groups of users
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="messaging"
+                    v-model="option_block.social_and_engagement"
+                    type="radio"
+                    name="social_and_engagement"
+                    value="Messaging"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="forums"
+                class="input-block forums-block grid two-auto"
+                :class="{selected:isOption('social_and_engagement','Forums or commenting')}"
+                @click="toggleOption('social_and_engagement','Forums or commenting')"
+              >
+                <div class="grid no-gap">
+                  <label for="forums">Forums or commenting</label>
+                  <small>Classic forum functional for account users or simple
+                    commenting on information
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="forums"
+                    v-model="option_block.social_and_engagement"
+                    type="radio"
+                    name="social_and_engagement"
+                    value="Forums or commenting"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="social_sharing"
+                class="input-block social-sharing-block grid two-auto"
+                :class="{selected:isOption('social_and_engagement','Social Sharing')}"
+                @click="toggleOption('social_and_engagement','Social Sharing')"
+              >
+                <div class="grid no-gap">
+                  <label for="social_sharing">Social Sharing</label>
+                  <small>Ability to share pieces of information in a controlled way on
+                    social media accounts to drive engagement.
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="social_sharing"
+                    v-model="option_block.social_and_engagement"
+                    type="radio"
+                    name="social_and_engagement"
+                    value="Social Sharing"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="open_graph"
+                class="input-block open_graph-block grid two-auto"
+                :class="{selected:isOption('social_and_engagement','Push to Facebook Open Graph')}"
+                @click="toggleOption('social_and_engagement','Push to Facebook Open Graph')"
+              >
+                <div class="grid no-gap">
+                  <label for="open_graph">Push to Facebook Open Graph</label>
+                  <small>Pushing content from your app directly into the Facebook Graphs
+                  </small>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="open_graph"
+                    v-model="option_block.social_and_engagement"
+                    type="radio"
+                    name="social_and_engagement"
+                    value="Push to Facebook Open Graph"
                   >
                   <span />
                 </div>
@@ -824,7 +926,8 @@ export default {
         signup_login: '',
         secure: '',
         generated_content: '',
-        dates_and_locations: ''
+        dates_and_locations: '',
+        social_and_engagement: ''
       }
     }
   },
