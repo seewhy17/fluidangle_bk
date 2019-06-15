@@ -712,8 +712,8 @@
               <div
                 ref="calendaring"
                 class="input-block calendaring-block grid two-auto"
-                :class="{selected:isOption('generated_content','Calendaring')}"
-                @click="toggleOption('generated_content','Calendaring')"
+                :class="{selected:isOption('dates_and_locations','Calendaring')}"
+                @click="toggleOption('dates_and_locations','Calendaring')"
               >
                 <div class="grid no-gap">
                   <label for="calendaring">Calendaring</label>
@@ -723,7 +723,7 @@
                 <div class="radio-button flex">
                   <input
                     id="calendaring"
-                    v-model="option_block.generated_content"
+                    v-model="option_block.dates_and_locations"
                     type="radio"
                     name="generated_content"
                     value="Calendaring"
@@ -734,8 +734,8 @@
               <div
                 ref="map_data"
                 class="input-block map_data-block grid two-auto"
-                :class="{selected:isOption('generated_content','Display of Map Data/Geolocation')}"
-                @click="toggleOption('generated_content','Display of Map Data/Geolocation')"
+                :class="{selected:isOption('dates_and_locations','Display of Map Data/Geolocation')}"
+                @click="toggleOption('dates_and_locations','Display of Map Data/Geolocation')"
               >
                 <div class="grid no-gap">
                   <label for="map_data">Display of Map Data/Geolocation</label>
@@ -745,7 +745,7 @@
                 <div class="radio-button flex">
                   <input
                     id="map_data"
-                    v-model="option_block.generated_content"
+                    v-model="option_block.dates_and_locations"
                     type="radio"
                     name="generated_content"
                     value="Display of Map Data/Geolocation"
@@ -756,8 +756,8 @@
               <div
                 ref="custom_map"
                 class="input-block custom_map-block grid two-auto"
-                :class="{selected:isOption('generated_content','Display of custom map markers/regions:')}"
-                @click="toggleOption('generated_content','Display of custom map markers/regions:')"
+                :class="{selected:isOption('dates_and_locations','Display of custom map markers/regions:')}"
+                @click="toggleOption('dates_and_locations','Display of custom map markers/regions:')"
               >
                 <div class="grid no-gap">
                   <label for="custom_map">Display of custom map markers/regions:</label>
@@ -768,7 +768,7 @@
                 <div class="radio-button flex">
                   <input
                     id="custom_map"
-                    v-model="option_block.generated_content"
+                    v-model="option_block.dates_and_locations"
                     type="radio"
                     name="generated_content"
                     value="Display of custom map markers/regions:"
@@ -779,8 +779,8 @@
               <div
                 ref="booking"
                 class="input-block booking-block grid two-auto"
-                :class="{selected:isOption('generated_content','Booking')}"
-                @click="toggleOption('generated_content','Booking')"
+                :class="{selected:isOption('dates_and_locations','Booking')}"
+                @click="toggleOption('dates_and_locations','Booking')"
               >
                 <div class="grid no-gap">
                   <label for="booking">Booking</label>
@@ -790,7 +790,7 @@
                 <div class="radio-button flex">
                   <input
                     id="booking"
-                    v-model="option_block.generated_content"
+                    v-model="option_block.dates_and_locations"
                     type="radio"
                     name="generated_content"
                     value="Booking"
@@ -823,7 +823,8 @@ export default {
         screen: '',
         signup_login: '',
         secure: '',
-        generated_content: ''
+        generated_content: '',
+        dates_and_locations: ''
       }
     }
   },
