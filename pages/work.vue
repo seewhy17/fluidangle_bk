@@ -18,16 +18,19 @@
     </div>
     <statistics />
     <start-project />
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/partials/navBar.vue'
+import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Work',
   components: {
     NavBar,
+    Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   }
