@@ -43,6 +43,7 @@ nav {
   .links {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     a {
       padding: 0 1rem;

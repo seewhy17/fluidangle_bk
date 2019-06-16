@@ -121,8 +121,14 @@ a {
 .grid {
   display: grid;
   grid-gap: 1rem;
+  .no-gap {
+    grid-gap: 0;
+  }
   &.two, &.equal-two {
     grid-template-columns: 1fr 1fr;
+  }
+  &.equal-two-rows{
+    grid-template-rows: 1fr 1fr;
   }
   &.three {
     grid-template-columns: 1fr 1fr;
@@ -145,13 +151,13 @@ a {
 
 .hide-on-med-and-down {
   @include breakpoint ($max: 992px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-on-small {
   @include breakpoint ($max: 767px) {
-    display: none;
+    display: none !important;
   }
 }
 
