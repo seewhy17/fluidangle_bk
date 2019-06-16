@@ -17,6 +17,7 @@
       </div>
     </div>
     <statistics />
+    <start-project />
   </div>
 </template>
 
@@ -27,7 +28,8 @@ export default {
   name: 'Work',
   components: {
     NavBar,
-    'Statistics': () => ({ component: import('~/components/statistics.vue') })
+    'Statistics': () => ({ component: import('~/components/statistics.vue') }),
+    'StartProject': () => ({ component: import('~/components/startProject.vue') })
   }
 }
 </script>
