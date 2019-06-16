@@ -1006,9 +1006,9 @@
               <div
                 ref="product"
                 class="input-block product-block grid two-auto"
+                style="width: 100%"
                 :class="{selected:isOption('billing','Product Management')}"
                 @click="toggleOption('billing','Product Management')"
-                style="width: 100%"
               >
                 <div class="grid no-gap">
                   <label for="product">Product Management</label>
