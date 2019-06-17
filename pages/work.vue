@@ -9,13 +9,117 @@
             OUR WORK
           </h1>
           <p>
-            Over the years we have worked with many businesses in diverse industries.
+            Over the years we have worked with many businesses in diverse industries. <br>
             We are proud of our portfolio and we believe you’ll love it too.
           </p>
-          <button>23 <br>Projects</button>
+        </div>
+        <div class="project-amount container">
+          <p class="flex dir-column">
+            <span>23</span> Projects
+          </p>
         </div>
       </div>
     </div>
+    <section class="projects">
+      <div class="filter-options container">
+        <ul class="flex dir-row">
+          <li><a class="selected bold" href="">All</a></li>
+          <li><a class="bold" href="">WEB</a></li>
+          <li><a class="bold" href="">MOBILE</a></li>
+          <li><a class="bold" href="">OUR PRODUCTS</a></li>
+        </ul>
+      </div>
+      <div class="projects-grid container flex dir-row">
+        <div class="project heroshe">
+          <div class="flex dir-row">
+            <div class="image-part">
+              <img
+                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
+                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
+             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
+                class=""
+              alt="">
+            </div>
+            <div class="content">
+              <div class="content-box">
+                <p class="title">Heroshe</p>
+                <p class="text">We ship from any US
+                  Online Store</p>
+              </div>
+              <div class="action-box">
+                <span class="action-word bold">View case study</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project heroshe">
+          <div class="flex dir-row">
+            <div class="image-part">
+              <img
+                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
+                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
+             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
+                class=""
+                alt="">
+            </div>
+            <div class="content">
+              <div class="content-box">
+                <p class="title">Heroshe</p>
+                <p class="text">We ship from any US
+                  Online Store</p>
+              </div>
+              <div class="action-box">
+                <span class="action-word bold">View case study</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project heroshe">
+          <div class="flex dir-row">
+            <div class="image-part">
+              <img
+                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
+                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
+             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
+                class=""
+                alt="">
+            </div>
+            <div class="content">
+              <div class="content-box">
+                <p class="title">Heroshe</p>
+                <p class="text">We ship from any US
+                  Online Store</p>
+              </div>
+              <div class="action-box">
+                <span class="action-word bold">View case study</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project heroshe">
+          <div class="flex dir-row">
+            <div class="image-part">
+              <img
+                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
+                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
+             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
+                class=""
+                alt="">
+            </div>
+            <div class="content">
+              <div class="content-box">
+                <p class="title">Heroshe</p>
+                <p class="text">We ship from any US
+                  Online Store</p>
+              </div>
+              <div class="action-box">
+                <span class="action-word bold">View case study</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <statistics />
     <start-project />
     <Footer />
@@ -49,12 +153,10 @@ export default {
         top: 0;
         left: 0;
         background: $primary;
-        height: 85vh;
+        height: 100%;
         z-index: -1;
       }
       .banner-grid {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
         padding: 4rem 5vw 0;
         overflow-x: hidden;
       }
@@ -65,56 +167,61 @@ export default {
         padding-top: 1.5rem;
 
         h1 {
-          font-size: 2.5rem;
+          font-size: 4.5rem;
           margin-bottom: 1rem;
         }
 
-        .build {
-          position: relative;
-
-          .replace {
-            position: absolute;
-            top: -2.5rem;
-            font-family: 'Montez', cursive;
-          }
-
-          .text {
-            text-decoration: {
-              style: solid;
-              line: line-through;
-              color: #ffb102;
-            };
-          }
-        }
-
         p {
-          font-size: .85rem;
+          font-size: .95rem;
           line-height: 2;
         }
-
-        button {
-          color: $primary;
+      }
+      .project-amount{
+        color: $primary;
+        margin:{top:12rem;}
+        p{
+          font-size: 1.7rem;
+          position: absolute;
+          bottom: -15%;
+          display: inline-flex;
+          padding:1.8rem 2rem;
           background: white;
-          border: none;
-          padding: .9rem 2.25rem;
-          font-size: .9rem;
-          margin: 3rem 0;
-
-          &:focus {
-            outline: none;
-          }
+          align-items: center;
+          color:$gray;
+          border: solid 1px $gray;
+        }
+        span{
+          font-size: 3rem;
+          font-weight: 500;
+          color:$primary
         }
       }
-
-      .banner-img {
-        box-sizing: border-box;
-        position: relative;
-
-        img {
-          width: 135%;
-          max-width: unset;
-          z-index: 5;
-          position: relative;
+    }
+    .projects{
+      margin-top: 8rem;
+      padding-bottom: 3rem;
+      .filter-options{
+        width: 50%;
+        min-width: 50%;
+        li{
+          width: 25%;
+          list-style-type: none;
+        }
+        a{
+          font-size: 1rem;
+          padding: {
+            bottom: .5rem;
+          };
+        }
+        .selected{
+          color:$primary;
+          border-bottom: solid 2px $primary;
+        }
+      }
+      .projects-grid{
+        margin-top: 3rem;
+        .project{
+          width: 50%;
         }
       }
     }

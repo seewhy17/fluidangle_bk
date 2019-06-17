@@ -112,7 +112,7 @@ export default {
     };
 
     .footer-grid {
-      height: 18rem;
+      min-height: 18rem;
       grid-template-columns: repeat(4, 1fr);
 
       .title {

@@ -374,10 +374,6 @@ export default {
 <style scoped lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Montez&display=swap');
 
-  .bold {
-    font-weight: bold;
-  }
-
   .three {
     grid-template-columns: repeat(3, 1fr);
   }
