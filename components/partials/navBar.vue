@@ -4,7 +4,7 @@
       <img src="/svg/fluid-angle_white.svg" alt="fluid-logo">
     </nuxt-link>
     <div class="links">
-      <nuxt-link to="/">
+      <nuxt-link to="/work">
         Work
       </nuxt-link>
       <nuxt-link to="/">
