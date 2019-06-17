@@ -114,7 +114,9 @@ export default {
     .footer-grid {
       min-height: 18rem;
       grid-template-columns: repeat(4, 1fr);
-
+      @include for-phone-only {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .title {
         border: {
           bottom: solid 2px $light-purple;
