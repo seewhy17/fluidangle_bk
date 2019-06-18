@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.953" height="47.771" viewBox="0 0 34.953 47.771">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#424a60;stroke-linecap:round;stroke-miterlimit:10;stroke-width:4px}.cls-2{fill:#ebba16}.cls-3{fill:#424a60}.cls-4{fill:#38454f}
+        </style>
+    </defs>
+    <g id="locked" transform="translate(-7.5)">
+        <path id="Path_59" d="M16.5 23.637V10.822C16.5 5.97 20.807 2 26.07 2c5.264 0 9.57 3.97 9.57 8.822v12.815z" class="cls-1" data-name="Path 59" transform="translate(-1.51)"/>
+        <path id="Rectangle_140" d="M0 0h34.953v26.631H0z" class="cls-2" data-name="Rectangle 140" transform="translate(7.5 21.141)"/>
+        <path id="Path_60" d="M28 42.986a2.5 2.5 0 0 1-2.5-2.5V35.5A2.5 2.5 0 0 1 28 33a2.5 2.5 0 0 1 2.5 2.5v4.99a2.5 2.5 0 0 1-2.5 2.496z" class="cls-3" data-name="Path 60" transform="translate(-3.02 -5.202)"/>
+        <path id="Rectangle_141" d="M0 0h34.953v4.993H0z" class="cls-4" data-name="Rectangle 141" transform="translate(7.5 42.778)"/>
+    </g>
+</svg>
