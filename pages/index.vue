@@ -4,7 +4,7 @@
       <span class="bg" />
       <nav-bar />
       <div class="banner-grid">
-        <div class="content container">
+        <div class="content">
           <h1>
             We
             <span class="build">
@@ -136,8 +136,8 @@
         <div class="image-part hide-on-small">
           <img
             src="/img/shutterstock_758031970.png"
-            srcset="/img/shutterstock-758031970-converted@2x.png 2x,
-             /img/shutterstock-758031970-converted@3x.png 3x"
+            srcset="/img/shutterstock-758031970@2x.png 2x,
+             /img/shutterstock-758031970@3x.png 3x"
             alt="services"
           >
         </div>
@@ -260,113 +260,17 @@
         <button>Start Project</button>
       </div>
     </section>
-    <footer>
-      <div class="footer-grid container grid">
-        <div>
-          <p class="title">
-            COMPANY
-          </p>
-          <div class="links flex dir-column">
-            <nuxt-link to="/">
-              About us
-            </nuxt-link>
-            <nuxt-link to="/">
-              Blog
-            </nuxt-link>
-            <nuxt-link to="/">
-              Career
-            </nuxt-link>
-          </div>
-        </div>
-        <div>
-          <p class="title">
-            SERVICES
-          </p>
-          <div class="links flex dir-column">
-            <nuxt-link to="/">
-              Web Development
-            </nuxt-link>
-            <nuxt-link to="/">
-              Mobile Development
-            </nuxt-link>
-            <nuxt-link to="/">
-              UI/UX Design
-            </nuxt-link>
-          </div>
-        </div>
-        <div>
-          <p class="title">
-            PRODUCTS
-          </p>
-          <div class="links flex dir-column">
-            <nuxt-link to="/">
-              Project-FED
-            </nuxt-link>
-            <nuxt-link to="/">
-              Other Products
-            </nuxt-link>
-          </div>
-        </div>
-        <div>
-          <p class="title">
-            CONTACT
-          </p>
-          <div class="links flex dir-column">
-            <nuxt-link to="/">
-              234-80283-2321
-            </nuxt-link>
-            <nuxt-link to="/">
-              info@fluidangle.com
-            </nuxt-link>
-            <div class="social-media flex">
-              <img
-                src="/img/facebook-logo-button.png"
-                srcset="/img/facebook-logo-button@2x.png 2x,
-             /img/facebook-logo-button@3x.png 3x"
-                alt="facebook"
-              >
-              <img
-                src="/img/twitter.png"
-                srcset="/img/twitter@2x.png 2x,
-             /img/twitter@3x.png 3x"
-                alt="twitter"
-              >
-              <img
-                src="/img/youtube.png"
-                srcset="/img/youtube@2x.png 2x,
-             /img/youtube@3x.png 3x"
-                alt="youtube"
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom container flex dir-row">
-        <div>
-          <p> Copyright (c) {{ new Date().getFullYear() }}</p>
-        </div>
-        <div class="links">
-          <nuxt-link to="/">
-            Term of uses
-          </nuxt-link>
-          <nuxt-link to="/">
-            Privacy Policy
-          </nuxt-link>
-          <nuxt-link to="/">
-            Sitemap
-          </nuxt-link>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 <script>
 import NavBar from '~/components/partials/navBar.vue'
-
+import Footer from '~/components/partials/Footer.vue'
 export default {
   name: 'Index',
   components: {
-    NavBar
+    NavBar,
+    Footer
   }
 }
 </script>
@@ -571,7 +475,10 @@ export default {
 
       &.our-services {
         background-color: rgba(#e3e8f1, 0.25);
-
+        padding: {
+          top:4rem;
+          bottom:4rem
+        };
         .fancy-heading {
           margin: {
             left: 10vw;
@@ -630,7 +537,7 @@ export default {
 
         .image-part {
           img {
-            height: 35rem;
+            height: 30rem;
             object-fit: cover;
           }
         }
