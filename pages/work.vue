@@ -23,14 +23,14 @@
     <section class="projects">
       <div class="filter-options container">
         <ul class="flex dir-row">
-          <li><a class="selected bold" href="" @click.prevent>All</a></li>
-          <li><a class="bold" href="" @click.prevent>WEB</a></li>
-          <li><a class="bold" href="" @click.prevent>MOBILE</a></li>
-          <li><a class="bold" href="" @click.prevent>OUR PRODUCTS</a></li>
+          <li><a class="bold" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">All</a></li>
+          <li><a class="bold" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
+          <li><a class="bold" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
+          <li><a class="bold" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div v-for="work in works" :key="work.id" class="project heroshe" :class="work.id">
+        <div v-for="work in filteredWorks" :key="work.id" class="project heroshe" :class="work.id">
           <div class="grid equal-two">
             <div class="image-part">
               <img
@@ -77,6 +77,7 @@ export default {
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
   data: () => ({
+    type: 'all',
     works: [
       {
         id: 'heroshe',
@@ -114,8 +115,21 @@ export default {
         action: '',
         type: 'mobile'
       }
-    ]
-  })
+    ],
+    filteredWorks: []
+  }),
+  mounted() {
+    this.filteredWorks = this.works
+  },
+  methods: {
+    filterWorks(type) {
+      this.type = type
+      this.filteredWorks = type === 'all' ? this.works : this.works.filter(work => work.type === type)
+    },
+    isSelected(type) {
+      return this.type === type
+    }
+  }
 }
 </script>
 
