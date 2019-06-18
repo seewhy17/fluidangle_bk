@@ -4,16 +4,16 @@
       <img src="/svg/fluid-angle_purple.svg" alt="fluid-logo">
     </nuxt-link>
     <div class="links">
-      <nuxt-link to="/">
+      <nuxt-link to="/work">
         Work
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/about">
         About Us
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/blog">
         Blog
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/contact">
         Contact
       </nuxt-link>
     </div>
