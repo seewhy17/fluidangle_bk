@@ -48,6 +48,9 @@ export default {
       color: $primary;
       background-color: $light;
       font-size: .95rem;
+      &:focus{
+          outline: 0;
+      }
     }
   }
 </style>

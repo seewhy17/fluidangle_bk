@@ -7,13 +7,13 @@
       <nuxt-link to="/work">
         Work
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/about">
         About
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/blog">
         Blog
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/contact">
         Contact
       </nuxt-link>
       <a class="phone" href="tel:+19788494391">

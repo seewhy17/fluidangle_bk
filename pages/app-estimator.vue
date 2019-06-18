@@ -215,88 +215,6 @@
                 </div>
               </div>
             </div>
-
-            <hr class="option-block-separator container">
-
-            <div class="center-align title-block design-title-block container">
-              <p>
-                How many approximate numbers of screens your app have?
-              </p>
-            </div>
-            <div class="options-block container flex wrap dir-row">
-              <div
-                ref="one_six"
-                class="input-block one_six-block grid three"
-                :class="{selected:isOption('screen','1 - 6')}"
-                @click="toggleOption('screen','1 - 6')"
-              >
-                <img
-                  src="svg/responsive_1.png"
-                  srcset="svg/responsive_1@2x.png 2x,
-             svg/responsive_1@3x.png 3x"
-                  alt="one_six"
-                >
-                <label for="one_six">1 - 6</label>
-                <div class="radio-button flex">
-                  <input id="one_six" v-model="option_block.screen" type="radio" name="screen" value="1 - 6">
-                  <span />
-                </div>
-              </div>
-              <div
-                ref="seven_twelve"
-                class="input-block seven_twelve-block grid three"
-                :class="{selected:isOption('screen','7 - 12')}"
-                @click="toggleOption('screen','7 - 12')"
-              >
-                <img
-                  src="svg/responsive_1.png"
-                  srcset="svg/responsive_1@2x.png 2x,
-             svg/responsive_1@3x.png 3x"
-                  alt="seven_twelve"
-                >
-                <label for="seven_twelve">7 - 12</label>
-                <div class="radio-button flex">
-                  <input id="seven_twelve" v-model="option_block.screen" type="radio" name="screen" value="7 - 12">
-                  <span />
-                </div>
-              </div>
-              <div
-                ref="thirteen_twenty"
-                class="input-block thirteen_twenty-block grid three"
-                :class="{selected:isOption('screen','13 - 20')}"
-                @click="toggleOption('screen','13 - 20')"
-              >
-                <img
-                  src="svg/responsive_1.png"
-                  srcset="svg/responsive_1@2x.png 2x,
-             svg/responsive_1@3x.png 3x"
-                  alt="thirteen_twenty"
-                >
-                <label for="thirteen_twenty">13 - 20</label>
-                <div class="radio-button flex">
-                  <input id="thirteen_twenty" v-model="option_block.screen" type="radio" name="screen" value="13 - 20">
-                  <span />
-                </div>
-              </div>
-              <div
-                ref="twenty_plus"
-                class="input-block twenty_plus-block grid three"
-                :class="{selected:isOption('screen','21+')}"
-                @click="toggleOption('screen','21+')"
-              >
-                <img
-                  src="svg/responsive_1.png"
-                  srcset="svg/responsive_1@2x.png 2x,
-             svg/responsive_1@3x.png 3x"
-                  alt="twenty_plus"
-                >
-                <label for="twenty_plus">21+</label>
-                <div class="radio-button flex">
-                  <input id="twenty_plus" v-model="option_block.screen" type="radio" name="screen" value="21+">
-                  <span />
-                </div>
-              </div>
-            </div>
           </section>
 
           <section class="signup-login-secure container card">
@@ -583,8 +501,8 @@
                 @click="toggleOption('generated_content','Activity Feed')"
               >
                 <img
-                    src="/img/app-estimator/newspaper.png"
-                    srcset="/img/app-estimator/newspaper@2x.png 2x,
+                  src="/img/app-estimator/newspaper.png"
+                  srcset="/img/app-estimator/newspaper@2x.png 2x,
                /img/app-estimator/newspaper@3x.png 3x"
                   alt="Activity"
                 >
@@ -1826,6 +1744,13 @@ export default {
               bottom: 3.8em;
             };
             border: solid 1px #c8c7d8;
+          }
+          .generated-content{
+            .input-block{
+              &:nth-child(n+3){
+                border-radius:0 ;
+              }
+            }
           }
         }
       }
