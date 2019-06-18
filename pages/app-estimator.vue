@@ -1470,6 +1470,31 @@
         </div>
       </div>
     </div>
+    <section class="contact-form container">
+      <p class="title center-align">Enter your details to get price estimation</p>
+      <form action="" class="container">
+        <div class="input-container grid equal-two">
+          <div class="input-block">
+            <input id="first-name" v-model="user.firstName" type="text" name="firstName" placeholder="First Name">
+          </div>
+          <div class="input-block">
+            <input id="last-name" v-model="user.lastName" type="text" name="lastName" placeholder="Last Name">
+          </div>
+          <div class="input-block">
+            <input id="email-address" v-model="user.email" type="text" name="email" placeholder="Email">
+          </div>
+          <div class="input-block">
+            <input id="telephone" v-model="user.telephone" type="text" name="telephone" placeholder="Telephone">
+          </div>
+          <div class="input-block">
+            <input id="company-name" v-model="user.companyName" type="text" name="companyName" placeholder="Company Name">
+          </div>
+        </div>
+        <div class="button-container center-align flex">
+          <button>Get Price Estimation</button>
+        </div>
+      </form>
+    </section>
   </div>
 </template>
 
@@ -1496,6 +1521,13 @@ export default {
         billing: '',
         types: '',
         external_api: ''
+      },
+      user: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        telephone: '',
+        companyName: ''
       }
     }
   },
@@ -1754,6 +1786,61 @@ export default {
           }
         }
       }
+    }
+    .contact-form{
+      padding: {
+        top:4.41rem;
+        bottom:4rem;
+      };
+      .title{
+        margin: {
+          bottom: 1.4rem;
+        };
+        font-size: 2rem;
+        color:$grey;
+      }
+      .input-container{
+        justify-items: center;
+        .input-block{
+          width: 100%;
+        }
+        input{
+          width: 100%;
+          padding: {
+            top:1rem;
+            bottom: 1.2rem;
+            left:1.5rem;
+            right:1.5rem;
+          };
+          color:$light-gray;
+          border-radius: 6px;
+          border: solid 1px $light-gray;
+
+          &:focus{
+            outline: 0;
+          }
+        }
+      }
+      .button-container{
+        margin:{
+          top:1rem;
+        }
+        width: 100%;
+        button{
+          background-color: #ffb100;
+          width: 100%;
+          border-radius: 10px;
+          padding: {
+            top: 1.45rem;
+            bottom: 1.25rem;
+          };
+          border: 0;
+          color:$light;
+          font-weight: 700;
+          font-size:1.45rem;
+        }
+      }
+
     }
   }
 </style>
