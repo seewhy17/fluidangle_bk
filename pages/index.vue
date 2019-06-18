@@ -20,7 +20,7 @@
           </p>
           <button>See our work</button>
         </div>
-        <div class="banner-img">
+        <div class="banner-img hide-on-small">
           <img src="/img/expo_demo.png" alt="expo-demo">
         </div>
       </div>
@@ -295,6 +295,9 @@ export default {
         background: $primary;
         height: 85vh;
         z-index: -1;
+        @include breakpoint($max:768px){
+          height: 100vh;
+        }
       }
 
       .banner-grid {
@@ -302,6 +305,9 @@ export default {
         grid-template-columns: 2fr 3fr;
         padding: 4rem 5vw 0;
         overflow-x: hidden;
+        @include for-phone-only{
+          grid-template-columns: 1fr;
+        }
       }
 
       .content {
@@ -312,6 +318,9 @@ export default {
         h1 {
           font-size: 2.5rem;
           margin-bottom: 1rem;
+          @include breakpoint($max:768px){
+            font-size: 2rem;
+          }
         }
 
         .build {
