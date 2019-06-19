@@ -23,7 +23,7 @@
     <section class="projects">
       <div class="filter-options container">
         <ul class="flex dir-row">
-          <li><a class="bold" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">All</a></li>
+          <li><a class="bold" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
           <li><a class="bold" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
           <li><a class="bold" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
           <li><a class="bold" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
@@ -200,9 +200,10 @@ export default {
       margin-top: 8rem;
 
       .filter-options {
+        @include breakpoint($min:1024px){
         width: 50%;
         min-width: 50%;
-
+        }
         li {
           width: 25%;
           list-style-type: none;
@@ -211,13 +212,13 @@ export default {
         a {
           font-size: 1rem;
           padding: {
-            bottom: .5rem;
+            bottom: .25rem;
           };
         }
 
         .selected {
           color: $primary;
-          border-bottom: solid 2px $primary;
+          border-bottom: solid 4px $primary;
         }
       }
 
