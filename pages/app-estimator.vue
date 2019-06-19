@@ -24,7 +24,7 @@
           class="Image-3"
         >
         <h2 class="center-align Get-An-Estimate">
-          Get An Estimate
+          Get App Estimate
         </h2>
         <div class="content">
           <section class="platform container card">
@@ -93,20 +93,20 @@
                 </div>
               </div>
               <div
-                ref="hybrid"
+                ref="crossPlatform"
                 class="input-block hybrid-block grid three"
-                :class="{selected:isOption('platform','hybrid')}"
-                @click="toggleOption('platform','hybrid')"
+                :class="{selected:isOption('platform','Cross Platform')}"
+                @click="toggleOption('platform','Cross Platform')"
               >
                 <img
                   src="/img/app-estimator/Image 7.png"
                   srcset="/img/app-estimator/Image 7@2x.png 2x,
              /img/app-estimator/Image 7@3x.png 3x"
-                  alt="Hybrid"
+                  alt="Cross Platform"
                 >
-                <label for="hybrid">Hybrid</label>
+                <label for="cross-platform">Cross Platform</label>
                 <div class="radio-button flex">
-                  <input id="hybrid" v-model="option_block" type="radio" name="platform" value="hybrid">
+                  <input id="cross-platform" v-model="option_block" type="radio" name="platform" value="Cross Platform">
                   <span />
                 </div>
               </div>
@@ -126,8 +126,8 @@
               <div
                 ref="stock_ui"
                 class="input-block stock-block grid three"
-                :class="{selected:isOption('design','Stock or Template UI')}"
-                @click="toggleOption('design','Stock or Template UI')"
+                :class="{selected:isOption('design','UX research & Wireframing')}"
+                @click="toggleOption('design','UX research & Wireframing')"
               >
                 <img
                   src="/img/app-estimator/layout.png"
@@ -135,14 +135,14 @@
              /img/app-estimator/layout@3x.png 3x"
                   alt="Stock or Template UI"
                 >
-                <label for="stock_ui">Stock or Template UI</label>
+                <label for="stock_ui">UX research & Wireframing</label>
                 <div class="radio-button flex">
                   <input
                     id="stock_ui"
                     v-model="option_block.design"
                     type="radio"
                     name="design"
-                    value="Stock or Template UI"
+                    value="UX research & Wireframing"
                   >
                   <span />
                 </div>
@@ -150,8 +150,8 @@
               <div
                 ref="custom_ui"
                 class="input-block custom-ui-block grid three"
-                :class="{selected:isOption('design','Custom Branded UI')}"
-                @click="toggleOption('design','Custom Branded UI')"
+                :class="{selected:isOption('design','HiFi UI Design')}"
+                @click="toggleOption('design','HiFi UI Design')"
               >
                 <img
                   src="/img/app-estimator/layout (1).png"
@@ -159,14 +159,14 @@
              /img/app-estimator/layout (1)@3x.png 3x"
                   alt="Custom Branded UI"
                 >
-                <label for="custom_ui">Custom Branded UI</label>
+                <label for="custom_ui">HiFi UI Design</label>
                 <div class="radio-button flex">
                   <input
                     id="custom_ui"
                     v-model="option_block.design"
                     type="radio"
                     name="design"
-                    value="Custom Branded UI"
+                    value="HiFi UI Design"
                   >
                   <span />
                 </div>
@@ -174,8 +174,8 @@
               <div
                 ref="animated_ui"
                 class="input-block animated-ui-block grid three"
-                :class="{selected:isOption('design','Animated UI')}"
-                @click="toggleOption('design','Animated UI')"
+                :class="{selected:isOption('design','Prototyping')}"
+                @click="toggleOption('design','Prototyping')"
               >
                 <img
                   src="/img/app-estimator/play-button.png"
@@ -183,10 +183,10 @@
              /img/app-estimator/play-button@3x.png 3x"
                   alt="Animated UI"
                 >
-                <label for="animated_ui">Windows</label>
+                <label for="animated_ui">Prototyping</label>
 
                 <div class="radio-button flex">
-                  <input id="animated_ui" v-model="option_block.design" type="radio" name="design" value="Animated UI">
+                  <input id="animated_ui" v-model="option_block.design" type="radio" name="design" value="Prototyping">
                   <span />
                 </div>
               </div>
@@ -1074,7 +1074,6 @@
               <div
                 ref="product"
                 class="input-block product-block grid three"
-                style="width: 100%"
                 :class="{selected:isOption('billing','Product Management')}"
                 @click="toggleOption('billing','Product Management')"
               >
@@ -1096,6 +1095,32 @@
                     type="radio"
                     name="billing"
                     value="Product Management"
+                  >
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="emailMarketing"
+                class="input-block email-block grid three"
+                :class="{selected:isOption('email_marketing','Email Marketing')}"
+                @click="toggleOption('email_marketing','Email Marketing')"
+              >
+                <img
+                  src="/img/app-estimator/newsletter.png"
+                  srcset="/img/app-estimator/newsletter@2x.png 2x,
+             /img/app-estimator/newsletter@3x.png 3x"
+                  alt="Product Management"
+                >
+                <div class="grid no-gap">
+                  <label for="product">Email Marketing</label>
+                </div>
+                <div class="radio-button flex">
+                  <input
+                    id="email_marketing"
+                    v-model="option_block.email_marketing"
+                    type="radio"
+                    name="billing"
+                    value="Email Marketing"
                   >
                   <span />
                 </div>
@@ -1473,7 +1498,7 @@
     <section class="contact-form container">
       <p class="title center-align">Enter your details to get price estimation</p>
       <form action="" class="container">
-        <div class="input-container grid equal-two">
+        <div class="input-container">
           <div class="input-block">
             <input id="first-name" v-model="user.firstName" type="text" name="firstName" placeholder="First Name">
           </div>
@@ -1514,6 +1539,7 @@ export default {
         design: '',
         screen: '',
         signup_login: '',
+        email_marketing: '',
         secure: '',
         generated_content: '',
         dates_and_locations: '',
@@ -1800,9 +1826,20 @@ export default {
         color:$grey;
       }
       .input-container{
+        display: flex;
+        flex-wrap: wrap;
         justify-items: center;
         .input-block{
-          width: 100%;
+          width: 49%;
+          margin: {
+            bottom: 1rem;
+          };
+          &:nth-child(even){
+            margin-left:2%;
+          }
+          &:last-child{
+            flex-grow: 2;
+          }
         }
         input{
           width: 100%;
