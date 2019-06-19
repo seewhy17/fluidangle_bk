@@ -65,11 +65,11 @@
                   src="/img/app-estimator/Image 5.png"
                   srcset="/img/app-estimator/Image 5@2x.png 2x,
              /img/app-estimator/Image 5@3x.png 3x"
-                  alt="iOs"
+                  alt="IOS"
                 >
-                <label for="ios" @click="toggleCheckBox('platform','ios')">iOs</label>
+                <label for="ios" @click="toggleCheckBox('platform','IOS')">IOS</label>
                 <div class="radio-button flex">
-                  <input id="ios" v-model="option_block.platform" type="checkbox" name="platform" value="ios">
+                  <input id="ios" v-model="option_block.platform" type="checkbox" name="platform" value="IOS">
                   <span />
                 </div>
               </div>
@@ -107,6 +107,24 @@
                 <label for="cross-platform" @click="toggleCheckBox('platform','Cross Platform')">Cross Platform</label>
                 <div class="radio-button flex">
                   <input id="cross-platform" v-model="option_block.platform" type="checkbox" name="platform" value="Cross Platform">
+                  <span />
+                </div>
+              </div>
+              <div
+                ref="web-app"
+                class="input-block hybrid-block grid three"
+                :class="{selected:isChecked('platform','Web App')}"
+                @click="toggleCheckBox('platform','Web App')"
+              >
+                <img
+                  src="/img/app-estimator/responsive (3).png"
+                  srcset="/img/app-estimator/responsive (3)@2x.png 2x,
+             /img/app-estimator/responsive (3)@3x.png 3x"
+                  alt="Cross Platform"
+                >
+                <label for="web-app" @click="toggleCheckBox('platform','Web App')">Web App</label>
+                <div class="radio-button flex">
+                  <input id="web-app" v-model="option_block.platform" type="checkbox" name="platform" value="Web App">
                   <span />
                 </div>
               </div>
@@ -1613,19 +1631,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @mixin radius($i) {
+  @mixin top-radius($i) {
     @if ($i == 1) {
       border-top-left-radius: 5px;
+      @include breakpoint($max: 767px) {
+        border-top-right-radius: 5px;
+      }
     } @else if ($i == 2) {
       @include breakpoint($min: 767px) {
         border-top-right-radius: 5px;
       }
-    } @else if ($i == 3) {
+    }
+  }
+  @mixin bottom-radius($i){
+    @if ($i == 1) {
+      border-bottom-right-radius: 5px;
+      @include breakpoint($max: 767px) {
+        border-bottom-left-radius: 5px;
+      }
+    } @else if ($i == 2) {
       @include breakpoint($min: 767px) {
         border-bottom-left-radius: 5px;
       }
-    } @else {
-      border-bottom-right-radius: 5px;
     }
   }
 
@@ -1771,12 +1798,15 @@ export default {
               /*justify-items: center;*/
               align-items: center;
               border: solid thin #c8c7d8;
-              @for $i from 1 through 4 {
+              @for $i from 1 through 2 {
                 &:nth-child(#{$i}) {
-                  @include radius($i)
+                  @include top-radius($i)
+                }
+                &:nth-last-child(#{$i}){
+                  @include bottom-radius($i)
                 }
               }
-              @include breakpoint($max: 767px) {
+              @include breakpoint ($max: 767px) {
                 width: 100%;
               }
 
@@ -1850,12 +1880,15 @@ export default {
             };
             border: solid 1px #c8c7d8;
           }
-          .generated-content{
+          .platform{
             .input-block{
-              &:nth-child(n+3){
-                border-radius:0 ;
+              &:last-child{
+                flex-grow:2;
               }
             }
+          }
+          .generated-content{
+            .input-block{}
           }
         }
       }
