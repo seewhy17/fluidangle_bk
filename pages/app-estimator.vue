@@ -220,7 +220,7 @@
              /img/app-estimator/console@3x.png 3x"
                   alt="Game Animations "
                 >
-                <label for="game_animations">Game Animations</label>
+                <label for="game_animations" @click="toggleCheckBox('design','Game Animations')">Game Animations</label>
                 <div class="radio-button flex">
                   <input
                     id="game_animations"
@@ -411,7 +411,7 @@
                   alt="SSL"
                 >
                 <div class="grid no-gap">
-                  <label for="ssl">SSL Certificate based Security</label>
+                  <label for="ssl" @click="toggleCheckBox('secure','SSL Certificate based Security')">SSL Certificate based Security</label>
                   <small>The industry standard way to ensure your users data is safe
                     during the use of this app
                   </small>
@@ -440,7 +440,7 @@
                   alt="DOS Protection"
                 >
                 <div class="grid no-gap">
-                  <label for="dos">DoS Protection</label>
+                  <label for="dos" @click="toggleCheckBox('secure','DoS Protection')">DoS Protection</label>
                   <small>For high volume app that with a high public profile, you may
                     be the target of Denial of Service attacks
                   </small>
@@ -463,7 +463,7 @@
                   alt="2fa Auth"
                 >
                 <div class="grid no-gap">
-                  <label for="two_factor">Two Factor Authentication</label>
+                  <label for="two_factor" @click="toggleCheckBox('secure','Two Factor Authentication')">Two Factor Authentication</label>
                   <small>for initial MVP versions
                   </small>
                 </div>
@@ -505,7 +505,7 @@
                   alt="Dashboard"
                 >
                 <div class="grid no-gap">
-                  <label for="dashboard">Dashboard</label>
+                  <label for="dashboard" @click="toggleCheckBox('generated_content','Dashboard')">Dashboard</label>
                   <small>A dashboard would usually be the first thing a user sees when logged
                     in and would summarize data and perhaps show graphs and notices
                   </small>
@@ -534,7 +534,7 @@
                   alt="Activity"
                 >
                 <div class="grid no-gap">
-                  <label for="activity">Activity Feed</label>
+                  <label for="activity" @click="toggleCheckBox('generated_content','Activity Feed')">Activity Feed</label>
                   <small>An Activity feed would perhaps show what users have
                     been doing recently
                   </small>
@@ -563,7 +563,7 @@
                   alt="File Upload"
                 >
                 <div class="grid no-gap">
-                  <label for="file_upload">File Upload</label>
+                  <label for="file_upload" @click="toggleCheckBox('generated_content','File Upload')">File Upload</label>
                   <small>Users should be able to upload file content, eg. images, PDF’s ect
                   </small>
                 </div>
@@ -591,7 +591,7 @@
                   alt="User Profile"
                 >
                 <div class="grid no-gap">
-                  <label for="user_profile">User Profile</label>
+                  <label for="user_profile" @click="toggleCheckBox('generated_content','User Profile')">User Profile</label>
                   <small>Users should be able to upload file content, eg. images, PDF’s ect
                   </small>
                 </div>
@@ -619,7 +619,7 @@
                   alt="Transaction Emails"
                 >
                 <div class="grid no-gap">
-                  <label for="transactional_emails">Transactional Emails</label>
+                  <label for="transactional_emails" @click="toggleCheckBox('generated_content','Transactional Emails')">Transactional Emails</label>
                   <small>Users might receive regular automated emails from the app
                     to drive engagement or notify them of changes
                   </small>
@@ -648,7 +648,7 @@
                   alt="Tags"
                 >
                 <div class="grid no-gap">
-                  <label for="tags_allows">Tags allows</label>
+                  <label for="tags_allows" @click="toggleCheckBox('generated_content','Tags allows')">Tags allows</label>
                   <small>Users to categorize information so that others can find
                     relevant information
                   </small>
@@ -677,7 +677,7 @@
                   alt="Ratings"
                 >
                 <div class="grid no-gap">
-                  <label for="ratings">Ratings or review</label>
+                  <label for="ratings" @click="toggleCheckBox('generated_content','Ratings or review')">Ratings or review</label>
                   <small>typical use case for ratings and reviews might be restaurants
                     reviews or customer satisfaction ratings.
                   </small>
@@ -706,7 +706,7 @@
                   alt="AV Processing"
                 >
                 <div class="grid no-gap">
-                  <label for="av_processing">Audio/Video Processing</label>
+                  <label for="av_processing" @click="toggleCheckBox('generated_content','Audio/Video Processing')">Audio/Video Processing</label>
                   <small>Encoding, modification and storage of audio or video files.
                   </small>
                 </div>
@@ -748,7 +748,7 @@
                   alt="Calendaring"
                 >
                 <div class="grid no-gap">
-                  <label for="calendaring">Calendaring</label>
+                  <label for="calendaring" @click="toggleCheckBox('dates_and_locations','Calendaring')">Calendaring</label>
                   <small>Display and capture of data in a calendar format
                   </small>
                 </div>
@@ -776,7 +776,7 @@
                   alt="Map Data"
                 >
                 <div class="grid no-gap">
-                  <label for="map_data">Display of Map Data/Geolocation</label>
+                  <label for="map_data" @click="toggleCheckBox('dates_and_locations','Display of Map Data/Geolocation')">Display of Map Data/Geolocation</label>
                   <small>Showing a map with data points, eg. venue locations, driver location
                   </small>
                 </div>
@@ -804,7 +804,7 @@
                   alt="Map Marker"
                 >
                 <div class="grid no-gap">
-                  <label for="custom_map">Display of custom map markers/regions:</label>
+                  <label for="custom_map" @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions:')">Display of custom map markers/regions:</label>
                   <small>Allowing the user to select a map area visually or custom
                     icons for different location types
                   </small>
@@ -833,7 +833,7 @@
                   alt="Booking"
                 >
                 <div class="grid no-gap">
-                  <label for="booking">Booking</label>
+                  <label for="booking" @click="toggleCheckBox('dates_and_locations','Booking')">Booking</label>
                   <small>Electing start and end dates, managing capacity etc.
                   </small>
                 </div>
@@ -873,7 +873,7 @@
                   alt="Messaging"
                 >
                 <div class="grid no-gap">
-                  <label for="messaging">Messaging</label>
+                  <label for="messaging" @click="toggleCheckBox('social_and_engagement','Messaging')">Messaging</label>
                   <small>Allowing users within the app to send messages to other
                     account users or groups of users
                   </small>
@@ -902,7 +902,7 @@
                   alt="Forums"
                 >
                 <div class="grid no-gap">
-                  <label for="forums">Forums or commenting</label>
+                  <label for="forums" @click="toggleCheckBox('social_and_engagement','Forums or commenting')">Forums or commenting</label>
                   <small>Classic forum functional for account users or simple
                     commenting on information
                   </small>
@@ -931,7 +931,7 @@
                   alt="Social Sharing"
                 >
                 <div class="grid no-gap">
-                  <label for="social_sharing">Social Sharing</label>
+                  <label for="social_sharing" @click="toggleCheckBox('social_and_engagement','Social Sharing')">Social Sharing</label>
                   <small>Ability to share pieces of information in a controlled way on
                     social media accounts to drive engagement.
                   </small>
@@ -960,7 +960,7 @@
                   alt="Push to Facebook"
                 >
                 <div class="grid no-gap">
-                  <label for="open_graph">Push to Facebook Open Graph</label>
+                  <label for="open_graph" @click="toggleCheckBox('social_and_engagement','Push to Facebook Open Graph')">Push to Facebook Open Graph</label>
                   <small>Pushing content from your app directly into the Facebook Graphs
                   </small>
                 </div>
@@ -1000,7 +1000,7 @@
                   alt="Subscription"
                 >
                 <div class="grid no-gap">
-                  <label for="subscription">Subscription plans</label>
+                  <label for="subscription" @click="toggleCheckBox('billing','Subscription plans')">Subscription plans</label>
                   <small>Allowing users within the app to send messages to other
                     account users or groups of users
                   </small>
@@ -1029,7 +1029,7 @@
                   alt="Payment Processing"
                 >
                 <div class="grid no-gap">
-                  <label for="payment">Payment Processing</label>
+                  <label for="payment" @click="toggleCheckBox('billing','Payment Processing')">Payment Processing</label>
                   <small>You will process adhoc or regular payment from users and
                     manage refunds, ect.
                   </small>
@@ -1058,7 +1058,7 @@
                   alt="Shopping Cart"
                 >
                 <div class="grid no-gap">
-                  <label for="cart">Shopping Cart</label>
+                  <label for="cart" @click="toggleCheckBox('billing','Shopping Cart')">Shopping Cart</label>
                   <small>Users will be able to browse products and add them to a cart,
                     Amazon style
                   </small>
@@ -1087,7 +1087,7 @@
                   alt="User Marketplace"
                 >
                 <div class="grid no-gap">
-                  <label for="cart">User Marketplace</label>
+                  <label for="cart" @click="toggleCheckBox('billing','User Marketplace')">User Marketplace</label>
                   <small>Users will be able to sell products or services to others users
                     and your revenue model will be based on a commission model.
                   </small>
@@ -1144,7 +1144,7 @@
                   alt="Product Management"
                 >
                 <div class="grid no-gap">
-                  <label for="product">Email Marketing</label>
+                  <label for="product" @click="toggleCheckBox('email_marketing','Email Marketing')">Email Marketing</label>
                 </div>
                 <div class="radio-button flex">
                   <input
@@ -1181,7 +1181,7 @@
                   alt="CMS Integration"
                 >
                 <div class="grid no-gap">
-                  <label for="cms_integration">CMS Integration</label>
+                  <label for="cms_integration" @click="toggleCheckBox('types','Dashboard')">CMS Integration</label>
                   <small>A content management system would allow editing of significant
                     parts of the static content of the app without developer intervention.
                   </small>
@@ -1210,7 +1210,7 @@
                   alt="User Admin Page"
                 >
                 <div class="grid no-gap">
-                  <label for="user_admin">User Admin Page</label>
+                  <label for="user_admin" @click="toggleCheckBox('types','User Admin Page')">User Admin Page</label>
                   <small>Account administrators would be able to
                     list/add/remove/suspend users.
                   </small>
@@ -1239,7 +1239,7 @@
                   alt="Moderation Approval"
                 >
                 <div class="grid no-gap">
-                  <label for="approval">Moderation/Content Approval</label>
+                  <label for="approval" @click="toggleCheckBox('types','Moderation/Content Approval')">Moderation/Content Approval</label>
                   <small>Account administration would oversee content submitted by
                     users for publication and would have an approval workflow
                   </small>
@@ -1268,7 +1268,7 @@
                   alt="Intercom"
                 >
                 <div class="grid no-gap">
-                  <label for="intercom">Intercom</label>
+                  <label for="intercom" @click="toggleCheckBox('types','Intercom')">Intercom</label>
                   <small>A leading third party platform for managing user engagement,
                     drip emails, feature announcements ect
                   </small>
@@ -1297,7 +1297,7 @@
                   alt="Usage Analytics"
                 >
                 <div class="grid no-gap">
-                  <label for="usage_analytics">Usage Analytics</label>
+                  <label for="usage_analytics" @click="toggleCheckBox('types','Usage Analytics')">Usage Analytics</label>
                   <small>Find out  where your users come from and how they use your app.
                     We recommend Kissmetrics and Google Analytics
                   </small>
@@ -1326,7 +1326,7 @@
                   alt="Crash Reporting"
                 >
                 <div class="grid no-gap">
-                  <label for="crash_reporting">Crash Reporting</label>
+                  <label for="crash_reporting" @click="toggleCheckBox('types','Crash Reporting')">Crash Reporting</label>
                   <small>When things go wrong you need to know we recommend Sentry.
                   </small>
                 </div>
@@ -1354,7 +1354,7 @@
                   alt="Performance Monitoring"
                 >
                 <div class="grid no-gap">
-                  <label for="performance">Performance Monitoring</label>
+                  <label for="performance" @click="toggleCheckBox('types','Performance Monitoring')">Performance Monitoring</label>
                   <small>As you scale up it is important to know that you are maintaining a
                     good user experience and making efficient use of your hosting
                     environment.
@@ -1384,7 +1384,7 @@
                   alt="Multilingual Support"
                 >
                 <div class="grid no-gap">
-                  <label for="multilingual">Multilingual Support</label>
+                  <label for="multilingual" @click="toggleCheckBox('types','Multilingual Support')">Multilingual Support</label>
                   <small>Provide support for multiple languages for your app
                   </small>
                 </div>
@@ -1424,7 +1424,7 @@
                   alt="Third Party Services"
                 >
                 <div class="grid no-gap">
-                  <label for="third_party">Connect to one or more third party services</label>
+                  <label for="third_party" @click="toggleCheckBox('external_api','Connect to one or more third party services')">Connect to one or more third party services</label>
                   <small>Perhaps a data feed that you need to integrate with or a partner app.
                   </small>
                 </div>
@@ -1452,7 +1452,7 @@
                   alt="SMS Messaging"
                 >
                 <div class="grid no-gap">
-                  <label for="sms">SMS Messaging</label>
+                  <label for="sms" @click="toggleCheckBox('external_api','SMS Messaging')">SMS Messaging</label>
                   <small>Allow your app to send SMS messages
                   </small>
                 </div>
@@ -1480,7 +1480,7 @@
                   alt="Api"
                 >
                 <div class="grid no-gap">
-                  <label for="api">An API for others to integrate with your app</label>
+                  <label for="api" @click="toggleCheckBox('external_api','An API for others to integrate with your app')">An API for others to integrate with your app</label>
                   <small>Ability to share pieces of information in a controlled way on
                     social media accounts to drive engagement.
                   </small>
@@ -1509,7 +1509,7 @@
                   alt="Phone Number Masking"
                 >
                 <div class="grid no-gap">
-                  <label for="number_masking">Phone Number Masking</label>
+                  <label for="number_masking" @click="toggleCheckBox('external_api','Phone Number Masking')">Phone Number Masking</label>
                   <small>Calls made through your app will have masked numbers
                   </small>
                 </div>
