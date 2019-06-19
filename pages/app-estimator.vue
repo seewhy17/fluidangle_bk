@@ -10,7 +10,7 @@
               LOOKING TO BUILD AN APP?
             </h1>
             <p class="Find-out-how-much-it-will-cost">
-              Find out how much it will cost
+              Get your app development cost
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@
           <section class="platform container card">
             <div class="center-align title-block platform-title-block container">
               <h3 class="">
-                Platform
+                App Platform
               </h3>
               <p>
                 Which platform will the app be built on?
@@ -116,7 +116,7 @@
           <section class="design container card">
             <div class="center-align title-block design-title-block container">
               <h3 class="">
-                Design
+                App UI Design
               </h3>
               <p>
                 What would your UI theme be?
@@ -219,6 +219,9 @@
 
           <section class="signup-login-secure container card">
             <div class="center-align signup-login-block  title-block signup-login-title-block container">
+              <h3 class="">
+                App User Access
+              </h3>
               <p>
                 How will your user signup and login into the app?
               </p>
@@ -341,6 +344,9 @@
             <hr class="option-block-separator container">
 
             <div class="center-align title-block secure-title-block container">
+              <h3 class="">
+                App UI Design
+              </h3>
               <p>
                 How do you wish to secure your app?
               </p>
@@ -459,6 +465,9 @@
 
           <section class="generated-content container card">
             <div class="center-align title-block generated-content-title-block container">
+              <h3>
+                App Content
+              </h3>
               <p>
                 What type of user generated content
                 do you want on your app?
@@ -699,6 +708,9 @@
 
           <section class="dates-and-locations container card">
             <div class="center-align title-block dates-and-locations-title-block container">
+              <h3>
+                App Events
+              </h3>
               <p>
                 What type of Dates & Locations do you
                 want on your app?
@@ -823,6 +835,7 @@
 
           <section class="social-and-engagements container card">
             <div class="center-align title-block social-and-engagements-title-block container">
+              <h3>App Engagement</h3>
               <p>
                 What type of Social & Engagement  do
                 you want on your app?
@@ -949,6 +962,7 @@
 
           <section class="billing container card">
             <div class="center-align title-block billing-title-block container">
+              <h3>App Billing</h3>
               <p>
                 What type of Billing or eCommerce
                 do you want on the app?
@@ -1130,6 +1144,7 @@
 
           <section class="types container card">
             <div class="center-align title-block types-title-block container">
+              <h3>App Admin & Analytics</h3>
               <p>
                 What type of Admin, Feedback & Analytics
               </p>
@@ -1371,6 +1386,7 @@
 
           <section class="external-api container card">
             <div class="center-align title-block external-api-title-block container">
+              <h3>App Integrations</h3>
               <p>
                 What Type of External APIs and Integration
                 do you want for your app?
