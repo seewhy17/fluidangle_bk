@@ -1670,7 +1670,6 @@ export default {
 
   .page {
     .banner {
-      padding-top: 2rem;
       position: relative;
 
       .bg {
