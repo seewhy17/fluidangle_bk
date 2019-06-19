@@ -49,7 +49,7 @@
              /img/app-estimator/Image 4@3x.png 3x"
                   alt="Android"
                 >
-                <label for="android">Android</label>
+                <label for="android" @click="toggleCheckBox('platform','android')">Android</label>
                 <div class="radio-button flex">
                   <input id="android" v-model="option_block.platform" type="checkbox" name="platform" value="android">
                   <span />
@@ -67,7 +67,7 @@
              /img/app-estimator/Image 5@3x.png 3x"
                   alt="iOs"
                 >
-                <label for="ios">iOs</label>
+                <label for="ios" @click="toggleCheckBox('platform','ios')">iOs</label>
                 <div class="radio-button flex">
                   <input id="ios" v-model="option_block.platform" type="checkbox" name="platform" value="ios">
                   <span />
@@ -85,7 +85,7 @@
              /img/app-estimator/Image 6@3x.png 3x"
                   alt="Windows"
                 >
-                <label for="windows">Windows</label>
+                <label for="windows" @click="toggleCheckBox('platform','windows')">Windows</label>
 
                 <div class="radio-button flex">
                   <input id="windows" v-model="option_block.platform" type="checkbox" name="platform" value="windows">
@@ -104,7 +104,7 @@
              /img/app-estimator/Image 7@3x.png 3x"
                   alt="Cross Platform"
                 >
-                <label for="cross-platform">Cross Platform</label>
+                <label for="cross-platform" @click="toggleCheckBox('platform','Cross Platform')">Cross Platform</label>
                 <div class="radio-button flex">
                   <input id="cross-platform" v-model="option_block.platform" type="checkbox" name="platform" value="Cross Platform">
                   <span />
@@ -135,7 +135,7 @@
              /img/app-estimator/layout@3x.png 3x"
                   alt="Stock or Template UI"
                 >
-                <label for="stock_ui">UX research & Wireframing</label>
+                <label for="stock_ui" @click="toggleCheckBox('design','UX research & Wireframing')">UX research & Wireframing</label>
                 <div class="radio-button flex">
                   <input
                     id="stock_ui"
@@ -159,7 +159,7 @@
              /img/app-estimator/layout (1)@3x.png 3x"
                   alt="Custom Branded UI"
                 >
-                <label for="custom_ui">HiFi UI Design</label>
+                <label for="custom_ui" @click="toggleCheckBox('design','HiFi UI Design')">HiFi UI Design</label>
                 <div class="radio-button flex">
                   <input
                     id="custom_ui"
@@ -183,7 +183,7 @@
              /img/app-estimator/play-button@3x.png 3x"
                   alt="Animated UI"
                 >
-                <label for="animated_ui">Prototyping</label>
+                <label for="animated_ui" @click="toggleCheckBox('design','Prototyping')">Prototyping</label>
 
                 <div class="radio-button flex">
                   <input id="animated_ui" v-model="option_block.design" type="checkbox" name="design" value="Prototyping">
@@ -323,7 +323,7 @@
                   alt="Subdomains"
                 >
                 <div class="grid no-gap">
-                  <label for="subdomains">Subdomains</label>
+                  <label for="subdomains" @click="toggleCheckBox('signup_login','Subdomains')">Subdomains</label>
                   <small style="font-size: 0.5em">In combination with multi-tenant accounts, this would
                     allow your customers to access their account with their
                     own subdomain, eg <i>www.acme.com</i> or <i>www.xyz.com</i></small>
@@ -345,7 +345,7 @@
 
             <div class="center-align title-block secure-title-block container">
               <h3 class="">
-                App UI Design
+                App Security
               </h3>
               <p>
                 How do you wish to secure your app?
@@ -365,7 +365,7 @@
                   alt="Security"
                 >
                 <div class="grid no-gap">
-                  <label for="security">Security not important</label>
+                  <label for="security" @click="toggleCheckBox('secure','Security not important')">Security not important</label>
                   <small>for initial MVP versions
                   </small>
                 </div>
@@ -1516,7 +1516,7 @@
         Enter your details to get price estimation
       </p>
       <form action="" class="container">
-        <div class="input-container">
+        <div class="input-container grid equal-two">
           <div class="input-block">
             <input id="first-name" v-model="user.firstName" type="text" name="firstName" placeholder="First Name">
           </div>
@@ -1532,9 +1532,12 @@
           <div class="input-block">
             <input id="company-name" v-model="user.companyName" type="text" name="companyName" placeholder="Company Name">
           </div>
+          <div class="input-block">
+            <input id="company-role" v-model="user.companyRole" type="text" name="companyRole" placeholder="Company Role">
+          </div>
         </div>
         <div class="button-container center-align flex">
-          <button>Get Price Estimation</button>
+          <button>Get App Estimate</button>
         </div>
       </form>
     </section>
@@ -1571,7 +1574,8 @@ export default {
         lastName: '',
         email: '',
         telephone: '',
-        companyName: ''
+        companyName: '',
+        companyRole: ''
       }
     }
   },
@@ -1869,20 +1873,9 @@ export default {
         color:$grey;
       }
       .input-container{
-        display: flex;
-        flex-wrap: wrap;
         justify-items: center;
         .input-block{
-          width: 49%;
-          margin: {
-            bottom: 1rem;
-          };
-          &:nth-child(even){
-            margin-left:2%;
-          }
-          &:last-child{
-            flex-grow: 2;
-          }
+          width: 100%;
         }
         input{
           width: 100%;
