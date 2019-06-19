@@ -40,8 +40,8 @@
               <div
                 ref="android"
                 class="input-block android-block grid three"
-                :class="{selected:isOption('platform','android')}"
-                @click="toggleOption('platform','android')"
+                :class="{selected:isChecked('platform','android')}"
+                @click="toggleCheckBox('platform','android')"
               >
                 <img
                   src="/img/app-estimator/Image 4.png"
@@ -51,15 +51,15 @@
                 >
                 <label for="android">Android</label>
                 <div class="radio-button flex">
-                  <input id="android" v-model="option_block.platform" type="radio" name="platform" value="android">
+                  <input id="android" v-model="option_block.platform" type="checkbox" name="platform" value="android">
                   <span />
                 </div>
               </div>
               <div
                 ref="Apple"
                 class="input-block ios-block grid three"
-                :class="{selected:isOption('platform','ios')}"
-                @click="toggleOption('platform','ios')"
+                :class="{selected:isChecked('platform','ios')}"
+                @click="toggleCheckBox('platform','ios')"
               >
                 <img
                   src="/img/app-estimator/Image 5.png"
@@ -69,15 +69,15 @@
                 >
                 <label for="ios">iOs</label>
                 <div class="radio-button flex">
-                  <input id="ios" v-model="option_block.platform" type="radio" name="platform" value="ios">
+                  <input id="ios" v-model="option_block.platform" type="checkbox" name="platform" value="ios">
                   <span />
                 </div>
               </div>
               <div
                 ref="Windows"
                 class="input-block windows-block grid three"
-                :class="{selected:isOption('platform','windows')}"
-                @click="toggleOption('platform','windows')"
+                :class="{selected:isChecked('platform','windows')}"
+                @click="toggleCheckBox('platform','windows')"
               >
                 <img
                   src="/img/app-estimator/Image 6.png"
@@ -88,15 +88,15 @@
                 <label for="windows">Windows</label>
 
                 <div class="radio-button flex">
-                  <input id="windows" v-model="option_block.platform" type="radio" name="platform" value="windows">
+                  <input id="windows" v-model="option_block.platform" type="checkbox" name="platform" value="windows">
                   <span />
                 </div>
               </div>
               <div
                 ref="crossPlatform"
                 class="input-block hybrid-block grid three"
-                :class="{selected:isOption('platform','Cross Platform')}"
-                @click="toggleOption('platform','Cross Platform')"
+                :class="{selected:isChecked('platform','Cross Platform')}"
+                @click="toggleCheckBox('platform','Cross Platform')"
               >
                 <img
                   src="/img/app-estimator/Image 7.png"
@@ -106,7 +106,7 @@
                 >
                 <label for="cross-platform">Cross Platform</label>
                 <div class="radio-button flex">
-                  <input id="cross-platform" v-model="option_block" type="radio" name="platform" value="Cross Platform">
+                  <input id="cross-platform" v-model="option_block" type="checkbox" name="platform" value="Cross Platform">
                   <span />
                 </div>
               </div>
@@ -126,8 +126,8 @@
               <div
                 ref="stock_ui"
                 class="input-block stock-block grid three"
-                :class="{selected:isOption('design','UX research & Wireframing')}"
-                @click="toggleOption('design','UX research & Wireframing')"
+                :class="{selected:isChecked('design','UX research & Wireframing')}"
+                @click="toggleCheckBox('design','UX research & Wireframing')"
               >
                 <img
                   src="/img/app-estimator/layout.png"
@@ -140,7 +140,7 @@
                   <input
                     id="stock_ui"
                     v-model="option_block.design"
-                    type="radio"
+                    type="checkbox"
                     name="design"
                     value="UX research & Wireframing"
                   >
@@ -150,8 +150,8 @@
               <div
                 ref="custom_ui"
                 class="input-block custom-ui-block grid three"
-                :class="{selected:isOption('design','HiFi UI Design')}"
-                @click="toggleOption('design','HiFi UI Design')"
+                :class="{selected:isChecked('design','HiFi UI Design')}"
+                @click="toggleCheckBox('design','HiFi UI Design')"
               >
                 <img
                   src="/img/app-estimator/layout (1).png"
@@ -164,7 +164,7 @@
                   <input
                     id="custom_ui"
                     v-model="option_block.design"
-                    type="radio"
+                    type="checkbox"
                     name="design"
                     value="HiFi UI Design"
                   >
@@ -174,8 +174,8 @@
               <div
                 ref="animated_ui"
                 class="input-block animated-ui-block grid three"
-                :class="{selected:isOption('design','Prototyping')}"
-                @click="toggleOption('design','Prototyping')"
+                :class="{selected:isChecked('design','Prototyping')}"
+                @click="toggleCheckBox('design','Prototyping')"
               >
                 <img
                   src="/img/app-estimator/play-button.png"
@@ -186,15 +186,15 @@
                 <label for="animated_ui">Prototyping</label>
 
                 <div class="radio-button flex">
-                  <input id="animated_ui" v-model="option_block.design" type="radio" name="design" value="Prototyping">
+                  <input id="animated_ui" v-model="option_block.design" type="checkbox" name="design" value="Prototyping">
                   <span />
                 </div>
               </div>
               <div
                 ref="game_animations"
                 class="input-block game-animations-block grid three"
-                :class="{selected:isOption('design','Game Animations')}"
-                @click="toggleOption('design','Game Animations')"
+                :class="{selected:isChecked('design','Game Animations')}"
+                @click="toggleCheckBox('design','Game Animations')"
               >
                 <img
                   src="/img/app-estimator/console.png"
@@ -207,7 +207,7 @@
                   <input
                     id="game_animations"
                     v-model="option_block.design"
-                    type="radio"
+                    type="checkbox"
                     name="design"
                     value="Game Animations"
                   >
@@ -230,8 +230,8 @@
               <div
                 ref="email_password"
                 class="input-block email-password-block grid three"
-                :class="{selected:isOption('signup_login','Email/Password Sign Up')}"
-                @click="toggleOption('signup_login','Email/Password Sign Up')"
+                :class="{selected:isChecked('signup_login','Email/Password Sign Up')}"
+                @click="toggleCheckBox('signup_login','Email/Password Sign Up')"
               >
                 <img
                   src="/img/app-estimator/email (1).png"
@@ -247,7 +247,7 @@
                   <input
                     id="email_password"
                     v-model="option_block.signup_login"
-                    type="radio"
+                    type="checkbox"
                     name="signup_login"
                     value="Email/Password Sign Up"
                   >
@@ -257,8 +257,8 @@
               <div
                 ref="social_networks"
                 class="input-block custom-ui-block grid three"
-                :class="{selected:isOption('signup_login','Social Networks')}"
-                @click="toggleOption('signup_login','Social Networks')"
+                :class="{selected:isChecked('signup_login','Social Networks')}"
+                @click="toggleCheckBox('signup_login','Social Networks')"
               >
                 <img
                   src="/img/app-estimator/business-affiliate-network.png"
@@ -274,7 +274,7 @@
                   <input
                     id="social_networks"
                     v-model="option_block.signup_login"
-                    type="radio"
+                    type="checkbox"
                     name="signup_login"
                     value="Social Networks"
                   >
@@ -284,8 +284,8 @@
               <div
                 ref="multi_tenant"
                 class="input-block animated-ui-block grid three"
-                :class="{selected:isOption('signup_login','Multi-tenant Accounts')}"
-                @click="toggleOption('signup_login','Multi-tenant Accounts')"
+                :class="{selected:isChecked('signup_login','Multi-tenant Accounts')}"
+                @click="toggleCheckBox('signup_login','Multi-tenant Accounts')"
               >
                 <img
                   src="/img/app-estimator/account.png"
@@ -303,7 +303,7 @@
                   <input
                     id="multi_tenant"
                     v-model="option_block.signup_login"
-                    type="radio"
+                    type="checkbox"
                     name="design"
                     value="Multi-tenant Accounts"
                   >
@@ -313,8 +313,8 @@
               <div
                 ref="subdomains"
                 class="input-block game-animations-block grid three"
-                :class="{selected:isOption('signup_login','Subdomains')}"
-                @click="toggleOption('signup_login','Subdomains')"
+                :class="{selected:isChecked('signup_login','Subdomains')}"
+                @click="toggleCheckBox('signup_login','Subdomains')"
               >
                 <img
                   src="/img/app-estimator/http.png"
@@ -332,7 +332,7 @@
                   <input
                     id="subdomains"
                     v-model="option_block.signup_login"
-                    type="radio"
+                    type="checkbox"
                     name="signup_login"
                     value="Subdomains"
                   >
@@ -355,8 +355,8 @@
               <div
                 ref="security"
                 class="input-block security-block grid three"
-                :class="{selected:isOption('secure','Security not important')}"
-                @click="toggleOption('secure','Security not important')"
+                :class="{selected:isChecked('secure','Security not important')}"
+                @click="toggleCheckBox('secure','Security not important')"
               >
                 <img
                   src="/img/app-estimator/shield (2).png"
@@ -373,7 +373,7 @@
                   <input
                     id="security"
                     v-model="option_block.secure"
-                    type="radio"
+                    type="checkbox"
                     name="secure"
                     value="Security not important"
                   >
@@ -383,8 +383,8 @@
               <div
                 ref="ssl"
                 class="input-block ssl-block grid three"
-                :class="{selected:isOption('secure','SSL Certificate based Security')}"
-                @click="toggleOption('secure','SSL Certificate based Security')"
+                :class="{selected:isChecked('secure','SSL Certificate based Security')}"
+                @click="toggleCheckBox('secure','SSL Certificate based Security')"
               >
                 <img
                   src="/img/app-estimator/locked.png"
@@ -402,7 +402,7 @@
                   <input
                     id="ssl"
                     v-model="option_block.secure"
-                    type="radio"
+                    type="checkbox"
                     name="secure"
                     value="SSL Certificate based Security"
                   >
@@ -412,8 +412,8 @@
               <div
                 ref="dos"
                 class="input-block dos-block grid three"
-                :class="{selected:isOption('secure','DoS Protection')}"
-                @click="toggleOption('secure','DoS Protection')"
+                :class="{selected:isChecked('secure','DoS Protection')}"
+                @click="toggleCheckBox('secure','DoS Protection')"
               >
                 <img
                   src="/img/app-estimator/shield (1).png"
@@ -428,15 +428,15 @@
                   </small>
                 </div>
                 <div class="radio-button flex">
-                  <input id="dos" v-model="option_block.secure" type="radio" name="secure" value="DoS Protection">
+                  <input id="dos" v-model="option_block.secure" type="checkbox" name="secure" value="DoS Protection">
                   <span />
                 </div>
               </div>
               <div
                 ref="two_factor"
                 class="input-block two_factor-block grid three"
-                :class="{selected:isOption('secure','Two Factor Authentication')}"
-                @click="toggleOption('secure','Two Factor Authentication')"
+                :class="{selected:isChecked('secure','Two Factor Authentication')}"
+                @click="toggleCheckBox('secure','Two Factor Authentication')"
               >
                 <img
                   src="/img/app-estimator/authentication.png"
@@ -453,7 +453,7 @@
                   <input
                     id="two_factor"
                     v-model="option_block.secure"
-                    type="radio"
+                    type="checkbox"
                     name="secure"
                     value="Two Factor Authentication"
                   >
@@ -477,8 +477,8 @@
               <div
                 ref="dashboard"
                 class="input-block dashboard-block grid three"
-                :class="{selected:isOption('generated_content','Dashboard')}"
-                @click="toggleOption('generated_content','Dashboard')"
+                :class="{selected:isChecked('generated_content','Dashboard')}"
+                @click="toggleCheckBox('generated_content','Dashboard')"
               >
                 <img
                   src="/img/app-estimator/dashboard.png"
@@ -496,7 +496,7 @@
                   <input
                     id="dashboard"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Dashboard"
                   >
@@ -506,8 +506,8 @@
               <div
                 ref="activity"
                 class="input-block activity-block grid three"
-                :class="{selected:isOption('generated_content','Activity Feed')}"
-                @click="toggleOption('generated_content','Activity Feed')"
+                :class="{selected:isChecked('generated_content','Activity Feed')}"
+                @click="toggleCheckBox('generated_content','Activity Feed')"
               >
                 <img
                   src="/img/app-estimator/newspaper.png"
@@ -525,7 +525,7 @@
                   <input
                     id="activity"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Activity Feed"
                   >
@@ -535,8 +535,8 @@
               <div
                 ref="file_upload"
                 class="input-block file_upload-block grid three"
-                :class="{selected:isOption('generated_content','File Upload')}"
-                @click="toggleOption('generated_content','File Upload')"
+                :class="{selected:isChecked('generated_content','File Upload')}"
+                @click="toggleCheckBox('generated_content','File Upload')"
               >
                 <img
                   src="/img/app-estimator/folder.png"
@@ -553,7 +553,7 @@
                   <input
                     id="file_upload"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="File Upload"
                   >
@@ -563,8 +563,8 @@
               <div
                 ref="user_profile"
                 class="input-block user_profile-block grid three"
-                :class="{selected:isOption('generated_content','User Profile')}"
-                @click="toggleOption('generated_content','User Profile')"
+                :class="{selected:isChecked('generated_content','User Profile')}"
+                @click="toggleCheckBox('generated_content','User Profile')"
               >
                 <img
                   src="/img/app-estimator/user.png"
@@ -581,7 +581,7 @@
                   <input
                     id="user_profile"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="User Profile"
                   >
@@ -591,8 +591,8 @@
               <div
                 ref="transactional_emails"
                 class="input-block transactional_emails-block grid three"
-                :class="{selected:isOption('generated_content','Transactional Emails')}"
-                @click="toggleOption('generated_content','Transactional Emails')"
+                :class="{selected:isChecked('generated_content','Transactional Emails')}"
+                @click="toggleCheckBox('generated_content','Transactional Emails')"
               >
                 <img
                   src="/img/app-estimator/email (2).png"
@@ -610,7 +610,7 @@
                   <input
                     id="transactional_emails"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Transactional Emails"
                   >
@@ -620,8 +620,8 @@
               <div
                 ref="tags_allows"
                 class="input-block tags_allows-block grid three"
-                :class="{selected:isOption('generated_content','Tags allows')}"
-                @click="toggleOption('generated_content','Tags allows')"
+                :class="{selected:isChecked('generated_content','Tags allows')}"
+                @click="toggleCheckBox('generated_content','Tags allows')"
               >
                 <img
                   src="/img/app-estimator/price-tag.png"
@@ -639,7 +639,7 @@
                   <input
                     id="tags_allows"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Tags allows"
                   >
@@ -649,8 +649,8 @@
               <div
                 ref="ratings"
                 class="input-block ratings-block grid three"
-                :class="{selected:isOption('generated_content','Ratings or review')}"
-                @click="toggleOption('generated_content','Ratings or review')"
+                :class="{selected:isChecked('generated_content','Ratings or review')}"
+                @click="toggleCheckBox('generated_content','Ratings or review')"
               >
                 <img
                   src="/img/app-estimator/star (2).png"
@@ -668,7 +668,7 @@
                   <input
                     id="ratings"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Ratings or review"
                   >
@@ -678,8 +678,8 @@
               <div
                 ref="av_processing"
                 class="input-block av_processing-block grid three"
-                :class="{selected:isOption('generated_content','Audio/Video Processing')}"
-                @click="toggleOption('generated_content','Audio/Video Processing')"
+                :class="{selected:isChecked('generated_content','Audio/Video Processing')}"
+                @click="toggleCheckBox('generated_content','Audio/Video Processing')"
               >
                 <img
                   src="/img/app-estimator/audio.png"
@@ -696,7 +696,7 @@
                   <input
                     id="av_processing"
                     v-model="option_block.generated_content"
-                    type="radio"
+                    type="checkbox"
                     name="generated_content"
                     value="Audio/Video Processing"
                   >
@@ -720,8 +720,8 @@
               <div
                 ref="calendaring"
                 class="input-block calendaring-block grid three"
-                :class="{selected:isOption('dates_and_locations','Calendaring')}"
-                @click="toggleOption('dates_and_locations','Calendaring')"
+                :class="{selected:isChecked('dates_and_locations','Calendaring')}"
+                @click="toggleCheckBox('dates_and_locations','Calendaring')"
               >
                 <img
                   src="/img/app-estimator/calendar (4).png"
@@ -738,7 +738,7 @@
                   <input
                     id="calendaring"
                     v-model="option_block.dates_and_locations"
-                    type="radio"
+                    type="checkbox"
                     name="dates_and_locations"
                     value="Calendaring"
                   >
@@ -748,8 +748,8 @@
               <div
                 ref="map_data"
                 class="input-block map_data-block grid three"
-                :class="{selected:isOption('dates_and_locations','Display of Map Data/Geolocation')}"
-                @click="toggleOption('dates_and_locations','Display of Map Data/Geolocation')"
+                :class="{selected:isChecked('dates_and_locations','Display of Map Data/Geolocation')}"
+                @click="toggleCheckBox('dates_and_locations','Display of Map Data/Geolocation')"
               >
                 <img
                   src="/img/app-estimator/geolocalization.png"
@@ -766,7 +766,7 @@
                   <input
                     id="map_data"
                     v-model="option_block.dates_and_locations"
-                    type="radio"
+                    type="checkbox"
                     name="dates_and_locations"
                     value="Display of Map Data/Geolocation"
                   >
@@ -776,8 +776,8 @@
               <div
                 ref="custom_map"
                 class="input-block custom_map-block grid three"
-                :class="{selected:isOption('dates_and_locations','Display of custom map markers/regions:')}"
-                @click="toggleOption('dates_and_locations','Display of custom map markers/regions:')"
+                :class="{selected:isChecked('dates_and_locations','Display of custom map markers/regions:')}"
+                @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions:')"
               >
                 <img
                   src="/img/app-estimator/map-location.png"
@@ -795,7 +795,7 @@
                   <input
                     id="custom_map"
                     v-model="option_block.dates_and_locations"
-                    type="radio"
+                    type="checkbox"
                     name="dates_and_locations"
                     value="Display of custom map markers/regions:"
                   >
@@ -805,8 +805,8 @@
               <div
                 ref="booking"
                 class="input-block booking-block grid three"
-                :class="{selected:isOption('dates_and_locations','Booking')}"
-                @click="toggleOption('dates_and_locations','Booking')"
+                :class="{selected:isChecked('dates_and_locations','Booking')}"
+                @click="toggleCheckBox('dates_and_locations','Booking')"
               >
                 <img
                   src="/img/app-estimator/choices.png"
@@ -823,7 +823,7 @@
                   <input
                     id="booking"
                     v-model="option_block.dates_and_locations"
-                    type="radio"
+                    type="checkbox"
                     name="dates_and_locations"
                     value="Booking"
                   >
@@ -845,8 +845,8 @@
               <div
                 ref="messaging"
                 class="input-block messaging-block grid three"
-                :class="{selected:isOption('social_and_engagement','Messaging')}"
-                @click="toggleOption('social_and_engagement','Messaging')"
+                :class="{selected:isChecked('social_and_engagement','Messaging')}"
+                @click="toggleCheckBox('social_and_engagement','Messaging')"
               >
                 <img
                   src="/img/app-estimator/chat.png"
@@ -864,7 +864,7 @@
                   <input
                     id="messaging"
                     v-model="option_block.social_and_engagement"
-                    type="radio"
+                    type="checkbox"
                     name="social_and_engagement"
                     value="Messaging"
                   >
@@ -874,8 +874,8 @@
               <div
                 ref="forums"
                 class="input-block forums-block grid three"
-                :class="{selected:isOption('social_and_engagement','Forums or commenting')}"
-                @click="toggleOption('social_and_engagement','Forums or commenting')"
+                :class="{selected:isChecked('social_and_engagement','Forums or commenting')}"
+                @click="toggleCheckBox('social_and_engagement','Forums or commenting')"
               >
                 <img
                   src="/img/app-estimator/group (2).png"
@@ -893,7 +893,7 @@
                   <input
                     id="forums"
                     v-model="option_block.social_and_engagement"
-                    type="radio"
+                    type="checkbox"
                     name="social_and_engagement"
                     value="Forums or commenting"
                   >
@@ -903,8 +903,8 @@
               <div
                 ref="social_sharing"
                 class="input-block social-sharing-block grid three"
-                :class="{selected:isOption('social_and_engagement','Social Sharing')}"
-                @click="toggleOption('social_and_engagement','Social Sharing')"
+                :class="{selected:isChecked('social_and_engagement','Social Sharing')}"
+                @click="toggleCheckBox('social_and_engagement','Social Sharing')"
               >
                 <img
                   src="/img/app-estimator/conversation.png"
@@ -922,7 +922,7 @@
                   <input
                     id="social_sharing"
                     v-model="option_block.social_and_engagement"
-                    type="radio"
+                    type="checkbox"
                     name="social_and_engagement"
                     value="Social Sharing"
                   >
@@ -932,8 +932,8 @@
               <div
                 ref="open_graph"
                 class="input-block open_graph-block grid three"
-                :class="{selected:isOption('social_and_engagement','Push to Facebook Open Graph')}"
-                @click="toggleOption('social_and_engagement','Push to Facebook Open Graph')"
+                :class="{selected:isChecked('social_and_engagement','Push to Facebook Open Graph')}"
+                @click="toggleCheckBox('social_and_engagement','Push to Facebook Open Graph')"
               >
                 <img
                   src="/img/app-estimator/facebook.png"
@@ -950,7 +950,7 @@
                   <input
                     id="open_graph"
                     v-model="option_block.social_and_engagement"
-                    type="radio"
+                    type="checkbox"
                     name="social_and_engagement"
                     value="Push to Facebook Open Graph"
                   >
@@ -972,8 +972,8 @@
               <div
                 ref="subscription"
                 class="input-block subscription-block grid three"
-                :class="{selected:isOption('billing','Subscription plans')}"
-                @click="toggleOption('billing','Subscription plans')"
+                :class="{selected:isChecked('billing','Subscription plans')}"
+                @click="toggleCheckBox('billing','Subscription plans')"
               >
                 <img
                   src="/img/app-estimator/subscription.png"
@@ -991,7 +991,7 @@
                   <input
                     id="subscription"
                     v-model="option_block.billing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="Subscription plans"
                   >
@@ -1001,8 +1001,8 @@
               <div
                 ref="payment"
                 class="input-block payment-block grid three"
-                :class="{selected:isOption('billing','Payment Processing')}"
-                @click="toggleOption('billing','Payment Processing')"
+                :class="{selected:isChecked('billing','Payment Processing')}"
+                @click="toggleCheckBox('billing','Payment Processing')"
               >
                 <img
                   src="/img/app-estimator/credit-card.png"
@@ -1020,7 +1020,7 @@
                   <input
                     id="payment"
                     v-model="option_block.billing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="Payment Processing"
                   >
@@ -1030,8 +1030,8 @@
               <div
                 ref="cart"
                 class="input-block subscription-block grid three"
-                :class="{selected:isOption('billing','Shopping Cart')}"
-                @click="toggleOption('billing','Shopping Cart')"
+                :class="{selected:isChecked('billing','Shopping Cart')}"
+                @click="toggleCheckBox('billing','Shopping Cart')"
               >
                 <img
                   src="/img/app-estimator/shopping.png"
@@ -1049,7 +1049,7 @@
                   <input
                     id="cart"
                     v-model="option_block.billing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="Shopping Cart"
                   >
@@ -1059,8 +1059,8 @@
               <div
                 ref="marketplace"
                 class="input-block marketplace-block grid three"
-                :class="{selected:isOption('billing','User Marketplace')}"
-                @click="toggleOption('billing','User Marketplace')"
+                :class="{selected:isChecked('billing','User Marketplace')}"
+                @click="toggleCheckBox('billing','User Marketplace')"
               >
                 <img
                   src="/img/app-estimator/laptop (2).png"
@@ -1078,7 +1078,7 @@
                   <input
                     id="marketplace"
                     v-model="option_block.billing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="User Marketplace"
                   >
@@ -1088,8 +1088,8 @@
               <div
                 ref="product"
                 class="input-block product-block grid three"
-                :class="{selected:isOption('billing','Product Management')}"
-                @click="toggleOption('billing','Product Management')"
+                :class="{selected:isChecked('billing','Product Management')}"
+                @click="toggleCheckBox('billing','Product Management')"
               >
                 <img
                   src="/img/app-estimator/time.png"
@@ -1106,7 +1106,7 @@
                   <input
                     id="product"
                     v-model="option_block.billing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="Product Management"
                   >
@@ -1116,8 +1116,8 @@
               <div
                 ref="emailMarketing"
                 class="input-block email-block grid three"
-                :class="{selected:isOption('email_marketing','Email Marketing')}"
-                @click="toggleOption('email_marketing','Email Marketing')"
+                :class="{selected:isChecked('email_marketing','Email Marketing')}"
+                @click="toggleCheckBox('email_marketing','Email Marketing')"
               >
                 <img
                   src="/img/app-estimator/newsletter.png"
@@ -1132,7 +1132,7 @@
                   <input
                     id="email_marketing"
                     v-model="option_block.email_marketing"
-                    type="radio"
+                    type="checkbox"
                     name="billing"
                     value="Email Marketing"
                   >
@@ -1153,8 +1153,8 @@
               <div
                 ref="cms_integration"
                 class="input-block cms_integration-block grid gear three"
-                :class="{selected:isOption('types','Dashboard')}"
-                @click="toggleOption('types','Dashboard')"
+                :class="{selected:isChecked('types','Dashboard')}"
+                @click="toggleCheckBox('types','Dashboard')"
               >
                 <img
                   src="/img/app-estimator/gear.png"
@@ -1172,7 +1172,7 @@
                   <input
                     id="cms_integration"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Dashboard"
                   >
@@ -1182,8 +1182,8 @@
               <div
                 ref="user_admin"
                 class="input-block user_admin-block grid three"
-                :class="{selected:isOption('types','User Admin Page')}"
-                @click="toggleOption('types','User Admin Page')"
+                :class="{selected:isChecked('types','User Admin Page')}"
+                @click="toggleCheckBox('types','User Admin Page')"
               >
                 <img
                   src="/img/app-estimator/admin.png"
@@ -1201,7 +1201,7 @@
                   <input
                     id="user_admin"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="User Admin Page"
                   >
@@ -1211,8 +1211,8 @@
               <div
                 ref="approval"
                 class="input-block approval-block grid three"
-                :class="{selected:isOption('types','Moderation/Content Approval')}"
-                @click="toggleOption('types','Moderation/Content Approval')"
+                :class="{selected:isChecked('types','Moderation/Content Approval')}"
+                @click="toggleCheckBox('types','Moderation/Content Approval')"
               >
                 <img
                   src="/img/app-estimator/responsive (2).png"
@@ -1230,7 +1230,7 @@
                   <input
                     id="approval"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Moderation/Content Approval"
                   >
@@ -1240,8 +1240,8 @@
               <div
                 ref="intercom"
                 class="input-block intercom-block grid three"
-                :class="{selected:isOption('types','Intercom')}"
-                @click="toggleOption('types','Intercom')"
+                :class="{selected:isChecked('types','Intercom')}"
+                @click="toggleCheckBox('types','Intercom')"
               >
                 <img
                   src="/img/app-estimator/intercom.png"
@@ -1259,7 +1259,7 @@
                   <input
                     id="intercom"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Intercom"
                   >
@@ -1269,8 +1269,8 @@
               <div
                 ref="usage_analytics"
                 class="input-block usage_analytics-block grid three"
-                :class="{selected:isOption('types','Usage Analytics')}"
-                @click="toggleOption('types','Usage Analytics')"
+                :class="{selected:isChecked('types','Usage Analytics')}"
+                @click="toggleCheckBox('types','Usage Analytics')"
               >
                 <img
                   src="/img/app-estimator/bar-chart.png"
@@ -1288,7 +1288,7 @@
                   <input
                     id="usage_analytics"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Usage Analytics"
                   >
@@ -1298,8 +1298,8 @@
               <div
                 ref="crash_reporting"
                 class="input-block crash_reporting-block grid three"
-                :class="{selected:isOption('types','Crash Reporting')}"
-                @click="toggleOption('types','Crash Reporting')"
+                :class="{selected:isChecked('types','Crash Reporting')}"
+                @click="toggleCheckBox('types','Crash Reporting')"
               >
                 <img
                   src="/img/app-estimator/statistics.png"
@@ -1316,7 +1316,7 @@
                   <input
                     id="crash_reporting"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Crash Reporting"
                   >
@@ -1326,8 +1326,8 @@
               <div
                 ref="performance"
                 class="input-block performance-block grid three"
-                :class="{selected:isOption('types','Performance Monitoring')}"
-                @click="toggleOption('types','Performance Monitoring')"
+                :class="{selected:isChecked('types','Performance Monitoring')}"
+                @click="toggleCheckBox('types','Performance Monitoring')"
               >
                 <img
                   src="/img/app-estimator/speed.png"
@@ -1346,7 +1346,7 @@
                   <input
                     id="performance"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Performance Monitoring"
                   >
@@ -1356,8 +1356,8 @@
               <div
                 ref="multilingual"
                 class="input-block av_processing-block grid three"
-                :class="{selected:isOption('types','Multilingual Support')}"
-                @click="toggleOption('types','Multilingual Support')"
+                :class="{selected:isChecked('types','Multilingual Support')}"
+                @click="toggleCheckBox('types','Multilingual Support')"
               >
                 <img
                   src="/img/app-estimator/support (2).png"
@@ -1374,7 +1374,7 @@
                   <input
                     id="multilingual"
                     v-model="option_block.types"
-                    type="radio"
+                    type="checkbox"
                     name="types"
                     value="Multilingual Support"
                   >
@@ -1396,8 +1396,8 @@
               <div
                 ref="third_party"
                 class="input-block messaging-block grid three"
-                :class="{selected:isOption('external_api','Connect to one or more third party services')}"
-                @click="toggleOption('external_api','Connect to one or more third party services')"
+                :class="{selected:isChecked('external_api','Connect to one or more third party services')}"
+                @click="toggleCheckBox('external_api','Connect to one or more third party services')"
               >
                 <img
                   src="/img/app-estimator/web.png"
@@ -1414,7 +1414,7 @@
                   <input
                     id="third_party"
                     v-model="option_block.external_api"
-                    type="radio"
+                    type="checkbox"
                     name="external_api"
                     value="Connect to one or more third party services"
                   >
@@ -1424,8 +1424,8 @@
               <div
                 ref="sms"
                 class="input-block sms-block grid three"
-                :class="{selected:isOption('external_api','SMS Messaging')}"
-                @click="toggleOption('external_api','SMS Messaging')"
+                :class="{selected:isChecked('external_api','SMS Messaging')}"
+                @click="toggleCheckBox('external_api','SMS Messaging')"
               >
                 <img
                   src="/img/app-estimator/chat (1).png"
@@ -1442,7 +1442,7 @@
                   <input
                     id="sms"
                     v-model="option_block.external_api"
-                    type="radio"
+                    type="checkbox"
                     name="external_api"
                     value="SMS Messaging"
                   >
@@ -1452,8 +1452,8 @@
               <div
                 ref="api"
                 class="input-block api-block grid three"
-                :class="{selected:isOption('external_api','An API for others to integrate with your app')}"
-                @click="toggleOption('external_api','An API for others to integrate with your app')"
+                :class="{selected:isChecked('external_api','An API for others to integrate with your app')}"
+                @click="toggleCheckBox('external_api','An API for others to integrate with your app')"
               >
                 <img
                   src="/img/app-estimator/browser.png"
@@ -1471,7 +1471,7 @@
                   <input
                     id="api"
                     v-model="option_block.external_api"
-                    type="radio"
+                    type="checkbox"
                     name="external_api"
                     value="An API for others to integrate with your app"
                   >
@@ -1481,8 +1481,8 @@
               <div
                 ref="number_masking"
                 class="input-block number_masking-block grid three"
-                :class="{selected:isOption('external_api','Phone Number Masking')}"
-                @click="toggleOption('external_api','Phone Number Masking')"
+                :class="{selected:isChecked('external_api','Phone Number Masking')}"
+                @click="toggleCheckBox('external_api','Phone Number Masking')"
               >
                 <img
                   src="/img/app-estimator/agenda.png"
@@ -1499,7 +1499,7 @@
                   <input
                     id="number_masking"
                     v-model="option_block.external_api"
-                    type="radio"
+                    type="checkbox"
                     name="external_api"
                     value="Phone Number Masking"
                   >
@@ -1512,7 +1512,9 @@
       </div>
     </div>
     <section class="contact-form container">
-      <p class="title center-align">Enter your details to get price estimation</p>
+      <p class="title center-align">
+        Enter your details to get price estimation
+      </p>
       <form action="" class="container">
         <div class="input-container">
           <div class="input-block">
@@ -1551,18 +1553,18 @@ export default {
   data: () => {
     return {
       option_block: {
-        platform: '',
-        design: '',
-        screen: '',
-        signup_login: '',
-        email_marketing: '',
-        secure: '',
-        generated_content: '',
-        dates_and_locations: '',
-        social_and_engagement: '',
-        billing: '',
-        types: '',
-        external_api: ''
+        platform: [],
+        design: [],
+        screen: [],
+        signup_login: [],
+        email_marketing: [],
+        secure: [],
+        generated_content: [],
+        dates_and_locations: [],
+        social_and_engagement: [],
+        billing: [],
+        types: [],
+        external_api: []
       },
       user: {
         firstName: '',
@@ -1574,8 +1576,27 @@ export default {
     }
   },
   methods: {
+    arrayRemove(arr, value) {
+      return arr.filter(ele => ele !== value)
+    },
     toggleOption(input, value) {
       this.option_block[input] = value
+    },
+    toggleCheckBox(input, value) {
+      if (this.isChecked(input, value)) {
+        const result = this.arrayRemove(this.option_block[input], value)
+        if (result) {
+          this.option_block[input] = result
+        }
+      } else {
+        this.option_block[input].push(value)
+      }
+    },
+    isChecked(input, value) {
+      if (this.option_block[input]) {
+        return this.option_block[input].find(item => item === value)
+      }
+      return false
     },
     isOption(input, value) {
       return this.option_block[input] === value
@@ -1783,17 +1804,20 @@ export default {
               .radio-button {
                 height: 100%;
 
-                input[type="radio"] {
+                input[type="radio"],
+                input[type="checkbox"] {
                   opacity: 0;
                 }
 
-                input[type="radio"] + span {
+                input[type="radio"] + span,
+                input[type="checkbox"] + span{
                   background: url("~assets/svg/uncheck-mark.svg") 0 -1px no-repeat;
                   height: 33.4px;
                   padding: 0 0 0 33.4px;
                 }
 
-                input[type="radio"]:checked + span {
+                input[type="radio"]:checked + span,
+                input[type="checkbox"]:checked + span{
                   background: url("~assets/svg/check-mark.svg") 0 -1px no-repeat;
                 }
               }
