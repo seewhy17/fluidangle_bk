@@ -23,20 +23,18 @@
     <section class="projects">
       <div class="filter-options container">
         <ul class="flex dir-row">
-          <li><a class="selected bold" href="">All</a></li>
-          <li><a class="bold" href="">WEB</a></li>
-          <li><a class="bold" href="">MOBILE</a></li>
-          <li><a class="bold" href="">OUR PRODUCTS</a></li>
+          <li><a class="bold" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
+          <li><a class="bold" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
+          <li><a class="bold" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
+          <li><a class="bold" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div class="project heroshe">
+        <div v-for="work in filteredWorks" :key="work.id" class="project heroshe" :class="work.id">
           <div class="grid equal-two">
             <div class="image-part">
               <img
-                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
-                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
-             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
+                :src="work.img"
                 class=""
                 alt=""
               >
@@ -44,107 +42,11 @@
             <div class="content grid equal-two-rows">
               <div class="content-box">
                 <p class="title">
-                  <img src="/svg/heroshe-colored_2.svg" class="" alt="heroshe">
+                  <img v-if="work.title === ''" :src="work.titleImage" class="" :alt="work.title">
+                  {{ work.title }}
                 </p>
                 <p class="text">
-                  We ship from any US
-                  Online Store
-                </p>
-              </div>
-              <div class="action-box">
-                <span class="action-word bold">View case study</span>
-              </div>
-            </div>
-          </div>
-          <div class="cover" />
-        </div>
-        <div class="project plinkd">
-          <div class="grid equal-two">
-            <div class="image-part">
-              <img
-                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
-                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
-             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
-                class=""
-                alt=""
-              >
-            </div>
-            <div class="content grid equal-two-rows">
-              <div class="content-box">
-                <p class="title">
-                  <img
-                    src="/img/LOGO text.png"
-                    srcset="/img/LOGO text@2x.png 2x,
-             /img/LOGO text@3x.png 3x"
-                    class=""
-                    alt="plinkd logo"
-                  >
-                </p>
-                <p class="text">
-                  One Location
-                  Connecting Friends mobile app
-                </p>
-              </div>
-              <div class="action-box">
-                <span class="action-word bold">View case study</span>
-              </div>
-            </div>
-          </div>
-          <div class="cover" />
-        </div>
-        <div class="project prontocare">
-          <div class="grid equal-two">
-            <div class="image-part">
-              <img
-                src="/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png"
-                srcset="img/Screenshot 2019-05-01 at 6.07.27 AM copy@2x.png 2x,
-             /img/Screenshot 2019-05-01 at 6.07.27 AM copy@3x.png 3x"
-                class=""
-                alt=""
-              >
-            </div>
-            <div class="content grid equal-two-rows">
-              <div class="content-box">
-                <p class="title">
-                  ProntoCare
-                </p>
-                <p class="text">
-                  We ship from any US
-                  Online Store
-                </p>
-              </div>
-              <div class="action-box">
-                <span class="action-word bold">View case study</span>
-              </div>
-            </div>
-          </div>
-          <div class="cover" />
-        </div>
-        <div class="project ponos">
-          <div class="grid equal-two">
-            <div class="image-part">
-              <img
-                src="/img/Image 4.png"
-                srcset="img/Image 4@2x.png 2x,
-             /img/Image 4@3x.png 3x"
-                class=""
-                alt=""
-              >
-            </div>
-            <div class="content grid equal-two-rows">
-              <div class="content-box">
-                <p class="title">
-                  <img
-                    src="/img/Image 5.png"
-                    srcset="img/Image 5@2x.png 2x,
-             /img/Image 5@3x.png 3x"
-                    class=""
-                    alt=""
-                  >
-                </p>
-                <p class="text">
-                  Making Living & Traveling <br>
-                  More Affordable for Everyone
+                  {{ work.text }}
                 </p>
               </div>
               <div class="action-box">
@@ -173,6 +75,60 @@ export default {
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  },
+  data: () => ({
+    type: 'all',
+    works: [
+      {
+        id: 'heroshe',
+        title: '',
+        titleImage: '/svg/heroshe-colored_2.svg',
+        text: 'We ship from any US Online Store',
+        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        action: '',
+        type: 'web'
+      },
+      {
+        id: 'plinkd',
+        title: '',
+        titleImage: '/img/LOGO text.png',
+        text: 'One Location Connecting Friends mobile app',
+        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        action: '',
+        type: 'mobile'
+      },
+      {
+        id: 'prontocare',
+        title: 'ProntoCare',
+        titleImage: '',
+        text: 'We ship from any US Online Store',
+        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        action: '',
+        type: 'web'
+      },
+      {
+        id: 'ponos',
+        title: '',
+        titleImage: '/img/Image 5.png',
+        text: 'Making Living & Traveling \n More Affordable for Everyone',
+        img: '/img/Image 4.png',
+        action: '',
+        type: 'mobile'
+      }
+    ],
+    filteredWorks: []
+  }),
+  mounted() {
+    this.filteredWorks = this.works
+  },
+  methods: {
+    filterWorks(type) {
+      this.type = type
+      this.filteredWorks = type === 'all' ? this.works : this.works.filter(work => work.type === type)
+    },
+    isSelected(type) {
+      return this.type === type
+    }
   }
 }
 </script>
@@ -244,9 +200,10 @@ export default {
       margin-top: 8rem;
 
       .filter-options {
+        @include breakpoint($min:1024px){
         width: 50%;
         min-width: 50%;
-
+        }
         li {
           width: 25%;
           list-style-type: none;
@@ -255,13 +212,13 @@ export default {
         a {
           font-size: 1rem;
           padding: {
-            bottom: .5rem;
+            bottom: .25rem;
           };
         }
 
         .selected {
           color: $primary;
-          border-bottom: solid 2px $primary;
+          border-bottom: solid 4px $primary;
         }
       }
 
@@ -341,10 +298,12 @@ export default {
             }
           }
           .action-word {
+            display: flex;
+            align-items: baseline;
+            align-content: baseline;
             text-transform: uppercase;
             font-size: .8rem;
             margin-top: 1.5rem;
-            display: block;
             color: $light;
 
             &:after {

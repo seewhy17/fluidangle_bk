@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-grid container grid">
-      <div>
+      <div class="company-links">
         <p class="title">
           COMPANY
         </p>
@@ -17,7 +17,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div>
+      <div class="services-links">
         <p class="title">
           SERVICES
         </p>
@@ -33,7 +33,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div>
+      <div class="products-links">
         <p class="title">
           PRODUCTS
         </p>
@@ -46,17 +46,23 @@
           </nuxt-link>
         </div>
       </div>
-      <div>
+      <div class="contact-links">
         <p class="title">
           CONTACT
         </p>
         <div class="links flex dir-column">
-          <nuxt-link to="/">
-            234-80283-2321
-          </nuxt-link>
-          <nuxt-link to="/">
-            info@fluidangle.com
-          </nuxt-link>
+          <div class="grid">
+            <img src="/svg/call-answer.svg" alt="">
+            <nuxt-link to="/">
+              234-80283-2321
+            </nuxt-link>
+          </div>
+          <div class="grid">
+            <img src="/svg/close-envelope.svg" alt="">
+            <nuxt-link to="/">
+              info@fluidangle.com
+            </nuxt-link>
+          </div>
           <div class="social-media flex">
             <img
               src="/img/facebook-logo-button.png"
@@ -138,6 +144,16 @@ export default {
         }
         img{
           margin-right: .2rem;
+        }
+      }
+      .contact-links{
+        .grid{
+          grid-template-columns: auto 1fr;
+          align-items: center;
+          margin:{bottom:0.8rem;}
+          a{
+            margin: 0;
+          }
         }
       }
     }
