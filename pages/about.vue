@@ -4,8 +4,8 @@
       <span class="bg" />
       <nav-bar />
       <div class="banner-grid">
-        <div class="grid equal-two-rows">
-          <div class="content">
+        <div class="grid equal-two-rows content">
+          <div class="header">
             <h1>
               WHO WE ARE
             </h1>
@@ -13,7 +13,7 @@
               We are always initiative and responsive
             </p>
           </div>
-          <div>
+          <div class="about-text">
             <p>
               We are doers. Our team of developers, designers, and devops engineers aims to see your ideas fly.
               Our products can get a new venture up and running or boost your existing business with great uptime.
@@ -66,20 +66,28 @@ export default {
         top: 0;
         left: 0;
         background: $primary;
-        height: 80%;
+        height: 60%;
         z-index: -1;
       }
 
       .banner-grid {
-        padding: 4rem 5vw 0;
+        padding: {
+          left:10vw;
+          top:2rem;
+        };
         overflow-x: hidden;
         display: grid;
-        grid-template-columns: 4fr 3fr;
+        grid-template-columns: 1.8fr 2fr;
         @include for-phone-only{
           grid-template-columns: 1fr;
         }
+        .content{
+          grid-template-rows: 1.5fr 1fr;
+          grid-gap: 1rem;
+        }
+        .image-part{}
       }
-      .content {
+      .header {
         text-transform: capitalize;
         color: white;
         padding-top: 1.5rem;
@@ -89,10 +97,18 @@ export default {
         }
 
         p {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
           line-height: 2;
         }
 
+      }
+      .about-text{
+        p{
+          font-size:.75rem;
+          margin:{
+            bottom:.5rem;
+          }
+        }
       }
     }
   }
