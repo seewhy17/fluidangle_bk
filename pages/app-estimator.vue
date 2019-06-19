@@ -106,7 +106,7 @@
                 >
                 <label for="cross-platform">Cross Platform</label>
                 <div class="radio-button flex">
-                  <input id="cross-platform" v-model="option_block" type="checkbox" name="platform" value="Cross Platform">
+                  <input id="cross-platform" v-model="option_block.platform" type="checkbox" name="platform" value="Cross Platform">
                   <span />
                 </div>
               </div>
@@ -1583,6 +1583,7 @@ export default {
       this.option_block[input] = value
     },
     toggleCheckBox(input, value) {
+      // console.log(input, value);
       if (this.isChecked(input, value)) {
         const result = this.arrayRemove(this.option_block[input], value)
         if (result) {
@@ -1593,6 +1594,8 @@ export default {
       }
     },
     isChecked(input, value) {
+      // eslint-disable-next-line no-console
+      // console.log(this.option_block[input])
       if (this.option_block[input]) {
         return this.option_block[input].find(item => item === value)
       }
@@ -1796,9 +1799,9 @@ export default {
               }
 
               img + label {
-                /*margin: {*/
-                /*  left: 35%;*/
-                /*};*/
+                &:hover {
+                  cursor: pointer;
+                }
               }
 
               .radio-button {
