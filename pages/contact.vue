@@ -20,6 +20,50 @@
         <img src="/img/Asset 1.png" alt="Who We Are">
       </div>
     </div>
+    <section class="section contact-box container grid">
+      <div class="contact-form-box">
+        <p class="title">
+          Drop us a message and
+          get a response within 24 hours
+        </p>
+        <form action="" />
+      </div>
+      <div class="info-box">
+        <div class="content-box">
+          <p class="title">
+            Our Headquarters
+          </p>
+          <p class="address">
+            13 Rutland Square, Boston, MA 02118
+          </p>
+          <p class="email">contact@fluidangle.com</p>
+          <p class="tel">Tel: <span>+1 (978) 849-4391</span></p>
+          <div class="social-media">
+            <small>SOCIAL MEDIA</small>
+            <div class="social-media">
+              <img
+                src="/img/facebook-logo-button.png"
+                srcset="/img/facebook-logo-button@2x.png 2x,
+             /img/facebook-logo-button@3x.png 3x"
+                alt="facebook"
+              >
+              <img
+                src="/img/twitter.png"
+                srcset="/img/twitter@2x.png 2x,
+             /img/twitter@3x.png 3x"
+                alt="twitter"
+              >
+              <img
+                src="/img/youtube.png"
+                srcset="/img/youtube@2x.png 2x,
+             /img/youtube@3x.png 3x"
+                alt="youtube"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <statistics />
     <start-project />
     <Footer />
@@ -46,8 +90,6 @@ export default {
     .banner {
       padding-top: 2rem;
       position: relative;
-      min-height: 100vh;
-
       .bg {
         position: absolute;
         width: 100%;
@@ -91,6 +133,55 @@ export default {
           font-size: .75rem;
           margin: {
             bottom: .5rem;
+          }
+        }
+      }
+    }
+    .contact-box{
+        grid-template-columns: 1.5fr 1fr;
+      @include for-phone-only{
+        grid-template-columns: auto;
+      }
+      padding:{top: 5%};
+      &>div{
+        box-shadow: 0 3px 60px 0 #e3e8f1;
+        border-radius: 13px;
+      }
+      .title{
+        font:{
+          size:1.75rem;
+          weight: 500;
+        }
+        color: #542ea4;
+      }
+      .contact-form-box{
+        padding: 3% 5%;
+        .title{
+          width: 70%;
+        }
+      }
+      .info-box{
+        padding: 5% 10%;
+        .content-box{
+          width: 75%;
+        }
+        .title{
+          margin:{
+            bottom:5%;
+          }
+        }
+        .address{
+          margin-bottom: 10%;
+        }
+        .tel{
+          margin-bottom: 7%;
+        }
+        .social-media{
+          small{
+            color:$light-gray;
+          }
+          img{
+            margin-right: 5%;
           }
         }
       }
