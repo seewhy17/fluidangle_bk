@@ -249,6 +249,9 @@ export default {
       .options-container{
         .option-box{
           margin:{ bottom: 5%;}
+          @include for-phone-only{
+            grid-template-columns: auto;
+          }
         }
         .title-box{
           width: 80%;
