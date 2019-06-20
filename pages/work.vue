@@ -30,7 +30,7 @@
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div v-for="work in filteredWorks" :key="work.id" class="project heroshe" :class="work.id">
+        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id">
           <div class="grid equal-two">
             <div class="image-part">
               <img
@@ -84,7 +84,7 @@ export default {
         title: '',
         titleImage: '/svg/heroshe-colored_2.svg',
         text: 'We ship from any US Online Store',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        img: '/img/Heroshe.png',
         action: '',
         type: 'web'
       },
@@ -241,23 +241,23 @@ export default {
 
           &.heroshe {
             background-color: #47b6d2;
-            img{
-              width: 10rem;
+            .image-part{
+              padding:{
+                left:0.5rem;
+              }
+              img{
+                width: 100%;
+                top:-10%;
+              }
             }
           }
 
           &.ponos {
             background-color: $gray;
-            img{
-              width: 9.83rem;
-            }
           }
 
           &.plinkd {
             background-color: #f9872b;
-            img{
-              width:9.5rem;
-            }
           }
 
           &.prontocare {
