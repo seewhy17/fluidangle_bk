@@ -92,7 +92,7 @@
       </div>
       <div class="links">
         <nuxt-link to="/">
-          Term of uses
+          Terms of uses
         </nuxt-link>
         <nuxt-link to="/">
           Privacy Policy
@@ -141,6 +141,7 @@ export default {
           margin:{
             bottom:0.8rem;
           }
+          font-weight: 500;
         }
         img{
           margin-right: .2rem;

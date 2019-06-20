@@ -26,7 +26,35 @@
           Drop us a message and
           get a response within 24 hours
         </p>
-        <form action="" />
+        <form action="" class="form">
+          <div class="input-block flex dir-column">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Your Name" name="name">
+          </div>
+          <div class="input-block flex dir-column">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Enter Your Email Address" name="email">
+          </div>
+          <div class="input-block flex dir-column">
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="text" placeholder="Enter your telephone number" name="telephone">
+          </div>
+          <div class="grid equal-two project-budget">
+            <div class="input-block flex dir-column">
+              <label for="project">Project</label>
+              <input id="project" type="text" placeholder="Select Project type" name="project">
+            </div>
+            <div class="input-block flex dir-column">
+              <label for="budget">Budget</label>
+              <input id="budget" type="text" placeholder="Enter Your budget" name="budget">
+            </div>
+          </div>
+          <div class="input-block flex dir-column">
+            <label for="messages">Messages</label>
+            <textarea id="messages" placeholder="Description" name="description"></textarea>
+          </div>
+          <button class="send-button" @click.prevent>Send Message</button>
+        </form>
       </div>
       <div class="info-box">
         <div class="content-box">
@@ -104,6 +132,7 @@ export default {
         padding: {
           left: 10vw;
           right: 2rem;
+          top:2rem;
         };
         background: $primary;
         overflow-x: hidden;
@@ -138,8 +167,9 @@ export default {
       }
     }
     .contact-box{
-        grid-template-columns: 1.5fr 1fr;
-      @include for-phone-only{
+      grid-template-columns: 1.5fr 1fr;
+      align-items: start;
+      @include breakpoint($max: 1024px){
         grid-template-columns: auto;
       }
       padding:{top: 5%};
@@ -155,15 +185,62 @@ export default {
         color: #542ea4;
       }
       .contact-form-box{
-        padding: 3% 5%;
+        padding: 5% 8%;
         .title{
-          width: 70%;
+          width: 80%;
+        }
+        .form{
+          margin: {
+            top:15%;
+          };
+          @include for-phone-only{
+            .project-budget{
+              grid-template-columns: auto;
+            }
+          }
+          .input-block{
+            padding: 2% 5%;
+            border-radius: 6px;
+            border: solid 1px #707070;
+            margin:{
+              bottom:5%;
+            }
+            label{
+              font:{
+                size:.75rem;
+                weight: 500;
+              }
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea{
+              border:0;
+              padding:{
+                top:3%;
+              }
+            }
+          }
+          .send-button{
+              height: 3rem;
+              width: 8rem;
+              margin: {
+                top: 1.5rem;
+              };
+              border-style: none;
+              border-radius: 5px;
+              color: $light;
+              background-color: $primary;
+              font-size: .95rem;
+              &:focus{
+                outline: 0;
+              }
+          }
         }
       }
       .info-box{
         padding: 5% 10%;
         .content-box{
-          width: 75%;
+          width: 85%;
         }
         .title{
           margin:{
