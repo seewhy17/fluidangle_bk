@@ -30,6 +30,9 @@ a {
   color: inherit;
 }
 
+li{
+  list-style-type: none;
+}
 // helpers
 .left-align {
   text-align: left;
@@ -55,7 +58,9 @@ a {
     min-width: 90%;
   }
 }
-
+.bold {
+  font-weight: bold;
+}
 .btn, button, .card {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   text-decoration: none;
@@ -121,8 +126,14 @@ a {
 .grid {
   display: grid;
   grid-gap: 1rem;
+  .no-gap {
+    grid-gap: 0;
+  }
   &.two, &.equal-two {
     grid-template-columns: 1fr 1fr;
+  }
+  &.equal-two-rows{
+    grid-template-rows: 1fr 1fr;
   }
   &.three {
     grid-template-columns: 1fr 1fr;
@@ -145,13 +156,13 @@ a {
 
 .hide-on-med-and-down {
   @include breakpoint ($max: 992px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-on-small {
   @include breakpoint ($max: 767px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -167,7 +178,7 @@ img {
 }
 
 .form {
-  input, textbox {
+  input, textbox, button {
     &:focus {
       outline: none;
     }

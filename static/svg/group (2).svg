@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.829" height="47" viewBox="0 0 43.829 47">
+    <defs>
+        <style>
+            .cls-1{fill:#90dee0}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#333;stroke-width:2px}.cls-2{fill:#b0d84e}.cls-3{fill:#f66}.cls-4{fill:#fff}
+        </style>
+    </defs>
+    <g id="group_2_" data-name="group (2)" transform="translate(-10.797 1)">
+        <g id="Group_53" data-name="Group 53" transform="translate(23.948 24.731)">
+            <circle id="Ellipse_12" cx="4.355" cy="4.355" r="4.355" class="cls-1" data-name="Ellipse 12" transform="translate(4.409)"/>
+            <path id="Path_267" d="M108.171 262.4h5.591a5.989 5.989 0 0 1 5.968 5.968v3.763H102.2v-3.763a5.989 5.989 0 0 1 5.971-5.968z" class="cls-1" data-name="Path 267" transform="translate(-102.203 -251.862)"/>
+        </g>
+        <path id="Path_268" d="M17.766 242.4h5.591a6 6 0 0 1 5.108 2.9 6.035 6.035 0 0 0-4.516 5.806v1.075H11.8v-3.763a5.932 5.932 0 0 1 5.966-6.018z" class="cls-2" data-name="Path 268" transform="translate(0 -209.819)"/>
+        <path id="Path_269" d="M204.111 242.4h5.589a5.989 5.989 0 0 1 5.968 5.968v3.763h-12.149v-1.075a6.035 6.035 0 0 0-4.519-5.807 6.09 6.09 0 0 1 5.111-2.849z" class="cls-3" data-name="Path 269" transform="translate(-162.044 -209.819)"/>
+        <circle id="Ellipse_13" cx="4.355" cy="4.355" r="4.355" class="cls-2" data-name="Ellipse 13" transform="translate(16.206 21.989)"/>
+        <g id="Group_54" data-name="Group 54" transform="translate(21.368)">
+            <circle id="Ellipse_14" cx="4.355" cy="4.355" r="4.355" class="cls-3" data-name="Ellipse 14" transform="translate(19.14 21.989)"/>
+            <path id="Path_270" d="M94.347 0c6.29 0 11.344 4.086 11.344 9.086s-5.054 9.14-11.344 9.14a14.279 14.279 0 0 1-4.247-.645L85.96 20l.645-4.194A8.424 8.424 0 0 1 83 9.14C83 4.086 88.057 0 94.347 0z" class="cls-3" data-name="Path 270" transform="translate(-83.003)"/>
+        </g>
+        <g id="Group_55" data-name="Group 55" transform="translate(26.69 8.172)">
+            <circle id="Ellipse_15" cx=".806" cy=".806" r=".806" class="cls-4" data-name="Ellipse 15"/>
+            <circle id="Ellipse_16" cx=".806" cy=".806" r=".806" class="cls-4" data-name="Ellipse 16" transform="translate(5.269)"/>
+            <circle id="Ellipse_17" cx=".806" cy=".806" r=".806" class="cls-4" data-name="Ellipse 17" transform="translate(10.484)"/>
+        </g>
+    </g>
+</svg>

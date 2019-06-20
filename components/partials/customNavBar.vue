@@ -4,16 +4,16 @@
       <img src="/svg/fluid-angle_purple.svg" alt="fluid-logo">
     </nuxt-link>
     <div class="links">
-      <nuxt-link to="/">
+      <nuxt-link to="/work">
         Work
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/about">
         About Us
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/blog">
         Blog
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/contact">
         Contact
       </nuxt-link>
     </div>
@@ -24,7 +24,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 5vw;
+  padding: 2rem 5vw;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
   a {
@@ -39,8 +39,7 @@ nav {
 
   .links {
     display: flex;
-    align-items: flex-start;
-
+    align-items: center;
     a {
       padding: 0 1rem;
       text-transform: none;
