@@ -290,7 +290,12 @@ export default {
       &.our-offer {
         margin-top: 5rem;
         padding-bottom: 3rem;
-
+        @include breakpoint($max: 768px){
+          grid-template-columns: auto;
+          padding: {
+            left: 5%;
+          };
+        }
         .img-part {
           display: flex;
           justify-content: left;
@@ -392,8 +397,10 @@ export default {
         }
 
         .service {
-          padding-top: 3rem;
-
+          padding:{
+            top: 3rem;
+            right: 1.5rem;
+          }
           &:nth-child(odd) {
             border: {
               right: solid 1px $light-purple;
