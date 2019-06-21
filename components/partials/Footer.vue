@@ -120,6 +120,7 @@ export default {
     .footer-grid {
       min-height: 18rem;
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: 3.5rem;
       @include for-phone-only {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -136,7 +137,7 @@ export default {
       }
 
       .links {
-        color: $light-gray;
+        color: rgba(#2b2b2b,0.63);
         a{
           margin:{
             bottom:0.8rem;
