@@ -30,52 +30,56 @@
         <img src="/svg/xc.svg" alt="Who We Are">
       </div>
     </div>
-    <section class="blog-container container grid">
-      <section class="posts">
-        <div class="post main-post">
-          <div class="image-part">
-            <img src="/img/custom/Screenshot from 2019-06-21 13:33:30.png" alt="">
-          </div>
-          <div class="content-box">
-            <div class="content">
-              <h3 class="title">The Rebellion Against China’s 996 Culture</h3>
-              <p class="text">
-                Workers will no longer tolerate the punishing schedules of technology giants
-                Workers will no longer tolerate the punishing schedules.
-              </p>
+    <section class="blog-container container">
+      <div class="posts-container grid">
+        <section class="posts">
+          <div class="post card main-post">
+            <div class="image-part">
+              <img src="/img/custom/General (24).jpg" alt="">
             </div>
-            <div class="action-box flex dir-row">
-              <a href="">Entrepreneur</a>
-              <p>7 mins read</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <aside>
-        <div class="post sub-post">
-          <div class="image-part">
-            <img src="/img/custom/Screenshot from 2019-06-21 13:33:48.png" alt="">
-          </div>
-          <div class="content-box">
-            <div class="content">
-              <h3 class="title">
-                The 3 Things Women Over 50
-                Can Do to Keep Their Jobs
-              </h3>
-              <p class="text">
-                Workers will no longer tolerate the punishing
-                schedules of technology giants Workers will
-                no longer tolerate the punishing schedules of
-                technology giants
-              </p>
-            </div>
-            <div class="action-box">
-              <a href="">Entrepreneur</a>
-              <p>7 mins read</p>
+            <div class="content-box">
+              <div class="content">
+                <h3 class="title">
+                  The Rebellion Against China’s 996 Culture
+                </h3>
+                <p class="text">
+                  Workers will no longer tolerate the punishing schedules of technology giants
+                  Workers will no longer tolerate the punishing schedules.
+                </p>
+              </div>
+              <div class="action-box flex dir-row">
+                <a href="">Entrepreneur</a>
+                <p>7 mins read</p>
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </section>
+        <aside>
+          <div class="post card sub-post">
+            <div class="image-part">
+              <img src="/img/custom/General (19).jpg" alt="">
+            </div>
+            <div class="content-box">
+              <div class="content">
+                <h3 class="title">
+                  The 3 Things Women Over 50
+                  Can Do to Keep Their Jobs
+                </h3>
+                <p class="text">
+                  Workers will no longer tolerate the punishing
+                  schedules of technology giants Workers will
+                  no longer tolerate the punishing schedules of
+                  technology giants
+                </p>
+              </div>
+              <div class="action-box flex dir-row">
+                <a href="">Development</a>
+                <p>7 mins read</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
     <Footer />
   </div>
@@ -83,6 +87,7 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+
 export default {
   name: 'Blog',
   components: {
@@ -145,12 +150,13 @@ export default {
           }
         }
       }
-      .input-block{
+
+      .input-block {
         display: inline-flex;
         padding: {
-          left:8%;
-          top:.5rem;
-          bottom:.5rem;
+          left: 8%;
+          top: .5rem;
+          bottom: .5rem;
           right: 1.0625rem;
         };
         margin: {
@@ -160,75 +166,147 @@ export default {
         border: solid 1px #707070;
         background-color: $light;
         font-size: .95rem;
-        input{
+
+        input {
           color: #9fb0bf;
           font-size: 1.28rem;
           line-height: 1.22;
           padding: 1.25rem 0;
-          border:0;
-          &:focus{
+          border: 0;
+
+          &:focus {
             outline: 0;
           }
         }
-        button{
+
+        button {
           border-radius: 48px;
           border: solid 1px #707070;
-          color:$light;
+          color: $light;
           background-color: $primary;
           font-size: 1.75rem;
           padding: {
-            top:.75rem;
-            bottom:.65rem;
-            left:1.5rem;
-            right:1.45rem;
+            top: .75rem;
+            bottom: .65rem;
+            left: 1.5rem;
+            right: 1.45rem;
           };
         }
       }
     }
-    .blog-container{
-      margin-top: 7.25rem;
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 2.5rem;
-      .post{
-        height: 100%;
+
+    .blog-container {
+      width: 85%;
+      min-width: 85%;
+      margin: {
+        top: 7.25rem;
+        right: 6%;
+        left: 9%;
+      }
+      .card{
         border-radius: 20px;
         box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
         padding: {
-          bottom:2rem;
+          bottom: 2rem;
         };
-        .content-box{
+      }
+      .posts-container{
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 2.5rem;
+}
+      .post {
+        height: 100%;
+        display: grid;
+        align-content: space-between;
+
+        .image-part {
+          img {
+            height: 25rem;
+            object-position: top;
+            object-fit: cover;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+        }
+
+        .content-box {
           padding: {
-            left:2.1rem;
-            top:3rem;
+            left: 2.1rem;
+            top: 3rem;
           };
-          .content{
+
+          .content {
             margin-bottom: 3rem;
             width: 85%;
-          h3{
-            line-height: 1.61;
-            font-weight: 500;
-            color: #3b3b3b;
-            margin:{
-              bottom:.5rem;
+
+            h3 {
+              line-height: 1.61;
+              font-weight: 500;
+              color: #3b3b3b;
+              margin: {
+                bottom: .5rem;
+              }
             }
-          }
-            p{
+
+            p {
               color: #555555;
               line-height: 1.61;
             }
           }
-          .action-box{
-            color:$primary;
-            a{
-            padding-right: 1.5rem;
-            border-right: solid 2px purple;
+
+          .action-box {
+            color: $primary;
+            a {
+              padding-right: 1.5rem;
+              border-right: solid 2px purple;
               margin-right: 1rem;
             }
           }
         }
       }
-      .sub-post{
 
+      .sub-post {
+        border-radius: 12px;
+        .image-part{
+          img{
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+          }
+        }
+        .content-box {
+          padding: {
+            top: 1rem;
+          };
+
+          .content {
+            margin-bottom: 1rem;
+            width: 90%;
+
+            h3 {
+              line-height: 1.38;
+              width: 90%;
+              font: {
+                size: 1rem;
+                weight: normal;
+              }
+            }
+
+            p {
+              line-height: 1.38;
+              font-size: .9rem;
+            }
+          }
+
+          .action-box {
+            a {
+              border: {
+                right: 0;
+              };
+              padding-right: 0;
+            }
+          }
+        }
       }
     }
   }
