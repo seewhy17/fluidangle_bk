@@ -17,7 +17,7 @@
             </p>
           </div>
           <div class="subscribe">
-            <form action="">
+            <form action="" class="form">
               <div class="input-block">
                 <input type="text" placeholder="Sign up for our weekly newsletter">
                 <button class="subscribe">
@@ -109,18 +109,20 @@
                 MOST POPULAR
               </h2>
             </div>
-            <div v-for="popular in mostPopular" :key="popular.key" :id="popular.key" class="content-box">
-              <div class="content">
-                <h3 class="title">
-                  {{ popular.title }}
-                </h3>
-                <p class="text">
-                  {{ popular.description }}
-                </p>
-              </div>
-              <div class="action-box flex dir-row">
-                <a href="">{{ popular.type }}</a>
-                <p>{{ popular.minutes }} mins read</p>
+            <div class="wrapper">
+              <div v-for="popular in mostPopular" :id="popular.key" :key="popular.key" class="content-box">
+                <div class="content">
+                  <h3 class="title">
+                    {{ popular.title }}
+                  </h3>
+                  <p class="text">
+                    {{ popular.description }}
+                  </p>
+                </div>
+                <div class="action-box flex dir-row">
+                  <a href="">{{ popular.type }}</a>
+                  <p>{{ popular.minutes }} mins read</p>
+                </div>
               </div>
             </div>
           </div>
@@ -140,6 +142,9 @@
                     <h3 class="title">
                       {{ post.title }}
                     </h3>
+                    <p class="description">
+                      {{post.description}}
+                    </p>
                   </div>
                   <div class="action-box flex dir-row">
                     <a href="">{{ post.type }}</a>
@@ -191,6 +196,12 @@ export default {
         title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
         type: 'Design',
         minutes: '6'
+      },
+      {
+        id: 'popular-01',
+        title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
+        type: 'Design',
+        minutes: '6'
       }
     ]
   })
@@ -198,9 +209,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  body{
+  body {
     background-color: #fdfdfd;;
   }
+
   .page {
     .banner {
       padding-top: 2rem;
@@ -369,6 +381,7 @@ export default {
           .action-box {
             color: $primary;
             align-items: center;
+
             a {
               padding-right: 1.5rem;
               border-right: solid 2px $deep-purple;
@@ -414,6 +427,7 @@ export default {
 
           .action-box {
             align-items: center;
+
             a {
               border: {
                 right: 0;
@@ -461,34 +475,48 @@ export default {
           }
         }
       }
-      .header{
+
+      .header {
         margin-bottom: 2rem;
-        .title{
-          color:$deep-purple;
+
+        .title {
+          color: $primary;
           font-weight: 500;
           line-height: 1.61;
           padding-bottom: .5rem;
           border-bottom: solid 2px $light-gray;
         }
       }
-      .most-popular{
-        .content-box{
-          h3{
+
+      .most-popular {
+        .content-box {
+          &:first-child{
+            border-bottom: solid 2px $light-gray;
+          }
+          padding-bottom: 2rem;
+          margin-bottom: 3rem;
+          h3 {
             font-weight: 500;
             line-height: 1.61;
-            color:$gray;
+            color: $gray;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
           }
         }
-        .action-box{
-            color: $gray;
+
+        .action-box {
+          color: $gray;
           align-items: center;
-            a {
-              padding-right: 1.5rem;
-              border-right: solid 2px $gray;
-              margin-right: 1rem;
-            }
+          a {
+            padding-right: 1rem;
+            border-right: solid 2px $gray;
+            margin-right: 1rem;
+          }
+        }
+      }
+      .trending{
+        .title{
+          padding-bottom: 1rem;
         }
       }
     }
