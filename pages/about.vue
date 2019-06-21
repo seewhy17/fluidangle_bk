@@ -114,7 +114,7 @@
             </div>
             <ul>
               <li><span />UX Research</li>
-              <li><span />Wireframe (LoFi Design) </li>
+              <li><span />Wireframe (LoFi Design)</li>
               <li><span />Mockup (HiFi Design) & Prototyping</li>
             </ul>
             <a>View Our Works</a>
@@ -165,14 +165,13 @@ export default {
     .banner {
       padding-top: 2rem;
       position: relative;
-      min-height: 100vh;
       .bg {
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
         background: $primary;
-        height: 60%;
+        height: 55%;
         z-index: -1;
       }
 
@@ -188,12 +187,12 @@ export default {
           grid-template-columns: 1fr;
         }
         .content{
-          grid-template-rows: 1.5fr 1fr;
+          grid-template-rows: 1.2fr 1fr;
           grid-gap: 1rem;
         }
         .image-part{
           img{
-            height: 35rem;
+            height: 35em;
           }
         }
       }
@@ -203,18 +202,21 @@ export default {
         padding-top: 1.5rem;
 
         h1 {
-          font-size: 4rem;
+          font-size: 3rem;
+          line-height: 1.45;
         }
 
         p {
-          font-size: 1.7rem;
-          line-height: 2;
+          font-size: 1.3rem;
+          line-height: 1.19;
+          font-weight: 500;
         }
 
       }
       .about-text{
         p{
-          font-size:.75rem;
+          font-size:.7rem;
+          line-height: 1.39;
           margin:{
             bottom:.5rem;
           }
@@ -257,12 +259,15 @@ export default {
           width: 80%;
           .title{
             font: {
-              weight: 700;
+              weight: 500;
               size:1.2rem
             };
+            line-height: 1.61;
+            color: #1a1a1a;
+            margin-bottom: 5%;
           }
           .description{
-            font-size: .75rem;
+            font-size: .7rem;
             color: $dark-gray;
             max-height: 7rem;
           }
@@ -290,7 +295,7 @@ export default {
             span{
               width: 1.2rem;
               background-color: $primary;
-              height: 0.2rem;
+              height: 2px;
               margin-right: 1rem;
             }
           }
@@ -313,9 +318,14 @@ export default {
           background-color: rgba(#e3e8f1,.27);
         }
         .title{
-          font-size:1.75rem;
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 1.19;
+          margin-bottom: 2%;
         }
         .action-word{
+          font-weight: 500;
+          font-size: .9rem;
           color:$light-gray;
           span{
             color: $accent;

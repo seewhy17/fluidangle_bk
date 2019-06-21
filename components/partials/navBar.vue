@@ -28,7 +28,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 5vw;
+  padding:{
+    bottom:2rem;
+    left:5vw;
+    right:5vw;
+  }
 
   a {
     color: white;
@@ -42,9 +46,7 @@ nav {
 
   .links {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
+    align-items: center;
     a {
       padding: 0 1rem;
       text-transform: uppercase;

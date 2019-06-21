@@ -116,8 +116,6 @@ export default {
     padding-bottom: 3rem;
 
   .statistics-grid {
-    min-width: 65%;
-    width: 65%;
     align-items: center;
   }
 
