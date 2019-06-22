@@ -81,7 +81,7 @@ export default {
       .left-menu{
         p{
           font-size: 3rem;
-          font-weight: 700;
+          font-weight: 600;
         }
       }
       .right-menu{

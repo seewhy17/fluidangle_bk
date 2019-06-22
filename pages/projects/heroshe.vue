@@ -106,7 +106,46 @@
         </div>
       </section>
     </div>
-  <shortcut-menu :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}"></shortcut-menu>
+    <div class="tools-used">
+      <div class="header">
+        <p class="title center-align">
+          TOOLS WE USED
+        </p>
+      </div>
+      <div class="wrapper grid equal-two container">
+        <div class="technologies">
+          <p class="title">
+            TECHNOLOGIES
+          </p>
+          <div class="technologies-grid flex dir-row">
+            <div v-for="technology in technologies" :key="technology.id" class="technology">
+              <div class="image-part">
+                <img :src="technology.image" alt="">
+              </div>
+              <div class="text">
+                <p>{{ technology.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="integrations">
+          <p class="title">
+            INTEGRATIONS
+          </p>
+          <div class="integrations-grid flex dir-row">
+            <div v-for="integration in integrations" :key="integration.id" class="integration">
+              <div class="image-part">
+                <img :src="integration.image" alt="">
+              </div>
+              <div class="text">
+                <p>{{ integration.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <shortcut-menus :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}" />
     <start-project />
     <Footer />
   </div>
@@ -121,9 +160,50 @@ export default {
   components: {
     NavBar,
     Footer,
-    shortcutMenu: () => ({ component: import('~/components/shortCutMenus.vue') }),
+    shortcutMenus: () => ({ component: import('~/components/shortCutMenus.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
-  }
+  },
+  data: () => ({
+    technologies: [
+      {
+        id: 'tech01',
+        text: 'HTML 5 \t CSS3',
+        image: '/img/HTML5CSS3Logos.png'
+      },
+      {
+        id: 'tech02',
+        text: 'Javascript',
+        image: '/img/Image 38.png'
+      },
+      {
+        id: 'tech03',
+        text: 'VueJS',
+        image: '/img/Image 39.png'
+      },
+      {
+        id: 'tech04',
+        text: '',
+        image: '/img/Image 37.png'
+      },
+      {
+        id: 'tech05',
+        text: '',
+        image: '/img/Image 42.png'
+      }
+    ],
+    integrations: [
+      {
+        id: 'int01',
+        text: 'Amazon AWS3',
+        image: '/img/Image 40.png'
+      },
+      {
+        id: 'int02',
+        text: '',
+        image: '/img/Image 41.png'
+      }
+    ]
+  })
 }
 </script>
 
@@ -278,6 +358,92 @@ export default {
           font-size: 1.4rem;
           line-height: 1.39;
           color:$dark-gray;
+        }
+      }
+    }
+    .tools-used{
+      background-color: #f2f2f3;
+      padding: {
+        top:3rem;
+        bottom: 3rem;
+      };
+      .header{
+        .title{
+          color: $gray;
+          font:{
+            weight: 500;
+            size: 1.5rem;
+          }
+          margin:{
+            bottom:5rem;
+          }
+        }
+      }
+      &>.wrapper{
+        .title{
+          line-height: 1.61;
+          font-weight: 600;
+          font-size:1.5rem;
+          color:$gray;
+          margin:{
+            bottom:1rem;
+          }
+        }
+      }
+      .technologies{
+        padding: {
+          left:5rem;
+          right:5rem;
+        };
+        border: {
+          right: solid 2px $gray;
+        };
+        .technologies-grid{
+          flex-wrap: wrap;
+        }
+        .technology{
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          margin-right: 5%;
+          margin-bottom: 5%;
+          &:first-child{
+            flex-grow:1
+          }
+          &:nth-last-child(-n+2){
+            flex-grow: .5;
+          }
+          .image-part{
+            img{
+              height: 5rem;
+              object-position: center;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .integrations{
+        padding: {
+          left:5rem;
+          right:5rem;
+        };
+        .integration{
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          margin-right: 5%;
+          margin-bottom: 5%;
+          .image-part{
+            img{
+              height: 4rem;
+              object-position: center;
+              object-fit: contain;
+            }
+          }
         }
       }
     }
