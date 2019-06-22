@@ -31,9 +31,11 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'TreeApp',
-  NavBar,
-  Footer,
-  'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  components: {
+    NavBar,
+    Footer,
+    'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  }
 }
 </script>
 
