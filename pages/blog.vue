@@ -157,20 +157,28 @@
         </div>
         <aside>
           <div class="whats-new card">
-            <p class="title">
-              Whats New
-            </p>
+            <div class="whats-new-header">
+              <p class="title">
+                Whats New
+              </p>
+            </div>
             <div class="filter">
               <a href="" class="filter-options selected" @click.prevent="">Latest</a>
               <a href="" class="filter-options" @click.prevent="">Popular</a>
               <a href="" class="filter-options" @click.prevent="">Comment</a>
             </div>
             <div class="new-posts">
-              <div class="new-post flex dir-row">
-                <div class="image-part" />
-                <div class="content-box flex">
-                  <p class="title" />
-                  <small class="date" />
+              <div v-for="newPost in whatsNew" :key="newPost.key" class="new-post flex dir-row">
+                <div class="image-part flex">
+                  <img :src="newPost.image" alt="">
+                </div>
+                <div class="content-box flex dir-column">
+                  <p class="title">
+                    {{ newPost.title }}
+                  </p>
+                  <small class="date">
+                    {{ newPost.date }}
+                  </small>
                 </div>
               </div>
             </div>
@@ -244,35 +252,35 @@ export default {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        imgage: '',
+        image: '/img/custom/Creative & Graphics (49).jpg',
         type: 'latest'
       },
       {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        imgage: '',
+        image: '/img/custom/Creative & Graphics (49).jpg',
         type: 'latest'
       },
       {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        imgage: '',
+        image: '/img/custom/Creative & Graphics (49).jpg',
         type: 'latest'
       },
       {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        imgage: '',
+        image: '/img/custom/Creative & Graphics (49).jpg',
         type: 'latest'
       },
       {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        imgage: '',
+        image: '/img/custom/Creative & Graphics (49).jpg',
         type: 'latest'
       }
     ]
@@ -593,6 +601,67 @@ export default {
       }
       .whats-new{
         margin-bottom:2rem;
+        padding:{
+          top:2.5rem;
+          left: 2rem;
+        }
+        .whats-new-header{
+        .title{
+          color: $deep-purple;
+          font:{
+            weight: 500;
+            size: 1.5rem;
+          }
+        }
+          margin: {
+            bottom: 1rem;
+          };
+          line-height: 1.61;
+        }
+        .filter{
+          margin-bottom: 1.5rem;
+        }
+        .filter-options{
+          color: rgba(#464646,0.45);
+          line-height: 1.36;
+          margin: {
+            right: 1rem;
+          };
+          &.selected{
+            font-weight: 700;
+            line-height: 1.44;
+            color: #464646;
+          }
+        }
+        .new-posts{
+          justify-content: center;
+          .new-post{
+            margin-bottom: 1rem;
+            .image-part{
+              width: 25%;
+              margin: {
+                right: 5%;
+              };
+              img{
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+              }
+            }
+            .content-box{
+              padding:.7rem 0
+            }
+            .title{
+              line-height: 1.44;
+              color: #1d1d1d;
+              font-weight: 700;
+            }
+            .date{
+              line-height: 1.38;
+              color: rgba(#464646,.71);
+            }
+          }
+        }
       }
       .categories{
         padding:{
