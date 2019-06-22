@@ -108,9 +108,21 @@
     </div>
     <div class="menus">
       <div class="wrapper grid">
-        <div class="left-menu"></div>
-        <div class="icon"></div>
-        <div class="right-menu"></div>
+        <div class="left-menu">
+          <div class="wrapper">
+            <chevron-left />
+            <p>PLINKD</p>
+          </div>
+        </div>
+        <div class="menu-grid">
+          <view-grid />
+        </div>
+        <div class="right-menu">
+          <div class="wrapper">
+            <chevron-right />
+            <img src="/img/Image 7.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
     <start-project />
@@ -127,6 +139,9 @@ export default {
   components: {
     NavBar,
     Footer,
+    ChevronLeft: () => ({ component: import('vue-material-design-icons/ChevronLeft.vue') }),
+    ViewGrid: () => ({ component: import('vue-material-design-icons/ViewGrid.vue') }),
+    ChevronRight: () => ({ component: import('vue-material-design-icons/ChevronRight.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   }
 }
