@@ -71,7 +71,32 @@
             </div>
           </div>
         </div>
-        <div class="links" />
+        <div class="info-box">
+          <div class="links">
+            <div class="link grid">
+              <div class="image-part flex">
+                <img src="/svg/monitor.svg" alt="">
+              </div>
+              <a href="" class="flex">Visit Website</a>
+            </div>
+            <div class="link grid">
+              <div class="image-part flex">
+                <img src="/svg/pdf.svg" alt="">
+              </div>
+              <a href="" class="flex">Download Case study</a>
+            </div>
+          </div>
+          <div class="app-stores grid equal-two">
+            <div class="image flex"><img src="" alt=""></div>
+            <div class="image flex"><img src="" alt=""></div>
+          </div>
+          <div class="project-team">
+            <p class="title">PROJECT TEAM</p>
+            <div class="image-part flex">
+              <img src="" alt="">
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <start-project />
@@ -184,6 +209,25 @@ export default {
           font-size: 1.2rem;
           color: $gray;
           font-weight: normal;
+        }
+      }
+      .info-box{
+        .links{
+          .link{
+            grid-template-columns: 20% 1fr;
+            grid-gap: .2rem;
+            padding: .5rem 1rem;
+            .image-part{
+              background-color: #dce2e6;
+              padding: 1.5rem 1rem 1rem;
+            }
+            a{
+              background-color: #dce2e6;
+              padding: 1rem 1.5rem 1rem;
+              align-items: center;
+              color: $gray;
+            }
+          }
         }
       }
     }
