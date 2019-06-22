@@ -45,7 +45,7 @@
                 <p class="amount">
                   45
                 </p>
-                <p class="comment">
+                <p class="comment center-align">
                   SCREENS
                 </p>
               </div>
@@ -55,7 +55,7 @@
                 <p class="amount">
                   1.2k
                 </p>
-                <p class="comment">
+                <p class="comment center-align">
                   HOURS SPENT
                 </p>
               </div>
@@ -65,7 +65,7 @@
                 <p class="amount">
                   5
                 </p>
-                <p class="comment">
+                <p class="comment center-align">
                   PEOPLE INVOLVED
                 </p>
               </div>
@@ -106,25 +106,7 @@
         </div>
       </section>
     </div>
-    <div class="menus">
-      <div class="wrapper grid">
-        <div class="left-menu">
-          <div class="wrapper">
-            <chevron-left />
-            <p>PLINKD</p>
-          </div>
-        </div>
-        <div class="menu-grid">
-          <view-grid />
-        </div>
-        <div class="right-menu">
-          <div class="wrapper">
-            <chevron-right />
-            <img src="/img/Image 7.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+  <shortcut-menu :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}"></shortcut-menu>
     <start-project />
     <Footer />
   </div>
@@ -139,9 +121,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    ChevronLeft: () => ({ component: import('vue-material-design-icons/ChevronLeft.vue') }),
-    ViewGrid: () => ({ component: import('vue-material-design-icons/ViewGrid.vue') }),
-    ChevronRight: () => ({ component: import('vue-material-design-icons/ChevronRight.vue') }),
+    shortcutMenu: () => ({ component: import('~/components/shortCutMenus.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   }
 }

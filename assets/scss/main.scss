@@ -195,3 +195,17 @@ p{
   font-stretch: normal;
   letter-spacing: normal;
 }
+.material-design-icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+.material-design-icon > .material-design-icon__svg {
+  height: 1em;
+  width: 1em;
+  //position: absolute;
+  bottom: -0.125em;
+}
+
