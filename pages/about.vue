@@ -171,14 +171,13 @@ export default {
         top: 0;
         left: 0;
         background: $primary;
-        height: 55%;
+        height: 50%;
         z-index: -1;
       }
 
       .banner-grid {
         padding: {
           left:10vw;
-          top:2rem;
         };
         overflow-x: hidden;
         display: grid;
@@ -187,7 +186,7 @@ export default {
           grid-template-columns: 1fr;
         }
         .content{
-          grid-template-rows: 1.2fr 1fr;
+          grid-template-rows: 1fr 1.5fr;
           grid-gap: 1rem;
         }
         .image-part{
@@ -215,10 +214,14 @@ export default {
       }
       .about-text{
         p{
-          font-size:.7rem;
+          font-size:1rem;
           line-height: 1.39;
+          color:$dark-gray;
           margin:{
             bottom:.5rem;
+          }
+          @include breakpoint($max: 768px){
+            font-size: .7rem;
           }
         }
       }
