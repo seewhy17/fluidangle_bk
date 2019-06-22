@@ -25,7 +25,7 @@
           <p class="title">
             Heroshe
           </p>
-          <div class="content">
+          <div class="content introduction">
             <p>
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -34,13 +34,14 @@
             <br>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
               ””Lorem ipsum dolor sit amet, ”
             </p>
           </div>
           <div class="stats grid">
             <div class="stat">
-              <div class="content">
+              <div class="content-box">
                 <p class="amount">
                   45
                 </p>
@@ -50,7 +51,7 @@
               </div>
             </div>
             <div class="stat">
-              <div class="content">
+              <div class="content-box">
                 <p class="amount">
                   1.2k
                 </p>
@@ -60,7 +61,7 @@
               </div>
             </div>
             <div class="stat">
-              <div class="content">
+              <div class="content-box">
                 <p class="amount">
                   5
                 </p>
@@ -87,17 +88,30 @@
             </div>
           </div>
           <div class="app-stores grid equal-two">
-            <div class="image flex"><img src="" alt=""></div>
-            <div class="image flex"><img src="" alt=""></div>
+            <div class="image flex">
+              <img src="/img/Image 21.png" alt="">
+            </div>
+            <div class="image flex">
+              <img src="/img/Image 20.png" alt="">
+            </div>
           </div>
           <div class="project-team">
-            <p class="title">PROJECT TEAM</p>
+            <p class="title">
+              PROJECT TEAM
+            </p>
             <div class="image-part flex">
-              <img src="" alt="">
+              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
             </div>
           </div>
         </div>
       </section>
+    </div>
+    <div class="menus">
+      <div class="wrapper grid">
+        <div class="left-menu"></div>
+        <div class="icon"></div>
+        <div class="right-menu"></div>
+      </div>
     </div>
     <start-project />
     <Footer />
@@ -137,7 +151,8 @@ export default {
       .banner-grid {
         padding: 0 5vw 0;
         overflow-x: hidden;
-        .image-part{
+
+        .image-part {
           justify-content: center;
         }
       }
@@ -151,7 +166,8 @@ export default {
 
         h1 {
           font-size: 3.5rem;
-          img{
+
+          img {
             width: 30%;
           }
         }
@@ -160,44 +176,58 @@ export default {
           font-size: 1.2rem;
           font-weight: 500;
           line-height: 1.43;
-          margin:{
-            bottom: 1rem;}
+          margin: {
+            bottom: 1rem;
+          }
         }
       }
     }
-    .project-container{
-      .summary{
+
+    .project-container {
+      .summary {
         grid-template-columns: 2fr 1fr;
+        grid-gap: 5rem;
         padding: {
-          top:5rem;
+          top: 5rem;
         };
+
         .content-box{
+          .title {
+            font-weight: 500;
+            line-height: 1.61;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+        .introduction {
           margin-bottom: 3rem;
-          .title{
-          font-weight: 500;
-          line-height: 1.61;
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
+          p{
+            font-size: .9rem;
           }
         }
       }
-      .stats{
-        grid-template-columns: 1fr 2fr 1fr;
+
+      .stats {
+        grid-template-columns: 1fr 1.5fr 1fr;
         margin-top: 2rem;
-        .stat{
+
+        .stat {
           padding: 1rem 0;
-          &:nth-child(2){
+
+          &:nth-child(2) {
             border: {
-              left:solid 2px $light-purple;
-              right:solid 2px $light-purple;
+              left: solid 2px $light-purple;
+              right: solid 2px $light-purple;
             };
           }
         }
-        .content{
+
+        .content-box {
           display: flex;
           flex-direction: column;
           align-items: center;
         }
+
         .amount {
           font-size: 3.2rem;
           font-weight: 700;
@@ -211,23 +241,48 @@ export default {
           font-weight: normal;
         }
       }
-      .info-box{
-        .links{
-          .link{
+
+      .info-box {
+        .links {
+          margin-bottom: 1.5rem;
+          .link {
             grid-template-columns: 20% 1fr;
             grid-gap: .2rem;
-            padding: .5rem 1rem;
-            .image-part{
+            padding: {
+              top: .5rem;
+              bottom: .5rem;
+              right: 1rem
+            };
+
+            .image-part {
               background-color: #dce2e6;
               padding: 1.5rem 1rem 1rem;
             }
-            a{
+
+            a {
               background-color: #dce2e6;
               padding: 1rem 1.5rem 1rem;
               align-items: center;
               color: $gray;
             }
           }
+        }
+      }
+
+      .app-stores {
+        .image {
+          margin-bottom: 1.5rem;
+          img {
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+      }
+      .project-team{
+        .title{
+          font-size: 1.4rem;
+          line-height: 1.39;
+          color:$dark-gray;
         }
       }
     }
