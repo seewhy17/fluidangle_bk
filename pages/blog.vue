@@ -607,7 +607,7 @@ export default {
         }
         .whats-new-header{
         .title{
-          color: $deep-purple;
+          color: $primary;
           font:{
             weight: 500;
             size: 1.5rem;
