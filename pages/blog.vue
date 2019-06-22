@@ -143,7 +143,7 @@
                       {{ post.title }}
                     </h3>
                     <p class="description">
-                      {{post.description}}
+                      {{ post.description }}
                     </p>
                   </div>
                   <div class="action-box flex dir-row">
@@ -155,7 +155,42 @@
             </div>
           </div>
         </div>
-        <aside />
+        <aside>
+          <div class="whats-new card">
+            <p class="title">
+              Whats New
+            </p>
+            <div class="filter">
+              <a href="" class="filter-options selected" @click.prevent="">Latest</a>
+              <a href="" class="filter-options" @click.prevent="">Popular</a>
+              <a href="" class="filter-options" @click.prevent="">Comment</a>
+            </div>
+            <div class="new-posts">
+              <div class="new-post flex dir-row">
+                <div class="image-part" />
+                <div class="content-box flex">
+                  <p class="title" />
+                  <small class="date" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="categories card">
+            <p class="title">
+              Categories
+            </p>
+            <div class="content-box">
+              <ul>
+                <li><a href="" @click.prevent>Entrepreneur</a></li>
+                <li><a href="" @click.prevent>Design</a></li>
+                <li><a href="" @click.prevent>Development</a></li>
+                <li><a href="" @click.prevent>Innovation</a></li>
+                <li><a href="" @click.prevent>Startup</a></li>
+                <li><a href="" @click.prevent>Strategy</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
     <Footer />
@@ -202,6 +237,43 @@ export default {
         title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
         type: 'Design',
         minutes: '6'
+      }
+    ],
+    whatsNew: [
+      {
+        id: 'new-01',
+        title: 'Lorem ipsum dolor',
+        date: 'Feb 14 2019',
+        imgage: '',
+        type: 'latest'
+      },
+      {
+        id: 'new-01',
+        title: 'Lorem ipsum dolor',
+        date: 'Feb 14 2019',
+        imgage: '',
+        type: 'latest'
+      },
+      {
+        id: 'new-01',
+        title: 'Lorem ipsum dolor',
+        date: 'Feb 14 2019',
+        imgage: '',
+        type: 'latest'
+      },
+      {
+        id: 'new-01',
+        title: 'Lorem ipsum dolor',
+        date: 'Feb 14 2019',
+        imgage: '',
+        type: 'latest'
+      },
+      {
+        id: 'new-01',
+        title: 'Lorem ipsum dolor',
+        date: 'Feb 14 2019',
+        imgage: '',
+        type: 'latest'
       }
     ]
   })
@@ -517,6 +589,39 @@ export default {
       .trending{
         .title{
           padding-bottom: 1rem;
+        }
+      }
+      .whats-new{
+        margin-bottom:2rem;
+      }
+      .categories{
+        padding:{
+          top:2.5rem;
+          left: 2rem;
+          bottom: 5rem;
+        }
+        .title{
+          font:{
+            size: 1.5rem;
+            weight: 500;
+          }
+          color:$gray;
+          line-height: 1.61;
+        }
+        ul{
+          padding: 0;
+          margin-top: 1.5rem;
+          li{
+            padding:{
+              top:.5rem;
+              bottom:.5rem;
+            }
+            margin-bottom: .5rem;
+            a{
+              line-height: 1.39;
+              color: $gray;
+            }
+          }
         }
       }
     }
