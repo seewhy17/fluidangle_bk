@@ -114,7 +114,6 @@ export default {
 
 <style scoped lang="scss">
   .page {
-
     .banner {
       padding-top: 2rem;
       position: relative;
