@@ -105,6 +105,38 @@
           </div>
         </div>
       </section>
+      <div class="process grid equal-two">
+        <div class="content-box">
+          <div class="challenge">
+            <p class="title">
+              The Challenge
+            </p>
+            <p class="text">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="what-we-did">
+            <p class="title">What we did</p>
+            <ul>
+              <li>Front End Development</li>
+              <li>Web Design</li>
+              <li>Search Engine Optimization</li>
+              <li>Content Management System</li>
+              <li>Bespoke UI Design</li>
+              <li>Mobile Responsive Development</li>
+              <li>Blog Integration</li>
+              <li>Live Chat Integration</li>
+              <li>Photo Gallery Integration</li>
+              <li>Technical Support</li>
+            </ul>
+          </div>
+        </div>
+        <div class="image-part">
+          <img src="/img/custom/Screenshot from 2019-06-23 14:20:39.png" alt="">
+        </div>
+      </div>
     </div>
     <div class="tools-used">
       <div class="header">
@@ -261,11 +293,16 @@ export default {
     .project-container {
       .summary {
         grid-template-columns: 2fr 1fr;
+        @include breakpoint($max: 768px){
+          grid-template-columns: 1fr;
+        }
         grid-gap: 5rem;
         padding: {
           top: 5rem;
         };
-
+        margin:{
+          bottom: 4rem;
+        }
         .content-box{
           .title {
             font-weight: 500;
@@ -281,7 +318,42 @@ export default {
           }
         }
       }
-
+      .process{
+        .content-box{
+          width: 85%;
+          &>div{
+            margin-bottom: 3rem;
+          }
+          .title{
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 1.61;
+            color:$gray;
+            margin: {
+              bottom:1rem;
+            };
+          }
+          ul{
+            padding: 0;
+            height: 9rem;
+            overflow: hidden;
+          }
+          .text,
+          li{
+          font-size: 1rem;
+            line-height: 1.44;
+            color:$dark-gray;
+            font-weight: 500
+          }
+          .image-part{
+            img{
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+      }
       .stats {
         grid-template-columns: 1fr 1.5fr 1fr;
         margin-top: 2rem;
@@ -380,6 +452,9 @@ export default {
         }
       }
       &>.wrapper{
+        @include breakpoint($max: 768px){
+          grid-template-columns: 1fr;
+        }
         .title{
           line-height: 1.61;
           font-weight: 600;
