@@ -16,7 +16,7 @@
       <nuxt-link to="/contact">
         Contact
       </nuxt-link>
-      <a class="phone" href="tel:+19788494391">
+      <a class="phone hide-on-med-and-down" href="tel:+19788494391">
         <img src="/svg/phone-receiver.svg" alt="phone">
         +1 (978) 849-4391
       </a>
@@ -28,7 +28,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 5vw;
+  padding:{
+    bottom:2rem;
+    left:5vw;
+    right:5vw;
+  }
 
   a {
     color: white;
@@ -42,9 +46,7 @@ nav {
 
   .links {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
+    align-items: center;
     a {
       padding: 0 1rem;
       text-transform: uppercase;

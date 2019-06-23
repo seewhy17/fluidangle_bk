@@ -116,8 +116,6 @@ export default {
     padding-bottom: 3rem;
 
   .statistics-grid {
-    min-width: 65%;
-    width: 65%;
     align-items: center;
   }
 
@@ -125,9 +123,17 @@ export default {
     width: 25%;
     justify-items: center;
     text-align: center;
+    margin-bottom: 5%;
+    @include for-phone-only{
+      width: 100%;
+      border-left:0;
+      border-bottom: solid 2px $light-purple;
+    }
 
   &:nth-child(n+2) {
+    @include for-tablet-portrait-up{
      border-left: solid 2px $light-purple;
+    }
    }
 
   .amount {

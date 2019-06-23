@@ -13,7 +13,7 @@
             We are proud of our portfolio and we believe you’ll love it too.
           </p>
         </div>
-        <div class="project-amount container">
+        <div class="project-amount">
           <p class="flex dir-column">
             <span>23</span> Projects
           </p>
@@ -23,14 +23,14 @@
     <section class="projects">
       <div class="filter-options container">
         <ul class="flex dir-row">
-          <li><a class="bold" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
-          <li><a class="bold" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
-          <li><a class="bold" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
-          <li><a class="bold" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
+          <li><a class="" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
+          <li><a class="" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
+          <li><a class="" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
+          <li><a class="" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div v-for="work in filteredWorks" :key="work.id" class="project heroshe" :class="work.id">
+        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id">
           <div class="grid equal-two">
             <div class="image-part">
               <img
@@ -84,7 +84,7 @@ export default {
         title: '',
         titleImage: '/svg/heroshe-colored_2.svg',
         text: 'We ship from any US Online Store',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        img: '/img/Heroshe.png',
         action: '',
         type: 'web'
       },
@@ -150,7 +150,7 @@ export default {
       }
 
       .banner-grid {
-        padding: 4rem 5vw 0;
+        padding: 0 5vw 0;
         overflow-x: hidden;
       }
 
@@ -158,15 +158,19 @@ export default {
         text-transform: capitalize;
         color: white;
         padding-top: 1.5rem;
+        margin: {
+          left:0
+        };
 
         h1 {
-          font-size: 4.5rem;
+          font-size: 3.5rem;
           margin-bottom: 1rem;
         }
 
         p {
           font-size: .95rem;
-          line-height: 2;
+          font-weight: 500;
+          line-height: 1.43;
         }
       }
 
@@ -179,6 +183,7 @@ export default {
         p {
           font-size: 1.7rem;
           position: absolute;
+          font-weight: 500;
           bottom: -15%;
           display: inline-flex;
           padding: 1.8rem 2rem;
@@ -186,11 +191,13 @@ export default {
           align-items: center;
           color: $gray;
           border: solid 1px $gray;
+          text-transform: uppercase;
         }
 
         span {
           font-size: 3rem;
-          font-weight: 500;
+          line-height: 1.45;
+          font-weight: 700;
           color: $primary
         }
       }
@@ -205,12 +212,15 @@ export default {
         min-width: 50%;
         }
         li {
-          width: 25%;
+          width: 20%;
           list-style-type: none;
         }
 
         a {
-          font-size: 1rem;
+          font:{
+            size: 1rem;
+            weight: 500;
+          }
           padding: {
             bottom: .25rem;
           };
@@ -241,23 +251,23 @@ export default {
 
           &.heroshe {
             background-color: #47b6d2;
-            img{
-              width: 10rem;
+            .image-part{
+              padding:{
+                left:0.5rem;
+              }
+              img{
+                width: 100%;
+                top:-10%;
+              }
             }
           }
 
           &.ponos {
             background-color: $gray;
-            img{
-              width: 9.83rem;
-            }
           }
 
           &.plinkd {
             background-color: #f9872b;
-            img{
-              width:9.5rem;
-            }
           }
 
           &.prontocare {
@@ -289,6 +299,9 @@ export default {
               color:$light;
               font-weight: 700;
               font-size: 1.8rem;
+              img{
+                width: 65%;
+              }
             }
 
             .text {
@@ -315,8 +328,7 @@ export default {
         }
 
         .cover {
-          height: 4rem;
-          bottom: -4rem;
+          height: 45%;
           position: absolute;
           width: 100%;
           background-color: #fff;

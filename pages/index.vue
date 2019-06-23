@@ -82,64 +82,65 @@
       </div>
     </section>
 
-    <div class="arrow-up center-align">
-      <a class="bold">^</a>
-    </div>
-
     <section class="section our-services">
-      <span class="fancy-heading bold">
-        Our Services
-      </span>
-      <div class="content-grid grid equal-two">
-        <div class="services-part">
-          <div class="services-grid container grid equal-two no-gap">
-            <div class="service">
-              <p class="service-title">
-                Web
-              </p>
-              <div class="service-options">
-                <p>Frontend</p>
-                <p>Backend</p>
+      <div class="arrow-up flex">
+        <a class="bold"><img src="/svg/keyboard-right-arrow-button.svg" alt=""></a>
+      </div>
+      <div class="wrapper">
+        <span class="fancy-heading bold">
+          Our Services
+        </span>
+        <div class="content-grid grid equal-two">
+          <div class="services-part">
+            <div class="services-grid container grid equal-two no-gap">
+              <div class="service">
+                <p class="service-title">
+                  Web
+                </p>
+                <div class="service-options">
+                  <p>Frontend</p>
+                  <p>Backend</p>
+                </div>
               </div>
-            </div>
-            <div class="service">
-              <p class="service-title">
-                Mobile
-              </p>
-              <div class="service-options">
-                <p>iOS Platform</p>
-                <p>Android</p>
+              <div class="service">
+                <p class="service-title">
+                  Mobile
+                </p>
+                <div class="service-options">
+                  <p>iOS Platform</p>
+                  <p>Android</p>
+                </div>
               </div>
-            </div>
-            <div class="service">
-              <p class="service-title">
-                Design
-              </p>
-              <div class="service-options">
-                <p>UI/UX</p>
-                <p>Sketching</p>
-                <p>Prototyping</p>
+              <div class="service">
+                <p class="service-title">
+                  Design
+                </p>
+                <div class="service-options">
+                  <p>UI/UX</p>
+                  <p>Sketching</p>
+                  <p>Prototyping</p>
+                </div>
               </div>
-            </div>
-            <div class="service">
-              <p class="service-title">
-                Testing
-              </p>
-              <div class="service-options">
-                <p>Usability Test</p>
-                <p>Performance</p>
-                <p>Security</p>
+              <div class="service">
+                <p class="service-title">
+                  Testing
+                </p>
+                <div class="service-options">
+                  <p>Usability Test</p>
+                  <p>Performance</p>
+                  <p>Security</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="image-part hide-on-small">
-          <img
-            src="/img/shutterstock_758031970.png"
-            srcset="/img/shutterstock-758031970@2x.png 2x,
+          <div class="image-part hide-on-small">
+            <img
+              src="/img/shutterstock_758031970.png"
+              srcset="/img/shutterstock-758031970@2x.png 2x,
              /img/shutterstock-758031970@3x.png 3x"
-            alt="services"
-          >
+              alt="services"
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -290,7 +291,12 @@ export default {
       &.our-offer {
         margin-top: 5rem;
         padding-bottom: 3rem;
-
+        @include breakpoint($max: 768px){
+          grid-template-columns: auto;
+          padding: {
+            left: 5%;
+          };
+        }
         .img-part {
           display: flex;
           justify-content: left;
@@ -372,10 +378,13 @@ export default {
 
       &.our-services {
         background-color: rgba(#e3e8f1, 0.25);
-        padding: {
-          top:4rem;
-          bottom:4rem
-        };
+        position: relative;
+        .wrapper{
+          padding: {
+            top:4rem;
+            bottom:4rem
+          };
+        }
         .fancy-heading {
           margin: {
             left: 10vw;
@@ -392,8 +401,10 @@ export default {
         }
 
         .service {
-          padding-top: 3rem;
-
+          padding:{
+            top: 3rem;
+            right: 1.5rem;
+          }
           &:nth-child(odd) {
             border: {
               right: solid 1px $light-purple;
@@ -443,17 +454,18 @@ export default {
   }
 
   .arrow-up {
-    margin: {
-      top: 2%
-    };
     color: $primary;
     font-size: 1.8rem;
-
+    justify-content: center;
     a {
-      padding: .5rem 1rem 0;
-      background-color: rgba(#e3e8f1, 0.25);
-      border-top-left-radius: 40%;
-      border-top-right-radius: 40%;
+      padding: 1rem 1.5rem 2rem;
+      background: linear-gradient(rgba(#e3e8f1, 0.25) 50%,rgba($light,0) 55%);
+      @include for-phone-only{
+        background: linear-gradient(rgba(#e3e8f1, 0.25) 40%,rgba($light,0) 55%);
+      }
+      border-radius: 100%;
+      position: absolute;
+      top:-7%;
     }
   }
 
