@@ -34,12 +34,15 @@ export default {
     }
 
     .text {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
     }
 
     button {
       height: 3rem;
-      width: 8rem;
+      padding:{
+        left: 2rem;
+        right: 3rem;
+      }
       margin: {
         top: 1.5rem;
       };
@@ -47,7 +50,7 @@ export default {
       border-radius: 1.7rem;
       color: $primary;
       background-color: $light;
-      font-size: .95rem;
+      font-size: 1.1rem;
       &:focus{
           outline: 0;
       }

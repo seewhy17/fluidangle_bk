@@ -16,7 +16,7 @@
       <nuxt-link to="/contact">
         Contact
       </nuxt-link>
-      <a class="phone" href="tel:+19788494391">
+      <a class="phone hide-on-med-and-down" href="tel:+19788494391">
         <img src="/svg/phone-receiver.svg" alt="phone">
         +1 (978) 849-4391
       </a>
