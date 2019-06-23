@@ -108,9 +108,9 @@
       <div class="process grid equal-two">
         <div class="content-box">
           <div class="challenge">
-            <p class="title">
+            <h2 class="title">
               The Challenge
-            </p>
+            </h2>
             <p class="text">
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam,
@@ -118,7 +118,9 @@
             </p>
           </div>
           <div class="what-we-did">
-            <p class="title">What we did</p>
+            <h2 class="title">
+              What we did
+            </h2>
             <ul>
               <li>Front End Development</li>
               <li>Web Design</li>
@@ -136,6 +138,48 @@
         <div class="image-part">
           <img src="/img/custom/Screenshot from 2019-06-23 14:20:39.png" alt="">
         </div>
+      </div>
+      <div class="gallery">
+        <div class="main-image flex dir-column list">
+          <div class="image flex">
+            <img src="/img/custom/Screenshot from 2019-06-23 14:57:33.png" alt="">
+          </div>
+          <div class="controls flex list dir-row">
+            <CheckboxBlankCircle fill-color="#d5d5d5"/>
+            <CheckboxBlankCircle fill-color="#d5d5d5" class="middle-control"/>
+            <CheckboxBlankCircle fill-color="#d5d5d5"/>
+          </div>
+        </div>
+        <div class="other-images grid equal-two">
+          <div class="image">
+            <img src="/img/custom/Screenshot from 2019-06-23 14:52:18.png" alt="">
+          </div>
+          <div class="image">
+            <img src="/img/custom/Screenshot from 2019-06-23 14:52:40.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="other-features">
+        <div class="header">
+          <h2 class="title  center-align">Mobile Responsive</h2>
+          <p class="text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <div class="image-part flex list">
+            <img src="/img/custom/Screenshot from 2019-06-23 15:41:05.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <div class="image-part flex">
+        <img src="/img/custom/Creative & Graphics (131).jpg" alt="">
+      </div>
+      <div class="content-box flex dir-column">
+        <p class="title">Sarah Homels</p>
+        <p class="text center-align">FluidAngle team are awesome guys to work with. <br>
+          I highly recommend them to get your project done ASAP and perfect delivery</p>
+        <p class="role">MD, Heroshe</p>
       </div>
     </div>
     <div class="tools-used">
@@ -192,6 +236,7 @@ export default {
   components: {
     NavBar,
     Footer,
+    CheckboxBlankCircle: () => ({ component: import('vue-material-design-icons/CheckboxBlankCircle.vue') }),
     shortcutMenus: () => ({ component: import('~/components/shortCutMenus.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
@@ -430,6 +475,100 @@ export default {
           font-size: 1.4rem;
           line-height: 1.39;
           color:$dark-gray;
+        }
+      }
+
+      .gallery{
+        .main-image{
+          align-items: center;
+          margin-bottom: 3rem;
+          img{
+            object-fit: cover;
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
+            /* border: solid 1px #707070; */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+          .controls{
+            padding: {
+              top:1rem;
+              bottom: 1rem;
+            };
+            font-size: 1.5rem;
+            & span:nth-child(2){
+              font-size: 2rem;
+            }
+          }
+        }
+        .other-images{
+          height: 20rem;
+          .image{
+            height: 60%;
+            img{
+              object-fit: fill;
+            }
+          }
+        }
+        .image{
+          img{
+            object-position: center;
+            height: 100%;
+          }
+        }
+      }
+      .other-features{
+        margin-top: 5rem;
+        .title{
+          color: $gray;
+          font:{
+            weight: 500;
+            size: 1.5rem;
+          }
+          margin:{
+            bottom:2rem;
+          }
+        }
+        .text{
+          font-size: 1rem;
+          line-height: 1.39;
+          margin-bottom: 5rem;
+        }
+        .image-part{
+          justify-content:center;
+        }
+      }
+    }
+    .testimonials{
+      padding-bottom: 5rem;
+      .image-part{
+        padding-top: 5%;
+        justify-content: center;
+        margin-bottom: 1rem;
+        img{
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          border: solid 4px $light;
+          height: 10rem;
+          border-radius: 50%;
+          width: 10rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .content-box{
+        align-items: center;
+        .title{
+          font-size: 1.5rem;
+          margin-bottom: .5rem;
+          font-weight: 500;
+          color: #62c9cb;
+        }
+        .text{
+          color: $gray;
+        }
+        .role{
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #62c9cb;
         }
       }
     }
