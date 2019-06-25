@@ -132,6 +132,11 @@ li{
   }
   &.two, &.equal-two {
     grid-template-columns: 1fr 1fr;
+    &.full-mobile{
+      @include breakpoint($max:768px){
+        grid-template-columns: 1fr;
+      }
+    }
   }
   &.equal-two-rows{
     grid-template-rows: 1fr 1fr;

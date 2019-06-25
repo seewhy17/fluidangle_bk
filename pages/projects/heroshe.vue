@@ -142,7 +142,7 @@
       <div class="gallery">
         <div class="main-image flex dir-column list">
           <div class="image flex">
-            <img src="/img/custom/Screenshot from 2019-06-23 14:57:33.png" alt="">
+            <img src="/img/xd/Component 5 – 1_cropped.png" alt="">
           </div>
           <div class="controls flex list dir-row">
             <CheckboxBlankCircle fill-color="#d5d5d5"/>
@@ -152,10 +152,10 @@
         </div>
         <div class="other-images grid equal-two">
           <div class="image">
-            <img src="/img/custom/Screenshot from 2019-06-23 14:52:18.png" alt="">
+            <img src="/img/xd/Rectangle 1521.png" alt="">
           </div>
           <div class="image">
-            <img src="/img/custom/Screenshot from 2019-06-23 14:52:40.png" alt="">
+            <img src="/img/xd/Rectangle 1522.png" alt="">
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="image-part flex list">
-            <img src="/img/custom/Screenshot from 2019-06-23 15:41:05.png" alt="">
+            <img src="/img/xd/Component 4 – 1_cropped.png" alt="">
           </div>
         </div>
       </div>
@@ -512,7 +512,7 @@ export default {
         .image{
           img{
             object-position: center;
-            height: 100%;
+            /*height: 100%;*/
           }
         }
       }
