@@ -129,7 +129,7 @@
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img src="/img/xd/Component 8 – 1_cropped.png" alt="">
+        <img src="/img/xd/Component 3 –2.png" alt="">
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
@@ -296,6 +296,9 @@ export default {
 
         .image-part {
           justify-content: center;
+          img{
+            width: 60%;
+          }
         }
       }
 
@@ -518,17 +521,20 @@ export default {
       }
 
       .charts {
+        width: 55%;
+        min-width: 55%;
         margin-top: 3rem;
-
-        & > div {
+        &>div{
           padding: 1.5rem 1rem;
           align-items: center;
           border-radius: 16px;
           box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
           background-color: $light;
-
-          .text {
-            margin-bottom: 1rem;
+          .text{
+            margin-bottom: 2rem;
+          }
+          img{
+            width:60%
           }
         }
       }

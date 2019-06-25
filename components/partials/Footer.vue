@@ -121,8 +121,11 @@ export default {
       min-height: 18rem;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 3.5rem;
-      @include for-phone-only {
+      @include breakpoint($max: 768px){
         grid-template-columns: repeat(2, 1fr);
+      }
+      @include for-phone-only {
+        grid-template-columns: auto;
       }
       .title {
         border: {

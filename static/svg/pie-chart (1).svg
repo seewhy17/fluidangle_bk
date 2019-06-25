@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="pie-chart_1_" width="175.208" height="175.208" data-name="pie-chart (1)" viewBox="0 0 175.208 175.208">
+    <defs>
+        <style>
+            .cls-1{fill:#f0c419}.cls-2{fill:#e57e25}.cls-3{fill:#26b99a}
+        </style>
+    </defs>
+    <path id="Path_3055" d="M77.333 87.6A48.332 48.332 0 0 1 29 135.937v39.271A87.6 87.6 0 1 0 29 0v39.271A48.332 48.332 0 0 1 77.333 87.6z" class="cls-1" data-name="Path 3055" transform="translate(58.604)"/>
+    <path id="Path_3056" d="M70.439 93.74a87.33 87.33 0 0 0 61.945-25.659l-27.767-27.767a48.337 48.337 0 0 1-68.355 0L8.494 68.081A87.33 87.33 0 0 0 70.439 93.74z" class="cls-2" data-name="Path 3056" transform="translate(17.165 81.468)"/>
+    <g id="Group_1916" data-name="Group 1916">
+        <path id="Path_3057" d="M39.271 87.6A48.332 48.332 0 0 1 87.6 39.271V0a87.6 87.6 0 0 0-61.941 149.549l27.767-27.767A48.193 48.193 0 0 1 39.271 87.6z" class="cls-3" data-name="Path 3057"/>
+    </g>
+</svg>

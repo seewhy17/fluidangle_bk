@@ -34,6 +34,19 @@ a {
 li{
   list-style-type: none;
 }
+h1,
+h2{
+  font-family: 'sailecbold', serif
+}
+h3{
+  font-family: 'sailecmedium', serif;
+}
+p,
+small,
+span,
+li{
+  font-family: 'sailecregular', serif;
+}
 // helpers
 .left-align {
   text-align: left;

@@ -135,7 +135,7 @@
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            Ponos Business App
+            Plinkd
           </h2>
           <div class="content-box">
             <div class="content">
@@ -150,7 +150,7 @@
                 officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
               </p>
             </div>
-            <div class="charts grid equal-two">
+            <div class="charts grid equal-two container">
               <div class="flex dir-column list">
                 <p class="text">
                   Customers
@@ -167,7 +167,7 @@
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img src="/img/xd/Component 6 – 1.png" alt="">
+          <img src="/img/xd/Component 4 – 1-2.png" alt="">
         </div>
       </div>
     </div>
@@ -297,6 +297,9 @@ export default {
 
         .image-part {
           justify-content: center;
+          img{
+            width: 60%;
+          }
         }
       }
 
@@ -311,7 +314,7 @@ export default {
           font-size: 3.5rem;
 
           img {
-            width: 20%;
+            width: 17%;
           }
         }
 
@@ -519,17 +522,20 @@ export default {
       }
 
       .charts {
+        width: 55%;
+        min-width: 55%;
         margin-top: 3rem;
-
-        & > div {
+        &>div{
           padding: 1.5rem 1rem;
           align-items: center;
           border-radius: 16px;
           box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
           background-color: $light;
-
-          .text {
-            margin-bottom: 1rem;
+          .text{
+            margin-bottom: 2rem;
+          }
+          img{
+            width:60%
           }
         }
       }
