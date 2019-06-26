@@ -183,9 +183,9 @@ export default {
         background: $primary;
         height: 90%;
         z-index: -1;
-        @include breakpoint($max:768px){
+        /*@include breakpoint($max:768px){
           height: 100vh;
-        }
+        }*/
       }
 
       .banner-grid {
@@ -216,8 +216,9 @@ export default {
 
           .replace {
             position: absolute;
-            top: -2.5rem;
+            top: -3.5rem;
             font-family: 'satisfactionregular', cursive;
+            color: $accent;
           }
 
           .text {

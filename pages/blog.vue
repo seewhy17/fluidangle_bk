@@ -82,7 +82,7 @@
       </div>
       <div class="posts-container grid more-posts">
         <div class="wrapper">
-          <div class="posts grid equal-two">
+          <div class="posts grid equal-two full-mobile">
             <div v-for="post in posts" :key="post.id" class="post">
               <div class="image-part">
                 <img :src="post.image" alt="">
@@ -289,10 +289,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  body {
-    background-color: #fdfdfd;;
-  }
-
   .page {
     .banner {
       padding-top: 2rem;
@@ -372,8 +368,10 @@ export default {
             line-height: 1.22;
             padding: 1rem 0;
             border: 0;
+            text-overflow: ellipsis;
             @include for-phone-only{
               width: 100%;
+              border-radius: 48px;
             }
             &:focus {
               outline: 0;
@@ -392,6 +390,9 @@ export default {
               left: 1.5rem;
               right: 1.45rem;
             };
+            @include for-phone-only{
+              font-size: 0.75rem;
+            }
           }
         }
       }
