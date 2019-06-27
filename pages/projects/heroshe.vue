@@ -142,7 +142,7 @@
       <div class="gallery">
         <div class="main-image flex dir-column list">
           <div class="image flex">
-            <img src="/img/xd/Component 5 – 1_cropped.png" alt="">
+            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')" alt="">
           </div>
           <div class="controls flex list dir-row">
             <CheckboxBlankCircle fill-color="#d5d5d5"/>
@@ -152,10 +152,10 @@
         </div>
         <div class="other-images grid equal-two">
           <div class="image">
-            <img src="/img/xd/Rectangle 1521.png" alt="">
+            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')" alt="">
           </div>
           <div class="image">
-            <img src="/img/xd/Rectangle 1522.png" alt="">
+            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1522.png')" alt="">
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="image-part flex list">
-            <img src="/img/xd/Component 4 – 1_cropped.png" alt="">
+            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_4_1_cropped.png')" alt="">
           </div>
         </div>
       </div>
@@ -280,7 +280,13 @@ export default {
         image: '/img/Image 41.png'
       }
     ]
-  })
+  }),
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
+  }
 }
 </script>
 
@@ -512,7 +518,6 @@ export default {
         .image{
           img{
             object-position: center;
-            /*height: 100%;*/
           }
         }
       }
@@ -535,6 +540,9 @@ export default {
         }
         .image-part{
           justify-content:center;
+          img{
+            width: 60%;
+          }
         }
       }
     }
