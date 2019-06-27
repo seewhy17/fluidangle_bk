@@ -60,7 +60,7 @@
             <p class="work-headline">
               We ship from any US <br> Online Store
             </p>
-            <span class="action-word bold">View case study <chevron-right /></span>
+            <span class="action-word" href="/projects/heroshe">View case study <chevron-right /></span>
           </div>
           <div class="image-part">
             <img src="/img/herose_hero.png" alt="heroshe-image">
@@ -76,7 +76,7 @@
             <p class="work-headline">
               One Location <br> Connecting Friends
             </p>
-            <span class="action-word bold">View case study <chevron-right /></span>
+            <a class="action-word" href="/projects/plinkd">View case study <chevron-right /></a>
           </div>
         </div>
       </div>
@@ -307,10 +307,10 @@ export default {
             align-items: center;
             margin-right: 2vw;
             .img-smartphone{
-              width: 40%;
+              width: 20%;
             }
             .img-laptop{
-              width: 25%;
+              width: 30%;
             }
           }
         }
@@ -360,14 +360,15 @@ export default {
 
         .action-word {
           text-transform: uppercase;
-          font-size: .8rem;
+          font-weight: 600;
+          font-size: 1rem;
           margin-top: 1.5rem;
           display: inline-flex;
           align-content: center;
           color: $primary;
           &>span{
             margin-left: 1rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
         }
 

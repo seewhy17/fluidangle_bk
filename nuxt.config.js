@@ -64,7 +64,8 @@ export default {
   },
 
   env: {
-    ApiUrl: process.env.API_URL || 'http://localhost:1337'
+    ApiUrl: process.env.API_URL || 'http://localhost:1337',
+    cloud_name: 'nazarick'
   },
 
   /*

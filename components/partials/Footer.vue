@@ -54,13 +54,13 @@
           <div class="grid">
             <img src="/svg/call-answer.svg" alt="">
             <nuxt-link to="/">
-              234-80283-2321
+              +1 (978) 849-4391
             </nuxt-link>
           </div>
           <div class="grid">
             <img src="/svg/close-envelope.svg" alt="">
             <nuxt-link to="/">
-              info@fluidangle.com
+              contact@fluidangle.com
             </nuxt-link>
           </div>
           <div class="social-media flex">
@@ -153,7 +153,7 @@ export default {
       }
       .contact-links{
         .grid{
-          grid-template-columns: auto 1fr;
+          grid-template-columns: 10% 1fr;
           align-items: center;
           margin:{bottom:0.8rem;}
           a{
