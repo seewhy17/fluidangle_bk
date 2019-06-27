@@ -205,7 +205,6 @@ export default {
 
     .projects {
       margin-top: 8rem;
-      overflow-y: hidden;
       .filter-options {
         @include breakpoint($min:1024px){
         width: 50%;

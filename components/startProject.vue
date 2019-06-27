@@ -6,7 +6,7 @@
       </p>
       <div class="">
         <p class="text">
-          Let’s build something awesome together! <br>Say contact@fluidangle.com or call: 234803823231
+          Let’s build something awesome together! <br>Say contact@fluidangle.com or call: +1 (978) 849-4391
         </p>
       </div>
       <button>Start Project</button>
