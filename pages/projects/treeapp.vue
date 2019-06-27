@@ -9,7 +9,7 @@
             <h1 class="title">
             </h1>
             <div class="image-part flex">
-              <img src="/img/xd/Component 10 – 1_cropped.png" alt="">
+              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_10_1_cropped.png')" alt="">
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img src="/img/xd/Component 3 –2.png" alt="">
+        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_3_2.png')" alt="">
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img src="/img/xd/Component 9 – 1.png" alt="">
+          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_9_1.png')" alt="">
         </div>
       </div>
     </div>
@@ -270,7 +270,13 @@ export default {
         image: '/img/Image 41.png'
       }
     ]
-  })
+  }),
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
+  }
 }
 </script>
 

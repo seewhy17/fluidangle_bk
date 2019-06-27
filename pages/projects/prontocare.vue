@@ -276,7 +276,13 @@ export default {
         image: '/img/Image 41.png'
       }
     ]
-  })
+  }),
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
+  }
 }
 </script>
 

@@ -166,7 +166,7 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="image-part flex list">
-            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_4_1_cropped.png')" alt="">
+              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')" alt="">
           </div>
         </div>
       </div>
