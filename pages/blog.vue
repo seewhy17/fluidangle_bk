@@ -35,7 +35,7 @@
         <section class="post-main">
           <div class="post card main-post">
             <div class="image-part">
-              <img src="/img/custom/General (24).jpg" alt="">
+              <img src="/img/xd/Rectangle 1856.png" alt="">
             </div>
             <div class="content-box">
               <div class="content">
@@ -57,7 +57,7 @@
         <aside>
           <div class="post card sub-post">
             <div class="image-part">
-              <img src="/img/custom/General (19).jpg" alt="">
+              <img src="/img/xd/Rectangle 1858.png" alt="">
             </div>
             <div class="content-box">
               <div class="content">
@@ -72,7 +72,7 @@
                   technology giants
                 </p>
               </div>
-              <div class="action-box flex dir-row">
+              <div class="action-box flex dir-row list">
                 <a href="">Development</a>
                 <p>7 mins read</p>
               </div>
@@ -82,7 +82,7 @@
       </div>
       <div class="posts-container grid more-posts">
         <div class="wrapper">
-          <div class="posts grid equal-two">
+          <div class="posts grid equal-two full-mobile">
             <div v-for="post in posts" :key="post.id" class="post">
               <div class="image-part">
                 <img :src="post.image" alt="">
@@ -119,7 +119,7 @@
                     {{ popular.description }}
                   </p>
                 </div>
-                <div class="action-box flex dir-row">
+                <div class="action-box flex dir-row list">
                   <a href="">{{ popular.type }}</a>
                   <p>{{ popular.minutes }} mins read</p>
                 </div>
@@ -132,7 +132,7 @@
                 TRENDING
               </h2>
             </div>
-            <div class="posts grid equal-two">
+            <div class="posts grid equal-two full-mobile">
               <div v-for="post in posts" :key="post.id" class="post">
                 <div class="image-part">
                   <img :src="post.image" alt="">
@@ -222,7 +222,7 @@ export default {
         description: 'Workers will no longer tolerate the punishing schedules of technology giants Workers will no longer tolerate the punishing schedules of technology giants',
         type: 'Development',
         minutes: '7',
-        image: '/img/custom/General (19).jpg'
+        image: '/img/xd/Rectangle 1744.png'
       },
       {
         id: 'post01',
@@ -230,7 +230,7 @@ export default {
         description: 'Workers will no longer tolerate the punishing schedules of technology giants Workers will no longer tolerate the punishing schedules of technology giants',
         type: 'Development',
         minutes: '7',
-        image: '/img/custom/General (19).jpg'
+        image: '/img/xd/Rectangle 1745.png'
       }
     ],
     mostPopular: [
@@ -252,35 +252,35 @@ export default {
         id: 'new-01',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        image: '/img/custom/Creative & Graphics (49).jpg',
+        image: '/img/xd/Rectangle 1850.png',
         type: 'latest'
       },
       {
-        id: 'new-01',
+        id: 'new-02',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        image: '/img/custom/Creative & Graphics (49).jpg',
+        image: '/img/xd/Rectangle 1851.png',
         type: 'latest'
       },
       {
-        id: 'new-01',
+        id: 'new-03',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        image: '/img/custom/Creative & Graphics (49).jpg',
+        image: '/img/xd/Rectangle 1852.png',
         type: 'latest'
       },
       {
-        id: 'new-01',
+        id: 'new-04',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        image: '/img/custom/Creative & Graphics (49).jpg',
+        image: '/img/xd/Rectangle 1853.png',
         type: 'latest'
       },
       {
-        id: 'new-01',
+        id: 'new-05',
         title: 'Lorem ipsum dolor',
         date: 'Feb 14 2019',
-        image: '/img/custom/Creative & Graphics (49).jpg',
+        image: '/img/xd/Rectangle 1854.png',
         type: 'latest'
       }
     ]
@@ -289,10 +289,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  body {
-    background-color: #fdfdfd;;
-  }
-
   .page {
     .banner {
       padding-top: 2rem;
@@ -328,11 +324,11 @@ export default {
         color: white;
 
         h1 {
-          font-size: 5.625rem;
+          font-size: 4.5rem;
         }
 
         p {
-          font-size: 1.7rem;
+          font-size: 1.4rem;
         }
 
       }
@@ -345,47 +341,59 @@ export default {
           }
         }
       }
-
-      .input-block {
-        display: inline-flex;
-        padding: {
-          left: 8%;
-          top: .5rem;
-          bottom: .5rem;
-          right: 1.0625rem;
-        };
-        margin: {
-          top: 1.5rem;
-        };
-        border-radius: 48px;
-        border: solid 1px #707070;
-        background-color: $light;
-        font-size: .95rem;
-
-        input {
-          color: #9fb0bf;
-          font-size: 1.28rem;
-          line-height: 1.22;
-          padding: 1.25rem 0;
-          border: 0;
-
-          &:focus {
-            outline: 0;
-          }
+      .form{
+        margin:{
+          bottom: 1rem;
+          top:1rem;
         }
-
-        button {
+        .input-block {
+          display: inline-flex;
+          padding: {
+            left: 3%;
+            top: .2rem;
+            bottom: .2rem;
+            right: .5rem;
+          };
+          margin: {
+            top: 1.5rem;
+          };
           border-radius: 48px;
           border: solid 1px #707070;
-          color: $light;
-          background-color: $primary;
-          font-size: 1.75rem;
-          padding: {
-            top: .75rem;
-            bottom: .65rem;
-            left: 1.5rem;
-            right: 1.45rem;
-          };
+          background-color: $light;
+          font-size: .8rem;
+
+          input {
+            color: #9fb0bf;
+            font-size: 1rem;
+            line-height: 1.22;
+            padding: 1rem 0;
+            border: 0;
+            text-overflow: ellipsis;
+            @include for-phone-only{
+              width: 100%;
+              border-radius: 48px;
+            }
+            &:focus {
+              outline: 0;
+            }
+          }
+
+          button {
+            border-radius: 48px;
+            border: solid 1px #707070;
+            color: $light;
+            background-color: $primary;
+            font-size: 1.75rem;
+            padding: {
+              top: .75rem;
+              bottom: .65rem;
+              left: 1.5rem;
+              right: 1.45rem;
+            };
+            @include for-phone-only{
+              font-size: 0.75rem;
+            }
+          }
         }
       }
     }
@@ -409,6 +417,9 @@ export default {
 
       .posts-container {
         grid-template-columns: 2fr 1fr;
+        @include breakpoint($max: 768px){
+          grid-template-columns: auto;
+        }
         grid-gap: 2.5rem;
         margin-bottom: 3rem;
       }

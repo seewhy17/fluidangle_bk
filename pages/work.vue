@@ -22,7 +22,7 @@
     </div>
     <section class="projects">
       <div class="filter-options container">
-        <ul class="flex dir-row">
+        <ul class="flex dir-row list">
           <li><a class="" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
           <li><a class="" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
           <li><a class="" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
@@ -50,7 +50,7 @@
                 </p>
               </div>
               <div class="action-box">
-                <span class="action-word bold">View case study</span>
+                <a :href="work.action"><span class="action-word bold">View case study</span></a>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default {
         titleImage: '/svg/heroshe-colored_2.svg',
         text: 'We ship from any US Online Store',
         img: '/img/Heroshe.png',
-        action: '',
+        action: '/projects/heroshe',
         type: 'web'
       },
       {
@@ -94,7 +94,7 @@ export default {
         titleImage: '/img/LOGO text.png',
         text: 'One Location Connecting Friends mobile app',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
-        action: '',
+        action: '/projects/plinkd',
         type: 'mobile'
       },
       {
@@ -103,7 +103,7 @@ export default {
         titleImage: '',
         text: 'We ship from any US Online Store',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
-        action: '',
+        action: '/projects/prontocare',
         type: 'web'
       },
       {
@@ -112,7 +112,7 @@ export default {
         titleImage: '/img/Image 5.png',
         text: 'Making Living & Traveling \n More Affordable for Everyone',
         img: '/img/Image 4.png',
-        action: '',
+        action: '/projects/ponos',
         type: 'mobile'
       }
     ],
@@ -168,7 +168,7 @@ export default {
         }
 
         p {
-          font-size: .95rem;
+          font-size: 1.2rem;
           font-weight: 500;
           line-height: 1.43;
         }
@@ -205,7 +205,7 @@ export default {
 
     .projects {
       margin-top: 8rem;
-
+      overflow-y: hidden;
       .filter-options {
         @include breakpoint($min:1024px){
         width: 50%;
@@ -239,7 +239,7 @@ export default {
           bottom: 3rem;
         }
         grid-gap: 5em 1em;
-        @include breakpoint ($max: 768px) {
+        @include breakpoint ($max: 992px) {
           grid-template-columns: 1fr;
         }
 
@@ -257,8 +257,11 @@ export default {
               }
               img{
                 width: 100%;
-                top:-10%;
+                top:-1rem;
               }
+            }
+            .content{
+              padding-left: 2rem;
             }
           }
 
@@ -328,7 +331,8 @@ export default {
         }
 
         .cover {
-          height: 45%;
+          /*height: 45%;*/
+          height:inherit;
           position: absolute;
           width: 100%;
           background-color: #fff;

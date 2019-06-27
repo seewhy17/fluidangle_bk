@@ -29,10 +29,10 @@
     <section class="section our-offer grid equal-two">
       <div class="img-part hide-on-small">
         <div class="img-box">
-          <img src="/svg/laptop.svg" alt="laptop">
+          <img src="/svg/laptop.svg" alt="laptop" class="img-laptop">
         </div>
         <div class="img-box">
-          <img src="/svg/smartphone.svg" alt="smartphone">
+          <img src="/svg/smartphone.svg" alt="smartphone" class="img-smartphone">
         </div>
       </div>
       <div class="content-part">
@@ -60,7 +60,7 @@
             <p class="work-headline">
               We ship from any US <br> Online Store
             </p>
-            <span class="action-word bold">View case study</span>
+            <span class="action-word bold">View case study <chevron-right /></span>
           </div>
           <div class="image-part">
             <img src="/img/herose_hero.png" alt="heroshe-image">
@@ -76,7 +76,7 @@
             <p class="work-headline">
               One Location <br> Connecting Friends
             </p>
-            <span class="action-word bold">View case study</span>
+            <span class="action-word bold">View case study <chevron-right /></span>
           </div>
         </div>
       </div>
@@ -158,6 +158,7 @@ export default {
   components: {
     NavBar,
     Footer,
+    ChevronRight: () => ({ component: import('vue-material-design-icons/ChevronRight.vue') }),
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   }
@@ -165,8 +166,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Montez&display=swap');
-
   .three {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -182,11 +181,11 @@ export default {
         top: 0;
         left: 0;
         background: $primary;
-        height: 85vh;
+        height: 90%;
         z-index: -1;
-        @include breakpoint($max:768px){
+        /*@include breakpoint($max:768px){
           height: 100vh;
-        }
+        }*/
       }
 
       .banner-grid {
@@ -217,8 +216,9 @@ export default {
 
           .replace {
             position: absolute;
-            top: -2.5rem;
-            font-family: 'Montez', cursive;
+            top: -3.5rem;
+            font-family: 'satisfactionregular', cursive;
+            color: $accent;
           }
 
           .text {
@@ -254,10 +254,12 @@ export default {
         position: relative;
 
         img {
-          width: 135%;
-          max-width: unset;
+          /*width: 135%;*/
+          /*max-width: unset;*/
           z-index: 5;
           position: relative;
+          top:0;
+          right:-11rem;
         }
       }
     }
@@ -278,14 +280,6 @@ export default {
           margin-right: 1rem;
           background: $primary;
         }
-      }
-
-      .action-word:after {
-        content: ">";
-        font-size: 1.5rem;
-        vertical-align: middle;
-        margin-left: 0.5rem;
-        font-weight: 500;
       }
 
       &.our-offer {
@@ -312,9 +306,11 @@ export default {
             justify-content: center;
             align-items: center;
             margin-right: 2vw;
-
-            img {
-              width: 30%;
+            .img-smartphone{
+              width: 40%;
+            }
+            .img-laptop{
+              width: 25%;
             }
           }
         }
@@ -327,8 +323,8 @@ export default {
             margin-bottom: 1rem;
 
             & + p {
-              width: 55%;
-              font-size: .75rem;
+              width: 80%;
+              font-size: 1rem;
               color: $gray;
             }
           }
@@ -340,6 +336,9 @@ export default {
 
         .a-work {
           margin-bottom: 10rem;
+          .content-part{
+            padding-left: 5rem;
+          }
         }
 
         .fancy-heading {
@@ -363,8 +362,13 @@ export default {
           text-transform: uppercase;
           font-size: .8rem;
           margin-top: 1.5rem;
-          display: block;
+          display: inline-flex;
+          align-content: center;
           color: $primary;
+          &>span{
+            margin-left: 1rem;
+            font-size: 1rem;
+          }
         }
 
         .image-part {
@@ -404,6 +408,7 @@ export default {
           padding:{
             top: 3rem;
             right: 1.5rem;
+            bottom: 2rem;
           }
           &:nth-child(odd) {
             border: {

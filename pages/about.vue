@@ -128,13 +128,13 @@
           <p class="title">
             CASE STUDY
           </p>
-          <a class="action-word">VIEW OUR WORKS <span>></span></a>
+          <a class="action-word flex dir-row list">VIEW OUR WORKS <img src="/img/xd/Group 2156.png" alt=""></a>
         </div>
         <div class="shortcut-content">
           <p class="title">
             CONTACT US
           </p>
-          <a class="action-word">HAVE A PROJECT <span>></span></a>
+          <a class="action-word flex dir-row list">HAVE A PROJECT <img src="/img/xd/Group 2156.png" alt=""></a>
         </div>
       </div>
     </section>
@@ -213,6 +213,7 @@ export default {
 
       }
       .about-text{
+        margin-top: 2rem;
         p{
           font-size:1rem;
           line-height: 1.39;
@@ -253,9 +254,16 @@ export default {
       }
       .options-container{
         .option-box{
-          margin:{ bottom: 5%;}
+          margin:{ bottom: 8%;}
           @include for-phone-only{
             grid-template-columns: auto;
+          }
+          &.mobile-app{
+            .image-part{
+              @include for-phone-only{
+                order: -1;
+              }
+            }
           }
         }
         .title-box{
@@ -270,13 +278,13 @@ export default {
             margin-bottom: 5%;
           }
           .description{
-            font-size: .7rem;
+            font-size: 1rem;
             color: $dark-gray;
             max-height: 7rem;
           }
         }
         .content-box{
-          width: 70%;
+          width: 90%;
           margin:{
            top: 0;
             left: auto;
@@ -328,14 +336,12 @@ export default {
         }
         .action-word{
           font-weight: 500;
-          font-size: .9rem;
+          font-size: 1rem;
           color:$light-gray;
-          span{
-            color: $accent;
-            padding: 0 .6rem;
-            border: solid 2px #707070;
-            border-radius: 100%;
-            margin-left: .6rem;
+          align-items: center;
+          img{
+            margin-left: 2rem;
+            width: 15%;
           }
         }
       }

@@ -34,6 +34,19 @@ a {
 li{
   list-style-type: none;
 }
+h1,
+h2{
+  font-family: 'sailecbold', serif
+}
+h3{
+  font-family: 'sailecmedium', serif;
+}
+p,
+small,
+span,
+li{
+  font-family: 'sailecregular', serif;
+}
 // helpers
 .left-align {
   text-align: left;
@@ -132,6 +145,11 @@ li{
   }
   &.two, &.equal-two {
     grid-template-columns: 1fr 1fr;
+    &.full-mobile{
+      @include breakpoint($max:768px){
+        grid-template-columns: 1fr;
+      }
+    }
   }
   &.equal-two-rows{
     grid-template-rows: 1fr 1fr;
