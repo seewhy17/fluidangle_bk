@@ -10,7 +10,10 @@
               <img src="/img/LOGO text.png" alt="Plinkd">
             </h1>
             <div class="image-part flex">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_7_1_cropped.png')" alt="">
+              <img
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_7_1_cropped.png')"
+                alt=""
+              >
             </div>
           </div>
         </div>
@@ -130,7 +133,10 @@
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_8_1_cropped.png')" alt="">
+        <img
+          :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_8_1_cropped.png')"
+          alt=""
+        >
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
@@ -167,7 +173,10 @@
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1-2.png')" alt="">
+          <img
+            :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1-2.png')"
+            alt=""
+          >
         </div>
       </div>
     </div>
@@ -185,7 +194,7 @@
           <p class="title">
             TECHNOLOGIES
           </p>
-          <div class="technologies-grid flex dir-row">
+          <div class="technologies-grid flex dir-row list">
             <div v-for="technology in technologies" :key="technology.id" class="technology">
               <div class="image-part">
                 <img :src="technology.image" alt="">
@@ -200,7 +209,7 @@
           <p class="title">
             INTEGRATIONS
           </p>
-          <div class="integrations-grid flex dir-row">
+          <div class="integrations-grid flex dir-row list">
             <div v-for="integration in integrations" :key="integration.id" class="integration">
               <div class="image-part">
                 <img :src="integration.image" alt="">
@@ -303,7 +312,8 @@ export default {
 
         .image-part {
           justify-content: center;
-          img{
+
+          img {
             width: 60%;
           }
         }
@@ -519,7 +529,8 @@ export default {
         & > .image-part {
           display: flex;
           justify-content: flex-end;
-          img{
+
+          img {
             object-fit: contain;
             height: 100%;
             width: 75%;
@@ -531,17 +542,20 @@ export default {
         width: 55%;
         min-width: 55%;
         margin-top: 3rem;
-        &>div{
+
+        & > div {
           padding: 1.5rem 1rem;
           align-items: center;
           border-radius: 16px;
           box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
           background-color: $light;
-          .text{
+
+          .text {
             margin-bottom: 2rem;
           }
-          img{
-            width:60%
+
+          img {
+            width: 60%
           }
         }
       }
@@ -641,6 +655,13 @@ export default {
         border: {
           right: solid 2px $gray;
         };
+        @include breakpoint($max: 768px) {
+          padding: {
+            right: 0;
+            left: 3rem;
+          }
+          border: 0;
+        }
 
         .technologies-grid {
           flex-wrap: wrap;

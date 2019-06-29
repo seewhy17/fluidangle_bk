@@ -105,7 +105,7 @@
           </div>
         </div>
       </section>
-      <div class="process grid equal-two">
+      <div class="process grid equal-two full-mobile">
         <div class="content-box">
           <div class="challenge">
             <h2 class="title">
@@ -135,7 +135,7 @@
             </ul>
           </div>
         </div>
-        <div class="image-part">
+        <div class="image-part hide-on-small">
           <img src="/img/custom/Screenshot from 2019-06-23 14:20:39.png" alt="">
         </div>
       </div>
@@ -620,6 +620,13 @@ export default {
         border: {
           right: solid 2px $gray;
         };
+        @include breakpoint($max: 768px) {
+          padding: {
+            right: 0;
+            left: 3rem;
+          }
+          border: 0;
+        }
         .technologies-grid{
           flex-wrap: wrap;
         }
