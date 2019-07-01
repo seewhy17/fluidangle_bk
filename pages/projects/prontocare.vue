@@ -189,7 +189,7 @@
           <p class="title">
             TECHNOLOGIES
           </p>
-          <div class="technologies-grid flex dir-row">
+          <div class="technologies-grid flex dir-row list">
             <div v-for="technology in technologies" :key="technology.id" class="technology">
               <div class="image-part">
                 <img :src="technology.image" alt="">
