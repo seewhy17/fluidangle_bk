@@ -27,7 +27,7 @@
             </p>
           </div>
         </div>
-        <div class="image-part">
+        <div class="image-part hide-on-small">
           <img src="/svg/vector1.svg" alt="Who We Are">
         </div>
       </div>
@@ -173,6 +173,9 @@ export default {
         background: $primary;
         height: 50%;
         z-index: -1;
+        @include breakpoint($max: 767px){
+          height: 100%;
+        }
       }
 
       .banner-grid {
@@ -221,8 +224,9 @@ export default {
           margin:{
             bottom:.5rem;
           }
-          @include breakpoint($max: 768px){
-            font-size: .7rem;
+          @include breakpoint($max: 767px){
+            font-size: 1rem;
+            color: $light;
           }
         }
       }

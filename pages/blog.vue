@@ -610,6 +610,7 @@ export default {
       }
 
       .most-popular {
+        margin-top: 3rem;
         .content-box {
           &:first-child {
             border-bottom: solid 2px $light-gray;
@@ -640,6 +641,7 @@ export default {
       }
 
       .trending {
+        margin-top: 3rem;
         .title {
           padding-bottom: 1rem;
         }

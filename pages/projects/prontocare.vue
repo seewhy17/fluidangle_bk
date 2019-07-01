@@ -613,6 +613,13 @@ export default {
         border: {
           right: solid 2px $gray;
         };
+        @include breakpoint($max: 768px) {
+          padding: {
+            right: 0;
+            left: 3rem;
+          }
+          border: 0;
+        }
         .technologies-grid{
           flex-wrap: wrap;
         }
