@@ -572,7 +572,7 @@ export default {
 
     .testimonials {
       padding-bottom: 5rem;
-
+      margin-top: 5rem;
       .image-part {
         padding-top: 5%;
         justify-content: center;
@@ -697,7 +697,6 @@ export default {
       .integrations {
         padding: {
           left: 5rem;
-          right: 5rem;
         };
 
         .integration {

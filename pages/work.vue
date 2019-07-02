@@ -210,11 +210,16 @@ export default {
         width: 50%;
         min-width: 50%;
         }
+        ul{
+          padding: 0;
+        }
         li {
           width: 20%;
           list-style-type: none;
+          &:last-child{
+            width: 40%;
+          }
         }
-
         a {
           font:{
             size: 1rem;
@@ -234,10 +239,11 @@ export default {
       .projects-grid {
         margin-top: 3rem;
         padding: {
-          top: 5rem;
+          top: 10vh;
           bottom: 3rem;
         }
         grid-gap: 5em 1em;
+        overflow: hidden;
         @include breakpoint ($max: 992px) {
           grid-template-columns: 1fr;
         }

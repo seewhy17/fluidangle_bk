@@ -4,7 +4,7 @@
       <span class="bg" />
       <nav-bar />
       <div class="banner-grid">
-        <div class="grid equal-two-rows content">
+        <div class="grid equal-two-rows content full-mobile">
           <div class="header">
             <h1>
               WHO WE ARE
@@ -128,13 +128,13 @@
           <p class="title">
             CASE STUDY
           </p>
-          <a class="action-word flex dir-row list">VIEW OUR WORKS <img src="/img/xd/Group 2156.png" alt=""></a>
+          <a class="action-word flex dir-row list">VIEW OUR WORKS <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
         <div class="shortcut-content">
           <p class="title">
             CONTACT US
           </p>
-          <a class="action-word flex dir-row list">HAVE A PROJECT <img src="/img/xd/Group 2156.png" alt=""></a>
+          <a class="action-word flex dir-row list">HAVE A PROJECT <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
       </div>
     </section>
@@ -155,6 +155,12 @@ export default {
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  },
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
   }
 }
 </script>
@@ -185,7 +191,7 @@ export default {
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 1.8fr 2fr;
-        @include for-phone-only{
+        @include breakpoint($max: 768px){
           grid-template-columns: 1fr;
         }
         .content{
@@ -217,6 +223,9 @@ export default {
       }
       .about-text{
         margin-top: 2rem;
+        padding: {
+          bottom: 2rem;
+        };
         p{
           font-size:1rem;
           line-height: 1.39;
@@ -258,7 +267,10 @@ export default {
       }
       .options-container{
         .option-box{
-          margin:{ bottom: 8%;}
+          margin:{
+            bottom: 8%;
+            top:4rem;
+          }
           @include for-phone-only{
             grid-template-columns: auto;
           }

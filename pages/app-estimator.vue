@@ -1847,14 +1847,14 @@ export default {
 
                 input[type="radio"] + span,
                 input[type="checkbox"] + span{
-                  background: url("~assets/svg/uncheck-mark.svg") 0 -1px no-repeat;
+                  background: url("~static/svg/uncheck-mark.svg") 0 -1px no-repeat;
                   height: 33.4px;
                   padding: 0 0 0 33.4px;
                 }
 
                 input[type="radio"]:checked + span,
                 input[type="checkbox"]:checked + span{
-                  background: url("~assets/svg/check-mark.svg") 0 -1px no-repeat;
+                  background: url("~static/svg/check-mark.svg") 0 -1px no-repeat;
                 }
               }
             }
