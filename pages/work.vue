@@ -210,6 +210,9 @@ export default {
         width: 50%;
         min-width: 50%;
         }
+        ul{
+          padding: 0;
+        }
         li {
           width: 20%;
           list-style-type: none;
@@ -217,7 +220,6 @@ export default {
             width: 40%;
           }
         }
-
         a {
           font:{
             size: 1rem;
