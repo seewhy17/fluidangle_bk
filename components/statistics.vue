@@ -155,7 +155,9 @@ export default {
   }
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-
+img{
+  width:50%;
+}
   .content-text {
     font-size: 1rem;
   }

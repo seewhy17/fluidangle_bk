@@ -22,7 +22,7 @@ export default {
 
 <style scoped lang="scss">
   .start-project {
-    padding: 4.5% 9.5%;
+    padding: 8% 9.5%;
     background-color: $primary;
     color: $light;
 

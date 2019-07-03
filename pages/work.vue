@@ -309,7 +309,7 @@ export default {
             }
 
             .text {
-              font-size: .8rem;
+              font-size: 1rem;
               color:$light;
               font-weight: 600;
               width:80%;
