@@ -124,33 +124,37 @@
         </div>
       </div>
       <div class="gallery">
-        <div class="main-image flex dir-column list">
-          <div class="image flex">
-            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')" alt="">
-          </div>
-          <div class="controls flex list dir-row">
-            <CheckboxBlankCircle fill-color="#d5d5d5"/>
-            <CheckboxBlankCircle fill-color="#d5d5d5" class="middle-control"/>
-            <CheckboxBlankCircle fill-color="#d5d5d5"/>
-          </div>
-        </div>
+        <hslider />
         <div class="other-images grid equal-two">
           <div class="image">
-            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')" alt="">
+            <img
+              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')"
+              alt=""
+            >
           </div>
           <div class="image">
-            <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1522.png')" alt="">
+            <img
+              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1522.png')"
+              alt=""
+            >
           </div>
         </div>
       </div>
       <div class="other-features">
         <div class="header">
-          <h2 class="title  center-align">Mobile Responsive</h2>
-          <p class="text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h2 class="title  center-align">
+            Mobile Responsive
+          </h2>
+          <p class="text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="image-part flex list">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')" alt="">
+            <img
+              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')"
+              alt=""
+            >
           </div>
         </div>
       </div>
@@ -160,10 +164,16 @@
         <img src="/img/custom/Creative & Graphics (131).jpg" alt="">
       </div>
       <div class="content-box flex dir-column">
-        <p class="title">Sarah Homels</p>
-        <p class="text center-align">FluidAngle team are awesome guys to work with. <br>
-          I highly recommend them to get your project done ASAP and perfect delivery</p>
-        <p class="role">MD, Heroshe</p>
+        <p class="title">
+          Sarah Homels
+        </p>
+        <p class="text center-align">
+          FluidAngle team are awesome guys to work with. <br>
+          I highly recommend them to get your project done ASAP and perfect delivery
+        </p>
+        <p class="role">
+          MD, Heroshe
+        </p>
       </div>
     </div>
     <div class="tools-used">
@@ -220,11 +230,13 @@ export default {
   components: {
     NavBar,
     Footer,
-    CheckboxBlankCircle: () => ({ component: import('vue-material-design-icons/CheckboxBlankCircle.vue') }),
+    // CheckboxBlankCircle: () => ({ component: import('vue-material-design-icons/CheckboxBlankCircle.vue') }),
     shortcutMenus: () => ({ component: import('~/components/shortCutMenus.vue') }),
-    'StartProject': () => ({ component: import('~/components/startProject.vue') })
+    'StartProject': () => ({ component: import('~/components/startProject.vue') }),
+    hslider: () => ({ component: import('~/components/heroshe-slider.vue') })
   },
   data: () => ({
+    slides: [],
     technologies: [
       {
         id: 'tech01',
@@ -265,6 +277,30 @@ export default {
       }
     ]
   }),
+  mounted() {
+    this.slides = [
+      {
+        id: 0,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+      },
+      {
+        id: 1,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+      },
+      {
+        id: 2,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')
+      },
+      {
+        id: 2,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+      },
+      {
+        id: 2,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+      }
+    ]
+  },
   methods: {
     getImageUrl(url) {
       return this.$cloudinary
@@ -334,17 +370,18 @@ export default {
     .project-container {
       .summary {
         grid-template-columns: 2fr 1fr;
-        @include breakpoint($max: 768px){
+        @include breakpoint($max: 768px) {
           grid-template-columns: 1fr;
         }
         grid-gap: 5rem;
         padding: {
           top: 5rem;
         };
-        margin:{
+        margin: {
           bottom: 4rem;
         }
-        .content-box{
+
+        .content-box {
           .title {
             font-weight: 500;
             line-height: 1.61;
@@ -352,42 +389,50 @@ export default {
             margin-bottom: 1rem;
           }
         }
+
         .introduction {
           margin-bottom: 3rem;
-          p{
+
+          p {
             font-size: .9rem;
           }
         }
       }
-      .process{
-        .content-box{
+
+      .process {
+        .content-box {
           width: 85%;
-          &>div{
+
+          & > div {
             margin-bottom: 3rem;
           }
-          .title{
+
+          .title {
             font-weight: 500;
             font-size: 1.5rem;
             line-height: 1.61;
-            color:$gray;
+            color: $gray;
             margin: {
-              bottom:1rem;
+              bottom: 1rem;
             };
           }
-          ul{
+
+          ul {
             padding: 0;
             height: 9rem;
             overflow: hidden;
           }
+
           .text,
-          li{
-          font-size: 1rem;
+          li {
+            font-size: 1rem;
             line-height: 1.44;
-            color:$dark-gray;
+            color: $dark-gray;
             font-weight: 500
           }
-          .image-part{
-            img{
+
+          .image-part {
+            img {
               height: 100%;
               object-fit: cover;
               object-position: center;
@@ -395,6 +440,7 @@ export default {
           }
         }
       }
+
       .stats {
         grid-template-columns: 1fr 1.5fr 1fr;
         margin-top: 2rem;
@@ -433,6 +479,7 @@ export default {
       .info-box {
         .links {
           margin-bottom: 1.5rem;
+
           .link {
             grid-template-columns: 20% 1fr;
             grid-gap: .2rem;
@@ -460,21 +507,23 @@ export default {
       .app-stores {
         .image {
           margin-bottom: 1.5rem;
+
           img {
             object-fit: contain;
             object-position: center;
           }
         }
       }
-      .project-team{
-        .title{
+
+      .project-team {
+        .title {
           font-size: 1.4rem;
           line-height: 1.39;
-          color:$dark-gray;
+          color: $dark-gray;
         }
       }
 
-      .gallery{
+      .gallery {
         .main-image{
           align-items: center;
           margin-bottom: 3rem;
@@ -496,54 +545,63 @@ export default {
             }
           }
         }
-        .other-images{
-          height: 20rem;
-          .image{
+        .other-images {
+          /*height: 20rem;*/
+          .image {
             height: 60%;
-            img{
+
+            img {
               object-fit: fill;
             }
           }
         }
-        .image{
-          img{
+
+        .image {
+          img {
             object-position: center;
           }
         }
       }
-      .other-features{
+
+      .other-features {
         margin-top: 5rem;
-        .title{
+        .title {
           color: $gray;
-          font:{
+          font: {
             weight: 500;
             size: 1.5rem;
           }
-          margin:{
-            bottom:2rem;
+          margin: {
+            bottom: 2rem;
           }
         }
-        .text{
+
+        .text {
           font-size: 1rem;
           line-height: 1.39;
           margin-bottom: 5rem;
         }
-        .image-part{
-          justify-content:center;
-          img{
+
+        .image-part {
+          justify-content: center;
+
+          img {
             width: 60%;
           }
         }
       }
     }
-    .testimonials{
+
+    .testimonials {
       padding-bottom: 5rem;
       margin-top: 5rem;
-      .image-part{
+
+      .image-part {
         padding-top: 5%;
         justify-content: center;
         margin-bottom: 1rem;
-        img{
+
+        img {
           box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
           border: solid 4px $light;
           height: 10rem;
@@ -553,60 +611,69 @@ export default {
           object-position: center;
         }
       }
-      .content-box{
+
+      .content-box {
         align-items: center;
-        .title{
+
+        .title {
           font-size: 1.5rem;
           margin-bottom: .5rem;
           font-weight: 500;
           color: #62c9cb;
         }
-        .text{
+
+        .text {
           color: $gray;
         }
-        .role{
+
+        .role {
           font-size: 1.2rem;
           font-weight: 500;
           color: #62c9cb;
         }
       }
     }
-    .tools-used{
+
+    .tools-used {
       background-color: #f2f2f3;
       padding: {
-        top:3rem;
+        top: 3rem;
         bottom: 3rem;
       };
-      .header{
-        .title{
+
+      .header {
+        .title {
           color: $gray;
-          font:{
+          font: {
             weight: 500;
             size: 1.5rem;
           }
-          margin:{
-            bottom:5rem;
+          margin: {
+            bottom: 5rem;
           }
         }
       }
-      &>.wrapper{
-        @include breakpoint($max: 768px){
+
+      & > .wrapper {
+        @include breakpoint($max: 768px) {
           grid-template-columns: 1fr;
         }
-        .title{
+
+        .title {
           line-height: 1.61;
           font-weight: 600;
-          font-size:1.5rem;
-          color:$gray;
-          margin:{
-            bottom:1rem;
+          font-size: 1.5rem;
+          color: $gray;
+          margin: {
+            bottom: 1rem;
           }
         }
       }
-      .technologies{
+
+      .technologies {
         padding: {
-          left:5rem;
-          right:5rem;
+          left: 5rem;
+          right: 5rem;
         };
         border: {
           right: solid 2px $gray;
@@ -618,10 +685,12 @@ export default {
           }
           border: 0;
         }
-        .technologies-grid{
+
+        .technologies-grid {
           flex-wrap: wrap;
         }
-        .technology{
+
+        .technology {
           width: 25%;
           display: flex;
           flex-direction: column;
@@ -629,14 +698,17 @@ export default {
           height: 100%;
           margin-right: 5%;
           margin-bottom: 5%;
-          &:first-child{
-            flex-grow:1
+
+          &:first-child {
+            flex-grow: 1
           }
-          &:nth-last-child(-n+2){
+
+          &:nth-last-child(-n+2) {
             flex-grow: .5;
           }
-          .image-part{
-            img{
+
+          .image-part {
+            img {
               height: 5rem;
               object-position: center;
               object-fit: contain;
@@ -644,11 +716,13 @@ export default {
           }
         }
       }
-      .integrations{
+
+      .integrations {
         padding: {
-          left:5rem;
+          left: 5rem;
         };
-        .integration{
+
+        .integration {
           width: 25%;
           display: flex;
           flex-direction: column;
@@ -656,8 +730,9 @@ export default {
           height: 100%;
           margin-right: 5%;
           margin-bottom: 5%;
-          .image-part{
-            img{
+
+          .image-part {
+            img {
               height: 4rem;
               object-position: center;
               object-fit: contain;
