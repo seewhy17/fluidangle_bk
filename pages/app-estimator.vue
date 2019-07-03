@@ -74,25 +74,6 @@
                 </div>
               </div>
               <div
-                ref="Windows"
-                class="input-block windows-block grid three"
-                :class="{selected:isChecked('platform','windows')}"
-                @click="toggleCheckBox('platform','windows')"
-              >
-                <img
-                  src="/img/app-estimator/Image 6.png"
-                  srcset="/img/app-estimator/Image 6@2x.png 2x,
-             /img/app-estimator/Image 6@3x.png 3x"
-                  alt="Windows"
-                >
-                <label for="windows" @click="toggleCheckBox('platform','windows')">Windows</label>
-
-                <div class="radio-button flex">
-                  <input id="windows" v-model="option_block.platform" type="checkbox" name="platform" value="windows">
-                  <span />
-                </div>
-              </div>
-              <div
                 ref="crossPlatform"
                 class="input-block hybrid-block grid three"
                 :class="{selected:isChecked('platform','Cross Platform')}"

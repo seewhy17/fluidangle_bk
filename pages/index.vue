@@ -18,7 +18,7 @@
             We design and develop awesome products for Web and Mobile from User Research to Product Design to
             Development.
           </p>
-          <button>See our work</button>
+          <a href="/work" class="header-link">See our work</a>
         </div>
         <div class="banner-img hide-on-small">
           <img src="/img/expo_demo.png" alt="expo-demo">
@@ -60,7 +60,9 @@
             <p class="work-headline">
               We ship from any US <br> Online Store
             </p>
-            <span class="action-word" href="/projects/heroshe">View case study <chevron-right /></span>
+            <a class="action-word" href="/projects/heroshe">View case study
+              <chevron-right />
+            </a>
           </div>
           <div class="image-part">
             <img src="/img/herose_hero.png" alt="heroshe-image">
@@ -76,7 +78,9 @@
             <p class="work-headline">
               One Location <br> Connecting Friends
             </p>
-            <a class="action-word" href="/projects/plinkd">View case study <chevron-right /></a>
+            <a class="action-word" href="/projects/plinkd">View case study
+              <chevron-right />
+            </a>
           </div>
         </div>
       </div>
@@ -153,6 +157,7 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+
 export default {
   name: 'Index',
   components: {
@@ -180,7 +185,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
+        background: {
+          color: $primary;
+          image: url('/svg/bg-lines.svg');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 90%;
         z-index: -1;
         /*@include breakpoint($max:768px){
@@ -190,10 +201,12 @@ export default {
 
       .banner-grid {
         display: grid;
-        grid-template-columns: 2fr 3fr;
-        padding: 4rem 5vw 0;
+        grid-template-columns: 1.5fr 2fr;
+        padding:{
+          left:5vw;
+        }
         overflow-x: hidden;
-        @include for-phone-only{
+        @include for-phone-only {
           grid-template-columns: 1fr;
         }
       }
@@ -201,13 +214,16 @@ export default {
       .content {
         text-transform: capitalize;
         color: white;
-        padding-top: 1.5rem;
+        padding-top: 4.5rem;
 
         h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: 1rem;
-          @include breakpoint($max:768px){
+          @include breakpoint($max: 768px) {
             font-size: 2rem;
+          }
+          span{
+            font-family: 'sailecbold', serif
           }
         }
 
@@ -218,7 +234,8 @@ export default {
             position: absolute;
             top: -3.5rem;
             font-family: 'satisfactionregular', cursive;
-            color: $accent;
+            color: #ffb102;
+            left: -20%;
           }
 
           .text {
@@ -231,20 +248,30 @@ export default {
         }
 
         p {
-          font-size: .85rem;
+          font-size: 1rem;
           line-height: 2;
         }
 
-        button {
+        .header-link {
+          display: inline-block;
           color: $primary;
           background: white;
           border: none;
           padding: .9rem 2.25rem;
           font-size: .9rem;
           margin: 3rem 0;
+          transition: {
+            timing-function: ease-in-out;
+          };
 
           &:focus {
             outline: none;
+          }
+
+          &:hover {
+            background: $primary;
+            color: white;
+            border: solid 2px $light;
           }
         }
       }
@@ -254,12 +281,14 @@ export default {
         position: relative;
 
         img {
-          /*width: 135%;*/
-          /*max-width: unset;*/
+          height:85vh;
+          object-fit: contain;
+          width: 135%;
+          max-width: unset;
           z-index: 5;
           position: relative;
-          top:0;
-          right:-11rem;
+          top: 0;
+          //right: -11rem;
         }
       }
     }
@@ -285,12 +314,13 @@ export default {
       &.our-offer {
         margin-top: 5rem;
         padding-bottom: 3rem;
-        @include breakpoint($max: 768px){
+        @include breakpoint($max: 768px) {
           grid-template-columns: auto;
           padding: {
             left: 5%;
           };
         }
+
         .img-part {
           display: flex;
           justify-content: left;
@@ -306,11 +336,13 @@ export default {
             justify-content: center;
             align-items: center;
             margin-right: 2vw;
-            .img-smartphone{
+
+            .img-smartphone {
               width: 20%;
             }
-            .img-laptop{
-              width: 30%;
+
+            .img-laptop {
+              width: 35%;
             }
           }
         }
@@ -336,7 +368,8 @@ export default {
 
         .a-work {
           margin-bottom: 10rem;
-          .content-part{
+
+          .content-part {
             padding-left: 5rem;
           }
         }
@@ -366,7 +399,8 @@ export default {
           display: inline-flex;
           align-content: center;
           color: $primary;
-          &>span{
+
+          & > span {
             margin-left: 1rem;
             font-size: 1.2rem;
           }
@@ -384,16 +418,24 @@ export default {
       &.our-services {
         background-color: rgba(#e3e8f1, 0.25);
         position: relative;
-        .wrapper{
+
+        .wrapper {
           padding: {
-            top:4rem;
-            bottom:4rem
+            top: 4rem;
+            bottom: 4rem
           };
         }
+
         .fancy-heading {
           margin: {
             left: 10vw;
           };
+        }
+
+        .content-grid {
+          @include breakpoint($max: 768px) {
+            grid-template-columns: auto;
+          }
         }
 
         .services-grid {
@@ -406,11 +448,12 @@ export default {
         }
 
         .service {
-          padding:{
+          padding: {
             top: 3rem;
             right: 1.5rem;
             bottom: 2rem;
           }
+
           &:nth-child(odd) {
             border: {
               right: solid 1px $light-purple;
@@ -463,15 +506,16 @@ export default {
     color: $primary;
     font-size: 1.8rem;
     justify-content: center;
+
     a {
       padding: 1rem 1.5rem 2rem;
-      background: linear-gradient(rgba(#e3e8f1, 0.25) 50%,rgba($light,0) 55%);
-      @include for-phone-only{
-        background: linear-gradient(rgba(#e3e8f1, 0.25) 40%,rgba($light,0) 55%);
+      background: linear-gradient(rgba(#e3e8f1, 0.25) 50%, rgba($light, 0) 55%);
+      @include for-phone-only {
+        background: linear-gradient(rgba(#e3e8f1, 0.25) 40%, rgba($light, 0) 55%);
       }
       border-radius: 100%;
       position: absolute;
-      top:-7%;
+      top: -7%;
     }
   }
 
@@ -502,12 +546,14 @@ export default {
 
       .links {
         color: $light-gray;
-        a{
-          margin:{
-            bottom:0.8rem;
+
+        a {
+          margin: {
+            bottom: 0.8rem;
           }
         }
-        img{
+
+        img {
           margin-right: .2rem;
         }
       }
@@ -521,7 +567,7 @@ export default {
         flex-direction: row;
         color: $grey;
 
-        a{
+        a {
           margin-left: .8rem;
         }
       }
