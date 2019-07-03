@@ -297,7 +297,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: #324ba1;
+        background: {
+          color: #324ba1;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 100%;
         z-index: -1;
       }

@@ -35,12 +35,17 @@
         <section class="post-main">
           <div class="post card main-post">
             <div class="image-part">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_53.png')" alt="">
+              <img
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_53.png')"
+                alt=""
+              >
               <div class="content-box">
                 <div class="content">
-                  <h3 class="title">
-                    The Rebellion Against China’s 996 Culture
-                  </h3>
+                  <a href="/posts/post-01" class="link-wrapper">
+                    <h3 class="title">
+                      The Rebellion Against China’s 996 Culture
+                    </h3>
+                  </a>
                   <p class="text">
                     Workers will no longer tolerate the punishing schedules of technology giants
                     Workers will no longer tolerate the punishing schedules.
@@ -57,14 +62,19 @@
         <aside>
           <div class="post card sub-post">
             <div class="image-part">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1858.png')" alt="">
+              <img
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1858.png')"
+                alt=""
+              >
             </div>
             <div class="content-box">
               <div class="content">
-                <h3 class="title">
-                  The 3 Things Women Over 50
-                  Can Do to Keep Their Jobs
-                </h3>
+                <a href="" class="link-wrapper">
+                  <h3 class="title">
+                    The 3 Things Women Over 50
+                    Can Do to Keep Their Jobs
+                  </h3>
+                </a>
                 <p class="text">
                   Workers will no longer tolerate the punishing
                   schedules of technology giants Workers will
@@ -89,9 +99,11 @@
               </div>
               <div class="content-box">
                 <div class="content">
-                  <h3 class="title">
-                    {{ post.title }}
-                  </h3>
+                  <a href="" class="link-wrapper">
+                    <h3 class="title">
+                      {{ post.title }}
+                    </h3>
+                  </a>
                   <p class="text">
                     {{ post.description }}
                   </p>
@@ -112,9 +124,11 @@
             <div class="wrapper">
               <div v-for="popular in mostPopular" :id="popular.key" :key="popular.key" class="content-box">
                 <div class="content">
-                  <h3 class="title">
-                    {{ popular.title }}
-                  </h3>
+                  <a href="" class="link-wrapper">
+                    <h3 class="title">
+                      {{ popular.title }}
+                    </h3>
+                  </a>
                   <p class="text">
                     {{ popular.description }}
                   </p>
@@ -137,11 +151,13 @@
                 <div class="image-part">
                   <img :src="post.image" alt="">
                 </div>
-                <div class="content-box">
+                <divx class="content-box">
                   <div class="content">
-                    <h3 class="title">
-                      {{ post.title }}
-                    </h3>
+                    <a href="" class="link-wrapper">
+                      <h3 class="title">
+                        {{ post.title }}
+                      </h3>
+                    </a>
                     <p class="description">
                       {{ post.description }}
                     </p>
@@ -150,7 +166,7 @@
                     <a href="">{{ post.type }}</a>
                     <p>{{ post.minutes }} mins read</p>
                   </div>
-                </div>
+                </divx>
               </div>
             </div>
           </div>
@@ -326,8 +342,14 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
-        height: 60%;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
+        height: 100%;
         z-index: -1;
       }
 
@@ -337,7 +359,6 @@ export default {
           right: 2rem;
           top: 2rem;
         };
-        background: $primary;
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
@@ -611,6 +632,7 @@ export default {
 
       .most-popular {
         margin-top: 3rem;
+
         .content-box {
           &:first-child {
             border-bottom: solid 2px $light-gray;
@@ -642,6 +664,7 @@ export default {
 
       .trending {
         margin-top: 3rem;
+
         .title {
           padding-bottom: 1rem;
         }

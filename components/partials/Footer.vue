@@ -6,10 +6,10 @@
           COMPANY
         </p>
         <div class="links flex dir-column">
-          <nuxt-link to="/">
+          <nuxt-link to="/about">
             About us
           </nuxt-link>
-          <nuxt-link to="/">
+          <nuxt-link to="/blog">
             Blog
           </nuxt-link>
           <nuxt-link to="/">
@@ -22,13 +22,13 @@
           SERVICES
         </p>
         <div class="links flex dir-column">
-          <nuxt-link to="/">
+          <nuxt-link to="/about">
             Web Development
           </nuxt-link>
-          <nuxt-link to="/">
+          <nuxt-link to="/about">
             Mobile Development
           </nuxt-link>
-          <nuxt-link to="/">
+          <nuxt-link to="/about">
             UI/UX Design
           </nuxt-link>
         </div>
@@ -64,24 +64,30 @@
             </nuxt-link>
           </div>
           <div class="social-media flex">
-            <img
-              src="/img/facebook-logo-button.png"
-              srcset="/img/facebook-logo-button@2x.png 2x,
+            <a href="https://www.facebook.com/fluidangle/">
+              <img
+                src="/img/facebook-logo-button.png"
+                srcset="/img/facebook-logo-button@2x.png 2x,
              /img/facebook-logo-button@3x.png 3x"
-              alt="facebook"
-            >
-            <img
-              src="/img/twitter.png"
-              srcset="/img/twitter@2x.png 2x,
+                alt="facebook"
+              >
+            </a>
+            <a href="https://twitter.com/fluidangle">
+              <img
+                src="/img/twitter.png"
+                srcset="/img/twitter@2x.png 2x,
              /img/twitter@3x.png 3x"
-              alt="twitter"
-            >
-            <img
-              src="/img/youtube.png"
-              srcset="/img/youtube@2x.png 2x,
-             /img/youtube@3x.png 3x"
-              alt="youtube"
-            >
+                alt="twitter"
+              >
+            </a>
+<!--            <a href="">-->
+<!--            <img-->
+<!--              src="/img/youtube.png"-->
+<!--              srcset="/img/youtube@2x.png 2x,-->
+<!--             /img/youtube@3x.png 3x"-->
+<!--              alt="youtube"-->
+<!--            >-->
+<!--            </a>-->
           </div>
         </div>
       </div>

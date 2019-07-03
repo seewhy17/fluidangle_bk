@@ -128,13 +128,13 @@
           <p class="title">
             CASE STUDY
           </p>
-          <a class="action-word flex dir-row list">VIEW OUR WORKS <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
+          <a class="action-word flex dir-row list" href="/work">VIEW OUR WORKS <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
         <div class="shortcut-content">
           <p class="title">
             CONTACT US
           </p>
-          <a class="action-word flex dir-row list">HAVE A PROJECT <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
+          <a class="action-word flex dir-row list" href="/contact">HAVE A PROJECT <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
       </div>
     </section>
@@ -176,7 +176,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 50%;
         z-index: -1;
         @include breakpoint($max: 767px){

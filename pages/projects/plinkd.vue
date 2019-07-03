@@ -301,7 +301,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $accent;
+        background: {
+          color: $accent;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 100%;
         z-index: -1;
       }
@@ -331,6 +337,9 @@ export default {
 
           img {
             width: 17%;
+            @include breakpoint($max:768px){
+              width: 30%;
+            }
           }
         }
 

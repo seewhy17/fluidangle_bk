@@ -84,7 +84,7 @@ export default {
         title: '',
         titleImage: '/svg/heroshe-colored_2.svg',
         text: 'We ship from any US Online Store',
-        img: '/img/Heroshe.png',
+        img: '/img/heroshe.png',
         action: '/projects/heroshe',
         type: 'web'
       },
@@ -105,15 +105,6 @@ export default {
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/prontocare',
         type: 'web'
-      },
-      {
-        id: 'ponos',
-        title: '',
-        titleImage: '/img/Image 5.png',
-        text: 'Making Living & Traveling \n More Affordable for Everyone',
-        img: '/img/Image 4.png',
-        action: '/projects/ponos',
-        type: 'mobile'
       }
     ],
     filteredWorks: []
@@ -144,7 +135,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 100%;
         z-index: -1;
       }
@@ -262,7 +259,6 @@ export default {
               }
               img{
                 width: 100%;
-                top:-1rem;
               }
             }
             .content{
@@ -316,6 +312,8 @@ export default {
               font-size: .8rem;
               color:$light;
               font-weight: 600;
+              width:80%;
+              margin-top:1rem;
             }
           }
           .action-word {

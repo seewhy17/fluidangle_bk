@@ -78,29 +78,13 @@
               <div class="image-part flex">
                 <img src="/svg/monitor.svg" alt="">
               </div>
-              <a href="" class="flex">Visit Website</a>
+              <a href="https://heroshe.com" class="flex">Visit Website</a>
             </div>
             <div class="link grid">
               <div class="image-part flex">
                 <img src="/svg/pdf.svg" alt="">
               </div>
               <a href="" class="flex">Download Case study</a>
-            </div>
-          </div>
-          <div class="app-stores grid equal-two">
-            <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
-            </div>
-            <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
-            </div>
-          </div>
-          <div class="project-team">
-            <p class="title">
-              PROJECT TEAM
-            </p>
-            <div class="image-part flex">
-              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
             </div>
           </div>
         </div>
@@ -301,7 +285,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: #47b6d2;
+        background: {
+          color: #47b6d2;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 100%;
         z-index: -1;
       }
