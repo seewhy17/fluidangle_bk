@@ -166,7 +166,8 @@ export default {
     ChevronRight: () => ({ component: import('vue-material-design-icons/ChevronRight.vue') }),
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
-  }
+  },
+  data: () => ({})
 }
 </script>
 
