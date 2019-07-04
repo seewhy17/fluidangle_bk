@@ -28,7 +28,7 @@ export default {
 
     .title {
       font-family: 'sailecmedium',serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 500;
       margin: {
         bottom: 1.5rem;
