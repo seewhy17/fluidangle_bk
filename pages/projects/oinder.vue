@@ -7,13 +7,9 @@
         <div class="content">
           <div class="title-block center-align">
             <h1 class="title">
-              <img src="/svg/heroshe-colored_2.svg" alt="Heroshe">
             </h1>
-            <p class="">
-              Enterprise Base Software
-            </p>
             <div class="image-part flex">
-              <img src="/img/Heroshe_project.png" alt="">
+              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')" alt="">
             </div>
           </div>
         </div>
@@ -23,7 +19,7 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Heroshe
+            Oinder App
           </p>
           <div class="content introduction">
             <p>
@@ -78,7 +74,7 @@
               <div class="image-part flex">
                 <img src="/svg/monitor.svg" alt="">
               </div>
-              <a href="https://heroshe.com" class="flex">Visit Website</a>
+              <a href="" class="flex">Visit Website</a>
             </div>
             <div class="link grid">
               <div class="image-part flex">
@@ -87,10 +83,26 @@
               <a href="" class="flex">Download Case study</a>
             </div>
           </div>
+          <div class="app-stores grid equal-two">
+            <div class="image flex">
+              <img src="/img/Image 21.png" alt="">
+            </div>
+            <div class="image flex">
+              <img src="/img/Image 20.png" alt="">
+            </div>
+          </div>
+          <div class="project-team">
+            <p class="title">
+              PROJECT TEAM
+            </p>
+            <div class="image-part flex">
+              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
+            </div>
+          </div>
         </div>
       </section>
-      <div class="process grid equal-two full-mobile">
-        <div class="content-box">
+      <div class="process">
+        <div class="content-box grid equal-two">
           <div class="challenge">
             <h2 class="title">
               The Challenge
@@ -106,75 +118,60 @@
               What we did
             </h2>
             <ul>
-              <li>Front End Development</li>
-              <li>Web Design</li>
-              <li>Search Engine Optimization</li>
-              <li>Content Management System</li>
-              <li>Bespoke UI Design</li>
-              <li>Mobile Responsive Development</li>
-              <li>Blog Integration</li>
-              <li>Live Chat Integration</li>
-              <li>Photo Gallery Integration</li>
-              <li>Technical Support</li>
+              <li>UI UX Research</li>
+              <li>UI UX Design</li>
+              <li>Android App Development</li>
+              <li>iOS Development</li>
             </ul>
-          </div>
-        </div>
-        <div class="image-part hide-on-small">
-          <img src="/img/custom/Screenshot from 2019-06-23 14:20:39.png" alt="">
-        </div>
-      </div>
-      <div class="gallery">
-        <hslider />
-        <div class="other-images grid equal-two">
-          <div class="image">
-            <img
-              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')"
-              alt=""
-            >
-          </div>
-          <div class="image">
-            <img
-              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1522.png')"
-              alt=""
-            >
-          </div>
-        </div>
-      </div>
-      <div class="other-features">
-        <div class="header">
-          <h2 class="title  center-align">
-            Mobile Responsive
-          </h2>
-          <p class="text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <div class="image-part flex list">
-            <img
-              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')"
-              alt=""
-            >
           </div>
         </div>
       </div>
     </div>
-    <div class="testimonials">
-      <div class="image-part flex">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')" alt="">
+    <div class="gallery">
+      <div class="main-image">
+        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')" alt="">
       </div>
-      <div class="content-box flex dir-column">
-        <p class="title">
-          Sarah Homels
-        </p>
-        <p class="text center-align">
-          FluidAngle team are awesome guys to work with. <br>
-          I highly recommend them to get your project done ASAP and perfect delivery
-        </p>
-        <p class="role">
-          MD, Heroshe
-        </p>
+      <div class="container details grid equal-two full-mobile">
+        <div class="wrapper">
+          <h2 class="title">
+            Oinder App
+          </h2>
+          <div class="content-box">
+            <div class="content">
+              <p class="text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <br>
+                <br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
+              </p>
+            </div>
+            <div class="charts grid equal-two">
+              <div class="flex dir-column list">
+                <p class="text">
+                  Customers
+                </p>
+                <img src="/svg/pie-chart (1).svg" alt="">
+              </div>
+              <div class="flex dir-column list">
+                <p class="text">
+                  Story Chart
+                </p>
+                <img src="/svg/profits.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-part hide-on-small">
+          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')" alt="">
+        </div>
       </div>
+    </div>
+    <div class="video-section">
+      <video src="" controls />
     </div>
     <div class="tools-used">
       <div class="header">
@@ -226,17 +223,14 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'Heroshe',
+  name: 'Oinder',
   components: {
     NavBar,
     Footer,
-    // CheckboxBlankCircle: () => ({ component: import('vue-material-design-icons/CheckboxBlankCircle.vue') }),
     shortcutMenus: () => ({ component: import('~/components/shortCutMenus.vue') }),
-    'StartProject': () => ({ component: import('~/components/startProject.vue') }),
-    hslider: () => ({ component: import('~/components/heroshe-slider.vue') })
+    'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
   data: () => ({
-    slides: [],
     technologies: [
       {
         id: 'tech01',
@@ -277,30 +271,6 @@ export default {
       }
     ]
   }),
-  mounted() {
-    this.slides = [
-      {
-        id: 0,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 1,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      }
-    ]
-  },
   methods: {
     getImageUrl(url) {
       return this.$cloudinary
@@ -322,7 +292,7 @@ export default {
         top: 0;
         left: 0;
         background: {
-          color: #47b6d2;
+          color: #877afb;
           image: url('/img/bg-lines.png');
           size: cover;
           repeat: no-repeat;
@@ -338,6 +308,9 @@ export default {
 
         .image-part {
           justify-content: center;
+          img{
+            width: 60%;
+          }
         }
       }
 
@@ -352,7 +325,7 @@ export default {
           font-size: 3.5rem;
 
           img {
-            width: 30%;
+            width: 20%;
           }
         }
 
@@ -401,7 +374,10 @@ export default {
 
       .process {
         .content-box {
-          width: 85%;
+          justify-items: end;
+          @include breakpoint($max: 768px) {
+            grid-template-columns: 1fr;
+          }
 
           & > div {
             margin-bottom: 3rem;
@@ -431,12 +407,8 @@ export default {
             font-weight: 500
           }
 
-          .image-part {
-            img {
-              height: 100%;
-              object-fit: cover;
-              object-position: center;
-            }
+          .what-we-did {
+            padding-right: 5rem;
           }
         }
       }
@@ -522,81 +494,76 @@ export default {
           color: $dark-gray;
         }
       }
+    }
 
-      .gallery {
-        margin-top:5rem;
-        margin-bottom: 5rem;
-        /*.main-image{*/
-        /*  align-items: center;*/
-        /*  margin-bottom: 3rem;*/
-        /*  img{*/
-        /*    object-fit: cover;*/
-        /*    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);*/
-        /*    !* border: solid 1px #707070; *!*/
-        /*    border-top-left-radius: 5px;*/
-        /*    border-top-right-radius: 5px;*/
-        /*  }*/
-        /*  .controls{*/
-        /*    padding: {*/
-        /*      top:1rem;*/
-        /*      bottom: 1rem;*/
-        /*    };*/
-        /*    font-size: 1.5rem;*/
-        /*    & span:nth-child(2){*/
-        /*      font-size: 2rem;*/
-        /*    }*/
-        /*  }*/
-        /*}*/
-        .other-images {
-          /*height: 20rem;*/
-          .image {
-            height: 60%;
+    .gallery {
+      .main-image {
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          height: 80%;
+        }
 
-            img {
-              object-fit: fill;
-            }
+        margin-bottom: 4rem;
+      }
+
+      .details {
+        .title {
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+
+        .content {
+          .text {
+            color: $dark-gray;
+            line-height: 1.39;
           }
         }
 
-        .image {
-          img {
-            object-position: center;
+        & > .image-part {
+          display: flex;
+          justify-content: flex-end;
+          img{
+            object-fit: contain;
+            height: 100%;
+            width: 75%;
           }
         }
       }
 
-      .other-features {
-        margin-top: 5rem;
-        .title {
-          color: $gray;
-          font: {
-            weight: 500;
-            size: 1.5rem;
+      .charts {
+        width: 55%;
+        min-width: 55%;
+        margin-top: 3rem;
+        &>div{
+          padding: 1.5rem 1rem;
+          align-items: center;
+          border-radius: 16px;
+          box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
+          background-color: $light;
+          .text{
+            margin-bottom: 2rem;
           }
-          margin: {
-            bottom: 2rem;
-          }
-        }
-
-        .text {
-          font-size: 1rem;
-          line-height: 1.39;
-          margin-bottom: 5rem;
-        }
-
-        .image-part {
-          justify-content: center;
-
-          img {
-            width: 60%;
+          img{
+            width:60%
           }
         }
       }
     }
 
-    .testimonials {
-      padding-bottom: 5rem;
+    .video-section {
       margin-top: 5rem;
+
+      video {
+        width: 100%;
+        max-height: 100vh;
+      }
+    }
+
+    .testimonials {
+      margin-top: 5rem;
+      padding-bottom: 5rem;
 
       .image-part {
         padding-top: 5%;
@@ -687,7 +654,6 @@ export default {
           }
           border: 0;
         }
-
         .technologies-grid {
           flex-wrap: wrap;
         }

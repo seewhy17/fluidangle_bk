@@ -115,57 +115,74 @@ export default {
     margin-top: 5rem;
     padding-bottom: 3rem;
 
-  .statistics-grid {
-    align-items: center;
-  }
-
-  .stats {
-    width: 25%;
-    justify-items: center;
-    text-align: center;
-    margin-bottom: 5%;
-    @include for-phone-only{
-      width: 100%;
-      border-left:0;
-      border-bottom: solid 2px $light-purple;
+    .statistics-grid {
+      align-items: center;
     }
 
-  &:nth-child(n+2) {
-    @include for-tablet-portrait-up{
-     border-left: solid 2px $light-purple;
+    .stats {
+      width: 25%;
+      justify-items: center;
+      text-align: center;
+      margin-bottom: 5%;
+      @include for-phone-only {
+        width: 100%;
+        border-left: 0;
+        border-bottom: solid 2px $light-purple;
+      }
+
+      &:nth-child(n+2) {
+        @include for-tablet-portrait-up {
+          border-left: solid 2px $light-purple;
+        }
+      }
+
+      .amount {
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: $dark-grey;
+      }
+
+      .comment {
+        font-size: .8rem;
+        color: $light-gray;
+        font-weight: 600;
+      }
     }
-   }
 
-  .amount {
-    font-size: 3.2rem;
-    font-weight: 600;
-    color: $dark-grey;
-  }
+    .works-grid {
+      width: 60%;
+      min-width: 60%;
+      margin: {
+        top: 5rem;
+      }
+      grid-template-columns: repeat(4, 1fr);
+      @include breakpoint($max: 768px) {
+        grid-template-columns: auto
+      }
+      align-items: center;
 
-  .comment {
-    font-size: .8rem;
-    color: $light-gray;
-    font-weight: 600;
-  }
-  }
+      & > div {
+        &:nth-child(1) {
+          width: 110%;
+        }
 
-  .works-grid {
-  margin: {
-    top: 5rem;
-  }
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-img{
-  width:50%;
-}
-  .content-text {
-    font-size: 1rem;
-  }
-  }
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
 
-  .clients {
-    min-width: 65%;
-    width: 65%;
-  }
+      img {
+        width: 50%;
+      }
+
+      .content-text {
+        font-size: 1rem;
+      }
+    }
+
+    .clients {
+      min-width: 65%;
+      width: 65%;
+    }
   }
 </style>

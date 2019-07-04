@@ -223,7 +223,7 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'ProntoCare',
+  name: 'Treeapp',
   components: {
     NavBar,
     Footer,

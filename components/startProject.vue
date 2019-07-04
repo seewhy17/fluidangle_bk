@@ -27,7 +27,9 @@ export default {
     color: $light;
 
     .title {
-      font-size: 1.8rem;
+      font-family: 'sailecmedium',serif;
+      font-size: 2rem;
+      font-weight: 500;
       margin: {
         bottom: 1.5rem;
       };

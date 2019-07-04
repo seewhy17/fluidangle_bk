@@ -6,7 +6,6 @@ import Vue from 'vue'
 import VueSwal from 'vue-swal'
 import cl from 'cloudinary-core'
 // import 'vue-material-design-icons/styles.css'
-
 // stylesheets
 // import 'vue-multiselect/dist/vue-multiselect.min.css'
 // import 'vue-loading-overlay/dist/vue-loading.css'

@@ -105,6 +105,24 @@ export default {
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/prontocare',
         type: 'web'
+      },
+      {
+        id: 'treeapp',
+        title: 'TreeApp',
+        titleImage: '',
+        text: '',
+        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        action: '/projects/treeapp',
+        type: 'web'
+      },
+      {
+        id: 'oinder',
+        title: 'Oinder',
+        titleImage: '',
+        text: '',
+        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        action: '/projects/oinder',
+        type: 'mobile'
       }
     ],
     filteredWorks: []
@@ -278,6 +296,12 @@ export default {
             background-color: #0254a3;
           }
 
+          &.oinder{
+            background-color: #877afb;
+          }
+          &.treeapp{
+            background-color: #6caa49;
+          }
           .equal-two {
             height: 100%;
           }

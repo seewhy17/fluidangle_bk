@@ -187,7 +187,7 @@ export default {
         left: 0;
         background: {
           color: $primary;
-          image: url('/svg/bg-lines.svg');
+          image: url('/img/bg-lines.png');
           size: cover;
           repeat: no-repeat;
           position: center center;
