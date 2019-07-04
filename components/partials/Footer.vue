@@ -64,7 +64,7 @@
             </nuxt-link>
           </div>
           <div class="social-media flex">
-            <a href="https://www.facebook.com/fluidangle/">
+            <a href="https://www.facebook.com/fluidangle/" title="facebook" target="_blank">
               <img
                 src="/img/facebook-logo-button.png"
                 srcset="/img/facebook-logo-button@2x.png 2x,
@@ -72,7 +72,7 @@
                 alt="facebook"
               >
             </a>
-            <a href="https://twitter.com/fluidangle">
+            <a href="https://twitter.com/fluidangle" title="twitter" target="_blank">
               <img
                 src="/img/twitter.png"
                 srcset="/img/twitter@2x.png 2x,
@@ -80,14 +80,13 @@
                 alt="twitter"
               >
             </a>
-<!--            <a href="">-->
-<!--            <img-->
-<!--              src="/img/youtube.png"-->
-<!--              srcset="/img/youtube@2x.png 2x,-->
-<!--             /img/youtube@3x.png 3x"-->
-<!--              alt="youtube"-->
-<!--            >-->
-<!--            </a>-->
+            <a href="https://www.instagram.com/fluidangle/" title="instagram" target="_blank">
+              <img
+                src="https://image.flaticon.com/icons/svg/1409/1409946.svg"
+                alt="instagram"
+                style="width: 39px;height:39px;"
+              >
+            </a>
           </div>
         </div>
       </div>

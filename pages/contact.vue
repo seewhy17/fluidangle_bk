@@ -42,16 +42,16 @@
           <div class="grid equal-two project-budget">
             <div class="input-block flex dir-column">
               <label for="project">Project</label>
-              <input id="project" type="text" placeholder="Select Project type" name="project">
+              <v-select id="project" placeholder="Select Project type" name="project" :options="projectOptions" />
             </div>
             <div class="input-block flex dir-column">
               <label for="budget">Budget</label>
-              <input id="budget" type="text" placeholder="Enter Your budget" name="budget">
+              <v-select id="budget" type="text" placeholder="Enter Your budget" name="budget" :options="budgetOptions" />
             </div>
           </div>
           <div class="input-block flex dir-column">
             <label for="messages">Messages</label>
-            <textarea id="messages" placeholder="Description" name="description" />
+            <textarea id="messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
           <button class="send-button" @click.prevent>
             Send Message
@@ -75,16 +75,23 @@
           <div class="social-media">
             <small>SOCIAL MEDIA</small>
             <div class="social-media">
-              <a href="https://www.facebook.com/fluidangle/">
+              <a href="https://www.facebook.com/fluidangle/" title="facebook">
                 <img
                   src="/img/facebook-logo-button.png"
                   alt="facebook"
                 >
               </a>
-              <a href="https://twitter.com/fluidangle">
+              <a href="https://twitter.com/fluidangle" title="twitter">
                 <img
                   src="/img/twitter.png"
                   alt="twitter"
+                >
+              </a>
+              <a href="https://www.instagram.com/fluidangle/" title="instagram" target="_blank">
+                <img
+                  src="https://image.flaticon.com/icons/svg/1409/1409946.svg"
+                  alt="instagram"
+                  style="width: 39px;height:39px;"
                 >
               </a>
             </div>
@@ -101,14 +108,22 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import vSelect from 'vue-select'
+import '~/assets/scss/vue-select.scss'
+
 export default {
   name: 'ContactVue',
   components: {
     NavBar,
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
-    'StartProject': () => ({ component: import('~/components/startProject.vue') })
-  }
+    'StartProject': () => ({ component: import('~/components/startProject.vue') }),
+    'v-select': vSelect
+  },
+  data: () => ({
+    projectOptions: [],
+    budgetOptions: []
+  })
 }
 </script>
 

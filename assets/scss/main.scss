@@ -236,3 +236,12 @@ p{
     }
   }
 }
+
+.scroll-fixed-header{
+  &.is-fixed{
+    background-color: $light-gray;
+    padding: {
+      top:1rem;
+    };
+  }
+}

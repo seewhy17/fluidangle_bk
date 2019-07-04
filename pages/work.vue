@@ -30,7 +30,7 @@
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id">
+        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id" :style="{backgroundColor:work.color}">
           <div class="grid equal-two">
             <div class="image-part">
               <img
@@ -86,7 +86,8 @@ export default {
         text: 'We ship from any US Online Store',
         img: '/img/heroshe.png',
         action: '/projects/heroshe',
-        type: 'web'
+        type: 'web',
+        color: '#47b6d2'
       },
       {
         id: 'plinkd',
@@ -95,7 +96,8 @@ export default {
         text: 'One Location Connecting Friends mobile app',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/plinkd',
-        type: 'mobile'
+        type: 'mobile',
+        color: '#f9872b'
       },
       {
         id: 'prontocare',
@@ -104,7 +106,8 @@ export default {
         text: 'We ship from any US Online Store',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/prontocare',
-        type: 'web'
+        type: 'web',
+        color: '#0254a3'
       },
       {
         id: 'treeapp',
@@ -113,7 +116,8 @@ export default {
         text: '',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/treeapp',
-        type: 'web'
+        type: 'web',
+        color: '#6caa49'
       },
       {
         id: 'oinder',
@@ -122,7 +126,8 @@ export default {
         text: '',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/oinder',
-        type: 'mobile'
+        type: 'mobile',
+        color: '#877afb'
       }
     ],
     filteredWorks: []
@@ -270,7 +275,7 @@ export default {
           position: relative;
 
           &.heroshe {
-            background-color: #47b6d2;
+            /*background-color: #47b6d2;*/
             .image-part{
               padding:{
                 left:0.5rem;
@@ -283,24 +288,12 @@ export default {
               padding-left: 2rem;
             }
           }
-
-          &.ponos {
-            background-color: $gray;
-          }
-
           &.plinkd {
             background-color: #f9872b;
           }
 
           &.prontocare {
             background-color: #0254a3;
-          }
-
-          &.oinder{
-            background-color: #877afb;
-          }
-          &.treeapp{
-            background-color: #6caa49;
           }
           .equal-two {
             height: 100%;
