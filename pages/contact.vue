@@ -211,7 +211,7 @@ export default {
             }
             label{
               font:{
-                size:.75rem;
+                size:1rem;
                 weight: 500;
               }
             }

@@ -8,9 +8,9 @@
       </hooper>
     </div>
     <div class="controls flex list dir-row">
-      <CheckboxBlankCircle fill-color="#d5d5d5" @click.prevent="slidePrev" />
+      <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev"/>
       <CheckboxBlankCircle fill-color="#d5d5d5" class="middle-control" />
-      <CheckboxBlankCircle fill-color="#d5d5d5" @click.prevent="slideNext" />
+      <CheckboxBlankCircle fill-color="#d5d5d5" title="next" class="next" @click.prevent="slideNext"/>
     </div>
   </div>
 </template>
@@ -30,7 +30,8 @@ export default {
     slides: [],
     hooperSettings: {
       centerMode: true,
-      infiniteScroll: true
+      infiniteScroll: true,
+      autoPlay: true
     }
   }),
   mounted() {
@@ -41,19 +42,11 @@ export default {
       },
       {
         id: 1,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/Admin_Dashboard.png')
       },
       {
         id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/1_Help_Desk_-_1.png')
       }
     ]
   },
@@ -98,6 +91,13 @@ export default {
       }
       & span:nth-child(2){
         font-size: 2rem;
+      }
+      & .prev:hover,
+      & .next:hover{
+        font-size: 2rem;
+        svg{
+          fill: $accent;
+        }
       }
     }
   }

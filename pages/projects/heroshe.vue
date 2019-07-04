@@ -161,7 +161,7 @@
     </div>
     <div class="testimonials">
       <div class="image-part flex">
-        <img src="/img/custom/Creative & Graphics (131).jpg" alt="">
+        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')" alt="">
       </div>
       <div class="content-box flex dir-column">
         <p class="title">
@@ -524,27 +524,29 @@ export default {
       }
 
       .gallery {
-        .main-image{
-          align-items: center;
-          margin-bottom: 3rem;
-          img{
-            object-fit: cover;
-            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
-            /* border: solid 1px #707070; */
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-          }
-          .controls{
-            padding: {
-              top:1rem;
-              bottom: 1rem;
-            };
-            font-size: 1.5rem;
-            & span:nth-child(2){
-              font-size: 2rem;
-            }
-          }
-        }
+        margin-top:5rem;
+        margin-bottom: 5rem;
+        /*.main-image{*/
+        /*  align-items: center;*/
+        /*  margin-bottom: 3rem;*/
+        /*  img{*/
+        /*    object-fit: cover;*/
+        /*    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);*/
+        /*    !* border: solid 1px #707070; *!*/
+        /*    border-top-left-radius: 5px;*/
+        /*    border-top-right-radius: 5px;*/
+        /*  }*/
+        /*  .controls{*/
+        /*    padding: {*/
+        /*      top:1rem;*/
+        /*      bottom: 1rem;*/
+        /*    };*/
+        /*    font-size: 1.5rem;*/
+        /*    & span:nth-child(2){*/
+        /*      font-size: 2rem;*/
+        /*    }*/
+        /*  }*/
+        /*}*/
         .other-images {
           /*height: 20rem;*/
           .image {
