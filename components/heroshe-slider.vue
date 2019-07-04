@@ -67,17 +67,16 @@ export default {
 
 <style scoped lang="scss">
   .hooper{
-    height: 100%;
+    height: 95vh;
   }
   .main-image{
     align-items: center;
     margin-bottom: 3rem;
     img{
-      object-fit: cover;
-      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
+      object-fit: contain;
+      width:100%;
+      /*box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);*/
       /* border: solid 1px #707070; */
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
     }
     .controls{
       padding: {
