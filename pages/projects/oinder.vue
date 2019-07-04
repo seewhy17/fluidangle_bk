@@ -9,7 +9,7 @@
             <h1 class="title">
             </h1>
             <div class="image-part flex">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_10_1_cropped.png')" alt="">
+              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')" alt="">
             </div>
           </div>
         </div>
@@ -19,7 +19,7 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Tree App
+            Oinder App
           </p>
           <div class="content introduction">
             <p>
@@ -129,12 +129,12 @@
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_3_2.png')" alt="">
+        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')" alt="">
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            TreeApp
+            Oinder App
           </h2>
           <div class="content-box">
             <div class="content">
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_9_1.png')" alt="">
+          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')" alt="">
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'Treeapp',
+  name: 'Oinder',
   components: {
     NavBar,
     Footer,
@@ -292,7 +292,7 @@ export default {
         top: 0;
         left: 0;
         background: {
-          color: #6caa49;
+          color: #877afb;
           image: url('/img/bg-lines.png');
           size: cover;
           repeat: no-repeat;
