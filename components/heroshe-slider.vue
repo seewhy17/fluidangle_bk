@@ -30,8 +30,7 @@ export default {
     slides: [],
     hooperSettings: {
       centerMode: true,
-      infiniteScroll: true,
-      autoPlay: true
+      infiniteScroll: true
     }
   }),
   mounted() {

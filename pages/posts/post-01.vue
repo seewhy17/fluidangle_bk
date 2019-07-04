@@ -46,7 +46,7 @@
         <span>Share</span>
         <ul class="flex list dir-row">
           <li><a> <img src="/svg/facebook.svg" alt=""></a></li>
-          <li><a> <img src="/svg/chat.svg" alt=""></a></li>
+          <li><a> <img src="https://image.flaticon.com/icons/svg/1409/1409946.svg" alt="" style="width:40px;height:40px"></a></li>
           <li><a> <img src="/svg/twitter.svg" alt=""></a></li>
         </ul>
       </div>
