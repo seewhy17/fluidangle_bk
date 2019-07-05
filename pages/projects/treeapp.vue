@@ -85,10 +85,14 @@
           </div>
           <div class="app-stores grid equal-two">
             <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
+              <a href="https://apps.apple.com/us/app/tree-christian-social-network/id1437700451" title="IOS Store" target="_blank">
+                <img src="/img/Image 21.png" alt="">
+              </a>
             </div>
             <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
+              <a href="" target="_blank">
+                <img src="/img/Image 20.png" alt="">
+              </a>
             </div>
           </div>
         </div>
