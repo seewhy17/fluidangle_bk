@@ -222,7 +222,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}" />
+    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{title:'TreeApp',url:'/projects/treeapp'}" />
     <start-project />
     <Footer />
   </div>

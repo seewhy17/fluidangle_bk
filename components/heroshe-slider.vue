@@ -29,8 +29,7 @@ export default {
   data: () => ({
     slides: [],
     hooperSettings: {
-      centerMode: true,
-      infiniteScroll: true
+      centerMode: true
     }
   }),
   mounted() {
