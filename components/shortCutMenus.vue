@@ -14,7 +14,9 @@
       </div>
       <div class="menu-grid">
         <div class="wrapper">
-          <view-grid class="menu-icon menu-grid-icon" fill-color="#e3e8f1" />
+          <nuxt-link to="/work" tag="div">
+            <view-grid class="menu-icon menu-grid-icon" fill-color="#e3e8f1" />
+          </nuxt-link>
         </div>
       </div>
       <div class="right-menu">
@@ -109,7 +111,7 @@ export default {
       }
       .right-menu{
         img{
-          width: 30%;
+          max-width: 30%;
         }
       }
     }
