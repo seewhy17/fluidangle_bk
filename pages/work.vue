@@ -100,21 +100,11 @@ export default {
         color: '#f9872b'
       },
       {
-        id: 'prontocare',
-        title: 'ProntoCare',
-        titleImage: '',
-        text: 'We ship from any US Online Store',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
-        action: '/projects/prontocare',
-        type: 'web',
-        color: '#0254a3'
-      },
-      {
         id: 'treeapp',
         title: 'TreeApp',
         titleImage: '',
         text: '',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562273978/fluidangle/img/xd/Image_65.png',
         action: '/projects/treeapp',
         type: 'web',
         color: '#6caa49'
@@ -124,7 +114,7 @@ export default {
         title: 'Oinder',
         titleImage: '',
         text: '',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
+        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562274422/fluidangle/img/xd/Image_71.png',
         action: '/projects/oinder',
         type: 'mobile',
         color: '#877afb'

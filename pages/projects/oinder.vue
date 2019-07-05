@@ -72,31 +72,14 @@
           <div class="links">
             <div class="link grid">
               <div class="image-part flex">
-                <img src="/svg/monitor.svg" alt="">
-              </div>
-              <a href="" class="flex">Visit Website</a>
-            </div>
-            <div class="link grid">
-              <div class="image-part flex">
                 <img src="/svg/pdf.svg" alt="">
               </div>
               <a href="" class="flex">Download Case study</a>
             </div>
           </div>
-          <div class="app-stores grid equal-two">
-            <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
-            </div>
+          <div class="app-stores grid">
             <div class="image flex">
               <img src="/img/Image 20.png" alt="">
-            </div>
-          </div>
-          <div class="project-team">
-            <p class="title">
-              PROJECT TEAM
-            </p>
-            <div class="image-part flex">
-              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
             </div>
           </div>
         </div>
@@ -212,7 +195,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}" />
+    <shortcut-menus :left-menu="{title:'PLINKD',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
     <start-project />
     <Footer />
   </div>

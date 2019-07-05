@@ -2,27 +2,33 @@
   <div class="menus container">
     <div class="wrapper grid">
       <div class="left-menu">
-        <div class="wrapper flex dir-row list">
-          <chevron-left class="menu-icon menu-left-icon icon-size" fill-color="#8d8d8d" />
-          <p class="title">
-            {{ leftMenu.title }}
-          </p>
-          <img v-if="leftMenu.image !== null || leftMenu.image !== '' " :src="leftMenu.image" alt="">
-        </div>
+        <nuxt-link :to="leftMenu.url" tag="div">
+          <div class="wrapper flex dir-row list">
+            <chevron-left class="menu-icon menu-left-icon icon-size" fill-color="#8d8d8d" />
+            <p class="title">
+              {{ leftMenu.title }}
+            </p>
+            <img v-if="leftMenu.image !== null || leftMenu.image !== '' " :src="leftMenu.image" alt="">
+          </div>
+        </nuxt-link>
       </div>
       <div class="menu-grid">
         <div class="wrapper">
-          <view-grid class="menu-icon menu-grid-icon" fill-color="#e3e8f1" />
+          <nuxt-link to="/work" tag="div">
+            <view-grid class="menu-icon menu-grid-icon" fill-color="#e3e8f1" />
+          </nuxt-link>
         </div>
       </div>
       <div class="right-menu">
-        <div class="wrapper flex dir-row list">
-          <p class="title">
-            {{ rightMenu.title }}
-          </p>
-          <img v-if="rightMenu.image !== null || rightMenu.image !== '' " :src="rightMenu.image" alt="">
-          <chevron-right class="menu-icon menu-right-icon" fill-color="#8d8d8d" />
-        </div>
+        <nuxt-link :to="rightMenu.url" tag="div">
+          <div class="wrapper flex dir-row list">
+            <p class="title">
+              {{ rightMenu.title }}
+            </p>
+            <img v-if="rightMenu.image !== null || rightMenu.image !== '' " :src="rightMenu.image" alt="">
+            <chevron-right class="menu-icon menu-right-icon" fill-color="#8d8d8d" />
+          </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -42,7 +48,8 @@ export default {
       default: function () {
         return {
           title: '',
-          image: ''
+          image: '',
+          url: '/'
         }
       }
     },
@@ -51,7 +58,8 @@ export default {
       default: function () {
         return {
           title: '',
-          image: ''
+          image: '',
+          url: '/'
         }
       }
     }
@@ -78,15 +86,20 @@ export default {
           justify-content: center;
           align-items: center;
         }
+        img{
+          cursor: pointer;
+        }
       }
       .title{
         font-size: 3rem;
+        cursor: pointer;
         @include breakpoint($max: 768px){
           font-size: 1rem;
         }
       }
       .menu-icon{
         font-size: 4rem;
+        cursor: pointer;
         @include breakpoint($max: 768px){
           font-size: 1rem;
         }
@@ -98,7 +111,7 @@ export default {
       }
       .right-menu{
         img{
-          width: 30%;
+          max-width: 30%;
         }
       }
     }

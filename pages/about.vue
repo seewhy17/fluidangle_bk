@@ -361,6 +361,7 @@ export default {
           font-size: 1rem;
           color:$light-gray;
           align-items: center;
+          cursor:pointer;
           img{
             margin-left: 2rem;
             width: 15%;

@@ -74,7 +74,7 @@
               <div class="image-part flex">
                 <img src="/svg/monitor.svg" alt="">
               </div>
-              <a href="" class="flex">Visit Website</a>
+              <a href="https://www.yourtreeapp.com/website/home" class="flex" target="_blank" title="TreeApp">Visit Website</a>
             </div>
             <div class="link grid">
               <div class="image-part flex">
@@ -85,18 +85,14 @@
           </div>
           <div class="app-stores grid equal-two">
             <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
+              <a href="https://apps.apple.com/us/app/tree-christian-social-network/id1437700451" title="IOS Store" target="_blank">
+                <img src="/img/Image 21.png" alt="">
+              </a>
             </div>
             <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
-            </div>
-          </div>
-          <div class="project-team">
-            <p class="title">
-              PROJECT TEAM
-            </p>
-            <div class="image-part flex">
-              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
+              <a href="" target="_blank">
+                <img src="/img/Image 20.png" alt="">
+              </a>
             </div>
           </div>
         </div>
@@ -212,7 +208,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}" />
+    <shortcut-menus :left-menu="{title:'PLINKD',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
     <start-project />
     <Footer />
   </div>

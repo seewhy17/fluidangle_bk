@@ -1,5 +1,5 @@
 <template>
-  <scroll-fixed-header :fixed.sync="fixed" :threshold="100">
+  <scroll-fixed-header :fixed.sync="fixed" :threshold="200">
     <nav>
       <nuxt-link to="/" class="brand">
         <img src="/svg/fluid-angle_white.svg" alt="fluid-logo">
