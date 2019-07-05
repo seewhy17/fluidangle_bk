@@ -2,7 +2,7 @@
   <div class="menus container">
     <div class="wrapper grid">
       <div class="left-menu">
-        <nuxt-link to="/" tag="div">
+        <nuxt-link :to="leftMenu.url" tag="div">
           <div class="wrapper flex dir-row list">
             <chevron-left class="menu-icon menu-left-icon icon-size" fill-color="#8d8d8d" />
             <p class="title">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="right-menu">
-        <nuxt-link to="/" tag="div">
+        <nuxt-link :to="rightMenu.url" tag="div">
           <div class="wrapper flex dir-row list">
             <p class="title">
               {{ rightMenu.title }}
