@@ -114,7 +114,7 @@ export default {
         title: 'Oinder',
         titleImage: '',
         text: '',
-        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562274422/fluidangle/img/xd/Image_71.png',
+        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562445160/fluidangle/img/xd/Image_71.png',
         action: '/projects/oinder',
         type: 'mobile',
         color: '#877afb'
