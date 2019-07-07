@@ -131,6 +131,7 @@
 <script>
 import { Hooper, Slide } from 'hooper'
 import 'hooper/dist/hooper.css'
+
 export default {
   name: 'Statistics',
   components: {
@@ -148,6 +149,9 @@ export default {
     this.slides = [
       {
         img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
+      },
+      {
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
       }
     ]
   },
@@ -155,6 +159,12 @@ export default {
     getImageUrl(url) {
       return this.$cloudinary
         .url(url)
+    },
+    slidePrev() {
+      this.$refs.carousel.slidePrev()
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext()
     }
   }
 }
@@ -267,6 +277,23 @@ export default {
           font-weight: 500;
           color: #62c9cb;
           font-style: italic;
+        }
+      }
+      .hooper{
+        height: auto;
+      }
+      .controls{
+        font-size: 1rem;
+        padding: {
+          top:1rem;
+        };
+        svg{
+          margin-left: 1rem;
+        }
+        & .prev:hover,
+        & .next:hover{
+          cursor: pointer;
+          font-size: 1.5rem;
         }
       }
     }
