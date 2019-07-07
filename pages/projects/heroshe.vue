@@ -26,21 +26,29 @@
             Heroshe
           </p>
           <div class="content introduction">
-            <p>In 2005, Heroshe Co-founder Chichi Ukomadu moved to America to pursue her version of the American dream.
+            <p>
+              In 2005, Heroshe Co-founder Chichi Ukomadu moved to America to pursue her version of the American dream.
               Before she left Nigeria, she was overjoyed at the prospect of all that was ahead of her. She wasn’t
-              prepared for the hardships she would face before she founded Heroshe.</p>
+              prepared for the hardships she would face before she founded Heroshe.
+            </p>
             <br>
-            <p>She ventured into the American job market. She was confident that her Computer Science degree combined
+            <p>
+              She ventured into the American job market. She was confident that her Computer Science degree combined
               with her prior experiences at Shell and KPMG Nigeria would allow her have her choice of jobs. She searched
               for months, growing more and more discouraged with each day that passed without a job. Months turned into
-              years without a job offer.</p>
+              years without a job offer.
+            </p>
             <br>
-            <p>Then, her husband asked her a simple question: “What are you passionate about?” The answer came easily:
+            <p>
+              Then, her husband asked her a simple question: “What are you passionate about?” The answer came easily:
               shopping and helping people. “Can you turn either of these passions into a business?” he asked. Then she
-              realized she had already been doing a combination of both passions for years.</p>
+              realized she had already been doing a combination of both passions for years.
+            </p>
             <br>
-            <p>Heroshe was founded with a desire to serve people. Since opening our doors in 2012, Heroshe has been
-              connecting Nigerians with quality US products they deserve at shipping prices they can afford.</p>
+            <p>
+              Heroshe was founded with a desire to serve people. Since opening our doors in 2012, Heroshe has been
+              connecting Nigerians with quality US products they deserve at shipping prices they can afford.
+            </p>
           </div>
           <div class="stats grid">
             <div class="stat">
@@ -99,14 +107,16 @@
               The Challenge
             </h2>
             <p class="text">
-            <p>Heroshe build their initial MVP (minimum viable product) on Wordpress. Wordpress is the largest CMS on
+              Heroshe build their initial MVP (minimum viable product) on Wordpress. Wordpress is the largest CMS on
               the market that powers up to 27% of website on the internet (Netcraft ) The flexibility of WordPress lets
-            you turn your content, images, video and more into a functional website.</p>
+              you turn your content, images, video and more into a functional website.
+            </p>
             <br>
-            <p>As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and “plug-in” third-party pieces
+            <p class="text">
+              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and “plug-in” third-party pieces
               of software to make your site look, act, and feel exactly the way you want) to suit their business needs.
               The problem with that is that too many plugins from different designers who did not interact together well
-              made the site less effect and slow down their site.</p>
+              made the site less effect and slow down their site.
             </p>
           </div>
           <div class="what-we-did">
@@ -114,12 +124,16 @@
               What we did
             </h2>
             <div class="content">
-              <p>We build a Custom Enterprise Solution for their Shop for and Ship for me platform. With a custom
+              <p>
+                We build a Custom Enterprise Solution for their Shop for and Ship for me platform. With a custom
                 website, there is no theme which allowed Heroshe to build a site around their customer journey by
-                focusing the design and development on the narrative that their customers is most likely to follow.</p>
+                focusing the design and development on the narrative that their customers is most likely to follow.
+              </p>
               <br>
-              <p>Custom building Heroshe allowed us to completely avoid unnecessary functionality which reduce load
-                time.</p>
+              <p>
+                Custom building Heroshe allowed us to completely avoid unnecessary functionality which reduce load
+                time.
+              </p>
             </div>
           </div>
         </div>
