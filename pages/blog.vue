@@ -151,7 +151,7 @@
                 <div class="image-part">
                   <img :src="post.image" alt="">
                 </div>
-                <divx class="content-box">
+                <div class="content-box">
                   <div class="content">
                     <a href="" class="link-wrapper">
                       <h3 class="title">
@@ -166,7 +166,7 @@
                     <a href="">{{ post.type }}</a>
                     <p>{{ post.minutes }} mins read</p>
                   </div>
-                </divx>
+                </div>
               </div>
             </div>
           </div>

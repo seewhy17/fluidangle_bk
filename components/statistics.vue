@@ -100,13 +100,63 @@
         >
       </div>
     </div>
-    <div class="clients container" />
+    <div class="clients container">
+      <div class="image-part grid">
+        <span />
+        <hooper ref="carousel" :settings="hooperSettings">
+          <slide v-for="(slide, index) in slides" :key="index" :index="index">
+            <img :src="slide.img" alt="">
+          </slide>
+        </hooper>
+        <span />
+      </div>
+      <div class="content-box flex dir-column">
+        <p class="text center-align">
+          FluidAngle team are awesome guys to work with. <br>
+          I highly recommend them to get your project done ASAP and perfect delivery
+        </p>
+        <p class="role">
+          Sarah - MD, ProntoCare
+        </p>
+        <div class="controls flex list dir-row">
+          <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev" />
+          <CheckboxBlankCircle fill-color="#d5d5d5" class="middle-control" />
+          <CheckboxBlankCircle fill-color="#d5d5d5" title="next" class="next" @click.prevent="slideNext" />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import { Hooper, Slide } from 'hooper'
+import 'hooper/dist/hooper.css'
 export default {
-  name: 'Statistics'
+  name: 'Statistics',
+  components: {
+    CheckboxBlankCircle: () => ({ component: import('vue-material-design-icons/CheckboxBlankCircle.vue') }),
+    Hooper,
+    Slide
+  },
+  data: () => ({
+    slides: [],
+    hooperSettings: {
+      centerMode: true
+    }
+  }),
+  mounted() {
+    this.slides = [
+      {
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
+      }
+    ]
+  },
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
+  }
 }
 </script>
 
@@ -181,8 +231,44 @@ export default {
     }
 
     .clients {
-      min-width: 65%;
-      width: 65%;
+      padding-bottom: 5rem;
+      .image-part {
+        grid-template-columns: 1fr auto 1fr;
+        grid-gap: 2rem;
+        padding-top: 5%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        span{
+          height: 2px;
+          background-color: rgba($light-gray,.8);
+        }
+        img {
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          border: solid 4px $light;
+          height: 7.5rem;
+          border-radius: 50%;
+          width: 7.5rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .content-box {
+        align-items: center;
+
+        .text {
+          color: $gray;
+          margin-bottom: 1.5rem;
+        }
+
+        .role {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #62c9cb;
+          font-style: italic;
+        }
+      }
     }
   }
 </style>
