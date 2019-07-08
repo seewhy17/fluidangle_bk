@@ -243,7 +243,7 @@ export default {
     .clients {
       padding-bottom: 5rem;
       .image-part {
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr 7.6rem 1fr;
         grid-gap: 2rem;
         padding-top: 5%;
         justify-content: center;
@@ -254,7 +254,7 @@ export default {
           background-color: rgba($light-gray,.8);
         }
         img {
-          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
           border: solid 4px $light;
           height: 7.5rem;
           border-radius: 50%;
