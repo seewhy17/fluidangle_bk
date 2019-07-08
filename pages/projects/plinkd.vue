@@ -27,16 +27,16 @@
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Plinkd was created for businesses to create a platform where they can directly market advertise and
+              connect with every individual within their location. Plinkd was created for users to be a tool for
+              everyone.
             </p>
             <br>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
+              A tool to establish a single place for users around the world to receive first hand all the
+              answers for their who? what? when? And where questions on things to do 24/7, 365. Also, Plinkd will
+              simplify the process and decrease the time it takes to plan a trip months in advance or even an
+              individual's last minute plans for a night out with friends.
             </p>
           </div>
           <div class="stats grid">
@@ -112,9 +112,15 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              There were approximately 1/2 million total active mobile app developers in leading app
+              stores as of January 2017 - 724,99 who developed a Google Play app and 494,400 who developed an Apple app.
+            </p>
+            <br>
+            <p class="text">
+              Having a unique mobile app idea is difficult, but finding the right mobile app development team for the
+              project is even more challenging. There are many mobile app developers. How do you find the right mobile
+              app development team for your project? A team that is invested in your vision and not just to make
+              money.
             </p>
           </div>
           <div class="what-we-did">
@@ -381,12 +387,15 @@ export default {
           margin-bottom: 3rem;
 
           p {
-            font-size: .9rem;
+            font-size: 1rem;
           }
         }
       }
 
       .process {
+        margin:{
+          bottom:5rem;
+        }
         .content-box {
           justify-items: end;
           @include breakpoint($max: 768px) {

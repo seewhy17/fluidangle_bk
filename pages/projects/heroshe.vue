@@ -27,23 +27,34 @@
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              In 2005, Heroshe Co-founder Chichi Ukomadu moved to America to pursue her version of the American dream.
+              Before she left Nigeria, she was overjoyed at the prospect of all that was ahead of her. She wasn’t
+              prepared for the hardships she would face before she founded Heroshe.
             </p>
             <br>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
+              She ventured into the American job market. She was confident that her Computer Science degree combined
+              with her prior experiences at Shell and KPMG Nigeria would allow her have her choice of jobs. She searched
+              for months, growing more and more discouraged with each day that passed without a job. Months turned into
+              years without a job offer.
+            </p>
+            <br>
+            <p>
+              Then, her husband asked her a simple question: “What are you passionate about?” The answer came easily:
+              shopping and helping people. “Can you turn either of these passions into a business?” he asked. Then she
+              realized she had already been doing a combination of both passions for years.
+            </p>
+            <br>
+            <p>
+              Heroshe was founded with a desire to serve people. Since opening our doors in 2012, Heroshe has been
+              connecting Nigerians with quality US products they deserve at shipping prices they can afford.
             </p>
           </div>
           <div class="stats grid">
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  45
+                  139
                 </p>
                 <p class="comment center-align">
                   SCREENS
@@ -53,7 +64,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  1.2k
+                  9.6k
                 </p>
                 <p class="comment center-align">
                   HOURS SPENT
@@ -63,7 +74,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  5
+                  4
                 </p>
                 <p class="comment center-align">
                   PEOPLE INVOLVED
@@ -96,27 +107,34 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Heroshe build their initial MVP (minimum viable product) on Wordpress. Wordpress is the largest CMS on
+              the market that powers up to 27% of website on the internet (Netcraft ) The flexibility of WordPress lets
+              you turn your content, images, video and more into a functional website.
+            </p>
+            <br>
+            <p class="text">
+              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and “plug-in” third-party pieces
+              of software to make your site look, act, and feel exactly the way you want) to suit their business needs.
+              The problem with that is that too many plugins from different designers who did not interact together well
+              made the site less effect and slow down their site.
             </p>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>Front End Development</li>
-              <li>Web Design</li>
-              <li>Search Engine Optimization</li>
-              <li>Content Management System</li>
-              <li>Bespoke UI Design</li>
-              <li>Mobile Responsive Development</li>
-              <li>Blog Integration</li>
-              <li>Live Chat Integration</li>
-              <li>Photo Gallery Integration</li>
-              <li>Technical Support</li>
-            </ul>
+            <div class="content">
+              <p>
+                We build a Custom Enterprise Solution for their Shop for and Ship for me platform. With a custom
+                website, there is no theme which allowed Heroshe to build a site around their customer journey by
+                focusing the design and development on the narrative that their customers is most likely to follow.
+              </p>
+              <br>
+              <p>
+                Custom building Heroshe allowed us to completely avoid unnecessary functionality which reduce load
+                time.
+              </p>
+            </div>
           </div>
         </div>
         <div class="image-part hide-on-small">
@@ -394,7 +412,7 @@ export default {
           margin-bottom: 3rem;
 
           p {
-            font-size: .9rem;
+            font-size: 1rem;
           }
         }
       }
