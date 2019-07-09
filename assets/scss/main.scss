@@ -285,7 +285,8 @@ p {
         top: 1rem;
       };
 
-      & + div.banner-grid {
+      & + div.banner-grid,
+      & + section.banner-grid {
         padding-top: 3rem;
       }
     }

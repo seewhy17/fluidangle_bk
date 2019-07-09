@@ -416,7 +416,7 @@ export default {
             color: #9fb0bf;
             font-size: 1rem;
             line-height: 1.22;
-            padding: 1rem 0;
+            padding: .25rem .2rem;
             border: 0;
             text-overflow: ellipsis;
             @include for-phone-only {
@@ -434,13 +434,14 @@ export default {
             border: solid 1px #707070;
             color: $light;
             background-color: $primary;
-            font-size: 1.75rem;
+            font-size: 1.35rem;
             padding: {
-              top: .75rem;
-              bottom: .65rem;
+              top: .5rem;
+              bottom: .45rem;
               left: 1.5rem;
               right: 1.45rem;
             };
+            cursor: pointer;
             @include for-phone-only {
               font-size: 0.75rem;
             }
