@@ -36,24 +36,23 @@
           <div class="post card main-post">
             <div class="image-part">
               <img
-                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_53.png')"
+                :src="getByPriority('Primary')[0]['backgroundUrl']"
                 alt=""
               >
               <div class="content-box">
                 <div class="content">
                   <a href="/posts/post-01" class="link-wrapper">
                     <h3 class="title">
-                      The Rebellion Against China’s 996 Culture
+                      {{ getByPriority('Primary')[0]['title'] }}
                     </h3>
                   </a>
                   <p class="text">
-                    Workers will no longer tolerate the punishing schedules of technology giants
-                    Workers will no longer tolerate the punishing schedules.
+                    {{ getByPriority('Primary')[0]['summary'] }}
                   </p>
                 </div>
                 <div class="action-box flex dir-row">
-                  <a href="">Entrepreneur</a>
-                  <p>7 mins read</p>
+                  <a href="">{{ getByPriority('Primary')[0]['type'] }}</a>
+                  <p>{{ getByPriority('Primary')[0]['duration'] }} mins read</p>
                 </div>
               </div>
             </div>
@@ -223,6 +222,11 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import Strapi from 'strapi-sdk-javascript/build/main'
+import { mapGetters, mapActions } from 'vuex'
+
+const apiUrl = process.env.API_URL || 'http://localhost:1337'
+const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'Blog',
@@ -232,6 +236,7 @@ export default {
   },
   data: () => ({
     posts: [],
+    stPosts: [],
     mostPopular: [
       {
         id: 'popular-01',
@@ -248,7 +253,23 @@ export default {
     ],
     whatsNew: []
   }),
+  computed: {
+    ...mapGetters([
+      'getPosts',
+      'getByPriority'
+    ])
+  },
+  async fetch({ store }) {
+    await store.dispatch('emptyPosts')
+    const response = await strapi.request('get', '/posts', {})
+    await response.forEach(async post => {
+      await store.dispatch('savePost', {
+        id: post._id, ...post
+      })
+    })
+  },
   mounted() {
+    this.stPosts = this.$store.getters.getPosts
     this.posts = [
       {
         id: 'post01',
@@ -306,6 +327,10 @@ export default {
     ]
   },
   methods: {
+    ...mapActions([
+      'savePost',
+      'emptyPosts'
+    ]),
     getImageUrl(url) {
       return this.$cloudinary
         .url(url)

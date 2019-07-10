@@ -11,8 +11,8 @@
         <nuxt-link to="/about">
           About
         </nuxt-link>
-        <nuxt-link to="/blog">
-          Blog
+        <nuxt-link to="/app-estimator">
+          Estimator
         </nuxt-link>
         <nuxt-link to="/contact">
           Contact
@@ -61,7 +61,7 @@ export default {
       a {
         padding: 0 1rem;
         text-transform: uppercase;
-        font-size: 0.8rem;
+        font-size: .8rem;
         font-weight: 500;
 
         &.phone {
