@@ -1,0 +1,223 @@
+{
+  "Platform": {
+    "Android": {
+      "lower": 3120,
+      "higher": 4680
+    },
+    "IOS": {
+      "lower": 3120,
+      "higher": 4680
+    },
+    "Web App": {
+      "lower": 0,
+      "higher": 0
+    },
+    "Cross Platform": {
+      "lower": 2080,
+      "higher": 3120
+    }
+  },
+  "Design": {
+    "UX research & Wireframing": {
+      "lower": 0,
+      "higher": 0
+    },
+    "HiFi UI Design": {
+      "lower": 0,
+      "higher": 0
+    },
+    "Prototyping": {
+      "lower": 0,
+      "higher": 0
+    },
+    "Game Animations": {
+      "lower": 10400,
+      "higher": 15600
+    }
+  },
+  "Signup Login": {
+    "Email/Password Sign Up": {
+      "lower": 478,
+      "higher": 717
+    },
+    "Social Networks": {
+      "lower": 1060,
+      "higher": 1590
+    },
+    "Multi-tenant Accounts": {
+      "lower": 1840,
+      "higher": 2760
+    },
+    "Subdomains": {
+      "lower": 1440,
+      "higher": 2160
+    }
+  },
+  "Secure": {
+    "Security not important": {
+      "lower": 0,
+      "higher": 0
+    },
+    "SSL Certificate based Security": {
+      "lower": 1040,
+      "higher": 1560
+    },
+    "DoS Protection": {
+      "lower": 1800,
+      "higher": 2700
+    },
+    "Two Factor Authentication": {
+      "lower": 1800,
+      "higher": 2700
+    }
+  },
+  "Generated Content": {
+    "Dashboard": {
+      "lower": 1800,
+      "higher": 2700
+    },
+    "Activity Feed": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "File Upload": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "User Profile": {
+      "lower": 720,
+      "higher": 1080
+    },
+    "Transactional Emails": {
+      "lower": 720,
+      "higher": 1080
+    },
+    "Tags allows": {
+      "lower": 720,
+      "higher": 1080
+    },
+    "Ratings or review": {
+      "lower": 1800,
+      "higher": 270"lower": 0,
+      "higher": 0
+    },
+    "Audio/Video Processing": {
+      "lower": 1800,
+      "higher": 2700
+    }
+  },
+  "Dates And Locations": {
+    "Calendaring": {
+      "lower": 2280,
+      "higher": 3240
+    },
+    "Display of Map Data/Geolocation": {
+      "lower": 1080,
+      "higher": 1620
+    },
+    "Display of custom map markers/regions": {
+      "lower": 1080,
+      "higher": 1620
+    },
+    "Booking": {
+      "lower": 2160,
+      "higher": 3240
+    }
+  },
+  "Social And Engagement": {
+    "Messaging": {
+      "lower": 1920,
+      "higher": 2880
+    },
+    "Forums or commenting": {
+      "lower": 1800,
+      "higher": 2700
+    },
+    "Social Sharing": {
+      "lower": 480,
+      "higher": 720
+    },
+    "Push to Facebook Open Graph": {
+      "lower": 1320,
+      "higher": 1980
+    }
+  },
+  "Billing": {
+    "Subscription plans": {
+      "lower": 2340,
+      "higher": 3510
+    },
+    "Payment Processing": {
+      "lower": 1800,
+      "higher": 2700
+    },
+    "Shopping Cart": {
+      "lower": 2880,
+      "higher": 4320
+    },
+    "User Marketplace": {
+      "lower": 4320,
+      "higher": 6480
+    },
+    "Product Management": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "Email Marketing": {
+      "lower": 0,
+      "higher": 0
+    }
+  },
+  "Types": {
+    "CMS Integration": {
+      "lower": 2520,
+      "higher": 3780
+    },
+    "User Admin Page": {
+      "lower": 1080,
+      "higher": 1620
+    },
+    "Moderation/Content Approval": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "Intercom": {
+      "lower": 1080,
+      "higher": 1620
+    },
+    "Usage Analytics": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "Crash Reporting": {
+      "lower": 0,
+      "higher": 0
+    },
+    "Performance Monitoring": {
+      "lower": 360,
+      "higher": 540
+    },
+    "Multilingual Support": {
+      "lower": 1440,
+      "higher": 2160
+    }
+  },
+  "External Api": {
+    "Connect to one or more third party services": {
+      "lower": 2160,
+      "higher": 3240
+    },
+    "SMS Messaging": {
+      "lower": 1440,
+      "higher": 2160
+    },
+    "An API for others to integrate with your app": {
+      "lower": 2880,
+      "higher": 4320
+    },
+    "Phone Number Masking": {
+      "lower": 1440,
+      "higher": 2160
+    }
+  }
+}

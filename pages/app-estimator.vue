@@ -40,8 +40,8 @@
               <div
                 ref="android"
                 class="input-block android-block grid three"
-                :class="{selected:isChecked('platform','android')}"
-                @click="toggleCheckBox('platform','android')"
+                :class="{selected:isChecked('platform','Android')}"
+                @click="toggleCheckBox('platform','Android')"
               >
                 <img
                   src="/img/app-estimator/Image 4.png"
@@ -49,17 +49,17 @@
              /img/app-estimator/Image 4@3x.png 3x"
                   alt="Android"
                 >
-                <label for="android" @click="toggleCheckBox('platform','android')">Android</label>
+                <label for="android" @click="toggleCheckBox('platform','Android')">Android</label>
                 <div class="radio-button flex">
-                  <input id="android" v-model="option_block.platform" type="checkbox" name="platform" value="android">
+                  <input id="android" v-model="option_block.platform" type="checkbox" name="platform" value="Android">
                   <span />
                 </div>
               </div>
               <div
                 ref="Apple"
                 class="input-block ios-block grid three"
-                :class="{selected:isChecked('platform','ios')}"
-                @click="toggleCheckBox('platform','ios')"
+                :class="{selected:isChecked('platform','IOS')}"
+                @click="toggleCheckBox('platform','IOS')"
               >
                 <img
                   src="/img/app-estimator/Image 5.png"
@@ -87,7 +87,13 @@
                 >
                 <label for="cross-platform" @click="toggleCheckBox('platform','Cross Platform')">Cross Platform</label>
                 <div class="radio-button flex">
-                  <input id="cross-platform" v-model="option_block.platform" type="checkbox" name="platform" value="Cross Platform">
+                  <input
+                    id="cross-platform"
+                    v-model="option_block.platform"
+                    type="checkbox"
+                    name="platform"
+                    value="Cross Platform"
+                  >
                   <span />
                 </div>
               </div>
@@ -134,7 +140,8 @@
              /img/app-estimator/layout@3x.png 3x"
                   alt="Stock or Template UI"
                 >
-                <label for="stock_ui" @click="toggleCheckBox('design','UX research & Wireframing')">UX research & Wireframing</label>
+                <label for="stock_ui" @click="toggleCheckBox('design','UX research & Wireframing')">UX research &
+                  Wireframing</label>
                 <div class="radio-button flex">
                   <input
                     id="stock_ui"
@@ -185,7 +192,13 @@
                 <label for="animated_ui" @click="toggleCheckBox('design','Prototyping')">Prototyping</label>
 
                 <div class="radio-button flex">
-                  <input id="animated_ui" v-model="option_block.design" type="checkbox" name="design" value="Prototyping">
+                  <input
+                    id="animated_ui"
+                    v-model="option_block.design"
+                    type="checkbox"
+                    name="design"
+                    value="Prototyping"
+                  >
                   <span />
                 </div>
               </div>
@@ -364,7 +377,8 @@
                   alt="Security"
                 >
                 <div class="grid no-gap">
-                  <label for="security" @click="toggleCheckBox('secure','Security not important')">Security not important</label>
+                  <label for="security" @click="toggleCheckBox('secure','Security not important')">Security not
+                    important</label>
                   <small>for initial MVP versions
                   </small>
                 </div>
@@ -392,7 +406,8 @@
                   alt="SSL"
                 >
                 <div class="grid no-gap">
-                  <label for="ssl" @click="toggleCheckBox('secure','SSL Certificate based Security')">SSL Certificate based Security</label>
+                  <label for="ssl" @click="toggleCheckBox('secure','SSL Certificate based Security')">SSL Certificate
+                    based Security</label>
                   <small>The industry standard way to ensure your users data is safe
                     during the use of this app
                   </small>
@@ -444,7 +459,8 @@
                   alt="2fa Auth"
                 >
                 <div class="grid no-gap">
-                  <label for="two_factor" @click="toggleCheckBox('secure','Two Factor Authentication')">Two Factor Authentication</label>
+                  <label for="two_factor" @click="toggleCheckBox('secure','Two Factor Authentication')">Two Factor
+                    Authentication</label>
                   <small>for initial MVP versions
                   </small>
                 </div>
@@ -515,7 +531,8 @@
                   alt="Activity"
                 >
                 <div class="grid no-gap">
-                  <label for="activity" @click="toggleCheckBox('generated_content','Activity Feed')">Activity Feed</label>
+                  <label for="activity" @click="toggleCheckBox('generated_content','Activity Feed')">Activity
+                    Feed</label>
                   <small>An Activity feed would perhaps show what users have
                     been doing recently
                   </small>
@@ -544,7 +561,8 @@
                   alt="File Upload"
                 >
                 <div class="grid no-gap">
-                  <label for="file_upload" @click="toggleCheckBox('generated_content','File Upload')">File Upload</label>
+                  <label for="file_upload" @click="toggleCheckBox('generated_content','File Upload')">File
+                    Upload</label>
                   <small>Users should be able to upload file content, eg. images, PDF’s ect
                   </small>
                 </div>
@@ -572,7 +590,8 @@
                   alt="User Profile"
                 >
                 <div class="grid no-gap">
-                  <label for="user_profile" @click="toggleCheckBox('generated_content','User Profile')">User Profile</label>
+                  <label for="user_profile" @click="toggleCheckBox('generated_content','User Profile')">User
+                    Profile</label>
                   <small>Users should be able to upload file content, eg. images, PDF’s ect
                   </small>
                 </div>
@@ -600,7 +619,8 @@
                   alt="Transaction Emails"
                 >
                 <div class="grid no-gap">
-                  <label for="transactional_emails" @click="toggleCheckBox('generated_content','Transactional Emails')">Transactional Emails</label>
+                  <label for="transactional_emails" @click="toggleCheckBox('generated_content','Transactional Emails')">Transactional
+                    Emails</label>
                   <small>Users might receive regular automated emails from the app
                     to drive engagement or notify them of changes
                   </small>
@@ -629,7 +649,8 @@
                   alt="Tags"
                 >
                 <div class="grid no-gap">
-                  <label for="tags_allows" @click="toggleCheckBox('generated_content','Tags allows')">Tags allows</label>
+                  <label for="tags_allows" @click="toggleCheckBox('generated_content','Tags allows')">Tags
+                    allows</label>
                   <small>Users to categorize information so that others can find
                     relevant information
                   </small>
@@ -658,7 +679,8 @@
                   alt="Ratings"
                 >
                 <div class="grid no-gap">
-                  <label for="ratings" @click="toggleCheckBox('generated_content','Ratings or review')">Ratings or review</label>
+                  <label for="ratings" @click="toggleCheckBox('generated_content','Ratings or review')">Ratings or
+                    review</label>
                   <small>typical use case for ratings and reviews might be restaurants
                     reviews or customer satisfaction ratings.
                   </small>
@@ -687,7 +709,8 @@
                   alt="AV Processing"
                 >
                 <div class="grid no-gap">
-                  <label for="av_processing" @click="toggleCheckBox('generated_content','Audio/Video Processing')">Audio/Video Processing</label>
+                  <label for="av_processing" @click="toggleCheckBox('generated_content','Audio/Video Processing')">Audio/Video
+                    Processing</label>
                   <small>Encoding, modification and storage of audio or video files.
                   </small>
                 </div>
@@ -729,7 +752,10 @@
                   alt="Calendaring"
                 >
                 <div class="grid no-gap">
-                  <label for="calendaring" @click="toggleCheckBox('dates_and_locations','Calendaring')">Calendaring</label>
+                  <label
+                    for="calendaring"
+                    @click="toggleCheckBox('dates_and_locations','Calendaring')"
+                  >Calendaring</label>
                   <small>Display and capture of data in a calendar format
                   </small>
                 </div>
@@ -757,7 +783,11 @@
                   alt="Map Data"
                 >
                 <div class="grid no-gap">
-                  <label for="map_data" @click="toggleCheckBox('dates_and_locations','Display of Map Data/Geolocation')">Display of Map Data/Geolocation</label>
+                  <label
+                    for="map_data"
+                    @click="toggleCheckBox('dates_and_locations','Display of Map Data/Geolocation')"
+                  >Display of Map
+                    Data/Geolocation</label>
                   <small>Showing a map with data points, eg. venue locations, driver location
                   </small>
                 </div>
@@ -775,8 +805,8 @@
               <div
                 ref="custom_map"
                 class="input-block custom_map-block grid three"
-                :class="{selected:isChecked('dates_and_locations','Display of custom map markers/regions:')}"
-                @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions:')"
+                :class="{selected:isChecked('dates_and_locations','Display of custom map markers/regions')}"
+                @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions')"
               >
                 <img
                   src="/img/app-estimator/map-location.png"
@@ -785,7 +815,11 @@
                   alt="Map Marker"
                 >
                 <div class="grid no-gap">
-                  <label for="custom_map" @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions:')">Display of custom map markers/regions:</label>
+                  <label
+                    for="custom_map"
+                    @click="toggleCheckBox('dates_and_locations','Display of custom map markers/regions')"
+                  >Display
+                    of custom map markers/regions</label>
                   <small>Allowing the user to select a map area visually or custom
                     icons for different location types
                   </small>
@@ -796,7 +830,7 @@
                     v-model="option_block.dates_and_locations"
                     type="checkbox"
                     name="dates_and_locations"
-                    value="Display of custom map markers/regions:"
+                    value="Display of custom map markers/regions"
                   >
                   <span />
                 </div>
@@ -836,7 +870,7 @@
             <div class="center-align title-block social-and-engagements-title-block container">
               <h3>App Engagement</h3>
               <p>
-                What type of Social & Engagement  do
+                What type of Social & Engagement do
                 you want on your app?
               </p>
             </div>
@@ -883,7 +917,8 @@
                   alt="Forums"
                 >
                 <div class="grid no-gap">
-                  <label for="forums" @click="toggleCheckBox('social_and_engagement','Forums or commenting')">Forums or commenting</label>
+                  <label for="forums" @click="toggleCheckBox('social_and_engagement','Forums or commenting')">Forums or
+                    commenting</label>
                   <small>Classic forum functional for account users or simple
                     commenting on information
                   </small>
@@ -912,7 +947,8 @@
                   alt="Social Sharing"
                 >
                 <div class="grid no-gap">
-                  <label for="social_sharing" @click="toggleCheckBox('social_and_engagement','Social Sharing')">Social Sharing</label>
+                  <label for="social_sharing" @click="toggleCheckBox('social_and_engagement','Social Sharing')">Social
+                    Sharing</label>
                   <small>Ability to share pieces of information in a controlled way on
                     social media accounts to drive engagement.
                   </small>
@@ -941,7 +977,11 @@
                   alt="Push to Facebook"
                 >
                 <div class="grid no-gap">
-                  <label for="open_graph" @click="toggleCheckBox('social_and_engagement','Push to Facebook Open Graph')">Push to Facebook Open Graph</label>
+                  <label
+                    for="open_graph"
+                    @click="toggleCheckBox('social_and_engagement','Push to Facebook Open Graph')"
+                  >Push to Facebook
+                    Open Graph</label>
                   <small>Pushing content from your app directly into the Facebook Graphs
                   </small>
                 </div>
@@ -981,7 +1021,8 @@
                   alt="Subscription"
                 >
                 <div class="grid no-gap">
-                  <label for="subscription" @click="toggleCheckBox('billing','Subscription plans')">Subscription plans</label>
+                  <label for="subscription" @click="toggleCheckBox('billing','Subscription plans')">Subscription
+                    plans</label>
                   <small>Allowing users within the app to send messages to other
                     account users or groups of users
                   </small>
@@ -1010,7 +1051,8 @@
                   alt="Payment Processing"
                 >
                 <div class="grid no-gap">
-                  <label for="payment" @click="toggleCheckBox('billing','Payment Processing')">Payment Processing</label>
+                  <label for="payment" @click="toggleCheckBox('billing','Payment Processing')">Payment
+                    Processing</label>
                   <small>You will process adhoc or regular payment from users and
                     manage refunds, ect.
                   </small>
@@ -1098,7 +1140,8 @@
                 >
                 <div class="grid no-gap">
                   <label for="product">Product Management</label>
-                  <small>Ability to manage data, eg. product listings, availability or other data relevant to your domain.
+                  <small>Ability to manage data, eg. product listings, availability or other data relevant to your
+                    domain.
                   </small>
                 </div>
                 <div class="radio-button flex">
@@ -1115,22 +1158,23 @@
               <div
                 ref="emailMarketing"
                 class="input-block email-block grid three"
-                :class="{selected:isChecked('email_marketing','Email Marketing')}"
-                @click="toggleCheckBox('email_marketing','Email Marketing')"
+                :class="{selected:isChecked('billing','Email Marketing')}"
+                @click="toggleCheckBox('billing','Email Marketing')"
               >
                 <img
                   src="/img/app-estimator/newsletter.png"
                   srcset="/img/app-estimator/newsletter@2x.png 2x,
              /img/app-estimator/newsletter@3x.png 3x"
-                  alt="Product Management"
+                  alt="Email Marketing"
                 >
                 <div class="grid no-gap">
-                  <label for="product" @click="toggleCheckBox('email_marketing','Email Marketing')">Email Marketing</label>
+                  <label for="email_marketing" @click="toggleCheckBox('billing','Email Marketing')">Email
+                    Marketing</label>
                 </div>
                 <div class="radio-button flex">
                   <input
                     id="email_marketing"
-                    v-model="option_block.email_marketing"
+                    v-model="option_block.billing"
                     type="checkbox"
                     name="billing"
                     value="Email Marketing"
@@ -1152,8 +1196,8 @@
               <div
                 ref="cms_integration"
                 class="input-block cms_integration-block grid gear three"
-                :class="{selected:isChecked('types','Dashboard')}"
-                @click="toggleCheckBox('types','Dashboard')"
+                :class="{selected:isChecked('types','CMS Integration')}"
+                @click="toggleCheckBox('types','CMS Integration')"
               >
                 <img
                   src="/img/app-estimator/gear.png"
@@ -1162,7 +1206,8 @@
                   alt="CMS Integration"
                 >
                 <div class="grid no-gap">
-                  <label for="cms_integration" @click="toggleCheckBox('types','Dashboard')">CMS Integration</label>
+                  <label for="cms_integration" @click="toggleCheckBox('types','CMS Integration')">CMS
+                    Integration</label>
                   <small>A content management system would allow editing of significant
                     parts of the static content of the app without developer intervention.
                   </small>
@@ -1173,7 +1218,7 @@
                     v-model="option_block.types"
                     type="checkbox"
                     name="types"
-                    value="Dashboard"
+                    value="CMS Integration"
                   >
                   <span />
                 </div>
@@ -1220,7 +1265,8 @@
                   alt="Moderation Approval"
                 >
                 <div class="grid no-gap">
-                  <label for="approval" @click="toggleCheckBox('types','Moderation/Content Approval')">Moderation/Content Approval</label>
+                  <label for="approval" @click="toggleCheckBox('types','Moderation/Content Approval')">Moderation/Content
+                    Approval</label>
                   <small>Account administration would oversee content submitted by
                     users for publication and would have an approval workflow
                   </small>
@@ -1278,8 +1324,9 @@
                   alt="Usage Analytics"
                 >
                 <div class="grid no-gap">
-                  <label for="usage_analytics" @click="toggleCheckBox('types','Usage Analytics')">Usage Analytics</label>
-                  <small>Find out  where your users come from and how they use your app.
+                  <label for="usage_analytics" @click="toggleCheckBox('types','Usage Analytics')">Usage
+                    Analytics</label>
+                  <small>Find out where your users come from and how they use your app.
                     We recommend Kissmetrics and Google Analytics
                   </small>
                 </div>
@@ -1307,7 +1354,8 @@
                   alt="Crash Reporting"
                 >
                 <div class="grid no-gap">
-                  <label for="crash_reporting" @click="toggleCheckBox('types','Crash Reporting')">Crash Reporting</label>
+                  <label for="crash_reporting" @click="toggleCheckBox('types','Crash Reporting')">Crash
+                    Reporting</label>
                   <small>When things go wrong you need to know we recommend Sentry.
                   </small>
                 </div>
@@ -1335,7 +1383,8 @@
                   alt="Performance Monitoring"
                 >
                 <div class="grid no-gap">
-                  <label for="performance" @click="toggleCheckBox('types','Performance Monitoring')">Performance Monitoring</label>
+                  <label for="performance" @click="toggleCheckBox('types','Performance Monitoring')">Performance
+                    Monitoring</label>
                   <small>As you scale up it is important to know that you are maintaining a
                     good user experience and making efficient use of your hosting
                     environment.
@@ -1365,7 +1414,8 @@
                   alt="Multilingual Support"
                 >
                 <div class="grid no-gap">
-                  <label for="multilingual" @click="toggleCheckBox('types','Multilingual Support')">Multilingual Support</label>
+                  <label for="multilingual" @click="toggleCheckBox('types','Multilingual Support')">Multilingual
+                    Support</label>
                   <small>Provide support for multiple languages for your app
                   </small>
                 </div>
@@ -1405,7 +1455,11 @@
                   alt="Third Party Services"
                 >
                 <div class="grid no-gap">
-                  <label for="third_party" @click="toggleCheckBox('external_api','Connect to one or more third party services')">Connect to one or more third party services</label>
+                  <label
+                    for="third_party"
+                    @click="toggleCheckBox('external_api','Connect to one or more third party services')"
+                  >Connect
+                    to one or more third party services</label>
                   <small>Perhaps a data feed that you need to integrate with or a partner app.
                   </small>
                 </div>
@@ -1461,7 +1515,11 @@
                   alt="Api"
                 >
                 <div class="grid no-gap">
-                  <label for="api" @click="toggleCheckBox('external_api','An API for others to integrate with your app')">An API for others to integrate with your app</label>
+                  <label
+                    for="api"
+                    @click="toggleCheckBox('external_api','An API for others to integrate with your app')"
+                  >An API
+                    for others to integrate with your app</label>
                   <small>Ability to share pieces of information in a controlled way on
                     social media accounts to drive engagement.
                   </small>
@@ -1490,7 +1548,8 @@
                   alt="Phone Number Masking"
                 >
                 <div class="grid no-gap">
-                  <label for="number_masking" @click="toggleCheckBox('external_api','Phone Number Masking')">Phone Number Masking</label>
+                  <label for="number_masking" @click="toggleCheckBox('external_api','Phone Number Masking')">Phone
+                    Number Masking</label>
                   <small>Calls made through your app will have masked numbers
                   </small>
                 </div>
@@ -1529,10 +1588,22 @@
             <input id="telephone" v-model="user.telephone" type="text" name="telephone" placeholder="Telephone">
           </div>
           <div class="input-block">
-            <input id="company-name" v-model="user.companyName" type="text" name="companyName" placeholder="Company Name">
+            <input
+              id="company-name"
+              v-model="user.companyName"
+              type="text"
+              name="companyName"
+              placeholder="Company Name"
+            >
           </div>
           <div class="input-block">
-            <input id="company-role" v-model="user.companyRole" type="text" name="companyRole" placeholder="Company Role">
+            <input
+              id="company-role"
+              v-model="user.companyRole"
+              type="text"
+              name="companyRole"
+              placeholder="Company Role"
+            >
           </div>
         </div>
         <div class="button-container center-align flex">
@@ -1559,7 +1630,6 @@ export default {
         design: [],
         screen: [],
         signup_login: [],
-        email_marketing: [],
         secure: [],
         generated_content: [],
         dates_and_locations: [],
@@ -1574,7 +1644,9 @@ export default {
         email: '',
         telephone: '',
         companyName: '',
-        companyRole: ''
+        companyRole: '',
+        lowEnd: 0,
+        HighEnd: 0
       }
     }
   },
@@ -1624,7 +1696,8 @@ export default {
       }
     }
   }
-  @mixin bottom-radius($i){
+
+  @mixin bottom-radius($i) {
     @if ($i == 1) {
       border-bottom-right-radius: 5px;
       @include breakpoint($max: 767px) {
@@ -1652,6 +1725,7 @@ export default {
   .page {
     .banner {
       position: relative;
+
       .bg {
         position: absolute;
         width: 100%;
@@ -1781,7 +1855,7 @@ export default {
                 &:nth-child(#{$i}) {
                   @include top-radius($i)
                 }
-                &:nth-last-child(#{$i}){
+                &:nth-last-child(#{$i}) {
                   @include bottom-radius($i)
                 }
               }
@@ -1826,14 +1900,14 @@ export default {
                 }
 
                 input[type="radio"] + span,
-                input[type="checkbox"] + span{
+                input[type="checkbox"] + span {
                   background: url("~static/svg/uncheck-mark.svg") 0 -1px no-repeat;
                   height: 33.4px;
                   padding: 0 0 0 33.4px;
                 }
 
                 input[type="radio"]:checked + span,
-                input[type="checkbox"]:checked + span{
+                input[type="checkbox"]:checked + span {
                   background: url("~static/svg/check-mark.svg") 0 -1px no-repeat;
                 }
               }
@@ -1859,59 +1933,69 @@ export default {
             };
             border: solid 1px #c8c7d8;
           }
-          .platform{
-            .input-block{
-              &:last-child{
-                flex-grow:2;
+
+          .platform {
+            .input-block {
+              &:last-child {
+                flex-grow: 2;
               }
             }
           }
-          .generated-content{
-            .input-block{}
+
+          .generated-content {
+            .input-block {
+            }
           }
         }
       }
     }
-    .contact-form{
+
+    .contact-form {
       padding: {
-        top:4.41rem;
-        bottom:4rem;
+        top: 4.41rem;
+        bottom: 4rem;
       };
-      .title{
+
+      .title {
         margin: {
           bottom: 1.4rem;
         };
         font-size: 2rem;
-        color:$grey;
+        color: $grey;
       }
-      .input-container{
+
+      .input-container {
         justify-items: center;
-        .input-block{
+
+        .input-block {
           width: 100%;
         }
-        input{
+
+        input {
           width: 100%;
           padding: {
-            top:1rem;
+            top: 1rem;
             bottom: 1.2rem;
-            left:1.5rem;
-            right:1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
           };
-          color:$light-gray;
+          color: $light-gray;
           border-radius: 6px;
           border: solid 1px $light-gray;
 
-          &:focus{
+          &:focus {
             outline: 0;
           }
         }
       }
-      .button-container{
-        margin:{
-          top:1rem;
+
+      .button-container {
+        margin: {
+          top: 1rem;
         }
         width: 100%;
-        button{
+
+        button {
           background-color: #ffb100;
           width: 100%;
           border-radius: 10px;
@@ -1920,9 +2004,9 @@ export default {
             bottom: 1.25rem;
           };
           border: 0;
-          color:$light;
+          color: $light;
           font-weight: 700;
-          font-size:1.45rem;
+          font-size: 1.45rem;
         }
       }
 
