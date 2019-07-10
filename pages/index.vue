@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div id="page" class="page">
     <div class="banner">
       <span class="bg" />
       <nav-bar />
@@ -88,7 +88,7 @@
 
     <section class="section our-services">
       <div class="arrow-up flex">
-        <a class="bold"><img src="/svg/keyboard-right-arrow-button.svg" alt=""></a>
+        <a class="bold" @click.prevent="scrollToView('#page')"><img src="/svg/keyboard-right-arrow-button.svg" alt=""></a>
       </div>
       <div class="wrapper">
         <span class="fancy-heading bold">
@@ -167,7 +167,12 @@ export default {
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
-  data: () => ({})
+  data: () => ({}),
+  methods: {
+    scrollToView(id) {
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 }
 </script>
 
@@ -509,6 +514,7 @@ export default {
     justify-content: center;
 
     a {
+      cursor: pointer;
       padding: 1rem 1.5rem 2rem;
       background: linear-gradient(rgba(#e3e8f1, 0.25) 50%, rgba($light, 0) 55%);
       @include for-phone-only {

@@ -61,7 +61,7 @@ export default {
       a {
         padding: 0 1rem;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: 500;
 
         &.phone {

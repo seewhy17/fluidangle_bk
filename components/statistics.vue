@@ -93,10 +93,14 @@
       </div>
       <div>
         <img
-          src="/img/Image 7.png"
-          srcset="/img/Image 7@2x.png 2x,
-             /img/Image 7@3x.png 3x"
-          alt="ponos"
+          src="/img/LOGO text_colored.png"
+          alt="plinkd"
+        >
+      </div>
+      <div>
+        <img
+          src="/img/tree.png"
+          alt="plinkd"
         >
       </div>
     </div>
@@ -210,12 +214,12 @@ export default {
     }
 
     .works-grid {
-      width: 60%;
-      min-width: 60%;
+      width: 70%;
+      min-width: 70%;
       margin: {
         top: 5rem;
       }
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 2fr repeat(4, 1fr);
       @include breakpoint($max: 768px) {
         grid-template-columns: auto
       }
@@ -223,16 +227,13 @@ export default {
 
       & > div {
         &:nth-child(1) {
-          width: 110%;
+          font-size: 1.2rem;
+          color:$dark-gray;
         }
 
         display: flex;
         justify-content: center;
         align-content: center;
-      }
-
-      img {
-        width: 50%;
       }
 
       .content-text {
