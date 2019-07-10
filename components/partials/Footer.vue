@@ -9,8 +9,8 @@
           <nuxt-link to="/about">
             About us
           </nuxt-link>
-          <nuxt-link to="/blog">
-            Blog
+          <nuxt-link to="/app-estimator">
+            Estimator
           </nuxt-link>
           <nuxt-link to="/">
             Career

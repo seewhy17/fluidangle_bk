@@ -10,8 +10,8 @@
       <nuxt-link to="/about">
         About Us
       </nuxt-link>
-      <nuxt-link to="/blog">
-        Blog
+      <nuxt-link to="/app-estimator">
+        Estimator
       </nuxt-link>
       <nuxt-link to="/contact">
         Contact
@@ -24,7 +24,7 @@
   nav {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5vw;
+    padding: 1rem 5vw;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
     a {

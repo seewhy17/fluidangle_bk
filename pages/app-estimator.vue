@@ -1652,7 +1652,6 @@ export default {
   .page {
     .banner {
       position: relative;
-
       .bg {
         position: absolute;
         width: 100%;
