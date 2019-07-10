@@ -3,10 +3,64 @@ import { persist, desist } from './utils'
 
 export const state = () => ({
   client: {},
-  posts: []
+  posts: [],
+  pricing: {
+    low: 0,
+    high: 0
+  },
+  optionBlock: {
+    platform: [],
+    design: [],
+    screen: [],
+    signup_login: [],
+    secure: [],
+    generated_content: [],
+    dates_and_locations: [],
+    social_and_engagement: [],
+    billing: [],
+    types: [],
+    external_api: []
+  },
+  user: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    telephone: '',
+    companyName: '',
+    companyRole: '',
+    lowEnd: 0,
+    highEnd: 0
+  }
 })
 
 export const mutations = {
+  changePrice(state, pricing) {
+    state.pricing = pricing
+  },
+  resetPrice(state) {
+    state.pricing = {
+      low: 0,
+      high: 0
+    }
+  },
+  changeOptions(state, optionBlock) {
+    state.optionBlock = optionBlock
+  },
+  resetOptions(state) {
+    state.optionBlock = {
+      platform: [],
+      design: [],
+      screen: [],
+      signup_login: [],
+      secure: [],
+      generated_content: [],
+      dates_and_locations: [],
+      social_and_engagement: [],
+      billing: [],
+      types: [],
+      external_api: []
+    }
+  },
   addPost(state, post) {
     state.posts.push(post)
   },
@@ -24,6 +78,8 @@ export const mutations = {
 }
 
 export const getters = {
+  getPrice: state => state.pricing,
+  getOptions: state => state.optionBlock,
   getPosts: state => {
     return state.posts
   },
@@ -36,8 +92,20 @@ export const actions = {
   async emptyPosts({ commit }) {
     await commit('resetPosts')
   },
+  async emptyPrice({ commit }) {
+    await commit('resetPrice')
+  },
+  async emptyOptions({ commit }) {
+    await commit('resetOptions')
+  },
   async savePost({ commit }, post) {
     await commit('addPost', post)
+  },
+  async saveOptions({ commit }, optionBlock) {
+    await commit('changeOptions', optionBlock)
+  },
+  async savePrice({ commit }, pricing) {
+    await commit('changePrice', pricing)
   },
   nuxtServerInit({ commit }, { req }) {
     if (req.headers.cookie) {

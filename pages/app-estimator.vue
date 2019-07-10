@@ -1607,7 +1607,9 @@
           </div>
         </div>
         <div class="button-container center-align flex">
-          <button>Get App Estimate</button>
+          <button @click.prevent="submit()">
+            Get App Estimate
+          </button>
         </div>
       </form>
     </section>
@@ -1617,6 +1619,8 @@
 <script>
 import NavBar from '~/components/partials/customNavBar.vue'
 import pricing from './../pricing.json'
+import cloneDeep from 'lodash.clonedeep'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
 
@@ -1624,22 +1628,10 @@ export default {
   components: {
     NavBar
   },
-  data: () => {
+  data() {
     return {
       appPricing: pricing,
-      option_block: {
-        platform: [],
-        design: [],
-        screen: [],
-        signup_login: [],
-        secure: [],
-        generated_content: [],
-        dates_and_locations: [],
-        social_and_engagement: [],
-        billing: [],
-        types: [],
-        external_api: []
-      },
+      option_block: cloneDeep(this.$store.state.optionBlock),
       user: {
         firstName: '',
         lastName: '',
@@ -1652,7 +1644,24 @@ export default {
       }
     }
   },
+  computed: {
+    storeOptions() {
+      return cloneDeep(this.$store.state.optionBlock)
+    },
+    ...mapGetters([])
+  },
+  watch: {
+    storeOptions(newValue) {
+      this.option_block = newValue
+    }
+  },
   methods: {
+    ...mapActions([
+      'emptyPrice',
+      'savePrice',
+      'emptyOptions',
+      'saveOptions'
+    ]),
     capitalize(str) {
       return str.charAt(0).toUpperCase() + str.slice(1)
     },
@@ -1681,7 +1690,6 @@ export default {
       this.option_block[input] = value
     },
     toggleCheckBox(input, value) {
-      // console.log(input, value);
       if (this.isChecked(input, value)) {
         const result = this.arrayRemove(this.option_block[input], value)
         if (result) {
@@ -1694,8 +1702,6 @@ export default {
       }
     },
     isChecked(input, value) {
-      // eslint-disable-next-line no-console
-      // console.log(this.option_block[input])
       if (this.option_block[input]) {
         return this.option_block[input].find(item => item === value)
       }
@@ -1703,6 +1709,17 @@ export default {
     },
     isOption(input, value) {
       return this.option_block[input] === value
+    },
+    submit() {
+      this.emptyPrice()
+      this.emptyOptions()
+      const pricing = {
+        low: this.user.lowEnd,
+        high: this.user.highEnd
+      }
+      this.saveOptions(this.option_block)
+      this.savePrice(pricing)
+      this.$router.push('/app-estimator-result')
     }
   }
 }
@@ -2023,6 +2040,7 @@ export default {
         button {
           background-color: #ffb100;
           width: 100%;
+          cursor: pointer;
           border-radius: 10px;
           padding: {
             top: 1.45rem;

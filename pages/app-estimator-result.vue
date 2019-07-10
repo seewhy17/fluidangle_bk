@@ -16,7 +16,7 @@
         </h2>
         <div class="content container">
           <p class="price">
-            Total Cost: $0
+            Total Cost: <span>${{ getPrice.low }}</span><span v-if="getPrice.high > 0"> - {{ getPrice.high }}</span>
           </p>
           <p class="rates">
             Based on rates
@@ -33,10 +33,17 @@
 
 <script>
 import NavBar from '~/components/partials/customNavBar2.vue'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'AppEstimatorResult',
   components: {
     NavBar
+  },
+  computed: {
+    ...mapGetters([
+      'getPrice'
+    ])
   }
 }
 </script>
