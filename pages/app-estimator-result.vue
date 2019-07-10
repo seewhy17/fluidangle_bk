@@ -32,30 +32,30 @@
 </template>
 
 <script>
-  import NavBar from '~/components/partials/customNavBar2.vue'
-  import { mapGetters } from 'vuex'
+import NavBar from '~/components/partials/customNavBar2.vue'
+import { mapGetters } from 'vuex'
 
-  export default {
-    name: 'AppEstimatorResult',
-    components: {
-      NavBar
-    },
-    computed: {
-      ...mapGetters([
-        'getPrice'
-      ])
-    },
-    methods: {
-      formatCurrency(number) {
-        const formatter = Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 2
-        })
-        return formatter.format(number)
-      }
+export default {
+  name: 'AppEstimatorResult',
+  components: {
+    NavBar
+  },
+  computed: {
+    ...mapGetters([
+      'getPrice'
+    ])
+  },
+  methods: {
+    formatCurrency(number) {
+      const formatter = Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+      })
+      return formatter.format(number)
     }
   }
+}
 </script>
 
 <style scoped lang="scss">
