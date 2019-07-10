@@ -1616,6 +1616,7 @@
 
 <script>
 import NavBar from '~/components/partials/customNavBar.vue'
+import pricing from './../pricing.json'
 
 export default {
 
@@ -1625,6 +1626,7 @@ export default {
   },
   data: () => {
     return {
+      appPricing: pricing,
       option_block: {
         platform: [],
         design: [],
@@ -1646,11 +1648,32 @@ export default {
         companyName: '',
         companyRole: '',
         lowEnd: 0,
-        HighEnd: 0
+        highEnd: 0
       }
     }
   },
   methods: {
+    capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1)
+    },
+    formatString(str) {
+      return str.split('_').map(itr => this.capitalize(itr)).join(' ')
+    },
+    addPrice(key, value) {
+      const formattedKey = this.formatString(key)
+      const lowPrice = this.appPricing[formattedKey][value].lower
+      const highPrice = this.appPricing[formattedKey][value].higher
+      this.user.lowEnd += lowPrice
+      this.user.highEnd += highPrice
+    },
+    removePrice(key, value) {
+      const formattedKey = this.formatString(key)
+      const formattedValue = this.formatString(value)
+      const lowPrice = this.appPricing[formattedKey][formattedValue].lower
+      const highPrice = this.appPricing[formattedKey][formattedValue].higher
+      this.user.lowEnd -= lowPrice
+      this.user.highEnd -= highPrice
+    },
     arrayRemove(arr, value) {
       return arr.filter(ele => ele !== value)
     },
@@ -1662,10 +1685,12 @@ export default {
       if (this.isChecked(input, value)) {
         const result = this.arrayRemove(this.option_block[input], value)
         if (result) {
+          this.removePrice(input, value)
           this.option_block[input] = result
         }
       } else {
         this.option_block[input].push(value)
+        this.addPrice(input, value)
       }
     },
     isChecked(input, value) {

@@ -98,8 +98,7 @@
     },
     "Ratings or review": {
       "lower": 1800,
-      "higher": 270"lower": 0,
-      "higher": 0
+      "higher": 270
     },
     "Audio/Video Processing": {
       "lower": 1800,
