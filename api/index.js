@@ -35,12 +35,12 @@ const sendMail = async (params) => {
   const [firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd] = params
   const testAccount = await nodemailer.createTestAccount()
   const transporter = nodemailer.createTransport({
-    host: process.env.mail_host || testAccount.smtp.host,
+    host: `${process.env.mail_host}` || testAccount.smtp.host,
     port: process.env.mail_port || testAccount.smtp.port,
-    secure: process.env.mail_secure || testAccount.smtp.secure,
+    secure: (process.env.mail_secure === 'true') || testAccount.smtp.secure,
     auth: {
-      user: process.env.mail_user || testAccount.user, // generated ethereal user
-      pass: process.env.mail_pass || testAccount.pass // generated ethereal password
+      user: `${process.env.mail_user}` || testAccount.user, // generated ethereal user
+      pass: `${process.env.mail_pass}` || testAccount.pass // generated ethereal password
     }
   })
   try {
