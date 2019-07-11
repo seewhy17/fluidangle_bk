@@ -67,7 +67,7 @@ export default {
     ApiUrl: process.env.API_URL || 'http://localhost:1337',
     cloud_name: 'nazarick'
   },
-  serverMiddleware: ['~/api/mail'],
+  serverMiddleware: ['~/api'],
   /*
   ** Build configuration
   */

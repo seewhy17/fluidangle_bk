@@ -48,7 +48,7 @@ const sendMail = async (params) => {
   }
 }
 
-app.post('/', async (req, res, next) => {
+app.post('/mail/', async (req, res, next) => {
   const attributes = ['firstName', 'lastName', 'email', 'telephone', 'companyName', 'companyRole', 'lowEnd', 'highEnd']
   const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]))
   const someInvalid = sanitizedAttributes.some(r => !r)
@@ -64,7 +64,10 @@ app.post('/', async (req, res, next) => {
     return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
   }
 })
+
+app.get('/test/', (req, res, next) => res.status(200).json('test'))
+
 export default {
-  path: '/api/mail',
+  path: '/api/',
   handler: app
 }
