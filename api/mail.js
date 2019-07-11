@@ -7,7 +7,7 @@ import bodyParser from 'body-parser'
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-const { router } = app
+
 const rejectFunctions = new Map([
   ['firstName', v => v.length < 4],
   ['lastName', v => v.length < 4],
@@ -48,7 +48,7 @@ const sendMail = async (params) => {
   }
 }
 
-router.post('/', async (req, res, next) => {
+app.post('/', async (req, res, next) => {
   const attributes = ['firstName', 'lastName', 'email', 'telephone', 'companyName', 'companyRole', 'lowEnd', 'highEnd']
   const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]))
   const someInvalid = sanitizedAttributes.some(r => !r)
@@ -64,8 +64,6 @@ router.post('/', async (req, res, next) => {
     return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
   }
 })
-
-app.use(router)
 export default {
   path: '/api/mail',
   handler: app
