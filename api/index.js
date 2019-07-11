@@ -3,10 +3,18 @@ import validator from 'validator'
 import xssFilters from 'xss-filters'
 import nodemailer from 'nodemailer'
 import bodyParser from 'body-parser'
+import dotenv from 'dotenv'
+import Mailchimp from 'mailchimp-api-v3'
+
+dotenv.config()
 
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
+const listUniqueId = process.env.MAILING_LIST_ID
+const mailchimpApiKey = process.env.MAILCHIMP_API_KEY
+const mailchimp = new Mailchimp(mailchimpApiKey)
 
 const rejectFunctions = new Map([
   ['firstName', v => v.length < 4],
@@ -47,18 +55,80 @@ const sendMail = async (params) => {
     return new Error(err)
   }
 }
+const subscribe = async (params) => {
+  const update = true
+  const status = {
+    subscribed: 'subscribed',
+    unsubscribed: 'unsubscribed',
+    pending: 'pending',
+    cleaned: 'cleaned'
+  }
+  const [firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd] = params
+  try {
+    return await mailchimp.post(`/lists/${listUniqueId}`, {
+      update_existing: update !== undefined ? update : true,
+      members: [{
+        email_address: email.toLowerCase(),
+        status: status.subscribed || 'subscribed',
+        merge_fields: {
+          'FNAME': firstName,
+          'LNAME': lastName,
+          'PHONE': telephone,
+          'CMPANYNAME': companyName,
+          'CMPANYROLE': companyRole,
+          'LOWEND': lowEnd,
+          'HIGHEND': highEnd
+        }
+      }]
+    })
+  } catch (err) {
+    return new Error(err)
+  }
+}
+
+app.post('/subscribe/', async (req, res, next) => {
+  const update = true
+  const status = {
+    subscribed: 'subscribed',
+    unsubscribed: 'unsubscribed',
+    pending: 'pending',
+    cleaned: 'cleaned'
+  }
+  const { firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd } = req.body
+  try {
+    const results = await mailchimp.post(`/lists/${listUniqueId}`, {
+      update_existing: update !== undefined ? update : true,
+      members: [{
+        email_address: email.toLowerCase(),
+        status: status.subscribed || 'subscribed',
+        merge_fields: {
+          'FNAME': firstName,
+          'LNAME': lastName,
+          'PHONE': telephone,
+          'CMPANYNAME': companyName,
+          'CMPANYROLE': companyRole,
+          'LOWEND': lowEnd,
+          'HIGHEND': highEnd
+        }
+      }]
+    })
+    res.status(200).json(results)
+  } catch (err) {
+    res.status(200).json(err)
+  }
+})
 
 app.post('/mail/', async (req, res, next) => {
   const attributes = ['firstName', 'lastName', 'email', 'telephone', 'companyName', 'companyRole', 'lowEnd', 'highEnd']
   const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]))
   const someInvalid = sanitizedAttributes.some(r => !r)
-
   if (someInvalid) {
     // Throw a 422 with a neat error message if validation failed
     return res.status(422).json({ 'error': 'Unable to Complete!' })
   }
   try {
     const info = await sendMail(sanitizedAttributes)
+    await subscribe(sanitizedAttributes)
     res.status(200).json({ 'message': `Mail Sent: ${info}` })
   } catch (err) {
     return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
