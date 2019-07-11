@@ -1709,7 +1709,7 @@ export default {
     isOption(input, value) {
       return this.option_block[input] === value
     },
-    submit() {
+    async submit() {
       this.emptyPrice()
       this.emptyOptions()
       this.emptyUserForm()
@@ -1721,7 +1721,12 @@ export default {
       this.saveOptions(this.option_block)
       this.saveUserForm(this.user)
       this.savePrice(pricing)
-      this.$router.push('/app-estimator-result')
+      try {
+        await this.$axios.$post('/api/mail', this.user)
+        this.$router.push('/app-estimator-result')
+      } catch (e) {
+        console.log(`Unable to Complete`)
+      }
     }
   }
 }
