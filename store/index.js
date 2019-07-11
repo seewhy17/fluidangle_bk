@@ -43,6 +43,21 @@ export const mutations = {
       high: 0
     }
   },
+  changeUserForm(state, user) {
+    state.user = user
+  },
+  resetUserForm(state) {
+    state.user = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      telephone: '',
+      companyName: '',
+      companyRole: '',
+      lowEnd: 0,
+      highEnd: 0
+    }
+  },
   changeOptions(state, optionBlock) {
     state.optionBlock = optionBlock
   },
@@ -80,6 +95,7 @@ export const mutations = {
 export const getters = {
   getPrice: state => state.pricing,
   getOptions: state => state.optionBlock,
+  getUserForm: state => state.user,
   getPosts: state => {
     return state.posts
   },
@@ -98,6 +114,9 @@ export const actions = {
   async emptyOptions({ commit }) {
     await commit('resetOptions')
   },
+  async emptyUserForm({ commit }) {
+    await commit('resetUserForm')
+  },
   async savePost({ commit }, post) {
     await commit('addPost', post)
   },
@@ -106,6 +125,9 @@ export const actions = {
   },
   async savePrice({ commit }, pricing) {
     await commit('changePrice', pricing)
+  },
+  async saveUserForm({ commit }, user) {
+    await commit('changeUserForm', user)
   },
   nuxtServerInit({ commit }, { req }) {
     if (req.headers.cookie) {

@@ -1632,27 +1632,24 @@ export default {
     return {
       appPricing: pricing,
       option_block: cloneDeep(this.$store.state.optionBlock),
-      user: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        telephone: '',
-        companyName: '',
-        companyRole: '',
-        lowEnd: 0,
-        highEnd: 0
-      }
+      user: cloneDeep(this.$store.state.user)
     }
   },
   computed: {
     storeOptions() {
       return cloneDeep(this.$store.state.optionBlock)
     },
+    storeUser() {
+      return cloneDeep(this.$store.state.user)
+    },
     ...mapGetters([])
   },
   watch: {
     storeOptions(newValue) {
       this.option_block = newValue
+    },
+    storeUser(newValue) {
+      this.user = newValue
     }
   },
   methods: {
@@ -1660,7 +1657,9 @@ export default {
       'emptyPrice',
       'savePrice',
       'emptyOptions',
-      'saveOptions'
+      'saveOptions',
+      'saveUserForm',
+      'emptyUserForm'
     ]),
     capitalize(str) {
       return str.charAt(0).toUpperCase() + str.slice(1)
@@ -1713,11 +1712,14 @@ export default {
     submit() {
       this.emptyPrice()
       this.emptyOptions()
+      this.emptyUserForm()
+
       const pricing = {
         low: this.user.lowEnd,
         high: this.user.highEnd
       }
       this.saveOptions(this.option_block)
+      this.saveUserForm(this.user)
       this.savePrice(pricing)
       this.$router.push('/app-estimator-result')
     }
