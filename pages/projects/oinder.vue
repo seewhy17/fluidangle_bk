@@ -6,10 +6,12 @@
       <section class="banner-grid">
         <div class="content">
           <div class="title-block center-align">
-            <h1 class="title">
-            </h1>
+            <h1 class="title" />
             <div class="image-part flex">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')" alt="">
+              <img
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')"
+                alt=""
+              >
             </div>
           </div>
         </div>
@@ -23,23 +25,17 @@
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Oinder is a problem sharing and solving community that enables people share personal day
+              to day challenges while also keeping them anonymous by providing them with aliases or different
+              identities.
             </p>
             <br>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
-            </p>
           </div>
           <div class="stats grid">
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  45
+                  30
                 </p>
                 <p class="comment center-align">
                   SCREENS
@@ -49,7 +45,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  1.2k
+                  0.9k
                 </p>
                 <p class="comment center-align">
                   HOURS SPENT
@@ -59,7 +55,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  5
+                  3
                 </p>
                 <p class="comment center-align">
                   PEOPLE INVOLVED
@@ -79,7 +75,9 @@
           </div>
           <div class="app-stores grid">
             <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
+              <a href="https://play.google.com/store/apps/details?id=com.oinder" target="_blank">
+                <img src="/img/Image 20.png" alt="">
+              </a>
             </div>
           </div>
         </div>
@@ -91,28 +89,33 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              The client noticed that at one point or the other people got depressed while facing personal
+              challenges that they felt was too difficult to share with their loved ones or relatives. They wanted to
+              create a place where individual could share their problems without being judge
             </p>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>UI UX Research</li>
-              <li>UI UX Design</li>
-              <li>Android App Development</li>
-              <li>iOS Development</li>
-            </ul>
+            <div class="content">
+              <p>
+                The App is designed to eliminate the fear of one’s own identity, by allowing people to share their
+                concerns or provide advice, recommendations or answers where necessary and anonymously too. Users on
+                Oinder can ask or answer questions which allows people to create a stream of information aligned with
+                their audience's interests.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')" alt="">
+        <img
+          :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')"
+          alt=""
+        >
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
@@ -121,40 +124,21 @@
           </h2>
           <div class="content-box">
             <div class="content">
-              <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
-              </p>
-            </div>
-            <div class="charts grid equal-two">
-              <div class="flex dir-column list">
-                <p class="text">
-                  Customers
-                </p>
-                <img src="/svg/pie-chart (1).svg" alt="">
-              </div>
-              <div class="flex dir-column list">
-                <p class="text">
-                  Story Chart
-                </p>
-                <img src="/svg/profits.svg" alt="">
-              </div>
+              <p class="text">Oinder is designed to enable you share your personal problems without the fear of your real identity been revealed. Your privacy is our priority, so we keep everyone in the community anonymous. Without fear of revealing your real identity, you can easily open up and share with the community any personal issue or problem that really bothers you. After which you receive advice and opinion from various people within the community. </p>
+              <br>
+              <p class="text">Oinder is the safest place you can share your personal problems online and receive great
+                advice. Join us today, share your story, and hopefully find a possible solution. The world is a better
+                place when we come together.</p>
             </div>
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')" alt="">
+          <img
+            :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')"
+            alt=""
+          >
         </div>
       </div>
-    </div>
-    <div class="video-section">
-      <video src="" controls />
     </div>
     <div class="tools-used">
       <div class="header">
@@ -195,7 +179,10 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
+    <shortcut-menus
+      :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}"
+      :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}"
+    />
     <start-project />
     <Footer />
   </div>
@@ -217,40 +204,15 @@ export default {
     technologies: [
       {
         id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
-        image: '/img/Image 39.png'
-      },
-      {
-        id: 'tech04',
         text: '',
-        image: '/img/Image 37.png'
-      },
-      {
-        id: 'tech05',
-        text: '',
-        image: '/img/Image 42.png'
+        image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       }
     ],
     integrations: [
       {
         id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
-      },
-      {
-        id: 'int02',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       }
     ]
   }),
@@ -291,7 +253,8 @@ export default {
 
         .image-part {
           justify-content: center;
-          img{
+
+          img {
             width: 60%;
           }
         }
@@ -356,6 +319,8 @@ export default {
       }
 
       .process {
+        margin-bottom: 2rem;
+
         .content-box {
           justify-items: end;
           @include breakpoint($max: 768px) {
@@ -388,6 +353,12 @@ export default {
             line-height: 1.44;
             color: $dark-gray;
             font-weight: 500
+          }
+
+          .challenge {
+            .text {
+              width: 70%;
+            }
           }
 
           .what-we-did {
@@ -507,7 +478,8 @@ export default {
         & > .image-part {
           display: flex;
           justify-content: flex-end;
-          img{
+
+          img {
             object-fit: contain;
             height: 100%;
             width: 75%;
@@ -519,17 +491,20 @@ export default {
         width: 55%;
         min-width: 55%;
         margin-top: 3rem;
-        &>div{
+
+        & > div {
           padding: 1.5rem 1rem;
           align-items: center;
           border-radius: 16px;
           box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
           background-color: $light;
-          .text{
+
+          .text {
             margin-bottom: 2rem;
           }
-          img{
-            width:60%
+
+          img {
+            width: 60%
           }
         }
       }
@@ -637,6 +612,7 @@ export default {
           }
           border: 0;
         }
+
         .technologies-grid {
           flex-wrap: wrap;
         }
@@ -674,7 +650,7 @@ export default {
         };
 
         .integration {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;

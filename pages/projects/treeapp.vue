@@ -208,7 +208,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
+    <shortcut-menus :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
     <start-project />
     <Footer />
   </div>

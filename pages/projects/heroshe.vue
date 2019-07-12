@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{title:'PLINKD',url:'/projects/plinkd'}" />
+    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" />
     <start-project />
     <Footer />
   </div>
