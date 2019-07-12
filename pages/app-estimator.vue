@@ -18,8 +18,6 @@
       <div class="blocks-container">
         <img
           src="/img/app-estimator/Image 3.png"
-          srcset="/img/app-estimator/Image 3@2x.png 2x,
-             /img/app-estimator/Image 3@3x.png 3x"
           alt=""
           class="Image-3"
         >
@@ -45,8 +43,6 @@
               >
                 <img
                   src="/img/app-estimator/Image 4.png"
-                  srcset="/img/app-estimator/Image 4@2x.png 2x,
-             /img/app-estimator/Image 4@3x.png 3x"
                   alt="Android"
                 >
                 <label for="android" @click="toggleCheckBox('platform','Android')">Android</label>
@@ -63,8 +59,6 @@
               >
                 <img
                   src="/img/app-estimator/Image 5.png"
-                  srcset="/img/app-estimator/Image 5@2x.png 2x,
-             /img/app-estimator/Image 5@3x.png 3x"
                   alt="IOS"
                 >
                 <label for="ios" @click="toggleCheckBox('platform','IOS')">IOS</label>
@@ -81,8 +75,6 @@
               >
                 <img
                   src="/img/app-estimator/Image 7.png"
-                  srcset="/img/app-estimator/Image 7@2x.png 2x,
-             /img/app-estimator/Image 7@3x.png 3x"
                   alt="Cross Platform"
                 >
                 <label for="cross-platform" @click="toggleCheckBox('platform','Cross Platform')">Cross Platform</label>
@@ -105,8 +97,6 @@
               >
                 <img
                   src="/img/app-estimator/responsive (3).png"
-                  srcset="/img/app-estimator/responsive (3)@2x.png 2x,
-             /img/app-estimator/responsive (3)@3x.png 3x"
                   alt="Cross Platform"
                 >
                 <label for="web-app" @click="toggleCheckBox('platform','Web App')">Web App</label>
@@ -136,8 +126,6 @@
               >
                 <img
                   src="/img/app-estimator/layout.png"
-                  srcset="/img/app-estimator/layout@2x.png 2x,
-             /img/app-estimator/layout@3x.png 3x"
                   alt="Stock or Template UI"
                 >
                 <label for="stock_ui" @click="toggleCheckBox('design','UX research & Wireframing')">UX research &
@@ -161,8 +149,6 @@
               >
                 <img
                   src="/img/app-estimator/layout (1).png"
-                  srcset="/img/app-estimator/layout (1)@2x.png 2x,
-             /img/app-estimator/layout (1)@3x.png 3x"
                   alt="Custom Branded UI"
                 >
                 <label for="custom_ui" @click="toggleCheckBox('design','HiFi UI Design')">HiFi UI Design</label>
@@ -185,8 +171,6 @@
               >
                 <img
                   src="/img/app-estimator/play-button.png"
-                  srcset="/img/app-estimator/play-button@2x.png 2x,
-             /img/app-estimator/play-button@3x.png 3x"
                   alt="Animated UI"
                 >
                 <label for="animated_ui" @click="toggleCheckBox('design','Prototyping')">Prototyping</label>
@@ -210,8 +194,6 @@
               >
                 <img
                   src="/img/app-estimator/console.png"
-                  srcset="/img/app-estimator/console@2x.png 2x,
-             /img/app-estimator/console@3x.png 3x"
                   alt="Game Animations "
                 >
                 <label for="game_animations" @click="toggleCheckBox('design','Game Animations')">Game Animations</label>
@@ -247,8 +229,6 @@
               >
                 <img
                   src="/img/app-estimator/email (1).png"
-                  srcset="/img/app-estimator/email (1)@2x.png 2x,
-             /img/app-estimator/email (1)@3x.png 3x"
                   alt="Email/Password Sign Up"
                 >
                 <div class="grid no-gap">
@@ -274,8 +254,6 @@
               >
                 <img
                   src="/img/app-estimator/business-affiliate-network.png"
-                  srcset="/img/app-estimator/business-affiliate-network@2x.png 2x,
-             /img/app-estimator/business-affiliate-network@3x.png 3x"
                   alt="Social Networks"
                 >
                 <div class="grid no-gap">
@@ -301,8 +279,6 @@
               >
                 <img
                   src="/img/app-estimator/account.png"
-                  srcset="/img/app-estimator/account@2x.png 2x,
-             /img/app-estimator/account@3x.png 3x"
                   alt="Multi-tenant Accounts"
                 >
                 <div class="grid no-gap">
@@ -330,8 +306,6 @@
               >
                 <img
                   src="/img/app-estimator/http.png"
-                  srcset="/img/app-estimator/http@2x.png 2x,
-             /img/app-estimator/http@3x.png 3x"
                   alt="Subdomains"
                 >
                 <div class="grid no-gap">
@@ -372,8 +346,6 @@
               >
                 <img
                   src="/img/app-estimator/shield (2).png"
-                  srcset="/img/app-estimator/shield (2)@2x.png 2x,
-             /img/app-estimator/shield (2)@3x.png 3x"
                   alt="Security"
                 >
                 <div class="grid no-gap">
@@ -401,8 +373,6 @@
               >
                 <img
                   src="/img/app-estimator/locked.png"
-                  srcset="/img/app-estimator/locked@2x.png 2x,
-             /img/app-estimator/locked@3x.png 3x"
                   alt="SSL"
                 >
                 <div class="grid no-gap">
@@ -431,8 +401,6 @@
               >
                 <img
                   src="/img/app-estimator/shield (1).png"
-                  srcset="/img/app-estimator/shield (1)@2x.png 2x,
-             /img/app-estimator/shield (1)@3x.png 3x"
                   alt="DOS Protection"
                 >
                 <div class="grid no-gap">
@@ -454,8 +422,6 @@
               >
                 <img
                   src="/img/app-estimator/authentication.png"
-                  srcset="/img/app-estimator/authentication@2x.png 2x,
-             /img/app-estimator/authentication@3x.png 3x"
                   alt="2fa Auth"
                 >
                 <div class="grid no-gap">
@@ -497,8 +463,6 @@
               >
                 <img
                   src="/img/app-estimator/dashboard.png"
-                  srcset="/img/app-estimator/dashboard@2x.png 2x,
-             /img/app-estimator/dashboard@3x.png 3x"
                   alt="Dashboard"
                 >
                 <div class="grid no-gap">
@@ -526,8 +490,6 @@
               >
                 <img
                   src="/img/app-estimator/newspaper.png"
-                  srcset="/img/app-estimator/newspaper@2x.png 2x,
-               /img/app-estimator/newspaper@3x.png 3x"
                   alt="Activity"
                 >
                 <div class="grid no-gap">
@@ -556,8 +518,6 @@
               >
                 <img
                   src="/img/app-estimator/folder.png"
-                  srcset="/img/app-estimator/folder@2x.png 2x,
-             /img/app-estimator/folder@3x.png 3x"
                   alt="File Upload"
                 >
                 <div class="grid no-gap">
@@ -585,8 +545,6 @@
               >
                 <img
                   src="/img/app-estimator/user.png"
-                  srcset="/img/app-estimator/user@2x.png 2x,
-             /img/app-estimator/user@3x.png 3x"
                   alt="User Profile"
                 >
                 <div class="grid no-gap">
@@ -614,8 +572,6 @@
               >
                 <img
                   src="/img/app-estimator/email (2).png"
-                  srcset="/img/app-estimator/email (2)@2x.png 2x,
-             /img/app-estimator/email (2)@3x.png 3x"
                   alt="Transaction Emails"
                 >
                 <div class="grid no-gap">
@@ -644,8 +600,6 @@
               >
                 <img
                   src="/img/app-estimator/price-tag.png"
-                  srcset="/img/app-estimator/price-tag@2x.png 2x,
-             /img/app-estimator/price-tag@3x.png 3x"
                   alt="Tags"
                 >
                 <div class="grid no-gap">
@@ -674,8 +628,6 @@
               >
                 <img
                   src="/img/app-estimator/star (2).png"
-                  srcset="/img/app-estimator/http@2x.png 2x,
-             /img/app-estimator/star (2)@3x.png 3x"
                   alt="Ratings"
                 >
                 <div class="grid no-gap">
@@ -704,8 +656,6 @@
               >
                 <img
                   src="/img/app-estimator/audio.png"
-                  srcset="/img/app-estimator/audio@2x.png 2x,
-             /img/app-estimator/audio@3x.png 3x"
                   alt="AV Processing"
                 >
                 <div class="grid no-gap">
@@ -747,8 +697,6 @@
               >
                 <img
                   src="/img/app-estimator/calendar (4).png"
-                  srcset="/img/app-estimator/calendar (4)@2x.png 2x,
-             /img/app-estimator/calendar (4)@3x.png 3x"
                   alt="Calendaring"
                 >
                 <div class="grid no-gap">
@@ -778,8 +726,6 @@
               >
                 <img
                   src="/img/app-estimator/geolocalization.png"
-                  srcset="/img/app-estimator/geolocalization@2x.png 2x,
-             /img/app-estimator/geolocalization@3x.png 3x"
                   alt="Map Data"
                 >
                 <div class="grid no-gap">
@@ -810,8 +756,6 @@
               >
                 <img
                   src="/img/app-estimator/map-location.png"
-                  srcset="/img/app-estimator/map-location@2x.png 2x,
-             /img/app-estimator/map-location@3x.png 3x"
                   alt="Map Marker"
                 >
                 <div class="grid no-gap">
@@ -843,8 +787,6 @@
               >
                 <img
                   src="/img/app-estimator/choices.png"
-                  srcset="/img/app-estimator/choices@2x.png 2x,
-             /img/app-estimator/choices@3x.png 3x"
                   alt="Booking"
                 >
                 <div class="grid no-gap">
@@ -883,8 +825,6 @@
               >
                 <img
                   src="/img/app-estimator/chat.png"
-                  srcset="/img/app-estimator/chat@2x.png 2x,
-             /img/app-estimator/chat@3x.png 3x"
                   alt="Messaging"
                 >
                 <div class="grid no-gap">
@@ -912,8 +852,6 @@
               >
                 <img
                   src="/img/app-estimator/group (2).png"
-                  srcset="/img/app-estimator/group (2)@2x.png 2x,
-             /img/app-estimator/group (2)@3x.png 3x"
                   alt="Forums"
                 >
                 <div class="grid no-gap">
@@ -942,8 +880,6 @@
               >
                 <img
                   src="/img/app-estimator/conversation.png"
-                  srcset="/img/app-estimator/conversation@2x.png 2x,
-             /img/app-estimator/conversation@3x.png 3x"
                   alt="Social Sharing"
                 >
                 <div class="grid no-gap">
@@ -972,8 +908,6 @@
               >
                 <img
                   src="/img/app-estimator/facebook.png"
-                  srcset="/img/app-estimator/facebook@2x.png 2x,
-             /img/app-estimator/facebook@3x.png 3x"
                   alt="Push to Facebook"
                 >
                 <div class="grid no-gap">
@@ -1016,8 +950,6 @@
               >
                 <img
                   src="/img/app-estimator/subscription.png"
-                  srcset="/img/app-estimator/subscription@2x.png 2x,
-             /img/app-estimator/subscription@3x.png 3x"
                   alt="Subscription"
                 >
                 <div class="grid no-gap">
@@ -1046,8 +978,6 @@
               >
                 <img
                   src="/img/app-estimator/credit-card.png"
-                  srcset="/img/app-estimator/credit-card@2x.png 2x,
-             /img/app-estimator/credit-card@3x.png 3x"
                   alt="Payment Processing"
                 >
                 <div class="grid no-gap">
@@ -1076,8 +1006,6 @@
               >
                 <img
                   src="/img/app-estimator/shopping.png"
-                  srcset="/img/app-estimator/shopping@2x.png 2x,
-             /img/app-estimator/shopping@3x.png 3x"
                   alt="Shopping Cart"
                 >
                 <div class="grid no-gap">
@@ -1105,8 +1033,6 @@
               >
                 <img
                   src="/img/app-estimator/laptop (2).png"
-                  srcset="/img/app-estimator/laptop (2)@2x.png 2x,
-             /img/app-estimator/laptop (2)@3x.png 3x"
                   alt="User Marketplace"
                 >
                 <div class="grid no-gap">
@@ -1134,8 +1060,6 @@
               >
                 <img
                   src="/img/app-estimator/time.png"
-                  srcset="/img/app-estimator/time@2x.png 2x,
-             /img/app-estimator/time@3x.png 3x"
                   alt="Product Management"
                 >
                 <div class="grid no-gap">
@@ -1163,8 +1087,6 @@
               >
                 <img
                   src="/img/app-estimator/newsletter.png"
-                  srcset="/img/app-estimator/newsletter@2x.png 2x,
-             /img/app-estimator/newsletter@3x.png 3x"
                   alt="Email Marketing"
                 >
                 <div class="grid no-gap">
@@ -1201,8 +1123,6 @@
               >
                 <img
                   src="/img/app-estimator/gear.png"
-                  srcset="/img/app-estimator/gear@2x.png 2x,
-             /img/app-estimator/gear@3x.png 3x"
                   alt="CMS Integration"
                 >
                 <div class="grid no-gap">
@@ -1231,8 +1151,6 @@
               >
                 <img
                   src="/img/app-estimator/admin.png"
-                  srcset="/img/app-estimator/admin@2x.png 2x,
-             /img/app-estimator/admin@3x.png 3x"
                   alt="User Admin Page"
                 >
                 <div class="grid no-gap">
@@ -1260,8 +1178,6 @@
               >
                 <img
                   src="/img/app-estimator/responsive (2).png"
-                  srcset="/img/app-estimator/responsive (2)@2x.png 2x,
-             /img/app-estimator/responsive (2)@3x.png 3x"
                   alt="Moderation Approval"
                 >
                 <div class="grid no-gap">
@@ -1290,8 +1206,6 @@
               >
                 <img
                   src="/img/app-estimator/intercom.png"
-                  srcset="/img/app-estimator/intercom@2x.png 2x,
-             /img/app-estimator/intercom@3x.png 3x"
                   alt="Intercom"
                 >
                 <div class="grid no-gap">
@@ -1319,8 +1233,6 @@
               >
                 <img
                   src="/img/app-estimator/bar-chart.png"
-                  srcset="/img/app-estimator/bar-chart@2x.png 2x,
-             /img/app-estimator/bar-chart@3x.png 3x"
                   alt="Usage Analytics"
                 >
                 <div class="grid no-gap">
@@ -1349,8 +1261,6 @@
               >
                 <img
                   src="/img/app-estimator/statistics.png"
-                  srcset="/img/app-estimator/statistics@2x.png 2x,
-             /img/app-estimator/statistics@3x.png 3x"
                   alt="Crash Reporting"
                 >
                 <div class="grid no-gap">
@@ -1378,8 +1288,6 @@
               >
                 <img
                   src="/img/app-estimator/speed.png"
-                  srcset="/img/app-estimator/speed@2x.png 2x,
-             /img/app-estimator/speed@3x.png 3x"
                   alt="Performance Monitoring"
                 >
                 <div class="grid no-gap">
@@ -1409,8 +1317,6 @@
               >
                 <img
                   src="/img/app-estimator/support (2).png"
-                  srcset="/img/app-estimator/support (2)@2x.png 2x,
-             /img/app-estimator/support (2)@3x.png 3x"
                   alt="Multilingual Support"
                 >
                 <div class="grid no-gap">
@@ -1450,8 +1356,6 @@
               >
                 <img
                   src="/img/app-estimator/web.png"
-                  srcset="/img/app-estimator/web@2x.png 2x,
-             /img/app-estimator/web@3x.png 3x"
                   alt="Third Party Services"
                 >
                 <div class="grid no-gap">
@@ -1482,8 +1386,6 @@
               >
                 <img
                   src="/img/app-estimator/chat (1).png"
-                  srcset="/img/app-estimator/chat (1)@2x.png 2x,
-             /img/app-estimator/chat (1)@3x.png 3x"
                   alt="SMS Messaging"
                 >
                 <div class="grid no-gap">
@@ -1510,8 +1412,6 @@
               >
                 <img
                   src="/img/app-estimator/browser.png"
-                  srcset="/img/app-estimator/browser@2x.png 2x,
-             /img/app-estimator/browser@3x.png 3x"
                   alt="Api"
                 >
                 <div class="grid no-gap">
@@ -1543,8 +1443,6 @@
               >
                 <img
                   src="/img/app-estimator/agenda.png"
-                  srcset="/img/app-estimator/agenda@2x.png 2x,
-             /img/app-estimator/agenda@3x.png 3x"
                   alt="Phone Number Masking"
                 >
                 <div class="grid no-gap">
@@ -1725,6 +1623,7 @@ export default {
         await this.$axios.$post('/api/mail', this.user)
         this.$router.push('/app-estimator-result')
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.log(`Unable to Complete`)
       }
     }

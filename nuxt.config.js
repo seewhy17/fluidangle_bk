@@ -77,6 +77,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    watch: ['api'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

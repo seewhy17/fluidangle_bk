@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
 import Mailchimp from 'mailchimp-api-v3'
-
+import mailTemplate from './mailTemplate'
 dotenv.config()
 
 const app = express()
@@ -32,7 +32,7 @@ const validateAndSanitize = (key, value) => {
   return rejectFunctions.has(key) && !rejectFunctions.get(key)(value) && xssFilters.inHTMLData(value)
 }
 const sendMail = async (params) => {
-  const [firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd] = params
+  const [email] = params
   const testAccount = await nodemailer.createTestAccount()
   const transporter = nodemailer.createTransport({
     host: `${process.env.mail_host}` || testAccount.smtp.host,
@@ -48,7 +48,7 @@ const sendMail = async (params) => {
       from: email,
       to: 'garubav@gmail.com',
       subject: 'App Price Estimation',
-      html: `<p>${firstName}, ${lastName}, ${email}, ${telephone}, ${companyName}, ${companyRole}, ${lowEnd}, ${highEnd}</p>`
+      html: mailTemplate(params)
     })
     return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
   } catch (err) {
