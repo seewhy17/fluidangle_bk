@@ -1,4 +1,7 @@
+import dotenv from 'dotenv'
 import pkg from './package'
+
+dotenv.config()
 
 export default {
   mode: 'universal',
