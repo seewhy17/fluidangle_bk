@@ -65,9 +65,7 @@ export default {
 
   env: {
     ApiUrl: process.env.API_URL || 'http://localhost:1337',
-    cloud_name: 'nazarick',
-    MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
-    MAILING_LIST_ID: process.env.MAILING_LIST_ID
+    cloud_name: 'nazarick'
   },
   serverMiddleware: ['~/api'],
   /*
