@@ -23,10 +23,6 @@
   },
   "builds": [
     {
-      "src": "api/*.js",
-      "use": "@now/node"
-    },
-    {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
       "config": {
@@ -41,10 +37,6 @@
     "new.fluidangle.com"
   ],
   "routes": [
-    {
-      "src": "/api",
-      "dest": "api/index.js"
-    },
     {
       "src": "/_nuxt/.+",
       "headers": {

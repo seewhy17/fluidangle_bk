@@ -5,7 +5,7 @@ cache:
 before_script:
  - npm i -g --unsafe-perm now
  - npm i
- 
+
 stages:
   - deploy
   - deploy_live
@@ -17,6 +17,7 @@ deploy:
   script:
   - now --token=${NOW_TOKEN}
   - echo "Deploying to now... wait for 60 before setting alias to https://dev.fluidangle.com"
+  - now --token=${NOW_TOKEN} -e API_URL dev.fluidangle.com
   - now alias --token=${NOW_TOKEN} ${pbpaste} dev.fluidangle.com
 deploy_live:
   stage: deploy_live
@@ -32,3 +33,4 @@ manualDeploy:
   script:
   - now --token=${NOW_TOKEN}
   - now alias --token=${NOW_TOKEN} ${pbpaste} test.fluidangle.com
+  - now --token=${NOW_TOKEN} -e API_URL test.fluidangle.com
