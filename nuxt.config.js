@@ -67,7 +67,7 @@ export default {
     ApiUrl: process.env.API_URL || 'http://localhost:1337',
     cloud_name: 'nazarick'
   },
-
+  serverMiddleware: ['~/api/index.js'],
   /*
   ** Build configuration
   */
@@ -75,6 +75,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    watch: ['api'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

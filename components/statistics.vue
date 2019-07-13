@@ -5,8 +5,6 @@
         <div class="image-part">
           <img
             src="/img/stats-clients-b5bbbd87.png"
-            srcset="/img/stats-clients-b5bbbd87@2x.png 2x,
-             /img/stats-clients-b5bbbd87@3x.png 3x"
             alt="stats-clients"
           >
         </div>
@@ -23,8 +21,6 @@
         <div class="image-part">
           <img
             src="/img/stats-commits-5a037d2c.png"
-            srcset="/img/stats-commits-5a037d2c@2x.png 2x,
-             /img/stats-commits-5a037d2c@3x.png 3x"
             alt="stats-commits"
           >
         </div>
@@ -41,8 +37,6 @@
         <div class="image-part">
           <img
             src="/img/stats-projects-efbd5c8b.png"
-            srcset="/img/stats-projects-efbd5c8b@2x.png 2x,
-             /img/stats-projects-efbd5c8b@3x.png 3x"
             alt="stats-projects"
           >
         </div>
@@ -59,8 +53,6 @@
         <div class="image-part">
           <img
             src="/img/stats-user-stories-a8e2c535.png"
-            srcset="/img/stats-user-stories-a8e2c535@2x.png 2x,
-             /img/stats-user-stories-a8e2c535@3x.png 3x"
             alt="stats-user-stories"
           >
         </div>
@@ -86,21 +78,19 @@
       <div>
         <img
           src="/img/Screenshot 2019-05-01 at 6.25.48 AM.png"
-          srcset="/img/Screenshot 2019-05-01 at 6.25.48 AM.@2x.png 2x,
-             /img/Screenshot 2019-05-01 at 6.25.48 AM.@3x.png 3x"
           alt="proto"
-        >
-      </div>
-      <div>
-        <img
-          src="/img/LOGO text_colored.png"
-          alt="plinkd"
         >
       </div>
       <div>
         <img
           src="/img/tree.png"
           alt="plinkd"
+        >
+      </div>
+      <div>
+        <img
+          src="/img/LOGO text_colored.png"
+          alt="treeApp"
         >
       </div>
     </div>

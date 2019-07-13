@@ -249,7 +249,7 @@ export default {
       .projects-grid {
         margin-top: 3rem;
         padding: {
-          top: 10vh;
+          top: 5rem;
           bottom: 3rem;
         }
         grid-gap: 5em 1em;

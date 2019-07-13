@@ -9,8 +9,8 @@
       "higher": 4680
     },
     "Web App": {
-      "lower": 0,
-      "higher": 0
+      "lower": 3120,
+      "higher": 4680
     },
     "Cross Platform": {
       "lower": 2080,
@@ -19,16 +19,16 @@
   },
   "Design": {
     "UX research & Wireframing": {
-      "lower": 0,
-      "higher": 0
+      "lower": 3120,
+      "higher": 4680
     },
     "HiFi UI Design": {
-      "lower": 0,
-      "higher": 0
+      "lower": 3120,
+      "higher": 4680
     },
     "Prototyping": {
-      "lower": 0,
-      "higher": 0
+      "lower": 3120,
+      "higher": 4680
     },
     "Game Animations": {
       "lower": 10400,
@@ -55,8 +55,8 @@
   },
   "Secure": {
     "Security not important": {
-      "lower": 0,
-      "higher": 0
+      "lower": 1040,
+      "higher": 1560
     },
     "SSL Certificate based Security": {
       "lower": 1040,
@@ -163,8 +163,8 @@
       "higher": 2160
     },
     "Email Marketing": {
-      "lower": 0,
-      "higher": 0
+      "lower": 1040,
+      "higher": 1560
     }
   },
   "Types": {
@@ -189,8 +189,8 @@
       "higher": 2160
     },
     "Crash Reporting": {
-      "lower": 0,
-      "higher": 0
+      "lower": 1440,
+      "higher": 2160
     },
     "Performance Monitoring": {
       "lower": 360,

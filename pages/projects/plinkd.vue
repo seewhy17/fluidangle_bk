@@ -228,7 +228,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{title:'TreeApp',url:'/projects/treeapp'}" />
+    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/tree.png',url:'/projects/treeapp'}" />
     <start-project />
     <Footer />
   </div>
