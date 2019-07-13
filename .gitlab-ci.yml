@@ -15,9 +15,9 @@ deploy:
   only:
    - staging
   script:
+  - now --token=${NOW_TOKEN} -e BASE_URL="https://dev.fluidangle.com"
   - now --token=${NOW_TOKEN}
   - echo "Deploying to now... wait for 60 before setting alias to https://dev.fluidangle.com"
-  - now --token=${NOW_TOKEN} -e BASE_URL https://dev.fluidangle.com
   - now alias --token=${NOW_TOKEN} ${pbpaste} dev.fluidangle.com
 deploy_live:
   stage: deploy_live
@@ -31,6 +31,6 @@ manualDeploy:
   stage: manualDeploy
   when: manual
   script:
+  - now --token=${NOW_TOKEN} -e BASE_URL="https://test.fluidangle.com"
   - now --token=${NOW_TOKEN}
   - now alias --token=${NOW_TOKEN} ${pbpaste} test.fluidangle.com
-  - now --token=${NOW_TOKEN} -e BASE_URL https://test.fluidangle.com
