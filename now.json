@@ -1,6 +1,17 @@
 {
   "name": "fluidangle-redesign",
   "version": 2,
+  "build": {
+    "env": {
+      "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
+      "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
+      "mail_host": "@fluidangle_v1_mail_host",
+      "mail_user": "@fluidangle_v1_mail_user",
+      "mail_port": "@fluidangle_v1_mail_port",
+      "mail_pass": "@fluidangle_v1_mail_pass",
+      "mail_secure": "@fluidangle_v1_mail_secure"
+    }
+  },
   "builds": [
     {
       "src": "nuxt.config.js",
@@ -23,14 +34,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "env": {
-    "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
-    "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
-    "mail_host": "@fluidangle_v1_mail_host",
-    "mail_user": "@fluidangle_v1_mail_user",
-    "mail_port": "@fluidangle_v1_mail_port",
-    "mail_pass": "@fluidangle_v1_mail_pass",
-    "mail_secure": "@fluidangle_v1_mail_secure"
-  }
+  ]
 }
