@@ -128,17 +128,17 @@ export const actions = {
   },
   async saveUserForm({ commit }, user) {
     await commit('changeUserForm', user)
-  },
-  nuxtServerInit({ commit }, { req }) {
-    if (req.headers.cookie) {
-      const parsed = cookieparser.parse(req.headers.cookie)
-
-      const { client } = parsed
-
-      if (client) {
-        // TODO: if auth.token fetch user info and pouplate it in store
-        commit('setClient', JSON.parse(client))
-      }
-    }
   }
+  // nuxtServerInit({ commit }, { req }) {
+  //   if (req.headers.cookie) {
+  //     const parsed = cookieparser.parse(req.headers.cookie)
+  //
+  //     const { client } = parsed
+  //
+  //     if (client) {
+  //       // TODO: if auth.token fetch user info and pouplate it in store
+  //       commit('setClient', JSON.parse(client))
+  //     }
+  //   }
+  // }
 }
