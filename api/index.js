@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
 import Mailchimp from 'mailchimp-api-v3'
 import mailTemplate from './mailTemplate'
+
 dotenv.config()
 
 const app = express()
@@ -31,7 +32,7 @@ const validateAndSanitize = (key, value) => {
   // If map has key and function returns false, return sanitized input. Else, return false
   return rejectFunctions.has(key) && !rejectFunctions.get(key)(value) && xssFilters.inHTMLData(value)
 }
-const sendMail = async (params) => {
+const sendMail = async (params, features) => {
   const [email] = params
   const testAccount = await nodemailer.createTestAccount()
   const transporter = nodemailer.createTransport({
@@ -48,7 +49,7 @@ const sendMail = async (params) => {
       from: email,
       to: 'garubav@gmail.com',
       subject: 'App Price Estimation',
-      html: mailTemplate(params)
+      html: mailTemplate(params, features, process.env.BASE_URL)
     })
     return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
   } catch (err) {
@@ -122,12 +123,13 @@ app.post('/mail/', async (req, res, next) => {
   const attributes = ['firstName', 'lastName', 'email', 'telephone', 'companyName', 'companyRole', 'lowEnd', 'highEnd']
   const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]))
   const someInvalid = sanitizedAttributes.some(r => !r)
+  const features = req.body.features || {}
   if (someInvalid) {
     // Throw a 422 with a neat error message if validation failed
     return res.status(422).json({ 'error': 'Unable to Complete!' })
   }
   try {
-    const info = await sendMail(sanitizedAttributes)
+    const info = await sendMail(sanitizedAttributes, features)
     await subscribe(sanitizedAttributes)
     res.status(200).json({ 'message': `Mail Sent: ${info}` })
   } catch (err) {
