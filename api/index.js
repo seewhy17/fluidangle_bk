@@ -33,7 +33,6 @@ const validateAndSanitize = (key, value) => {
   return rejectFunctions.has(key) && !rejectFunctions.get(key)(value) && xssFilters.inHTMLData(value)
 }
 const sendMail = async (params, features) => {
-  const [email] = params
   const testAccount = await nodemailer.createTestAccount()
   const transporter = nodemailer.createTransport({
     host: `${process.env.mail_host}` || testAccount.smtp.host,
