@@ -46,7 +46,7 @@ const sendMail = async (params, features) => {
   })
   try {
     const info = await transporter.sendMail({
-      from: email,
+      from: process.env.mail_user,
       to: 'garubav@gmail.com',
       subject: 'App Price Estimation',
       html: mailTemplate(params, features, process.env.BASE_URL)
