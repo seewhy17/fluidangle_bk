@@ -6,8 +6,9 @@ const formatCurrency = (number) => {
   })
   return formatter.format(number)
 }
-export default function mailTemplate(params) {
+export default function mailTemplate(params, features, baseURL) {
   const [firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd] = params
+  const featuresQuery = encodeURIComponent(JSON.stringify(features))
   return `<div style="position: relative; padding: .5rem;border: solid #f0f0f0;min-width: 0;  word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;">
   <h1 style="text-align:center;background-color:#542ea4;color:#fff;padding: .75rem 1.25rem;margin-bottom: 0; border-bottom: 1px solid rgba(0,0,0,.125);">App Price Estimation</h1>
   <table style="width:100%;margin-bottom:1rem;border-spacing:2px;border-color:grey;">
@@ -47,5 +48,8 @@ export default function mailTemplate(params) {
     </tbody>
     <caption style="caption-side:bottom;padding:10px"></caption>
   </table>
+  <div style="padding:5%;text-align:center;">
+  <a href="${baseURL}/user-selected-features?features=${featuresQuery}" style="color: #fff;background:#542ea4;border: none;padding: .9rem 2.25rem;font-size: .9rem;text-decoration:none;font-weight:500;">View Selected Features</a>
+  </div>
 </div>`
 }
