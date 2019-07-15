@@ -210,7 +210,7 @@
             TECHNOLOGIES
           </p>
           <div class="technologies-grid flex dir-row list">
-            <div v-for="technology in technologies" :key="technology.id" class="technology">
+            <div v-for="(technology, index) in technologies" :key="index" class="technology">
               <div class="image-part">
                 <img :src="technology.image" alt="">
               </div>
@@ -225,7 +225,7 @@
             INTEGRATIONS
           </p>
           <div class="integrations-grid flex dir-row list">
-            <div v-for="integration in integrations" :key="integration.id" class="integration">
+            <div v-for="(integration, index) in integrations" :key="index" class="integration">
               <div class="image-part">
                 <img :src="integration.image" alt="">
               </div>
@@ -261,41 +261,34 @@ export default {
     slides: [],
     technologies: [
       {
-        id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
+        text: '',
         image: '/img/Image 39.png'
       },
       {
-        id: 'tech04',
         text: '',
-        image: '/img/Image 37.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192367/fluidangle/svg/nuxtjs-typo.svg'
       },
       {
-        id: 'tech05',
         text: '',
-        image: '/img/Image 42.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194028/fluidangle/svg/python-3.svg'
+      },
+      {
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192014/fluidangle/svg/djangoproject-ar21.svg'
       }
     ],
     integrations: [
       {
-        id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192756/fluidangle/svg/stripe-ar21.svg'
       },
       {
-        id: 'int02',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192749/fluidangle/svg/mailgun-ar21.svg'
+      },
+      {
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194036/fluidangle/svg/amazon-web-services.svg'
       }
     ]
   }),
@@ -718,7 +711,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -750,7 +743,7 @@ export default {
         };
 
         .integration {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;

@@ -216,40 +216,35 @@ export default {
     technologies: [
       {
         id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
-        image: '/img/Image 39.png'
+        text: '',
+        image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       },
       {
         id: 'tech04',
         text: '',
-        image: '/img/Image 37.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563193651/fluidangle/svg/ios-seeklogo.com.svg'
       },
       {
-        id: 'tech05',
+        id: 'tech02',
         text: '',
-        image: '/img/Image 42.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
+      },
+      {
+        id: 'tech03',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194024/fluidangle/svg/android-5.svg'
       }
     ],
     integrations: [
       {
         id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
+        text: '',
+        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       },
       {
         id: 'int02',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
       }
     ]
   }),
@@ -652,7 +647,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
