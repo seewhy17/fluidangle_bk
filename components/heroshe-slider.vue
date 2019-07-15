@@ -29,7 +29,9 @@ export default {
   data: () => ({
     slides: [],
     hooperSettings: {
-      centerMode: true
+      centerMode: true,
+      wheelControl: false,
+      trimWhiteSpace: true
     }
   }),
   mounted() {

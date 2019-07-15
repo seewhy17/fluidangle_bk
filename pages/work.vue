@@ -298,7 +298,7 @@ export default {
             img {
               width: 70%;
               position: absolute;
-              top: -20%;
+              top: -15%;
             }
           }
 

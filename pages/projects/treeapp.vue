@@ -145,20 +145,6 @@
                 officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
               </p>
             </div>
-            <div class="charts grid equal-two">
-              <div class="flex dir-column list">
-                <p class="text">
-                  Customers
-                </p>
-                <img src="/svg/pie-chart (1).svg" alt="">
-              </div>
-              <div class="flex dir-column list">
-                <p class="text">
-                  Story Chart
-                </p>
-                <img src="/svg/profits.svg" alt="">
-              </div>
-            </div>
           </div>
         </div>
         <div class="image-part hide-on-small">
@@ -167,7 +153,9 @@
       </div>
     </div>
     <div class="video-section">
-      <video src="" controls />
+      <video controls autoplay>
+        <source src="https://drive.google.com/file/d/1vaM3GzwqQS9T--4m24yeylSFeflgeF2s/view">
+      </video>
     </div>
     <div class="tools-used">
       <div class="header">

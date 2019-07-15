@@ -74,18 +74,6 @@
         </div>
         <div class="info-box">
           <div class="links">
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/monitor.svg" alt="">
-              </div>
-              <a href="" class="flex">Visit Website</a>
-            </div>
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/pdf.svg" alt="">
-              </div>
-              <a href="" class="flex">Download Case study</a>
-            </div>
           </div>
           <div class="app-stores grid equal-two">
             <div class="image flex">
@@ -93,14 +81,6 @@
             </div>
             <div class="image flex">
               <img src="/img/Image 20.png" alt="">
-            </div>
-          </div>
-          <div class="project-team">
-            <p class="title">
-              PROJECT TEAM
-            </p>
-            <div class="image-part flex">
-              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
             </div>
           </div>
         </div>
@@ -161,20 +141,6 @@
                 eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                 officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
               </p>
-            </div>
-            <div class="charts grid equal-two container">
-              <div class="flex dir-column list">
-                <p class="text">
-                  Customers
-                </p>
-                <img src="/svg/pie-chart (1).svg" alt="">
-              </div>
-              <div class="flex dir-column list">
-                <p class="text">
-                  Story Chart
-                </p>
-                <img src="/svg/profits.svg" alt="">
-              </div>
             </div>
           </div>
         </div>

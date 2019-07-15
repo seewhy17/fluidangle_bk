@@ -33,6 +33,7 @@ const validateAndSanitize = (key, value) => {
   return rejectFunctions.has(key) && !rejectFunctions.get(key)(value) && xssFilters.inHTMLData(value)
 }
 const sendMail = async (params, features) => {
+  const email = params[2]
   const testAccount = await nodemailer.createTestAccount()
   const transporter = nodemailer.createTransport({
     host: `${process.env.mail_host}` || testAccount.smtp.host,
@@ -46,7 +47,7 @@ const sendMail = async (params, features) => {
   try {
     const info = await transporter.sendMail({
       from: process.env.mail_user,
-      to: 'garubav@gmail.com',
+      to: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com, ${email}`,
       subject: 'App Price Estimation',
       html: mailTemplate(params, features, process.env.BASE_URL)
     })

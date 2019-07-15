@@ -229,6 +229,9 @@ export default {
       .content-text {
         font-size: 1rem;
       }
+      img{
+        height:auto;
+      }
     }
 
     .clients {
