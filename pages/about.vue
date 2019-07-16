@@ -150,6 +150,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'About',
+  head() {
+    return {
+      title: 'About Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'About Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

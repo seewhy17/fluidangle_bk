@@ -37,6 +37,14 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'AppEstimatorResult',
+  head() {
+    return {
+      title: 'App Estimator Result',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Get App Estimated Pricing' }
+      ]
+    }
+  },
   components: {
     NavBar
   },

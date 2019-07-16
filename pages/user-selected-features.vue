@@ -1481,8 +1481,15 @@
 <script>
 import NavBar from '~/components/partials/customNavBar.vue'
 export default {
-
   name: 'AppEstimatorVue',
+  head() {
+    return {
+      title: 'Selected Features',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Review Selected Features' }
+      ]
+    }
+  },
   components: {
     NavBar
   },

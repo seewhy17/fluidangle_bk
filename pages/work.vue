@@ -70,6 +70,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Work',
+  head() {
+    return {
+      title: 'Our Works',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Projects' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

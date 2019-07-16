@@ -113,7 +113,8 @@
             </p>
             <br>
             <p class="text">
-              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and “plug-in” third-party pieces
+              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and
+              “plug-in” third-party pieces
               of software to make your site look, act, and feel exactly the way you want) to suit their business needs.
               The problem with that is that too many plugins from different designers who did not interact together well
               made the site less effect and slow down their site.
@@ -187,7 +188,13 @@
         </p>
         <div class="container text-container">
           <p class="text center-align">
-            It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the team would understand the scope and complexity of our project. Our initial conversations started building my confidence but I still had reservations because most of the web apps I had seen built in Nigeria seemed subpar. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed that I continued working with some of the talents in the next phase of the project.
+            It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the
+            team would understand the scope and complexity of our project. Our initial conversations started building my
+            confidence but I still had reservations because most of the web apps I had seen built in Nigeria seemed
+            subpar. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to
+            move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final
+            output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed
+            that I continued working with some of the talents in the next phase of the project.
           </p>
           <p class="text center-align">
             If you still have questions, feel free to ask. I'm always here to help.
@@ -237,7 +244,10 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" />
+    <shortcut-menus
+      :left-menu="{title:'Oinder',url:'/projects/oinder'}"
+      :right-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}"
+    />
     <start-project />
     <Footer />
   </div>
@@ -539,29 +549,8 @@ export default {
       }
 
       .gallery {
-        margin-top:5rem;
+        margin-top: 5rem;
         margin-bottom: 5rem;
-        /*.main-image{*/
-        /*  align-items: center;*/
-        /*  margin-bottom: 3rem;*/
-        /*  img{*/
-        /*    object-fit: cover;*/
-        /*    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);*/
-        /*    !* border: solid 1px #707070; *!*/
-        /*    border-top-left-radius: 5px;*/
-        /*    border-top-right-radius: 5px;*/
-        /*  }*/
-        /*  .controls{*/
-        /*    padding: {*/
-        /*      top:1rem;*/
-        /*      bottom: 1rem;*/
-        /*    };*/
-        /*    font-size: 1.5rem;*/
-        /*    & span:nth-child(2){*/
-        /*      font-size: 2rem;*/
-        /*    }*/
-        /*  }*/
-        /*}*/
         .other-images {
           /*height: 20rem;*/
           .image {
@@ -582,6 +571,7 @@ export default {
 
       .other-features {
         margin-top: 5rem;
+
         .title {
           color: $gray;
           font: {
@@ -638,9 +628,11 @@ export default {
           font-weight: 500;
           color: #62c9cb;
         }
-.text-container{
-  margin-bottom: 2rem;
-}
+
+        .text-container {
+          margin-bottom: 2rem;
+        }
+
         .text {
           color: $gray;
 
@@ -741,6 +733,10 @@ export default {
         padding: {
           left: 5rem;
         };
+
+        .integrations-grid {
+          flex-wrap: wrap;
+        }
 
         .integration {
           width: 30%;

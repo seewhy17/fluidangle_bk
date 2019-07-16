@@ -6,8 +6,7 @@
       <section class="banner-grid">
         <div class="content">
           <div class="title-block center-align">
-            <h1 class="title">
-            </h1>
+            <h1 class="title" />
             <div class="image-part flex">
               <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_10_1_cropped.png')" alt="">
             </div>
@@ -239,14 +238,24 @@ export default {
     ],
     integrations: [
       {
-        id: 'int01',
+        id: 'firebase',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       },
       {
-        id: 'int02',
+        id: 'cloud',
         text: '',
         image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
+      },
+      {
+        id: 'stripe',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192756/fluidangle/svg/stripe-ar21.svg'
+      },
+      {
+        id: 'cloudinary',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192854/fluidangle/svg/cloudinary-seeklogo.com.svg'
       }
     ]
   }),
@@ -668,7 +677,9 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        .integrations-grid{
+          flex-wrap: wrap;
+        }
         .integration {
           width: 30%;
           display: flex;

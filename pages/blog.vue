@@ -230,6 +230,14 @@ const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'Blog',
+  head() {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Blog' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer

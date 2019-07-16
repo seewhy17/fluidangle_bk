@@ -1521,10 +1521,17 @@ import cloneDeep from 'lodash.clonedeep'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-
   name: 'AppEstimatorVue',
   components: {
     NavBar
+  },
+  head() {
+    return {
+      title: 'App Estimator',
+      meta: [
+        { hid: 'description', name: 'description', content: 'App Estimator Survey' }
+      ]
+    }
   },
   data() {
     return {

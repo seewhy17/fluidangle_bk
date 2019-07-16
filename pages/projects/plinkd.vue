@@ -73,8 +73,7 @@
           </div>
         </div>
         <div class="info-box">
-          <div class="links">
-          </div>
+          <div class="links" />
           <div class="app-stores grid equal-two">
             <div class="image flex">
               <img src="/img/Image 21.png" alt="">
@@ -152,8 +151,26 @@
         </div>
       </div>
     </div>
-    <div class="video-section">
-      <video src="" controls />
+    <div class="testimonials">
+      <div class="image-part flex">
+        <img src="https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg" alt="">
+      </div>
+      <div class="content-box flex dir-column">
+        <p class="title">
+          Osinachi Ukomadu &amp; Chichi Ukomadu
+        </p>
+        <div class="container text-container">
+          <p class="text center-align">
+            It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the team would understand the scope and complexity of our project. Our initial conversations started building my confidence but I still had reservations because most of the web apps I had seen built in Nigeria seemed subpar. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed that I continued working with some of the talents in the next phase of the project.
+          </p>
+          <p class="text center-align">
+            If you still have questions, feel free to ask. I'm always here to help.
+          </p>
+        </div>
+        <p class="role">
+          Co-Founder & CEO, Osi Ukomadu
+        </p>
+      </div>
     </div>
     <div class="tools-used">
       <div class="header">
@@ -677,7 +694,9 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        .integrations-grid{
+          flex-wrap: wrap;
+        }
         .integration {
           width: 25%;
           display: flex;

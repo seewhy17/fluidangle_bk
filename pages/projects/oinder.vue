@@ -66,12 +66,6 @@
         </div>
         <div class="info-box">
           <div class="links">
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/pdf.svg" alt="">
-              </div>
-              <a href="" class="flex">Download Case study</a>
-            </div>
           </div>
           <div class="app-stores grid">
             <div class="image flex">
@@ -206,6 +200,16 @@ export default {
         id: 'tech01',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
+      },
+      {
+        id: 'tech02',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
+      },
+      {
+        id: 'tech03',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194024/fluidangle/svg/android-5.svg'
       }
     ],
     integrations: [
@@ -648,7 +652,9 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        .integrations-grid{
+          flex-wrap: wrap;
+        }
         .integration {
           width: 30%;
           display: flex;
