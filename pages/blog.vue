@@ -225,7 +225,7 @@ import Footer from '~/components/partials/Footer.vue'
 import Strapi from 'strapi-sdk-javascript/build/main'
 import { mapGetters, mapActions } from 'vuex'
 
-const apiUrl = process.env.API_URL || 'http://localhost:1337'
+const apiUrl = 'https://fluidangle-blog-server.herokuapp.com'
 const strapi = new Strapi(apiUrl)
 
 export default {
