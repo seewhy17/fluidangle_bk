@@ -96,10 +96,10 @@
         <p> Copyright (c) {{ new Date().getFullYear() }}</p>
       </div>
       <div class="links">
-        <nuxt-link to="/terms-and-conditions">
+        <nuxt-link to="/terms-of-use">
           Terms of uses
         </nuxt-link>
-        <nuxt-link to="/">
+        <nuxt-link to="/privacy-policy">
           Privacy Policy
         </nuxt-link>
         <nuxt-link to="/">
