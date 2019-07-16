@@ -106,11 +106,10 @@
       </div>
       <div class="content-box flex dir-column">
         <p class="text center-align">
-          FluidAngle team are awesome guys to work with. <br>
-          I highly recommend them to get your project done ASAP and perfect delivery
+          {{ slides[currentIndex]['text'] }}
         </p>
         <p class="role">
-          Sarah - MD, ProntoCare
+          {{ slides[currentIndex]['role'] }}
         </p>
         <div class="controls flex list dir-row">
           <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev" />
@@ -135,6 +134,7 @@ export default {
   },
   data: () => ({
     slides: [],
+    currentIndex: 0,
     hooperSettings: {
       centerMode: true
     }
@@ -142,14 +142,14 @@ export default {
   mounted() {
     this.slides = [
       {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png'),
-        text:'',
-        role:''
+        img: 'https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg',
+        text: 'It was a wonderful experience working with the fluidangle team. I was so impressed that I continued working with some of the talents in the next phase of the project.',
+        role: 'Co-Founder & CEO, Osi Ukomadu'
       },
       {
         img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png'),
-        text:'',
-        role:''
+        text: 'Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks.',
+        role: ''
       }
     ]
   },
@@ -160,9 +160,11 @@ export default {
     },
     slidePrev() {
       this.$refs.carousel.slidePrev()
+      this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : 0
     },
     slideNext() {
       this.$refs.carousel.slideNext()
+      this.currentIndex = this.currentIndex > this.slides.length ? this.slides.length : this.currentIndex + 1
     }
   }
 }

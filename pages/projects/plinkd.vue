@@ -160,7 +160,7 @@
         </p>
         <div class="container text-container">
           <p class="text center-align">
-            Terry and Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks. The sky is the limit from here and ALL the praise goes to Terry and his team. I can guarantee they have my business for life.
+            Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks. The sky is the limit from here and ALL the praise goes to Terry and his team. I can guarantee they have my business for life.
           </p>
         </div>
         <p class="role">
