@@ -11,7 +11,7 @@
         About Us
       </nuxt-link>
       <nuxt-link to="/app-estimator">
-        Estimator
+        App Estimator
       </nuxt-link>
       <nuxt-link to="/contact">
         Contact

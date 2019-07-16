@@ -153,7 +153,7 @@
     </div>
     <div class="testimonials">
       <div class="image-part flex">
-        <img src="https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png" alt="">
+        <img src="https://www.plinkd.app/src/images/team/CEO.jpg" alt="">
       </div>
       <div class="content-box flex dir-column">
         <p class="title">
@@ -164,6 +164,7 @@
           </p>
         </div>
         <p class="role">
+          Gabriel Middlebrook
         </p>
       </div>
     </div>

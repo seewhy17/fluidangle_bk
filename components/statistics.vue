@@ -133,25 +133,24 @@ export default {
     Slide
   },
   data: () => ({
-    slides: [],
-    currentIndex: 0,
-    hooperSettings: {
-      centerMode: true
-    }
-  }),
-  mounted() {
-    this.slides = [
+    slides: [
       {
         img: 'https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg',
         text: 'It was a wonderful experience working with the fluidangle team. I was so impressed that I continued working with some of the talents in the next phase of the project.',
         role: 'Co-Founder & CEO, Osi Ukomadu'
       },
       {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png'),
+        img: 'https://www.plinkd.app/src/images/team/CEO.jpg',
         text: 'Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks.',
-        role: ''
+        role: 'CEO, Gabriel Middlebrook'
       }
-    ]
+    ],
+    currentIndex: 0,
+    hooperSettings: {
+      centerMode: true
+    }
+  }),
+  mounted() {
   },
   methods: {
     getImageUrl(url) {
