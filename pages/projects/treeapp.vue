@@ -152,9 +152,7 @@
       </div>
     </div>
     <div class="video-section">
-      <video controls autoplay>
-        <source src="https://drive.google.com/file/d/1vaM3GzwqQS9T--4m24yeylSFeflgeF2s/view">
-      </video>
+      <youtube :video-id="player.id" :player-width="player.width" :player-height="player.height"></youtube>
     </div>
     <div class="tools-used">
       <div class="header">
@@ -214,6 +212,11 @@ export default {
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
   data: () => ({
+    player: {
+      id: 'YnWrA0DDRyk',
+      width: '100%',
+      height: '600'
+    },
     technologies: [
       {
         id: 'tech01',
