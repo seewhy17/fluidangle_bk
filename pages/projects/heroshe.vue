@@ -95,7 +95,7 @@
               <div class="image-part flex">
                 <img src="/svg/pdf.svg" alt="">
               </div>
-              <a href="" class="flex">Download Case study</a>
+              <a href="https://docs.google.com/document/d/1a14-UmqCIrGM6QEOt0vGyg4B-lGwPcDWSSX7beES34g/edit?usp=sharing" target="_blank" class="flex">Download Case study</a>
             </div>
           </div>
         </div>
@@ -439,7 +439,6 @@ export default {
 
           .image-part {
             img {
-              height: 100%;
               object-fit: cover;
               object-position: center;
             }

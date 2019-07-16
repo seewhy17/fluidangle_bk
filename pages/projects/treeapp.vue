@@ -18,20 +18,14 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Tree App
+            Tree
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Tree is a community connect app for believers. This is the place to meet Christians, connectwith people in your church congregation, and find or post events. This is a social network builtspecifically based on principles of Christianity and Jesus culture for every Christian communityand churches around the world! Every church has their own private Christian chat room whereyou can receive encouragement, post prayer request, discuss things, or just have fun in thisChristian mingle place. All Christians and churches are welcomed, whether you are Baptists,Catholic, Methodists, etc. or from non-denominational churches.
             </p>
-            <br>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
+              Tree was founded to help believers find friendship, community and build genuine connectionwith other Christians. We empower our community to connect and engage  building healthyChristian relationships with other believers so that we can live a positive, productive life in ourwalk as a Christ’ disciple. Tree focuses on building a clean, supportive, and healthy Christiancommunity based on the principle of Christianity.
             </p>
           </div>
           <div class="stats grid">
@@ -103,9 +97,7 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Tree was created to solve was the lack of genuine connection and communitywithin the church and the body of Christ as a whole
             </p>
           </div>
           <div class="what-we-did">
@@ -129,19 +121,15 @@
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            TreeApp
+            Tree
           </h2>
           <div class="content-box">
             <div class="content">
               <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
+                Tree provides a place where churches can grow their community through exclusive chat rooms,groups and connection identifiers for the church congregation. We connect believers together around the world through our open chat rooms, life groups, and events map to help increase the opportunity for communication and growth together.
+              </p>
+              <p class="text">
+                Tree also provides those wanting to know more about Christ a place to come and get connected to other believers and gain true community as they transition into their relationship with Christ because we were never called todo life alone
               </p>
             </div>
           </div>
@@ -152,7 +140,7 @@
       </div>
     </div>
     <div class="video-section">
-      <youtube :video-id="player.id" :player-width="player.width" :player-height="player.height"></youtube>
+      <youtube :video-id="player.id" :player-width="player.width" :player-height="player.height" />
     </div>
     <div class="tools-used">
       <div class="header">
@@ -204,7 +192,7 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'Treeapp',
+  name: 'Tree',
   components: {
     NavBar,
     Footer,
@@ -219,24 +207,24 @@ export default {
     },
     technologies: [
       {
-        id: 'tech01',
+        id: 'flutter',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       },
       {
-        id: 'tech04',
-        text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563193651/fluidangle/svg/ios-seeklogo.com.svg'
-      },
-      {
-        id: 'tech02',
+        id: 'dart',
         text: '',
         image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
       },
       {
-        id: 'tech03',
+        id: 'kotlin',
         text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194024/fluidangle/svg/android-5.svg'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292713/fluidangle/svg/kotlinlang-ar21.svg'
+      },
+      {
+        id: 'swift',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292723/fluidangle/svg/swift-ar21.svg'
       }
     ],
     integrations: [
@@ -517,7 +505,6 @@ export default {
           justify-content: flex-end;
           img{
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }

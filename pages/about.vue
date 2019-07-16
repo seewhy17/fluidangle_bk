@@ -47,8 +47,8 @@
           </li>
         </ul>
       </div>
-      <div class="options-container">
-        <div class="web-development grid equal-two option-box">
+      <div id="options" class="options-container">
+        <div id="web-development" class="web-development grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:54:27.png" alt="">
           </div>
@@ -72,7 +72,7 @@
             <a>View Our Works</a>
           </div>
         </div>
-        <div class="mobile-app grid equal-two option-box">
+        <div id="mobile-app" class="mobile-app grid equal-two option-box">
           <div class="content-box">
             <div class="title-box">
               <p class="title">
@@ -96,7 +96,7 @@
             <img src="/img/custom/Screenshot from 2019-06-20 00:30:56.png" alt="">
           </div>
         </div>
-        <div class="ui-ux grid equal-two option-box">
+        <div id="ui-ux" class="ui-ux grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:56:12.png" alt="">
           </div>
@@ -280,10 +280,21 @@ export default {
         }
       }
       .options-container{
+        margin:{
+          top: 5%;
+          bottom: 5%;
+        }
         .option-box{
           margin:{
-            bottom: 8%;
-            top:4rem;
+            top:2rem;
+          }
+          padding: {
+            top:8%;
+          };
+          &.web-development{
+            padding: {
+              top: 5%;
+            }
           }
           @include for-phone-only{
             grid-template-columns: auto;

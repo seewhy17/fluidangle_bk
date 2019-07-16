@@ -15,7 +15,7 @@
         </div>
         <div class="project-amount">
           <p class="flex dir-column">
-            <span>23</span> Projects
+            <span>Featured</span> Works
           </p>
         </div>
       </div>
@@ -213,7 +213,7 @@ export default {
         }
 
         span {
-          font-size: 3rem;
+          font-size: 2.5rem;
           line-height: 1.45;
           font-weight: 700;
           color: $primary

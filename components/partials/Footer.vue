@@ -22,13 +22,13 @@
           SERVICES
         </p>
         <div class="links flex dir-column">
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#options">
             Web Development
           </nuxt-link>
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#mobile-app">
             Mobile Development
           </nuxt-link>
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#ui-ux">
             UI/UX Design
           </nuxt-link>
         </div>

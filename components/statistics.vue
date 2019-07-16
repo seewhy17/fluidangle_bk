@@ -72,26 +72,28 @@
           People that trust our work
         </p>
       </div>
-      <div>
-        <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
-      </div>
-      <div>
-        <img
-          src="/img/Screenshot 2019-05-01 at 6.25.48 AM.png"
-          alt="proto"
-        >
-      </div>
-      <div>
-        <img
-          src="/img/tree.png"
-          alt="plinkd"
-        >
-      </div>
-      <div>
-        <img
-          src="/img/LOGO text_colored.png"
-          alt="treeApp"
-        >
+      <div class="works">
+        <div>
+          <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
+        </div>
+        <div>
+          <img
+            src="/img/Screenshot 2019-05-01 at 6.25.48 AM.png"
+            alt="proto"
+          >
+        </div>
+        <div>
+          <img
+            src="/img/tree.png"
+            alt="plinkd"
+          >
+        </div>
+        <div>
+          <img
+            src="/img/LOGO text_colored.png"
+            alt="treeApp"
+          >
+        </div>
       </div>
     </div>
     <div class="clients container">
@@ -147,7 +149,10 @@ export default {
     ],
     currentIndex: 0,
     hooperSettings: {
-      centerMode: true
+      centerMode: true,
+      touchDrag: false,
+      wheelControl: false,
+      mouseDrag: false
     }
   }),
   mounted() {
@@ -163,7 +168,7 @@ export default {
     },
     slideNext() {
       this.$refs.carousel.slideNext()
-      this.currentIndex = this.currentIndex > this.slides.length ? this.slides.length : this.currentIndex + 1
+      this.currentIndex = this.currentIndex >= this.slides.length - 1 ? this.slides.length - 1 : this.currentIndex + 1
     }
   }
 }
@@ -214,9 +219,19 @@ export default {
       margin: {
         top: 5rem;
       }
-      grid-template-columns: 2fr repeat(4, 1fr);
+      grid-template-columns: auto 1fr;
       @include breakpoint($max: 768px) {
         grid-template-columns: auto
+      }
+      .works{
+       display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        @include breakpoint($max: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        grid-gap: 1rem;
       }
       align-items: center;
 
@@ -288,6 +303,9 @@ export default {
         };
         svg{
           margin-left: 1rem;
+        }
+        .middle-control{
+          font-size: 1.5rem;
         }
         & .prev:hover,
         & .next:hover{

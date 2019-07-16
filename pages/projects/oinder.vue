@@ -197,24 +197,29 @@ export default {
   data: () => ({
     technologies: [
       {
-        id: 'tech01',
+        id: 'flutter',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       },
       {
-        id: 'tech02',
+        id: 'dart',
         text: '',
         image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
       },
       {
-        id: 'tech03',
+        id: 'kotlin',
         text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194024/fluidangle/svg/android-5.svg'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292713/fluidangle/svg/kotlinlang-ar21.svg'
+      },
+      {
+        id: 'swift',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292723/fluidangle/svg/swift-ar21.svg'
       }
     ],
     integrations: [
       {
-        id: 'int01',
+        id: 'firebase',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       }
@@ -485,7 +490,6 @@ export default {
 
           img {
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }
@@ -622,7 +626,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -660,7 +664,6 @@ export default {
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100%;
           margin-right: 5%;
           margin-bottom: 5%;
 

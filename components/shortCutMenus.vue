@@ -85,6 +85,10 @@ export default {
           height: 100%;
           justify-content: center;
           align-items: center;
+          padding:{
+            left:5%;
+            right: 5%;
+          }
         }
         img{
           cursor: pointer;
