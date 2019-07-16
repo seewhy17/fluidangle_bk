@@ -98,7 +98,7 @@ export default {
         font-size: 3rem;
         cursor: pointer;
         @include breakpoint($max: 768px){
-          font-size: 1rem;
+          font-size: 1.3rem;
         }
       }
       .menu-icon{
@@ -113,9 +113,13 @@ export default {
           font-weight: 600;
         }
       }
-      .right-menu{
+      .right-menu,
+      .left-menu{
         img{
           max-width: 30%;
+          @include breakpoint($max: 768px){
+            max-width: 75%;
+          }
         }
       }
     }

@@ -32,7 +32,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  45
+                  70
                 </p>
                 <p class="comment center-align">
                   SCREENS

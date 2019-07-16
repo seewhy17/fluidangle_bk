@@ -165,7 +165,7 @@
         <img src="https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg" alt="">
       </div>
       <div class="content-box flex dir-column">
-        <p class="title">
+        <p class="title center-align">
           Osinachi Ukomadu &amp; Chichi Ukomadu
         </p>
         <div class="container text-container">
@@ -249,7 +249,6 @@ export default {
     hslider: () => ({ component: import('~/components/heroshe-slider.vue') })
   },
   data: () => ({
-    slides: [],
     technologies: [
       {
         text: '',
@@ -284,28 +283,6 @@ export default {
     ]
   }),
   mounted() {
-    this.slides = [
-      {
-        id: 0,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 1,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      }
-    ]
   },
   methods: {
     getImageUrl(url) {
@@ -672,8 +649,8 @@ export default {
         };
         @include breakpoint($max: 768px) {
           padding: {
-            right: 0;
-            left: 3rem;
+            right: 1.5rem;
+            left: 1.5rem;
           }
           border: 0;
         }
@@ -713,13 +690,18 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        @include breakpoint($max: 768px) {
+          padding: {
+            right: 1.5rem;
+            left: 1.5rem;
+          }
+        }
         .integrations-grid {
           flex-wrap: wrap;
         }
 
         .integration {
-          width: 30%;
+          width: 40%;
           display: flex;
           flex-direction: column;
           align-items: center;

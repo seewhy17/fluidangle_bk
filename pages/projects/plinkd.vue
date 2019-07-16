@@ -74,12 +74,12 @@
         </div>
         <div class="info-box">
           <div class="links" />
-          <div class="app-stores grid equal-two">
+          <div class="app-stores grid">
             <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
+              <img src="/img/coming_soon_appstore.png" alt="">
             </div>
             <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
+              <img src="/img/coming_soon_playstore.png" alt="">
             </div>
           </div>
         </div>
@@ -693,7 +693,7 @@ export default {
           flex-wrap: wrap;
         }
         .integration {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;

@@ -47,6 +47,46 @@ export default {
       {
         id: 2,
         img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/1_Help_Desk_-_1.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305168/fluidangle/img/Customers_Admin_1.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305157/fluidangle/img/Cargo_Manifest_1.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305153/fluidangle/img/Invoices.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305151/fluidangle/img/Configuration_Settings.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305147/fluidangle/img/Order_new_user.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305144/fluidangle/img/Admin_Shipping_List.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305057/fluidangle/img/Single_Order_Details_Page_-_Buy4Me_1.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305054/fluidangle/img/Single_Order_Details_Page_-_Ship4Me.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305053/fluidangle/img/Email_Order.png')
+      },
+      {
+        id: 3,
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1563305047/fluidangle/img/Order_Request_Admin.png')
       }
     ]
   },
