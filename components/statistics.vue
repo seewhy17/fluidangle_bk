@@ -142,10 +142,14 @@ export default {
   mounted() {
     this.slides = [
       {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png'),
+        text:'',
+        role:''
       },
       {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
+        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png'),
+        text:'',
+        role:''
       }
     ]
   },

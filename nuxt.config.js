@@ -54,8 +54,18 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: process.env.BASE_URL || 'http://localhost:3000',
+    gzip: true,
+    exclude: [
+      '/secret',
+      '/admin/**'
+    ],
+    routes: ['/', '/work', '/about', '/contact']
+  },
   /*
   ** Axios module configuration
   */

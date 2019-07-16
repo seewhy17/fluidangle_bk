@@ -159,24 +159,6 @@
           </div>
         </div>
       </div>
-      <div class="other-features">
-        <div class="header">
-          <h2 class="title  center-align">
-            Mobile Responsive
-          </h2>
-          <p class="text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <div class="image-part flex list">
-            <img
-              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')"
-              alt=""
-            >
-          </div>
-        </div>
-      </div>
     </div>
     <div class="testimonials">
       <div class="image-part flex">
@@ -190,8 +172,7 @@
           <p class="text center-align">
             It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the
             team would understand the scope and complexity of our project. Our initial conversations started building my
-            confidence but I still had reservations because most of the web apps I had seen built in Nigeria seemed
-            subpar. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to
+            confidence. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to
             move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final
             output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed
             that I continued working with some of the talents in the next phase of the project.
