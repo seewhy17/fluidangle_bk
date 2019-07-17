@@ -9,9 +9,7 @@
     "mail_user": "@fluidangle_v1_contact_mail-address",
     "mail_port": "@fluidangle_v1_mail_port",
     "mail_pass": "@fluidangle_v1_contact_mail-pass",
-    "mail_secure": "@fluidangle_v1_mail_secure",
-    "strapi_user": "@fluidangle_v1_strapi_user",
-    "strapi_pass": "@fluidangle_v1_strapi_pass"
+    "mail_secure": "@fluidangle_v1_mail_secure"
   },
   "build": {
     "env": {
@@ -22,9 +20,7 @@
       "mail_user": "@fluidangle_v1_contact_mail-address",
       "mail_port": "@fluidangle_v1_mail_port",
       "mail_pass": "@fluidangle_v1_contact_mail-pass",
-      "mail_secure": "@fluidangle_v1_mail_secure",
-      "strapi_user": "@fluidangle_v1_strapi_user",
-      "strapi_pass": "@fluidangle_v1_strapi_pass"
+      "mail_secure": "@fluidangle_v1_mail_secure"
     }
   },
   "builds": [
