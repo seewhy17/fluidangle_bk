@@ -237,20 +237,6 @@ export default {
   data: () => ({
     posts: [],
     stPosts: [],
-    mostPopular: [
-      {
-        id: 'popular-01',
-        title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
-        type: 'Design',
-        minutes: '6'
-      },
-      {
-        id: 'popular-01',
-        title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
-        type: 'Design',
-        minutes: '6'
-      }
-    ],
     whatsNew: []
   }),
   computed: {
