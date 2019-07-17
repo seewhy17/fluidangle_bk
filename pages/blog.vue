@@ -41,7 +41,7 @@
               >
               <div class="content-box">
                 <div class="content">
-                  <a href="/posts/post-01" class="link-wrapper">
+                  <a :href="`/posts/${getByPriority('Primary')[0]['_id']}`" class="link-wrapper">
                     <h3 class="title">
                       {{ getByPriority('Primary')[0]['title'] }}
                     </h3>
@@ -51,7 +51,7 @@
                   </p>
                 </div>
                 <div class="action-box flex dir-row">
-                  <a href="">{{ getByPriority('Primary')[0]['type'] }}</a>
+                  <a href="">{{ getByPriority('Primary')[0]['category']['name'] }}</a>
                   <p>{{ getByPriority('Primary')[0]['duration'] }} mins read</p>
                 </div>
               </div>
@@ -62,28 +62,24 @@
           <div class="post card sub-post">
             <div class="image-part">
               <img
-                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1858.png')"
+                :src="getByPriority('Secondary')[0]['backgroundUrl']"
                 alt=""
               >
             </div>
             <div class="content-box">
               <div class="content">
-                <a href="" class="link-wrapper">
+                <a :href="`/posts/${getByPriority('Secondary')[0]['_id']}`" class="link-wrapper">
                   <h3 class="title">
-                    The 3 Things Women Over 50
-                    Can Do to Keep Their Jobs
+                    {{ getByPriority('Secondary')[0]['title'] }}
                   </h3>
                 </a>
                 <p class="text">
-                  Workers will no longer tolerate the punishing
-                  schedules of technology giants Workers will
-                  no longer tolerate the punishing schedules of
-                  technology giants
+                  {{ getByPriority('Secondary')[0]['summary'] }}
                 </p>
               </div>
               <div class="action-box flex dir-row list">
-                <a href="">Development</a>
-                <p>7 mins read</p>
+                <a href=""> {{ getByPriority('Secondary')[0]['category']['name'] }} </a>
+                <p>{{ getByPriority('Secondary')[0]['duration'] }} mins read</p>
               </div>
             </div>
           </div>
@@ -121,7 +117,7 @@
               </h2>
             </div>
             <div class="wrapper">
-              <div v-for="popular in mostPopular" :id="popular.key" :key="popular.key" class="content-box">
+              <div v-for="popular in getMostPopular" :id="popular._id" :key="popular._id" class="content-box">
                 <div class="content">
                   <a href="" class="link-wrapper">
                     <h3 class="title">
@@ -129,12 +125,11 @@
                     </h3>
                   </a>
                   <p class="text">
-                    {{ popular.description }}
                   </p>
                 </div>
                 <div class="action-box flex dir-row list">
-                  <a href="">{{ popular.type }}</a>
-                  <p>{{ popular.minutes }} mins read</p>
+                  <a href="">{{ popular.category.name }}</a>
+                  <p>{{ popular.duration }} mins read</p>
                 </div>
               </div>
             </div>
@@ -204,12 +199,9 @@
             </p>
             <div class="content-box">
               <ul>
-                <li><a href="" @click.prevent>Entrepreneur</a></li>
-                <li><a href="" @click.prevent>Design</a></li>
-                <li><a href="" @click.prevent>Development</a></li>
-                <li><a href="" @click.prevent>Innovation</a></li>
-                <li><a href="" @click.prevent>Startup</a></li>
-                <li><a href="" @click.prevent>Strategy</a></li>
+                <li v-for="category in getCategories" :key="category._id">
+                  <a href="" @click.prevent>{{ category.name }}</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -264,15 +256,71 @@ export default {
   computed: {
     ...mapGetters([
       'getPosts',
-      'getByPriority'
+      'getCategories',
+      'getByPriority',
+      'getMostPopular'
     ])
   },
-  async fetch({ store, env }) {
+  async fetch({ store }) {
     await store.dispatch('emptyPosts')
-    const posts = await strapi.request('get', '/posts', {})
-    await posts.forEach(async post => {
+    await store.dispatch('emptyCategories')
+    await store.dispatch('emptyMostPopular')
+    const posts = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query {
+        posts {
+            _id
+            title
+            summary
+            category{
+              name
+            }
+            backgroundUrl
+            duration
+            priority
+          }
+        }`
+      }
+    })
+    await posts.data.posts.forEach(async post => {
       await store.dispatch('savePost', {
         id: post._id, ...post
+      })
+    })
+    const categories = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query{
+        categories{
+            _id
+            name
+          }
+        }`
+      }
+    })
+    await categories.data.categories.forEach(async category => {
+      await store.dispatch('saveCategory', {
+        id: category._id, ...category
+      })
+    })
+    const mostPopular = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query{
+        mostpopulars{
+            _id
+            title
+            duration
+            category{
+              name
+            }
+          }
+        }`
+      }
+    })
+    // eslint-disable-next-line no-console
+    // console.log(mostPopular.data.mostpopulars[0])
+    await mostPopular.data.mostpopulars.forEach(async popular => {
+      await store.dispatch('saveMostPopular', {
+        id: popular._id, ...popular
       })
     })
   },
@@ -337,7 +385,11 @@ export default {
   methods: {
     ...mapActions([
       'savePost',
-      'emptyPosts'
+      'emptyCategories',
+      'saveCategory',
+      'emptyPosts',
+      'emptyMostPopular',
+      'saveMostPopular'
     ]),
     getImageUrl(url) {
       return this.$cloudinary

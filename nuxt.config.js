@@ -75,6 +75,12 @@ export default {
       }
     }],
     '@nuxtjs/style-resources',
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-MGW96BQ',
+      layer: 'dataLayer',
+      pageTracking: false,
+      dev: true
+    }],
     '@nuxtjs/sitemap'
   ],
   sitemap: {
