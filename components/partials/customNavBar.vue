@@ -164,6 +164,8 @@ nav {
   z-index: 9999;
   width: 100%;
   min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
   background: {
     color: rgba($light, .5);
     image: url('/img/bg-lines.png');
