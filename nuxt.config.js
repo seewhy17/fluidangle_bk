@@ -80,21 +80,8 @@ export default {
       layer: 'dataLayer',
       pageTracking: false,
       dev: true
-    }],
-    '@nuxtjs/sitemap'
+    }]
   ],
-  sitemap: {
-    hostname: process.env.BASE_URL || 'http://localhost:3000',
-    path: '/sitemap.xml',
-    gzip: true,
-    cacheTime: 1000 * 60 * 15,
-    generate: false,
-    exclude: [
-      '/secret',
-      '/admin/**'
-    ],
-    routes: ['/', '/work', '/about', '/contact']
-  },
   /*
   ** Axios module configuration
   */
