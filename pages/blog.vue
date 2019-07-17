@@ -267,11 +267,10 @@ export default {
       'getByPriority'
     ])
   },
-  async fetch({ store }) {
+  async fetch({ store, env }) {
     await store.dispatch('emptyPosts')
-    await strapi.login(process.env.strapi_user, process.env.strapi_pass)
-    const response = await strapi.request('get', '/posts', {})
-    await response.forEach(async post => {
+    const posts = await strapi.request('get', '/posts', {})
+    await posts.forEach(async post => {
       await store.dispatch('savePost', {
         id: post._id, ...post
       })
