@@ -269,6 +269,7 @@ export default {
   },
   async fetch({ store }) {
     await store.dispatch('emptyPosts')
+    await strapi.login(process.env.strapi_user, process.env.strapi_pass)
     const response = await strapi.request('get', '/posts', {})
     await response.forEach(async post => {
       await store.dispatch('savePost', {

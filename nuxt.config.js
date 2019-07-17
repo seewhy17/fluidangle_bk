@@ -53,13 +53,36 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    ['@nuxtjs/pwa', {
+      manifest: {
+        'name': 'FluidAngle Website',
+        'short_name': 'fluidangle',
+        'start_url': '/',
+        'lang': 'en-US',
+        'display': 'standalone',
+        'background_color': '#fff',
+        'theme_color': '#542ea4',
+        'description': 'FluidAngle - We build &amp; Develop Digital Products',
+        'icons': [{
+          'src': '/favicon-16x16.png.png',
+          'sizes': '16x16',
+          'type': 'image/png'
+        }, {
+          'src': '/favicon-32x32.png',
+          'sizes': '32x32',
+          'type': 'image/png'
+        }]
+      }
+    }],
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap'
   ],
   sitemap: {
     hostname: process.env.BASE_URL || 'http://localhost:3000',
+    path: '/sitemap.xml',
     gzip: true,
+    cacheTime: 1000 * 60 * 15,
+    generate: false,
     exclude: [
       '/secret',
       '/admin/**'
@@ -79,7 +102,9 @@ export default {
 
   env: {
     ApiUrl: process.env.API_URL || 'http://localhost:1337',
-    cloud_name: 'nazarick'
+    cloud_name: 'nazarick',
+    strapi_user: process.env.user,
+    strapi_pass: process.env.pass
   },
   serverMiddleware: ['~/api/index.js'],
   /*

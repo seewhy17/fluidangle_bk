@@ -83,7 +83,7 @@
               </a>
             </div>
             <div class="image flex">
-              <a href="" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=com.tree_app" target="_blank">
                 <img src="/img/Image 20.png" alt="">
               </a>
             </div>

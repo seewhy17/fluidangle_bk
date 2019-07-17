@@ -26,7 +26,6 @@
           <li><a class="" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
           <li><a class="" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
           <li><a class="" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
-          <li><a class="" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
@@ -109,12 +108,12 @@ export default {
       },
       {
         id: 'treeapp',
-        title: 'TreeApp',
+        title: 'Tree',
         titleImage: '',
         text: 'We ship from any US Online Store',
         img: 'https://res.cloudinary.com/nazarick/image/upload/v1562273978/fluidangle/img/xd/Image_65.png',
         action: '/projects/treeapp',
-        type: 'web',
+        type: 'mobile',
         color: '#6caa49'
       },
       {
