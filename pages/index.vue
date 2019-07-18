@@ -140,8 +140,6 @@
           <div class="image-part hide-on-small">
             <img
               src="/img/shutterstock_758031970.png"
-              srcset="/img/shutterstock-758031970@2x.png 2x,
-             /img/shutterstock-758031970@3x.png 3x"
               alt="services"
             >
           </div>

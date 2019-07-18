@@ -20,7 +20,7 @@
           </nuxt-link>
         </div>
         <div class="menu-bar">
-          <Menu fill-color="#e3e8f1" @click="toggleMobile" />
+          <Menu fill-color="#41464D" @click="toggleMobile" />
         </div>
       </nav>
       <transition name="mobile-transition">
@@ -167,7 +167,7 @@ nav {
   height: 100vh;
   overflow-y: scroll;
   background: {
-    color: rgba($light, .5);
+    color: rgba($light, .9);
     image: url('/img/bg-lines.png');
     size: cover;
     repeat: no-repeat;
@@ -183,7 +183,7 @@ nav {
       font-size: 3rem;
       border-bottom:solid thin $light-gray;
       width: 100%;
-      color:$light;
+      color:$dark-grey;
       padding: {
         left:5%;
       };

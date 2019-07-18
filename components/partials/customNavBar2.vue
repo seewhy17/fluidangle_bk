@@ -170,7 +170,7 @@ export default {
     height: 100vh;
     overflow-y: scroll;
     background: {
-      color: rgba($light, .5);
+      color: rgba($light, .9);
       image: url('/img/bg-lines.png');
       size: cover;
       repeat: no-repeat;
@@ -188,7 +188,7 @@ export default {
         font-size: 3rem;
         border-bottom: solid thin $light-gray;
         width: 100%;
-        color: $light;
+        color: $dark-grey;
         padding: {
           left: 5%;
         };

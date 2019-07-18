@@ -64,7 +64,7 @@ export default {
         'theme_color': '#542ea4',
         'description': 'FluidAngle - We build &amp; Develop Digital Products',
         'icons': [{
-          'src': '/favicon-16x16.png.png',
+          'src': '/favicon-16x16.png',
           'sizes': '16x16',
           'type': 'image/png'
         }, {
