@@ -212,7 +212,7 @@ export default {
         }
 
         span {
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 1.45;
           font-weight: 700;
           color: $primary
@@ -270,6 +270,55 @@ export default {
           background-color: $gray;
           margin-bottom: 3rem;
           position: relative;
+          @include for-phone-only{
+            height: 100vmin;
+            margin: {
+              top: 21rem;
+            };
+            &.heroshe{
+              margin: {
+                top:10rem;
+              };
+            }
+            &>.grid{
+              grid-template-columns: auto;
+              .image-part{
+                padding: 0;
+                top: -50%;
+                z-index: -1;
+                img{
+                  position: relative;
+                  width: 100%;
+                  top:0
+                }
+              }
+              .content{
+                position: absolute;
+                justify-items: center;
+                width: 100%;
+                .content-box{
+                  text-align: center;
+                  padding: {
+                    left:1rem;
+                    right:1rem;
+                  };
+                  .title{
+                    font-size: 2.8rem;
+                  }
+                  .text{
+                    font-size: 1.5rem;
+                    width: 100%;
+                  }
+                  .action-word{
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+            .cover{
+              height: calc(100% - 23rem);
+            }
+          }
 
           &.heroshe {
             /*background-color: #47b6d2;*/

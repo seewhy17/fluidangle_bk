@@ -1474,16 +1474,44 @@
       <form action="" class="container">
         <div class="input-container grid equal-two">
           <div class="input-block">
-            <input id="first-name" v-model="user.firstName" type="text" name="firstName" placeholder="First Name">
+            <input
+              id="first-name"
+              v-model="user.firstName"
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              required
+            >
           </div>
           <div class="input-block">
-            <input id="last-name" v-model="user.lastName" type="text" name="lastName" placeholder="Last Name">
+            <input
+              id="last-name"
+              v-model="user.lastName"
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            >
           </div>
           <div class="input-block">
-            <input id="email-address" v-model="user.email" type="text" name="email" placeholder="Email">
+            <input
+              id="email-address"
+              v-model="user.email"
+              type="text"
+              name="email"
+              placeholder="Email"
+              required
+            >
           </div>
           <div class="input-block">
-            <input id="telephone" v-model="user.telephone" type="text" name="telephone" placeholder="Telephone">
+            <input
+              id="telephone"
+              v-model="user.telephone"
+              type="text"
+              name="telephone"
+              placeholder="Telephone"
+              required
+            >
           </div>
           <div class="input-block">
             <input
@@ -1492,6 +1520,7 @@
               type="text"
               name="companyName"
               placeholder="Company Name"
+              required
             >
           </div>
           <div class="input-block">
@@ -1501,11 +1530,12 @@
               type="text"
               name="companyRole"
               placeholder="Company Role"
+              required
             >
           </div>
         </div>
         <div class="button-container center-align flex">
-          <button @click.prevent="submit()">
+          <button type="submit" @click.prevent="submit()">
             Get App Estimate
           </button>
         </div>
@@ -1923,7 +1953,9 @@ export default {
 
       .input-container {
         justify-items: center;
-
+        @include breakpoint($max: 768px){
+          grid-template-columns: auto;
+        }
         .input-block {
           width: 100%;
         }

@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
 import Mailchimp from 'mailchimp-api-v3'
 import mailTemplate from './mailTemplate'
+import contactTemplate from './contactTemplate'
 
 dotenv.config()
 
@@ -51,6 +52,31 @@ const sendMail = async (params, features) => {
       bcc: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com`,
       subject: 'App Price Estimation',
       html: mailTemplate(params, features, process.env.BASE_URL)
+    })
+    return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
+  } catch (err) {
+    return new Error(err)
+  }
+}
+
+const sendContactMail = async (params) => {
+  const testAccount = await nodemailer.createTestAccount()
+  const transporter = nodemailer.createTransport({
+    host: `${process.env.mail_host}` || testAccount.smtp.host,
+    port: process.env.mail_port || testAccount.smtp.port,
+    secure: (process.env.mail_secure === 'true') || testAccount.smtp.secure,
+    auth: {
+      user: `${process.env.mail_user}` || testAccount.user, // generated ethereal user
+      pass: `${process.env.mail_pass}` || testAccount.pass // generated ethereal password
+    }
+  })
+  try {
+    const info = await transporter.sendMail({
+      from: process.env.mail_user,
+      to: `garubav@gmail.com`,
+      bcc: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com`,
+      subject: 'FluidAngle Contact Mail',
+      html: contactTemplate(params)
     })
     return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
   } catch (err) {
@@ -132,6 +158,15 @@ app.post('/mail/', async (req, res, next) => {
   try {
     const info = await sendMail(sanitizedAttributes, features)
     await subscribe(sanitizedAttributes)
+    res.status(200).json({ 'message': `Mail Sent: ${info}` })
+  } catch (err) {
+    return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
+  }
+})
+
+app.post('/contact/', async (req, res, next) => {
+  try {
+    const info = await sendContactMail(req.body)
     res.status(200).json({ 'message': `Mail Sent: ${info}` })
   } catch (err) {
     return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })

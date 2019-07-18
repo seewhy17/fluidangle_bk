@@ -29,31 +29,53 @@
         <form action="" class="form">
           <div class="input-block flex dir-column">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Enter Your Name" name="name">
+            <input
+              id="name"
+              v-model="user.name"
+              type="text"
+              placeholder="Enter Your Name"
+              name="name"
+              required
+            >
           </div>
           <div class="input-block flex dir-column">
             <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Enter Your Email Address" name="email">
+            <input
+              id="email"
+              v-model="user.email"
+              type="email"
+              placeholder="Enter Your Email Address"
+              name="email"
+              required
+            >
           </div>
           <div class="input-block flex dir-column">
             <label for="telephone">Telephone</label>
-            <input id="telephone" type="text" placeholder="Enter your telephone number" name="telephone">
+            <input id="telephone" v-model="user.telephone" type="text" placeholder="Enter your telephone number" name="telephone">
           </div>
           <div class="grid equal-two project-budget">
             <div class="input-block flex dir-column">
               <label for="project">Project</label>
-              <v-select id="project" placeholder="Select Project type" name="project" :options="projectOptions" />
+              <v-select id="project" v-model="user.project" placeholder="Select Project type" name="project" :options="projectOptions" />
             </div>
             <div class="input-block flex dir-column">
               <label for="budget">Budget</label>
-              <v-select id="budget" type="text" placeholder="Enter Your budget" name="budget" :options="budgetOptions" />
+              <v-select
+                id="budget"
+                v-model="user.budget"
+                type="text"
+                placeholder="Enter Your budget"
+                name="budget"
+                :options="budgetOptions"
+                required
+              />
             </div>
           </div>
           <div class="input-block flex dir-column">
             <label for="messages">Messages</label>
-            <textarea id="messages" placeholder="Description" name="description" style="resize: vertical" />
+            <textarea id="messages" v-model="user.messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
-          <button class="send-button" @click.prevent>
+          <button class="send-button" @click.prevent type="submit">
             Send Message
           </button>
         </form>
@@ -130,7 +152,15 @@ export default {
   },
   data: () => ({
     projectOptions: [],
-    budgetOptions: []
+    budgetOptions: [],
+    user: {
+      name: '',
+      email: '',
+      project: [],
+      budget: [],
+      telephone: '',
+      messages: ''
+    }
   })
 }
 </script>
