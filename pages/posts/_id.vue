@@ -1,47 +1,20 @@
 <template>
   <div class="page">
     <div class="banner">
-      <div class="bg" :style="getUrlMap()">
+      <div class="bg" :style="{backgroundImage: `url(${post.backgroundUrl})`}">
         <div class="banner-grid container flex dir-column">
           <h2 class="title">
-            The Rebellion Against China’s 996 Culture
+            {{ post.title }}
           </h2>
           <div class="content flex dir-row list">
-            <span class="type">Entrepreneur</span> <span class="duration">7 mins read</span>
+            <span class="type">{{ post.category.name }}</span> <span class="duration">{{ post.duration }} mins read</span>
           </div>
         </div>
       </div>
       <nav-bar />
     </div>
     <div class="section container post">
-      <p>
-        Major tech events go, Google I/O lacks the glamour of an iPhone launch, the tension and drama of a
-        Facebook keynote, or the cringe-inducing, over-the-top spectacle of a Samsung unveiling. The company’s announcements tend to be wonky,
-        incremental, and heavily focused on artificial intelligence, especially its confusing inner workings.
-      </p>
-      <p>
-        Yet I find Google’s annual developer conference the most consistently intriguing of
-        the four, because the company isn’t just releasing nifty gadgets: It’s pushing the boundaries
-        of what can be automated, down to the most quotidian tasks in our everyday lives.
-      </p>
-      <p>
-        In the process, Google is giving us glimpses of a future that often looks more like sci-fi
-        than we’re really prepared to grapple with — even as it tries to reassure us with privacy
-        and security measures that often feel like attempts to paper over the can of worms it just opened.
-      </p>
-      <div class="image-part">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/Image_35.png')" alt="">
-      </div>
-      <p>
-        Yet I find Google’s annual developer conference the most consistently intriguing of the four,
-        because the company isn’t just releasing nifty gadgets: It’s pushing the boundaries of what can be automated,
-        down to the most quotidian tasks in our everyday lives.
-      </p>
-      <p>
-        In the process, Google is giving us glimpses of a future that often looks more like sci-fi than we’re really prepared
-        to grapple with — even as it tries to reassure us with privacy and security measures that often feel like attempts to
-        paper over the can of worms it just opened.
-      </p>
+      <div v-html="post.paragraph"></div>
       <div class="share flex dir-row list">
         <span>Share</span>
         <ul class="flex list dir-row">
@@ -58,20 +31,57 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import Strapi from 'strapi-sdk-javascript/build/main'
+// import { mapGetters, mapActions } from 'vuex'
+
+const apiUrl = 'https://fluidangle-blog-server.herokuapp.com'
+const strapi = new Strapi(apiUrl)
+
 export default {
   name: 'Post01',
   components: {
     NavBar,
     Footer
   },
+  data() {
+    return {
+      post: {}
+    }
+  },
+  async asyncData({ params }) {
+    const id = params.id
+    const post = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query {
+        post(id: "${id}") {
+            _id
+            title
+            summary
+            paragraph
+            category{
+              name
+            }
+            backgroundUrl
+            duration
+            priority
+          }
+        }`
+      }
+    })
+    // eslint-disable-next-line no-console
+    console.log(post)
+    return {
+      post: post.data.post
+    }
+  },
+  mounted() {
+    // eslint-disable-next-line no-console
+    console.log(this.$route)
+  },
   methods: {
     getImageUrl(url) {
       return this.$cloudinary
         .url(url)
-    },
-    getUrlMap() {
-      const url = this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_53.png')
-      return { 'background-image': 'url("' + url + '")' }
     }
   }
 }

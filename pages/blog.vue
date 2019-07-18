@@ -88,27 +88,27 @@
       <div class="posts-container grid more-posts">
         <div class="wrapper">
           <div class="posts grid equal-two full-mobile">
-            <div v-for="post in posts" :key="post.id" class="post">
+            <div v-for="post in getByPriority('Others')" :key="post.id" class="post">
               <div class="image-part">
-                <img :src="post.image" alt="">
+                <img :src="post.backgroundUrl" alt="">
               </div>
-              <div class="content-box">
-                <div class="content">
-                  <a href="" class="link-wrapper">
-                    <h3 class="title">
-                      {{ post.title }}
-                    </h3>
-                  </a>
-                  <p class="text">
-                    {{ post.description }}
-                  </p>
-                </div>
-                <div class="action-box flex dir-row">
-                  <a href="">{{ post.type }}</a>
-                  <p>{{ post.minutes }} mins read</p>
-                </div>
+              <!--              <div class="content-box">-->
+              <div class="content">
+                <a :href="`/posts/${getByPriority('Others')[0]['_id']}`" class="link-wrapper">
+                  <h3 class="title">
+                    {{ post.title }}
+                  </h3>
+                </a>
+                <p class="text">
+                  {{ post.summary }}
+                </p>
+              </div>
+              <div class="action-box flex dir-row">
+                <a href="">{{ post.category.name }}</a>
+                <p>{{ post.duration }} mins read</p>
               </div>
             </div>
+            <!--            </div>-->
           </div>
           <div class="most-popular">
             <div class="header">
@@ -119,13 +119,12 @@
             <div class="wrapper">
               <div v-for="popular in getMostPopular" :id="popular._id" :key="popular._id" class="content-box">
                 <div class="content">
-                  <a href="" class="link-wrapper">
+                  <a :href="`/posts/${popular._id}`" class="link-wrapper">
                     <h3 class="title">
                       {{ popular.title }}
                     </h3>
                   </a>
-                  <p class="text">
-                  </p>
+                  <p class="text" />
                 </div>
                 <div class="action-box flex dir-row list">
                   <a href="">{{ popular.category.name }}</a>
@@ -572,7 +571,7 @@ export default {
             left: 2.1rem;
             top: 3rem;
           };
-
+        }
           .content {
             margin-bottom: 3rem;
             width: 85%;
@@ -602,7 +601,7 @@ export default {
               margin-right: 1rem;
             }
           }
-        }
+        /*}*/
       }
 
       .sub-post {
@@ -658,8 +657,8 @@ export default {
         }
 
         .post {
-          align-content: space-evenly;
-
+          align-content: stretch;
+          grid-template-rows: auto 1fr auto;
           .image-part {
             img {
               border-radius: 0;
@@ -667,13 +666,16 @@ export default {
             }
           }
 
-          .content-box {
-            padding: {
-              top: 1rem;
-              left: 0;
-            }
+          /*.content-box {*/
+          /*  padding: {*/
+          /*    top: 1rem;*/
+          /*    left: 0;*/
+          /*  }*/
 
             .content {
+              margin:{
+                top: 1rem;
+              }
               width: 100%;
             }
 
@@ -686,7 +688,7 @@ export default {
               width: 80%;
               font-size: .9rem;
             }
-          }
+          /*}*/
         }
       }
 
