@@ -35,20 +35,24 @@
         <section class="post-main">
           <div class="post card main-post">
             <div class="image-part">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_53.png')" alt="">
+              <img
+                :src="getByPriority('Primary')[0]['backgroundUrl']"
+                alt=""
+              >
               <div class="content-box">
                 <div class="content">
-                  <h3 class="title">
-                    The Rebellion Against China’s 996 Culture
-                  </h3>
+                  <a :href="`/posts/${getByPriority('Primary')[0]['_id']}`" class="link-wrapper">
+                    <h3 class="title">
+                      {{ getByPriority('Primary')[0]['title'] }}
+                    </h3>
+                  </a>
                   <p class="text">
-                    Workers will no longer tolerate the punishing schedules of technology giants
-                    Workers will no longer tolerate the punishing schedules.
+                    {{ getByPriority('Primary')[0]['summary'] }}
                   </p>
                 </div>
                 <div class="action-box flex dir-row">
-                  <a href="">Entrepreneur</a>
-                  <p>7 mins read</p>
+                  <a href="">{{ getByPriority('Primary')[0]['category']['name'] }}</a>
+                  <p>{{ getByPriority('Primary')[0]['duration'] }} mins read</p>
                 </div>
               </div>
             </div>
@@ -57,24 +61,25 @@
         <aside>
           <div class="post card sub-post">
             <div class="image-part">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1858.png')" alt="">
+              <img
+                :src="getByPriority('Secondary')[0]['backgroundUrl']"
+                alt=""
+              >
             </div>
             <div class="content-box">
               <div class="content">
-                <h3 class="title">
-                  The 3 Things Women Over 50
-                  Can Do to Keep Their Jobs
-                </h3>
+                <a :href="`/posts/${getByPriority('Secondary')[0]['_id']}`" class="link-wrapper">
+                  <h3 class="title">
+                    {{ getByPriority('Secondary')[0]['title'] }}
+                  </h3>
+                </a>
                 <p class="text">
-                  Workers will no longer tolerate the punishing
-                  schedules of technology giants Workers will
-                  no longer tolerate the punishing schedules of
-                  technology giants
+                  {{ getByPriority('Secondary')[0]['summary'] }}
                 </p>
               </div>
               <div class="action-box flex dir-row list">
-                <a href="">Development</a>
-                <p>7 mins read</p>
+                <a href=""> {{ getByPriority('Secondary')[0]['category']['name'] }} </a>
+                <p>{{ getByPriority('Secondary')[0]['duration'] }} mins read</p>
               </div>
             </div>
           </div>
@@ -83,25 +88,27 @@
       <div class="posts-container grid more-posts">
         <div class="wrapper">
           <div class="posts grid equal-two full-mobile">
-            <div v-for="post in posts" :key="post.id" class="post">
+            <div v-for="post in getByPriority('Others')" :key="post.id" class="post">
               <div class="image-part">
-                <img :src="post.image" alt="">
+                <img :src="post.backgroundUrl" alt="">
               </div>
-              <div class="content-box">
-                <div class="content">
+              <!--              <div class="content-box">-->
+              <div class="content">
+                <a :href="`/posts/${getByPriority('Others')[0]['_id']}`" class="link-wrapper">
                   <h3 class="title">
                     {{ post.title }}
                   </h3>
-                  <p class="text">
-                    {{ post.description }}
-                  </p>
-                </div>
-                <div class="action-box flex dir-row">
-                  <a href="">{{ post.type }}</a>
-                  <p>{{ post.minutes }} mins read</p>
-                </div>
+                </a>
+                <p class="text">
+                  {{ post.summary }}
+                </p>
+              </div>
+              <div class="action-box flex dir-row">
+                <a href="">{{ post.category.name }}</a>
+                <p>{{ post.duration }} mins read</p>
               </div>
             </div>
+            <!--            </div>-->
           </div>
           <div class="most-popular">
             <div class="header">
@@ -110,18 +117,18 @@
               </h2>
             </div>
             <div class="wrapper">
-              <div v-for="popular in mostPopular" :id="popular.key" :key="popular.key" class="content-box">
+              <div v-for="popular in getMostPopular" :id="popular._id" :key="popular._id" class="content-box">
                 <div class="content">
-                  <h3 class="title">
-                    {{ popular.title }}
-                  </h3>
-                  <p class="text">
-                    {{ popular.description }}
-                  </p>
+                  <a :href="`/posts/${popular._id}`" class="link-wrapper">
+                    <h3 class="title">
+                      {{ popular.title }}
+                    </h3>
+                  </a>
+                  <p class="text" />
                 </div>
                 <div class="action-box flex dir-row list">
-                  <a href="">{{ popular.type }}</a>
-                  <p>{{ popular.minutes }} mins read</p>
+                  <a href="">{{ popular.category.name }}</a>
+                  <p>{{ popular.duration }} mins read</p>
                 </div>
               </div>
             </div>
@@ -139,9 +146,11 @@
                 </div>
                 <div class="content-box">
                   <div class="content">
-                    <h3 class="title">
-                      {{ post.title }}
-                    </h3>
+                    <a href="" class="link-wrapper">
+                      <h3 class="title">
+                        {{ post.title }}
+                      </h3>
+                    </a>
                     <p class="description">
                       {{ post.description }}
                     </p>
@@ -189,12 +198,9 @@
             </p>
             <div class="content-box">
               <ul>
-                <li><a href="" @click.prevent>Entrepreneur</a></li>
-                <li><a href="" @click.prevent>Design</a></li>
-                <li><a href="" @click.prevent>Development</a></li>
-                <li><a href="" @click.prevent>Innovation</a></li>
-                <li><a href="" @click.prevent>Startup</a></li>
-                <li><a href="" @click.prevent>Strategy</a></li>
+                <li v-for="category in getCategories" :key="category._id">
+                  <a href="" @click.prevent>{{ category.name }}</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -207,32 +213,104 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import Strapi from 'strapi-sdk-javascript/build/main'
+import { mapGetters, mapActions } from 'vuex'
+
+const apiUrl = 'https://fluidangle-blog-server.herokuapp.com'
+const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'Blog',
+  head() {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Blog' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer
   },
   data: () => ({
     posts: [],
-    mostPopular: [
-      {
-        id: 'popular-01',
-        title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
-        type: 'Design',
-        minutes: '6'
-      },
-      {
-        id: 'popular-01',
-        title: 'Want to Retire Rich? Don’t Make This Common Mistake.',
-        type: 'Design',
-        minutes: '6'
-      }
-    ],
+    stPosts: [],
     whatsNew: []
   }),
+  computed: {
+    ...mapGetters([
+      'getPosts',
+      'getCategories',
+      'getByPriority',
+      'getMostPopular'
+    ])
+  },
+  async fetch({ store }) {
+    await store.dispatch('emptyPosts')
+    await store.dispatch('emptyCategories')
+    await store.dispatch('emptyMostPopular')
+    const posts = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query {
+        posts {
+            _id
+            title
+            summary
+            category{
+              name
+            }
+            backgroundUrl
+            duration
+            priority
+          }
+        }`
+      }
+    })
+    await posts.data.posts.forEach(async post => {
+      await store.dispatch('savePost', {
+        id: post._id, ...post
+      })
+    })
+    const categories = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query{
+        categories{
+            _id
+            name
+          }
+        }`
+      }
+    })
+    await categories.data.categories.forEach(async category => {
+      await store.dispatch('saveCategory', {
+        id: category._id, ...category
+      })
+    })
+    const mostPopular = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query{
+        mostpopulars{
+            _id
+            title
+            duration
+            category{
+              name
+            }
+          }
+        }`
+      }
+    })
+    // eslint-disable-next-line no-console
+    // console.log(mostPopular.data.mostpopulars[0])
+    await mostPopular.data.mostpopulars.forEach(async popular => {
+      await store.dispatch('saveMostPopular', {
+        id: popular._id, ...popular
+      })
+    })
+  },
   mounted() {
+    this.stPosts = this.$store.getters.getPosts
     this.posts = [
       {
         id: 'post01',
@@ -290,6 +368,14 @@ export default {
     ]
   },
   methods: {
+    ...mapActions([
+      'savePost',
+      'emptyCategories',
+      'saveCategory',
+      'emptyPosts',
+      'emptyMostPopular',
+      'saveMostPopular'
+    ]),
     getImageUrl(url) {
       return this.$cloudinary
         .url(url)
@@ -326,8 +412,14 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
-        height: 60%;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
+        height: 100%;
         z-index: -1;
       }
 
@@ -337,7 +429,6 @@ export default {
           right: 2rem;
           top: 2rem;
         };
-        background: $primary;
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
@@ -395,7 +486,7 @@ export default {
             color: #9fb0bf;
             font-size: 1rem;
             line-height: 1.22;
-            padding: 1rem 0;
+            padding: .25rem .2rem;
             border: 0;
             text-overflow: ellipsis;
             @include for-phone-only {
@@ -413,13 +504,14 @@ export default {
             border: solid 1px #707070;
             color: $light;
             background-color: $primary;
-            font-size: 1.75rem;
+            font-size: 1.35rem;
             padding: {
-              top: .75rem;
-              bottom: .65rem;
+              top: .5rem;
+              bottom: .45rem;
               left: 1.5rem;
               right: 1.45rem;
             };
+            cursor: pointer;
             @include for-phone-only {
               font-size: 0.75rem;
             }
@@ -479,7 +571,7 @@ export default {
             left: 2.1rem;
             top: 3rem;
           };
-
+        }
           .content {
             margin-bottom: 3rem;
             width: 85%;
@@ -509,7 +601,7 @@ export default {
               margin-right: 1rem;
             }
           }
-        }
+        /*}*/
       }
 
       .sub-post {
@@ -565,8 +657,8 @@ export default {
         }
 
         .post {
-          align-content: space-evenly;
-
+          align-content: stretch;
+          grid-template-rows: auto 1fr auto;
           .image-part {
             img {
               border-radius: 0;
@@ -574,13 +666,16 @@ export default {
             }
           }
 
-          .content-box {
-            padding: {
-              top: 1rem;
-              left: 0;
-            }
+          /*.content-box {*/
+          /*  padding: {*/
+          /*    top: 1rem;*/
+          /*    left: 0;*/
+          /*  }*/
 
             .content {
+              margin:{
+                top: 1rem;
+              }
               width: 100%;
             }
 
@@ -593,7 +688,7 @@ export default {
               width: 80%;
               font-size: .9rem;
             }
-          }
+          /*}*/
         }
       }
 
@@ -611,6 +706,7 @@ export default {
 
       .most-popular {
         margin-top: 3rem;
+
         .content-box {
           &:first-child {
             border-bottom: solid 2px $light-gray;
@@ -642,6 +738,7 @@ export default {
 
       .trending {
         margin-top: 3rem;
+
         .title {
           padding-bottom: 1rem;
         }

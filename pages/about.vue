@@ -4,7 +4,7 @@
       <span class="bg" />
       <nav-bar />
       <div class="banner-grid">
-        <div class="grid equal-two-rows content">
+        <div class="grid equal-two-rows content full-mobile">
           <div class="header">
             <h1>
               WHO WE ARE
@@ -47,8 +47,8 @@
           </li>
         </ul>
       </div>
-      <div class="options-container">
-        <div class="web-development grid equal-two option-box">
+      <div id="options" class="options-container">
+        <div id="web-development" class="web-development grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:54:27.png" alt="">
           </div>
@@ -72,7 +72,7 @@
             <a>View Our Works</a>
           </div>
         </div>
-        <div class="mobile-app grid equal-two option-box">
+        <div id="mobile-app" class="mobile-app grid equal-two option-box">
           <div class="content-box">
             <div class="title-box">
               <p class="title">
@@ -96,7 +96,7 @@
             <img src="/img/custom/Screenshot from 2019-06-20 00:30:56.png" alt="">
           </div>
         </div>
-        <div class="ui-ux grid equal-two option-box">
+        <div id="ui-ux" class="ui-ux grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:56:12.png" alt="">
           </div>
@@ -128,13 +128,13 @@
           <p class="title">
             CASE STUDY
           </p>
-          <a class="action-word flex dir-row list">VIEW OUR WORKS <img src="/img/xd/Group 2156.png" alt=""></a>
+          <a class="action-word flex dir-row list" href="/work">VIEW OUR WORKS <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
         <div class="shortcut-content">
           <p class="title">
             CONTACT US
           </p>
-          <a class="action-word flex dir-row list">HAVE A PROJECT <img src="/img/xd/Group 2156.png" alt=""></a>
+          <a class="action-word flex dir-row list" href="/contact">HAVE A PROJECT <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570109/fluidangle/img/xd/Group_2156.png')" alt=""></a>
         </div>
       </div>
     </section>
@@ -150,11 +150,25 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'About',
+  head() {
+    return {
+      title: 'About Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'About Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  },
+  methods: {
+    getImageUrl(url) {
+      return this.$cloudinary
+        .url(url)
+    }
   }
 }
 </script>
@@ -170,7 +184,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 50%;
         z-index: -1;
         @include breakpoint($max: 767px){
@@ -185,7 +205,7 @@ export default {
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 1.8fr 2fr;
-        @include for-phone-only{
+        @include breakpoint($max: 768px){
           grid-template-columns: 1fr;
         }
         .content{
@@ -217,6 +237,9 @@ export default {
       }
       .about-text{
         margin-top: 2rem;
+        padding: {
+          bottom: 2rem;
+        };
         p{
           font-size:1rem;
           line-height: 1.39;
@@ -257,8 +280,22 @@ export default {
         }
       }
       .options-container{
+        margin:{
+          top: 5%;
+          bottom: 5%;
+        }
         .option-box{
-          margin:{ bottom: 8%;}
+          margin:{
+            top:2rem;
+          }
+          padding: {
+            top:8%;
+          };
+          &.web-development{
+            padding: {
+              top: 5%;
+            }
+          }
           @include for-phone-only{
             grid-template-columns: auto;
           }
@@ -343,6 +380,7 @@ export default {
           font-size: 1rem;
           color:$light-gray;
           align-items: center;
+          cursor:pointer;
           img{
             margin-left: 2rem;
             width: 15%;

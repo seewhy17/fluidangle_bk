@@ -16,7 +16,7 @@
         </h2>
         <div class="content container">
           <p class="price">
-            Total Cost: $0
+            Total Cost: <span>{{ formatCurrency(getPrice.low) }}</span><span v-if="getPrice.high > 0"> - {{ formatCurrency(getPrice.high) }}</span>
           </p>
           <p class="rates">
             Based on rates
@@ -33,10 +33,35 @@
 
 <script>
 import NavBar from '~/components/partials/customNavBar2.vue'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'AppEstimatorResult',
+  head() {
+    return {
+      title: 'App Estimator Result',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Get App Estimated Pricing' }
+      ]
+    }
+  },
   components: {
     NavBar
+  },
+  computed: {
+    ...mapGetters([
+      'getPrice'
+    ])
+  },
+  methods: {
+    formatCurrency(number) {
+      const formatter = Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+      })
+      return formatter.format(number)
+    }
   }
 }
 </script>
@@ -68,7 +93,7 @@ export default {
       }
       nav{
         a{
-        color:$light;
+          color:$light;
         }
       }
       .banner-grid {

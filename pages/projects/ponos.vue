@@ -200,7 +200,7 @@
           <p class="title">
             TECHNOLOGIES
           </p>
-          <div class="technologies-grid flex dir-row">
+          <div class="technologies-grid flex dir-row list">
             <div v-for="technology in technologies" :key="technology.id" class="technology">
               <div class="image-part">
                 <img :src="technology.image" alt="">
@@ -215,7 +215,7 @@
           <p class="title">
             INTEGRATIONS
           </p>
-          <div class="integrations-grid flex dir-row">
+          <div class="integrations-grid flex dir-row list">
             <div v-for="integration in integrations" :key="integration.id" class="integration">
               <div class="image-part">
                 <img :src="integration.image" alt="">
@@ -307,7 +307,13 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: #2f2f2f;
+        background: {
+          color: #2f2f2f;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
         height: 100%;
         z-index: -1;
       }
@@ -336,6 +342,9 @@ export default {
 
           img {
             width: 20%;
+            @include breakpoint($max:768px){
+              width: 30%;
+            }
           }
         }
 
@@ -516,7 +525,6 @@ export default {
           justify-content: flex-end;
           img{
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }
@@ -549,6 +557,7 @@ export default {
     }
     .testimonials{
       padding-bottom: 5rem;
+      margin-top: 5rem;
       .image-part{
         padding-top: 5%;
         justify-content: center;
@@ -657,7 +666,6 @@ export default {
       .integrations{
         padding: {
           left:5rem;
-          right:5rem;
         };
         .integration{
           width: 25%;

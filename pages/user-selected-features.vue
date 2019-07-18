@@ -34,7 +34,7 @@
                 Which platform will the app be built on?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="android"
                 class="input-block android-block grid three"
@@ -47,7 +47,14 @@
                 >
                 <label for="android" @click="toggleCheckBox('platform','Android')">Android</label>
                 <div class="radio-button flex">
-                  <input id="android" v-model="option_block.platform" type="checkbox" name="platform" value="Android">
+                  <input
+                    id="android"
+                    v-model="option_block.platform"
+                    type="checkbox"
+                    name="platform"
+                    value="Android"
+                    disabled
+                  >
                   <span />
                 </div>
               </div>
@@ -117,7 +124,7 @@
                 What would your UI theme be?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="stock_ui"
                 class="input-block stock-block grid three"
@@ -220,7 +227,7 @@
                 How will your user signup and login into the app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="email_password"
                 class="input-block email-password-block grid three"
@@ -337,7 +344,7 @@
                 How do you wish to secure your app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="security"
                 class="input-block security-block grid three"
@@ -454,7 +461,7 @@
                 do you want on your app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="dashboard"
                 class="input-block dashboard-block grid three"
@@ -688,7 +695,7 @@
                 want on your app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="calendaring"
                 class="input-block calendaring-block grid three"
@@ -744,6 +751,7 @@
                     type="checkbox"
                     name="dates_and_locations"
                     value="Display of Map Data/Geolocation"
+                    disabled
                   >
                   <span />
                 </div>
@@ -816,7 +824,7 @@
                 you want on your app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="messaging"
                 class="input-block messaging-block grid three"
@@ -941,7 +949,7 @@
                 do you want on the app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="subscription"
                 class="input-block subscription-block grid three"
@@ -1114,7 +1122,7 @@
                 What type of Admin, Feedback & Analytics
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="cms_integration"
                 class="input-block cms_integration-block grid gear three"
@@ -1347,7 +1355,7 @@
                 do you want for your app?
               </p>
             </div>
-            <div class="options-block container flex wrap dir-row">
+            <div class="options-block container flex wrap dir-row" @click.prevent>
               <div
                 ref="third_party"
                 class="input-block messaging-block grid three"
@@ -1467,105 +1475,41 @@
         </div>
       </div>
     </div>
-    <section class="contact-form container">
-      <p class="title center-align">
-        Enter your details to get price estimation
-      </p>
-      <form action="" class="container">
-        <div class="input-container grid equal-two">
-          <div class="input-block">
-            <input id="first-name" v-model="user.firstName" type="text" name="firstName" placeholder="First Name">
-          </div>
-          <div class="input-block">
-            <input id="last-name" v-model="user.lastName" type="text" name="lastName" placeholder="Last Name">
-          </div>
-          <div class="input-block">
-            <input id="email-address" v-model="user.email" type="text" name="email" placeholder="Email">
-          </div>
-          <div class="input-block">
-            <input id="telephone" v-model="user.telephone" type="text" name="telephone" placeholder="Telephone">
-          </div>
-          <div class="input-block">
-            <input
-              id="company-name"
-              v-model="user.companyName"
-              type="text"
-              name="companyName"
-              placeholder="Company Name"
-            >
-          </div>
-          <div class="input-block">
-            <input
-              id="company-role"
-              v-model="user.companyRole"
-              type="text"
-              name="companyRole"
-              placeholder="Company Role"
-            >
-          </div>
-        </div>
-        <div class="button-container center-align flex">
-          <button @click.prevent="submit()">
-            Get App Estimate
-          </button>
-        </div>
-      </form>
-    </section>
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/partials/customNavBar.vue'
-import pricing from './../pricing.json'
-import cloneDeep from 'lodash.clonedeep'
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
   name: 'AppEstimatorVue',
-  components: {
-    NavBar
-  },
   head() {
     return {
-      title: 'App Estimator',
+      title: 'Selected Features',
       meta: [
-        { hid: 'description', name: 'description', content: 'App Estimator Survey' }
+        { hid: 'description', name: 'description', content: 'Review Selected Features' }
       ]
     }
   },
+  components: {
+    NavBar
+  },
   data() {
     return {
-      appPricing: pricing,
-      option_block: cloneDeep(this.$store.state.optionBlock),
-      user: cloneDeep(this.$store.state.user)
+      option_block: {}
     }
   },
   computed: {
-    storeOptions() {
-      return cloneDeep(this.$store.state.optionBlock)
-    },
-    storeUser() {
-      return cloneDeep(this.$store.state.user)
-    },
-    ...mapGetters([])
   },
   watch: {
-    storeOptions(newValue) {
-      this.option_block = newValue
-    },
-    storeUser(newValue) {
-      this.user = newValue
-    }
+  },
+  mounted() {
+    // eslint-disable-next-line no-console
+    this.option_block = JSON.parse(this.$route.query.features)
+    const link = encodeURIComponent(JSON.stringify(this.option_block))
+    // eslint-disable-next-line no-console
+    console.log(`http://localhost:3000/user-selected-features?features=${link}`)
   },
   methods: {
-    ...mapActions([
-      'emptyPrice',
-      'savePrice',
-      'emptyOptions',
-      'saveOptions',
-      'saveUserForm',
-      'emptyUserForm'
-    ]),
     capitalize(str) {
       return str.charAt(0).toUpperCase() + str.slice(1)
     },
@@ -1591,19 +1535,9 @@ export default {
       return arr.filter(ele => ele !== value)
     },
     toggleOption(input, value) {
-      this.option_block[input] = value
+      // this.option_block[input] = value
     },
     toggleCheckBox(input, value) {
-      if (this.isChecked(input, value)) {
-        const result = this.arrayRemove(this.option_block[input], value)
-        if (result) {
-          this.removePrice(input, value)
-          this.option_block[input] = result
-        }
-      } else {
-        this.option_block[input].push(value)
-        this.addPrice(input, value)
-      }
     },
     isChecked(input, value) {
       if (this.option_block[input]) {
@@ -1613,28 +1547,6 @@ export default {
     },
     isOption(input, value) {
       return this.option_block[input] === value
-    },
-    async submit() {
-      this.emptyPrice()
-      this.emptyOptions()
-      this.emptyUserForm()
-
-      const pricing = {
-        low: this.user.lowEnd,
-        high: this.user.highEnd
-      }
-      this.saveOptions(this.option_block)
-      this.saveUserForm(this.user)
-      this.savePrice(pricing)
-      const userForm = this.user
-      userForm.features = this.option_block
-      try {
-        await this.$axios.$post('/api/mail', userForm)
-        this.$router.push('/app-estimator-result')
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(`Unable to Complete`)
-      }
     }
   }
 }

@@ -42,18 +42,20 @@
           <div class="grid equal-two project-budget">
             <div class="input-block flex dir-column">
               <label for="project">Project</label>
-              <input id="project" type="text" placeholder="Select Project type" name="project">
+              <v-select id="project" placeholder="Select Project type" name="project" :options="projectOptions" />
             </div>
             <div class="input-block flex dir-column">
               <label for="budget">Budget</label>
-              <input id="budget" type="text" placeholder="Enter Your budget" name="budget">
+              <v-select id="budget" type="text" placeholder="Enter Your budget" name="budget" :options="budgetOptions" />
             </div>
           </div>
           <div class="input-block flex dir-column">
             <label for="messages">Messages</label>
-            <textarea id="messages" placeholder="Description" name="description"></textarea>
+            <textarea id="messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
-          <button class="send-button" @click.prevent>Send Message</button>
+          <button class="send-button" @click.prevent>
+            Send Message
+          </button>
         </form>
       </div>
       <div class="info-box">
@@ -64,29 +66,34 @@
           <p class="address">
             13 Rutland Square, Boston, MA 02118
           </p>
-          <p class="email">contact@fluidangle.com</p>
-          <p class="tel">Tel: <span>+1 (978) 849-4391</span></p>
+          <p class="email">
+            contact@fluidangle.com
+          </p>
+          <p class="tel">
+            Tel: <span><b>+1 (978) 849-4391</b></span>
+          </p>
           <div class="social-media">
             <small>SOCIAL MEDIA</small>
             <div class="social-media">
-              <img
-                src="/img/facebook-logo-button.png"
-                srcset="/img/facebook-logo-button@2x.png 2x,
-             /img/facebook-logo-button@3x.png 3x"
-                alt="facebook"
-              >
-              <img
-                src="/img/twitter.png"
-                srcset="/img/twitter@2x.png 2x,
-             /img/twitter@3x.png 3x"
-                alt="twitter"
-              >
-              <img
-                src="/img/youtube.png"
-                srcset="/img/youtube@2x.png 2x,
-             /img/youtube@3x.png 3x"
-                alt="youtube"
-              >
+              <a href="https://www.facebook.com/fluidangle/" title="facebook">
+                <img
+                  src="/img/facebook-logo-button.png"
+                  alt="facebook"
+                >
+              </a>
+              <a href="https://twitter.com/fluidangle" title="twitter">
+                <img
+                  src="/img/twitter.png"
+                  alt="twitter"
+                >
+              </a>
+              <a href="https://www.instagram.com/fluidangle/" title="instagram" target="_blank">
+                <img
+                  src="https://image.flaticon.com/icons/svg/1409/1409946.svg"
+                  alt="instagram"
+                  style="width: 39px;height:39px;"
+                >
+              </a>
             </div>
           </div>
         </div>
@@ -101,14 +108,30 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import vSelect from 'vue-select'
+import '~/assets/scss/vue-select.scss'
+
 export default {
   name: 'ContactVue',
+  head() {
+    return {
+      title: 'Contact Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Contact Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
-    'StartProject': () => ({ component: import('~/components/startProject.vue') })
-  }
+    'StartProject': () => ({ component: import('~/components/startProject.vue') }),
+    'v-select': vSelect
+  },
+  data: () => ({
+    projectOptions: [],
+    budgetOptions: []
+  })
 }
 </script>
 
@@ -122,8 +145,14 @@ export default {
         width: 100%;
         top: 0;
         left: 0;
-        background: $primary;
-        height: 60%;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
+        height: 100%;
         z-index: -1;
       }
 
@@ -133,7 +162,6 @@ export default {
           right: 2rem;
           top:2rem;
         };
-        background: $primary;
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
@@ -206,7 +234,7 @@ export default {
             }
             label{
               font:{
-                size:.75rem;
+                size:1rem;
                 weight: 500;
               }
             }
@@ -220,16 +248,23 @@ export default {
             }
           }
           .send-button{
-              height: 3rem;
-              width: 8rem;
+              min-height: 3.5rem;
+              min-width: 11rem;
               margin: {
                 top: 1.5rem;
               };
+            cursor: pointer;
+            padding: {
+              top:1rem;
+              left:2rem;
+              right:4rem;
+              bottom: 1rem;
+            };
               border-style: none;
               border-radius: 5px;
               color: $light;
               background-color: $primary;
-              font-size: .95rem;
+              font-size: 1.1rem;
               &:focus{
                 outline: 0;
               }
@@ -246,11 +281,21 @@ export default {
             bottom:5%;
           }
         }
+        .address,
+        .email,
+        .tel{
+          font-size:1.1rem;
+          color: #3b3b3b;
+        }
+        .email{
+          margin-bottom: .5rem;
+        }
         .address{
           margin-bottom: 10%;
         }
         .tel{
           margin-bottom: 7%;
+          color: #3b3b3b;
         }
         .social-media{
           small{

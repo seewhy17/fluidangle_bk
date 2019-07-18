@@ -6,12 +6,10 @@
       <section class="banner-grid">
         <div class="content">
           <div class="title-block center-align">
-            <h1 class="title">
-              <img src="/img/LOGO text.png" alt="Plinkd">
-            </h1>
+            <h1 class="title" />
             <div class="image-part flex">
               <img
-                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_7_1_cropped.png')"
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')"
                 alt=""
               >
             </div>
@@ -23,27 +21,21 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Plinkd App
+            Oinder App
           </p>
           <div class="content introduction">
             <p>
-              Plinkd was created for businesses to create a platform where they can directly market advertise and
-              connect with every individual within their location. Plinkd was created for users to be a tool for
-              everyone.
+              Oinder is a problem sharing and solving community that enables people share personal day
+              to day challenges while also keeping them anonymous by providing them with aliases or different
+              identities.
             </p>
             <br>
-            <p>
-              A tool to establish a single place for users around the world to receive first hand all the
-              answers for their who? what? when? And where questions on things to do 24/7, 365. Also, Plinkd will
-              simplify the process and decrease the time it takes to plan a trip months in advance or even an
-              individual's last minute plans for a night out with friends.
-            </p>
           </div>
           <div class="stats grid">
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  45
+                  30
                 </p>
                 <p class="comment center-align">
                   SCREENS
@@ -53,7 +45,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  1.2k
+                  0.9k
                 </p>
                 <p class="comment center-align">
                   HOURS SPENT
@@ -63,7 +55,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  5
+                  3
                 </p>
                 <p class="comment center-align">
                   PEOPLE INVOLVED
@@ -73,13 +65,13 @@
           </div>
         </div>
         <div class="info-box">
-          <div class="links" />
+          <div class="links">
+          </div>
           <div class="app-stores grid">
             <div class="image flex">
-              <img src="/img/coming_soon_appstore.png" alt="">
-            </div>
-            <div class="image flex">
-              <img src="/img/coming_soon_playstore.png" alt="">
+              <a href="https://play.google.com/store/apps/details?id=com.oinder" target="_blank">
+                <img src="/img/Image 20.png" alt="">
+              </a>
             </div>
           </div>
         </div>
@@ -91,27 +83,23 @@
               The Challenge
             </h2>
             <p class="text">
-              There were approximately 1/2 million total active mobile app developers in leading app
-              stores as of January 2017 - 724,99 who developed a Google Play app and 494,400 who developed an Apple app.
-            </p>
-            <br>
-            <p class="text">
-              Having a unique mobile app idea is difficult, but finding the right mobile app development team for the
-              project is even more challenging. There are many mobile app developers. How do you find the right mobile
-              app development team for your project? A team that is invested in your vision and not just to make
-              money.
+              The client noticed that at one point or the other people got depressed while facing personal
+              challenges that they felt was too difficult to share with their loved ones or relatives. They wanted to
+              create a place where individual could share their problems without being judge
             </p>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>UI UX Research</li>
-              <li>UI UX Design</li>
-              <li>Android App Development</li>
-              <li>iOS Development</li>
-            </ul>
+            <div class="content">
+              <p>
+                The App is designed to eliminate the fear of one’s own identity, by allowing people to share their
+                concerns or provide advice, recommendations or answers where necessary and anonymously too. Users on
+                Oinder can ask or answer questions which allows people to create a stream of information aligned with
+                their audience's interests.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,53 +107,31 @@
     <div class="gallery">
       <div class="main-image">
         <img
-          :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_8_1_cropped.png')"
+          :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')"
           alt=""
         >
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            Plinkd
+            Oinder App
           </h2>
           <div class="content-box">
             <div class="content">
-              <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
-              </p>
+              <p class="text">Oinder is designed to enable you share your personal problems without the fear of your real identity been revealed. Your privacy is our priority, so we keep everyone in the community anonymous. Without fear of revealing your real identity, you can easily open up and share with the community any personal issue or problem that really bothers you. After which you receive advice and opinion from various people within the community. </p>
+              <br>
+              <p class="text">Oinder is the safest place you can share your personal problems online and receive great
+                advice. Join us today, share your story, and hopefully find a possible solution. The world is a better
+                place when we come together.</p>
             </div>
           </div>
         </div>
         <div class="image-part hide-on-small">
           <img
-            :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1-2.png')"
+            :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')"
             alt=""
           >
         </div>
-      </div>
-    </div>
-    <div class="testimonials">
-      <div class="image-part flex">
-        <img src="https://www.plinkd.app/src/images/team/CEO.jpg" alt="">
-      </div>
-      <div class="content-box flex dir-column">
-        <p class="title">
-        </p>
-        <div class="container text-container">
-          <p class="text center-align">
-            Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks. The sky is the limit from here and ALL the praise goes to Terry and his team. I can guarantee they have my business for life.
-          </p>
-        </div>
-        <p class="role">
-          Gabriel Middlebrook
-        </p>
       </div>
     </div>
     <div class="tools-used">
@@ -207,7 +173,10 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/tree.png',url:'/projects/treeapp'}" />
+    <shortcut-menus
+      :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}"
+      :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}"
+    />
     <start-project />
     <Footer />
   </div>
@@ -218,7 +187,7 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'ProntoCare',
+  name: 'Oinder',
   components: {
     NavBar,
     Footer,
@@ -253,11 +222,6 @@ export default {
         id: 'firebase',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
-      },
-      {
-        id: 'cloud',
-        text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
       }
     ]
   }),
@@ -282,7 +246,7 @@ export default {
         top: 0;
         left: 0;
         background: {
-          color: $accent;
+          color: #877afb;
           image: url('/img/bg-lines.png');
           size: cover;
           repeat: no-repeat;
@@ -316,10 +280,7 @@ export default {
           font-size: 3.5rem;
 
           img {
-            width: 17%;
-            @include breakpoint($max:768px){
-              width: 30%;
-            }
+            width: 20%;
           }
         }
 
@@ -361,15 +322,14 @@ export default {
           margin-bottom: 3rem;
 
           p {
-            font-size: 1rem;
+            font-size: .9rem;
           }
         }
       }
 
       .process {
-        margin:{
-          bottom:5rem;
-        }
+        margin-bottom: 2rem;
+
         .content-box {
           justify-items: end;
           @include breakpoint($max: 768px) {
@@ -402,6 +362,12 @@ export default {
             line-height: 1.44;
             color: $dark-gray;
             font-weight: 500
+          }
+
+          .challenge {
+            .text {
+              width: 70%;
+            }
           }
 
           .what-we-did {
@@ -562,8 +528,9 @@ export default {
     }
 
     .testimonials {
-      padding-bottom: 5rem;
       margin-top: 5rem;
+      padding-bottom: 5rem;
+
       .image-part {
         padding-top: 5%;
         justify-content: center;
@@ -697,7 +664,6 @@ export default {
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100%;
           margin-right: 5%;
           margin-bottom: 5%;
 
