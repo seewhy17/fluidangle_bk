@@ -10,7 +10,7 @@
             About us
           </nuxt-link>
           <nuxt-link to="/app-estimator">
-            Estimator
+            App Estimator
           </nuxt-link>
           <nuxt-link to="/">
             Career
@@ -22,13 +22,13 @@
           SERVICES
         </p>
         <div class="links flex dir-column">
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#options">
             Web Development
           </nuxt-link>
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#mobile-app">
             Mobile Development
           </nuxt-link>
-          <nuxt-link to="/about">
+          <nuxt-link to="/about#ui-ux">
             UI/UX Design
           </nuxt-link>
         </div>
@@ -96,13 +96,13 @@
         <p> Copyright (c) {{ new Date().getFullYear() }}</p>
       </div>
       <div class="links">
-        <nuxt-link to="/">
+        <nuxt-link to="/terms-of-use">
           Terms of uses
         </nuxt-link>
-        <nuxt-link to="/">
+        <nuxt-link to="/privacy-policy">
           Privacy Policy
         </nuxt-link>
-        <nuxt-link to="/">
+        <nuxt-link to="/sitemap.xml">
           Sitemap
         </nuxt-link>
       </div>

@@ -140,8 +140,6 @@
           <div class="image-part hide-on-small">
             <img
               src="/img/shutterstock_758031970.png"
-              srcset="/img/shutterstock-758031970@2x.png 2x,
-             /img/shutterstock-758031970@3x.png 3x"
               alt="services"
             >
           </div>
@@ -160,6 +158,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Index',
+  head() {
+    return {
+      title: 'Welcome',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
@@ -200,9 +206,9 @@ export default {
         }
         height: 90%;
         z-index: -1;
-        /*@include breakpoint($max:768px){
-          height: 100vh;
-        }*/
+        @include breakpoint($min: 1440px){
+          height: 80%;
+        }
       }
 
       .banner-grid {
@@ -451,6 +457,13 @@ export default {
           height: 80%;
           min-width: 50%;
           width: 50%;
+          @include for-phone-only{
+            width: auto;
+            grid-template-columns: 1fr;
+            padding: {
+              left:10%;
+            };
+          }
         }
 
         .service {

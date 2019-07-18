@@ -6,8 +6,7 @@
       <section class="banner-grid">
         <div class="content">
           <div class="title-block center-align">
-            <h1 class="title">
-            </h1>
+            <h1 class="title" />
             <div class="image-part flex">
               <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_10_1_cropped.png')" alt="">
             </div>
@@ -19,27 +18,21 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Tree App
+            Tree
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Tree is a community connect app for believers. This is the place to meet Christians, connectwith people in your church congregation, and find or post events. This is a social network builtspecifically based on principles of Christianity and Jesus culture for every Christian communityand churches around the world! Every church has their own private Christian chat room whereyou can receive encouragement, post prayer request, discuss things, or just have fun in thisChristian mingle place. All Christians and churches are welcomed, whether you are Baptists,Catholic, Methodists, etc. or from non-denominational churches.
             </p>
-            <br>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
+              Tree was founded to help believers find friendship, community and build genuine connectionwith other Christians. We empower our community to connect and engage  building healthyChristian relationships with other believers so that we can live a positive, productive life in ourwalk as a Christ’ disciple. Tree focuses on building a clean, supportive, and healthy Christiancommunity based on the principle of Christianity.
             </p>
           </div>
           <div class="stats grid">
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  45
+                  70
                 </p>
                 <p class="comment center-align">
                   SCREENS
@@ -90,7 +83,7 @@
               </a>
             </div>
             <div class="image flex">
-              <a href="" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=com.tree_app" target="_blank">
                 <img src="/img/Image 20.png" alt="">
               </a>
             </div>
@@ -104,9 +97,7 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Tree was created to solve was the lack of genuine connection and communitywithin the church and the body of Christ as a whole
             </p>
           </div>
           <div class="what-we-did">
@@ -130,34 +121,16 @@
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            TreeApp
+            Tree
           </h2>
           <div class="content-box">
             <div class="content">
               <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
+                Tree provides a place where churches can grow their community through exclusive chat rooms,groups and connection identifiers for the church congregation. We connect believers together around the world through our open chat rooms, life groups, and events map to help increase the opportunity for communication and growth together.
               </p>
-            </div>
-            <div class="charts grid equal-two">
-              <div class="flex dir-column list">
-                <p class="text">
-                  Customers
-                </p>
-                <img src="/svg/pie-chart (1).svg" alt="">
-              </div>
-              <div class="flex dir-column list">
-                <p class="text">
-                  Story Chart
-                </p>
-                <img src="/svg/profits.svg" alt="">
-              </div>
+              <p class="text">
+                Tree also provides those wanting to know more about Christ a place to come and get connected to other believers and gain true community as they transition into their relationship with Christ because we were never called todo life alone
+              </p>
             </div>
           </div>
         </div>
@@ -167,7 +140,7 @@
       </div>
     </div>
     <div class="video-section">
-      <video src="" controls />
+      <youtube :video-id="player.id" :player-width="player.width" :player-height="player.height" />
     </div>
     <div class="tools-used">
       <div class="header">
@@ -219,7 +192,7 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'Treeapp',
+  name: 'Tree',
   components: {
     NavBar,
     Footer,
@@ -227,43 +200,53 @@ export default {
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
   data: () => ({
+    player: {
+      id: 'YnWrA0DDRyk',
+      width: '100%',
+      height: '600'
+    },
     technologies: [
       {
-        id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
-        image: '/img/Image 39.png'
-      },
-      {
-        id: 'tech04',
+        id: 'flutter',
         text: '',
-        image: '/img/Image 37.png'
+        image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       },
       {
-        id: 'tech05',
+        id: 'dart',
         text: '',
-        image: '/img/Image 42.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
+      },
+      {
+        id: 'kotlin',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292713/fluidangle/svg/kotlinlang-ar21.svg'
+      },
+      {
+        id: 'swift',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292723/fluidangle/svg/swift-ar21.svg'
       }
     ],
     integrations: [
       {
-        id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
+        id: 'firebase',
+        text: '',
+        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       },
       {
-        id: 'int02',
+        id: 'cloud',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
+      },
+      {
+        id: 'stripe',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192756/fluidangle/svg/stripe-ar21.svg'
+      },
+      {
+        id: 'cloudinary',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192854/fluidangle/svg/cloudinary-seeklogo.com.svg'
       }
     ]
   }),
@@ -522,7 +505,6 @@ export default {
           justify-content: flex-end;
           img{
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }
@@ -655,7 +637,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -685,9 +667,11 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        .integrations-grid{
+          flex-wrap: wrap;
+        }
         .integration {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;

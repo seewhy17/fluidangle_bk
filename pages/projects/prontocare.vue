@@ -519,7 +519,6 @@ export default {
         .image{
           img{
             object-position: center;
-            height: 100%;
           }
         }
       }

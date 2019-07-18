@@ -113,6 +113,14 @@ import '~/assets/scss/vue-select.scss'
 
 export default {
   name: 'ContactVue',
+  head() {
+    return {
+      title: 'Contact Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Contact Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

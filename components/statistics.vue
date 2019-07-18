@@ -72,26 +72,28 @@
           People that trust our work
         </p>
       </div>
-      <div>
-        <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
-      </div>
-      <div>
-        <img
-          src="/img/Screenshot 2019-05-01 at 6.25.48 AM.png"
-          alt="proto"
-        >
-      </div>
-      <div>
-        <img
-          src="/img/tree.png"
-          alt="plinkd"
-        >
-      </div>
-      <div>
-        <img
-          src="/img/LOGO text_colored.png"
-          alt="treeApp"
-        >
+      <div class="works">
+        <div>
+          <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
+        </div>
+        <div>
+          <img
+            src="/img/Screenshot 2019-05-01 at 6.25.48 AM.png"
+            alt="proto"
+          >
+        </div>
+        <div>
+          <img
+            src="/img/tree.png"
+            alt="plinkd"
+          >
+        </div>
+        <div>
+          <img
+            src="/img/LOGO text_colored.png"
+            alt="treeApp"
+          >
+        </div>
       </div>
     </div>
     <div class="clients container">
@@ -106,11 +108,10 @@
       </div>
       <div class="content-box flex dir-column">
         <p class="text center-align">
-          FluidAngle team are awesome guys to work with. <br>
-          I highly recommend them to get your project done ASAP and perfect delivery
+          {{ slides[currentIndex]['text'] }}
         </p>
         <p class="role">
-          Sarah - MD, ProntoCare
+          {{ slides[currentIndex]['role'] }}
         </p>
         <div class="controls flex list dir-row">
           <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev" />
@@ -134,20 +135,27 @@ export default {
     Slide
   },
   data: () => ({
-    slides: [],
+    slides: [
+      {
+        img: 'https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg',
+        text: 'It was a wonderful experience working with the fluidangle team. I was so impressed that I continued working with some of the talents in the next phase of the project.',
+        role: 'Co-Founder & CEO, Osi Ukomadu'
+      },
+      {
+        img: 'https://www.plinkd.app/src/images/team/CEO.jpg',
+        text: 'Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks.',
+        role: 'CEO, Gabriel Middlebrook'
+      }
+    ],
+    currentIndex: 0,
     hooperSettings: {
-      centerMode: true
+      centerMode: true,
+      touchDrag: false,
+      wheelControl: false,
+      mouseDrag: false
     }
   }),
   mounted() {
-    this.slides = [
-      {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
-      },
-      {
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1744.png')
-      }
-    ]
   },
   methods: {
     getImageUrl(url) {
@@ -156,9 +164,11 @@ export default {
     },
     slidePrev() {
       this.$refs.carousel.slidePrev()
+      this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : 0
     },
     slideNext() {
       this.$refs.carousel.slideNext()
+      this.currentIndex = this.currentIndex >= this.slides.length - 1 ? this.slides.length - 1 : this.currentIndex + 1
     }
   }
 }
@@ -209,9 +219,19 @@ export default {
       margin: {
         top: 5rem;
       }
-      grid-template-columns: 2fr repeat(4, 1fr);
+      grid-template-columns: auto 1fr;
       @include breakpoint($max: 768px) {
         grid-template-columns: auto
+      }
+      .works{
+       display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        @include breakpoint($max: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        grid-gap: 1rem;
       }
       align-items: center;
 
@@ -228,6 +248,9 @@ export default {
 
       .content-text {
         font-size: 1rem;
+      }
+      img{
+        height:auto;
       }
     }
 
@@ -280,6 +303,9 @@ export default {
         };
         svg{
           margin-left: 1rem;
+        }
+        .middle-control{
+          font-size: 1.5rem;
         }
         & .prev:hover,
         & .next:hover{

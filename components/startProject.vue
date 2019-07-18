@@ -9,7 +9,7 @@
           Let’s build something awesome together! <br>Say contact@fluidangle.com or call: +1 (978) 849-4391
         </p>
       </div>
-      <button>Start Project</button>
+      <a href="/app-estimator" class="btn">Start Project</a>
     </div>
   </section>
 </template>
@@ -39,7 +39,9 @@ export default {
       font-size: 1.1rem;
     }
 
-    button {
+    .btn {
+      display: inline-flex;
+      align-items: center;
       height: 3rem;
       padding:{
         left: 2rem;
@@ -49,12 +51,17 @@ export default {
         top: 1.5rem;
       };
       border-style: none;
-      border-radius: 1.7rem;
+      border-radius: 1.5rem;
       color: $primary;
       background-color: $light;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       &:focus{
           outline: 0;
+      }
+      &:hover{
+        background-color: $primary;
+        color: $light;
+        border:solid 2px $light;
       }
     }
   }

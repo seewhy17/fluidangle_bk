@@ -525,7 +525,6 @@ export default {
           justify-content: flex-end;
           img{
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }

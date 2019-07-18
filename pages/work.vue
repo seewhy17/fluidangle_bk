@@ -15,7 +15,7 @@
         </div>
         <div class="project-amount">
           <p class="flex dir-column">
-            <span>23</span> Projects
+            <span>Featured</span> Works
           </p>
         </div>
       </div>
@@ -26,7 +26,6 @@
           <li><a class="" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
           <li><a class="" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
           <li><a class="" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
-          <li><a class="" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
@@ -70,6 +69,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Work',
+  head() {
+    return {
+      title: 'Our Works',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Projects' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
@@ -101,12 +108,12 @@ export default {
       },
       {
         id: 'treeapp',
-        title: 'TreeApp',
+        title: 'Tree',
         titleImage: '',
         text: 'We ship from any US Online Store',
         img: 'https://res.cloudinary.com/nazarick/image/upload/v1562273978/fluidangle/img/xd/Image_65.png',
         action: '/projects/treeapp',
-        type: 'web',
+        type: 'mobile',
         color: '#6caa49'
       },
       {
@@ -205,7 +212,7 @@ export default {
         }
 
         span {
-          font-size: 3rem;
+          font-size: 2.5rem;
           line-height: 1.45;
           font-weight: 700;
           color: $primary
@@ -298,7 +305,7 @@ export default {
             img {
               width: 70%;
               position: absolute;
-              top: -20%;
+              top: -15%;
             }
           }
 

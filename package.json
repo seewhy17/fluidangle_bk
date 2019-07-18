@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/google-tag-manager": "^2.2.1",
     "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/sitemap": "^1.2.0",
     "@nuxtjs/style-resources": "^0.1.2",
     "body-parser": "^1.19.0",
     "cloudinary-core": "^2.6.3",
@@ -37,6 +39,7 @@
     "vue-ripple-directive": "^2.0.1",
     "vue-select": "^3.1.0",
     "vue-swal": "^1.0.0",
+    "vue-youtube-embed": "^2.2.1",
     "vuejs-scroll-fixed-header": "^1.0.2",
     "xss-filters": "^1.2.7"
   },

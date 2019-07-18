@@ -95,7 +95,7 @@
               <div class="image-part flex">
                 <img src="/svg/pdf.svg" alt="">
               </div>
-              <a href="" class="flex">Download Case study</a>
+              <a href="https://docs.google.com/document/d/1a14-UmqCIrGM6QEOt0vGyg4B-lGwPcDWSSX7beES34g/edit?usp=sharing" target="_blank" class="flex">Download Case study</a>
             </div>
           </div>
         </div>
@@ -113,7 +113,8 @@
             </p>
             <br>
             <p class="text">
-              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and “plug-in” third-party pieces
+              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and
+              “plug-in” third-party pieces
               of software to make your site look, act, and feel exactly the way you want) to suit their business needs.
               The problem with that is that too many plugins from different designers who did not interact together well
               made the site less effect and slow down their site.
@@ -158,36 +159,23 @@
           </div>
         </div>
       </div>
-      <div class="other-features">
-        <div class="header">
-          <h2 class="title  center-align">
-            Mobile Responsive
-          </h2>
-          <p class="text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <div class="image-part flex list">
-            <img
-              :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_4_1_cropped.png')"
-              alt=""
-            >
-          </div>
-        </div>
-      </div>
     </div>
     <div class="testimonials">
       <div class="image-part flex">
         <img src="https://heroshe.com/wp-content/themes/heroshewp4/images/why_we_do_what3.jpg" alt="">
       </div>
       <div class="content-box flex dir-column">
-        <p class="title">
+        <p class="title center-align">
           Osinachi Ukomadu &amp; Chichi Ukomadu
         </p>
         <div class="container text-container">
           <p class="text center-align">
-            It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the team would understand the scope and complexity of our project. Our initial conversations started building my confidence but I still had reservations because most of the web apps I had seen built in Nigeria seemed subpar. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed that I continued working with some of the talents in the next phase of the project.
+            It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the
+            team would understand the scope and complexity of our project. Our initial conversations started building my
+            confidence. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to
+            move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final
+            output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed
+            that I continued working with some of the talents in the next phase of the project.
           </p>
           <p class="text center-align">
             If you still have questions, feel free to ask. I'm always here to help.
@@ -210,7 +198,7 @@
             TECHNOLOGIES
           </p>
           <div class="technologies-grid flex dir-row list">
-            <div v-for="technology in technologies" :key="technology.id" class="technology">
+            <div v-for="(technology, index) in technologies" :key="index" class="technology">
               <div class="image-part">
                 <img :src="technology.image" alt="">
               </div>
@@ -225,7 +213,7 @@
             INTEGRATIONS
           </p>
           <div class="integrations-grid flex dir-row list">
-            <div v-for="integration in integrations" :key="integration.id" class="integration">
+            <div v-for="(integration, index) in integrations" :key="index" class="integration">
               <div class="image-part">
                 <img :src="integration.image" alt="">
               </div>
@@ -237,7 +225,10 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" />
+    <shortcut-menus
+      :left-menu="{title:'Oinder',url:'/projects/oinder'}"
+      :right-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}"
+    />
     <start-project />
     <Footer />
   </div>
@@ -258,70 +249,40 @@ export default {
     hslider: () => ({ component: import('~/components/heroshe-slider.vue') })
   },
   data: () => ({
-    slides: [],
     technologies: [
       {
-        id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
+        text: '',
         image: '/img/Image 39.png'
       },
       {
-        id: 'tech04',
         text: '',
-        image: '/img/Image 37.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192367/fluidangle/svg/nuxtjs-typo.svg'
       },
       {
-        id: 'tech05',
         text: '',
-        image: '/img/Image 42.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194028/fluidangle/svg/python-3.svg'
+      },
+      {
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192014/fluidangle/svg/djangoproject-ar21.svg'
       }
     ],
     integrations: [
       {
-        id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192756/fluidangle/svg/stripe-ar21.svg'
       },
       {
-        id: 'int02',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192749/fluidangle/svg/mailgun-ar21.svg'
+      },
+      {
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194036/fluidangle/svg/amazon-web-services.svg'
       }
     ]
   }),
   mounted() {
-    this.slides = [
-      {
-        id: 0,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 1,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Rectangle_1521.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      },
-      {
-        id: 2,
-        img: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/v1561570127/fluidangle/img/xd/Component_5_1_cropped.png')
-      }
-    ]
   },
   methods: {
     getImageUrl(url) {
@@ -455,7 +416,6 @@ export default {
 
           .image-part {
             img {
-              height: 100%;
               object-fit: cover;
               object-position: center;
             }
@@ -546,29 +506,8 @@ export default {
       }
 
       .gallery {
-        margin-top:5rem;
+        margin-top: 5rem;
         margin-bottom: 5rem;
-        /*.main-image{*/
-        /*  align-items: center;*/
-        /*  margin-bottom: 3rem;*/
-        /*  img{*/
-        /*    object-fit: cover;*/
-        /*    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);*/
-        /*    !* border: solid 1px #707070; *!*/
-        /*    border-top-left-radius: 5px;*/
-        /*    border-top-right-radius: 5px;*/
-        /*  }*/
-        /*  .controls{*/
-        /*    padding: {*/
-        /*      top:1rem;*/
-        /*      bottom: 1rem;*/
-        /*    };*/
-        /*    font-size: 1.5rem;*/
-        /*    & span:nth-child(2){*/
-        /*      font-size: 2rem;*/
-        /*    }*/
-        /*  }*/
-        /*}*/
         .other-images {
           /*height: 20rem;*/
           .image {
@@ -589,6 +528,7 @@ export default {
 
       .other-features {
         margin-top: 5rem;
+
         .title {
           color: $gray;
           font: {
@@ -645,9 +585,11 @@ export default {
           font-weight: 500;
           color: #62c9cb;
         }
-.text-container{
-  margin-bottom: 2rem;
-}
+
+        .text-container {
+          margin-bottom: 2rem;
+        }
+
         .text {
           color: $gray;
 
@@ -707,8 +649,8 @@ export default {
         };
         @include breakpoint($max: 768px) {
           padding: {
-            right: 0;
-            left: 3rem;
+            right: 1.5rem;
+            left: 1.5rem;
           }
           border: 0;
         }
@@ -718,7 +660,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -748,9 +690,18 @@ export default {
         padding: {
           left: 5rem;
         };
+        @include breakpoint($max: 768px) {
+          padding: {
+            right: 1.5rem;
+            left: 1.5rem;
+          }
+        }
+        .integrations-grid {
+          flex-wrap: wrap;
+        }
 
         .integration {
-          width: 25%;
+          width: 40%;
           display: flex;
           flex-direction: column;
           align-items: center;

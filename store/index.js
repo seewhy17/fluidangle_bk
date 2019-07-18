@@ -4,6 +4,8 @@ import { persist, desist } from './utils'
 export const state = () => ({
   client: {},
   posts: [],
+  categories: [],
+  mostPopular: [],
   pricing: {
     low: 0,
     high: 0
@@ -82,6 +84,18 @@ export const mutations = {
   resetPosts(state) {
     state.posts = []
   },
+  addCategory(state, category) {
+    state.categories.push(category)
+  },
+  resetCategories(state) {
+    state.categories = []
+  },
+  addMostPopular(state, popular) {
+    state.mostPopular.push(popular)
+  },
+  resetMostPopular(state) {
+    state.mostPopular = []
+  },
   setClient(state, info) {
     state.client = info
     persist('client', state.client)
@@ -99,14 +113,26 @@ export const getters = {
   getPosts: state => {
     return state.posts
   },
+  getCategories: state => {
+    return state.categories
+  },
+  getMostPopular: state => {
+    return state.mostPopular
+  },
   getByPriority: (state) => (priority) => {
-    return state.posts.filter(post => post.priority.toLowerCase === priority.toLowerCase)
+    return state.posts.filter(post => post.priority.toLowerCase() === priority.toLowerCase())
   }
 }
 
 export const actions = {
   async emptyPosts({ commit }) {
     await commit('resetPosts')
+  },
+  async emptyCategories({ commit }) {
+    await commit('resetCategories')
+  },
+  async emptyMostPopular({ commit }) {
+    await commit('resetMostPopular')
   },
   async emptyPrice({ commit }) {
     await commit('resetPrice')
@@ -119,6 +145,12 @@ export const actions = {
   },
   async savePost({ commit }, post) {
     await commit('addPost', post)
+  },
+  async saveCategory({ commit }, category) {
+    await commit('addCategory', category)
+  },
+  async saveMostPopular({ commit }, popular) {
+    await commit('addMostPopular', popular)
   },
   async saveOptions({ commit }, optionBlock) {
     await commit('changeOptions', optionBlock)
