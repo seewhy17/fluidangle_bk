@@ -273,18 +273,18 @@ export default {
           @include for-phone-only{
             height: 100vmin;
             margin: {
-              top: 21rem;
+              top: 24rem;
             };
             &.heroshe{
               margin: {
-                top:10rem;
+                top:16rem;
               };
             }
             &>.grid{
               grid-template-columns: auto;
               .image-part{
                 padding: 0;
-                top: -50%;
+                top: -60%;
                 z-index: -1;
                 img{
                   position: relative;
@@ -296,6 +296,7 @@ export default {
                 position: absolute;
                 justify-items: center;
                 width: 100%;
+                padding: 0;
                 .content-box{
                   text-align: center;
                   padding: {
@@ -316,7 +317,7 @@ export default {
               }
             }
             .cover{
-              height: calc(100% - 23rem);
+              height: calc(100% - 25rem);
             }
           }
 
