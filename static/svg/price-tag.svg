@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.837" height="39.238" viewBox="0 0 37.837 39.238">
+    <defs>
+        <style>
+            .cls-1{fill:#e7d4b1}.cls-2{fill:#d3c2a4}.cls-3{fill:#cbb292}.cls-4{fill:#71c386}.cls-5{fill:#fff}
+        </style>
+    </defs>
+    <g id="price-tag" transform="translate(-1)">
+        <path id="Path_135" d="M33.211 0h-9.234L6.848 17.074l16.63 16.666 17.11-17.054V7.36zM32.19 10.419a2.057 2.057 0 1 1 2.057-2.057 2.056 2.056 0 0 1-2.057 2.057z" class="cls-1" data-name="Path 135" transform="translate(-1.75)"/>
+        <path id="Path_136" d="M5.118 24.354L1 28.461l16.63 16.666L21.766 41z" class="cls-2" data-name="Path 136" transform="translate(0 -7.289)"/>
+        <path id="Path_137" d="M40.939 7.8a2.057 2.057 0 1 1-2.057 2.057A2.056 2.056 0 0 1 40.939 7.8m0-2.8A4.859 4.859 0 1 0 45.8 9.859 4.865 4.865 0 0 0 40.939 5z" class="cls-3" data-name="Path 137" transform="translate(-10.5 -1.497)"/>
+        <g id="Group_48" data-name="Group 48" transform="translate(17.817 22.422)">
+            <circle id="Ellipse_8" cx="8.408" cy="8.408" r="8.408" class="cls-4" data-name="Ellipse 8"/>
+            <path id="Path_138" d="M39.109 41.2h-3.5v-3.5a.7.7 0 1 0-1.4 0v3.5H30.7a.7.7 0 1 0 0 1.4h3.5v3.5a.7.7 0 1 0 1.4 0v-3.5h3.5a.7.7 0 0 0 0-1.4z" class="cls-5" data-name="Path 138" transform="translate(-26.497 -33.497)"/>
+        </g>
+    </g>
+</svg>
