@@ -61,7 +61,7 @@
             <label for="messages">Messages</label>
             <textarea id="messages" v-model="user.messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
-          <button class="send-button" type="submit" @click.prevent>
+          <button class="send-button" type="submit" @click.prevent="sendContactMail()">
             Send Message
           </button>
         </form>
@@ -148,7 +148,25 @@ export default {
       telephone: '',
       messages: ''
     }
-  })
+  }),
+  methods: {
+    async sendContactMail() {
+      const resetUser = {
+        name: '',
+        email: '',
+        project: [],
+        telephone: '',
+        messages: ''
+      }
+      try {
+        await this.$axios.$post('/api/contact', this.user)
+        this.user = resetUser
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log(`Unable to Complete: ${e}`)
+      }
+    }
+  }
 }
 </script>
 

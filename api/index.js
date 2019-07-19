@@ -61,6 +61,7 @@ const sendMail = async (params, features) => {
 
 const sendContactMail = async (params) => {
   const testAccount = await nodemailer.createTestAccount()
+  const { email } = params
   const transporter = nodemailer.createTransport({
     host: `${process.env.mail_host}` || testAccount.smtp.host,
     port: process.env.mail_port || testAccount.smtp.port,
@@ -72,11 +73,11 @@ const sendContactMail = async (params) => {
   })
   try {
     const info = await transporter.sendMail({
-      from: process.env.mail_user,
-      to: `garubav@gmail.com`,
+      from: email,
+      to: process.env.mail_user,
       bcc: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com`,
       subject: 'FluidAngle Contact Mail',
-      html: contactTemplate(params)
+      html: contactTemplate(params, process.env.BASE_URL)
     })
     return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
   } catch (err) {
