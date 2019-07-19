@@ -73,7 +73,7 @@ const sendContactMail = async (params) => {
   })
   try {
     const info = await transporter.sendMail({
-      from: email,
+      from: process.env.mail_user,
       to: process.env.mail_user,
       bcc: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com`,
       subject: 'FluidAngle Contact Mail',
