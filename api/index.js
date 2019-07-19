@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
 import Mailchimp from 'mailchimp-api-v3'
 import mailTemplate from './mailTemplate'
+import contactTemplate from './contactTemplate'
 
 dotenv.config()
 
@@ -57,6 +58,31 @@ const sendMail = async (params, features) => {
     return new Error(err)
   }
 }
+
+const sendContactMail = async (params) => {
+  const testAccount = await nodemailer.createTestAccount()
+  const transporter = nodemailer.createTransport({
+    host: `${process.env.mail_host}` || testAccount.smtp.host,
+    port: process.env.mail_port || testAccount.smtp.port,
+    secure: (process.env.mail_secure === 'true') || testAccount.smtp.secure,
+    auth: {
+      user: `${process.env.mail_user}` || testAccount.user, // generated ethereal user
+      pass: `${process.env.mail_pass}` || testAccount.pass // generated ethereal password
+    }
+  })
+  try {
+    const info = await transporter.sendMail({
+      from: process.env.mail_user,
+      to: process.env.mail_user,
+      bcc: `terrykrangar@fluidangle.com, abdulsamii@fluidangle.com, garubav@gmail.com`,
+      subject: 'FluidAngle Contact Mail',
+      html: contactTemplate(params, process.env.BASE_URL)
+    })
+    return `Message sent: ${nodemailer.getTestMessageUrl(info) || info.messageId}`
+  } catch (err) {
+    return new Error(err)
+  }
+}
 const subscribe = async (params) => {
   const update = true
   const status = {
@@ -96,22 +122,14 @@ app.post('/subscribe/', async (req, res, next) => {
     pending: 'pending',
     cleaned: 'cleaned'
   }
-  const { firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd } = req.body
+  const { email } = req.body
   try {
     const results = await mailchimp.post(`/lists/${listUniqueId}`, {
       update_existing: update !== undefined ? update : true,
       members: [{
         email_address: email.toLowerCase(),
         status: status.subscribed || 'subscribed',
-        merge_fields: {
-          'FNAME': firstName,
-          'LNAME': lastName,
-          'PHONE': telephone,
-          'CMPANYNAME': companyName,
-          'CMPANYROLE': companyRole,
-          'LOWEND': lowEnd,
-          'HIGHEND': highEnd
-        }
+        merge_fields: {}
       }]
     })
     res.status(200).json(results)
@@ -132,6 +150,15 @@ app.post('/mail/', async (req, res, next) => {
   try {
     const info = await sendMail(sanitizedAttributes, features)
     await subscribe(sanitizedAttributes)
+    res.status(200).json({ 'message': `Mail Sent: ${info}` })
+  } catch (err) {
+    return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
+  }
+})
+
+app.post('/contact/', async (req, res, next) => {
+  try {
+    const info = await sendContactMail(req.body)
     res.status(200).json({ 'message': `Mail Sent: ${info}` })
   } catch (err) {
     return res.status(422).json({ 'error': `Unable to Complete!: ${err}` })
