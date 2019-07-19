@@ -1,71 +1,71 @@
 <template>
   <section class="section our-statistics">
-    <div class="container flex dir-row statistics-grid">
-      <div class="stats grid equal-two-rows">
-        <div class="image-part">
-          <img
-            src="/img/stats-clients-b5bbbd87.png"
-            alt="stats-clients"
-          >
-        </div>
-        <div class="content">
-          <p class="amount">
-            60+
-          </p>
-          <p class="comment">
-            HAPPY CLIENTS
-          </p>
-        </div>
-      </div>
-      <div class="stats grid equal-two-rows">
-        <div class="image-part">
-          <img
-            src="/img/stats-commits-5a037d2c.png"
-            alt="stats-commits"
-          >
-        </div>
-        <div class="content">
-          <p class="amount">
-            90+
-          </p>
-          <p class="comment">
-            SUCCESSFUL PROJECT
-          </p>
-        </div>
-      </div>
-      <div class="stats grid equal-two-rows">
-        <div class="image-part">
-          <img
-            src="/img/stats-projects-efbd5c8b.png"
-            alt="stats-projects"
-          >
-        </div>
-        <div class="content">
-          <p class="amount">
-            63+
-          </p>
-          <p class="comment">
-            ACCEPTED USER STORIES
-          </p>
-        </div>
-      </div>
-      <div class="stats grid equal-two-rows">
-        <div class="image-part">
-          <img
-            src="/img/stats-user-stories-a8e2c535.png"
-            alt="stats-user-stories"
-          >
-        </div>
-        <div class="content">
-          <p class="amount">
-            339+
-          </p>
-          <p class="comment">
-            DELIVERED GIT COMMITS
-          </p>
-        </div>
-      </div>
-    </div>
+<!--    <div class="container flex dir-row statistics-grid">-->
+<!--      <div class="stats grid equal-two-rows">-->
+<!--        <div class="image-part">-->
+<!--          <img-->
+<!--            src="/img/stats-clients-b5bbbd87.png"-->
+<!--            alt="stats-clients"-->
+<!--          >-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--          <p class="amount">-->
+<!--            60+-->
+<!--          </p>-->
+<!--          <p class="comment">-->
+<!--            HAPPY CLIENTS-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="stats grid equal-two-rows">-->
+<!--        <div class="image-part">-->
+<!--          <img-->
+<!--            src="/img/stats-commits-5a037d2c.png"-->
+<!--            alt="stats-commits"-->
+<!--          >-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--          <p class="amount">-->
+<!--            90+-->
+<!--          </p>-->
+<!--          <p class="comment">-->
+<!--            SUCCESSFUL PROJECT-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="stats grid equal-two-rows">-->
+<!--        <div class="image-part">-->
+<!--          <img-->
+<!--            src="/img/stats-projects-efbd5c8b.png"-->
+<!--            alt="stats-projects"-->
+<!--          >-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--          <p class="amount">-->
+<!--            63+-->
+<!--          </p>-->
+<!--          <p class="comment">-->
+<!--            ACCEPTED USER STORIES-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="stats grid equal-two-rows">-->
+<!--        <div class="image-part">-->
+<!--          <img-->
+<!--            src="/img/stats-user-stories-a8e2c535.png"-->
+<!--            alt="stats-user-stories"-->
+<!--          >-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--          <p class="amount">-->
+<!--            339+-->
+<!--          </p>-->
+<!--          <p class="comment">-->
+<!--            DELIVERED GIT COMMITS-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="container grid works-grid">
       <div>
         <p class="content-text">
