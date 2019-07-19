@@ -240,6 +240,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Heroshe',
+  head() {
+    return {
+      title: 'Fluidangle --Heroshe',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Heroshe Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

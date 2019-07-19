@@ -153,7 +153,7 @@
     </div>
     <div class="testimonials">
       <div class="image-part flex">
-        <img src="https://www.plinkd.app/src/images/team/CEO.jpg" alt="">
+        <img src="https://res.cloudinary.com/nazarick/image/upload/q_auto:eco/v1563542258/fluidangle/img/Image_from_iOS.png" alt="">
       </div>
       <div class="content-box flex dir-column">
         <p class="title">
@@ -219,6 +219,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'ProntoCare',
+  head() {
+    return {
+      title: 'Fluidangle --Plinkd',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Plinkd Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

@@ -39,6 +39,14 @@ const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'Post01',
+  head() {
+    return {
+      title: 'Fluidangle Post',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Post' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer
