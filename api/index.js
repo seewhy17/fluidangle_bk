@@ -61,7 +61,6 @@ const sendMail = async (params, features) => {
 
 const sendContactMail = async (params) => {
   const testAccount = await nodemailer.createTestAccount()
-  const { email } = params
   const transporter = nodemailer.createTransport({
     host: `${process.env.mail_host}` || testAccount.smtp.host,
     port: process.env.mail_port || testAccount.smtp.port,
@@ -123,22 +122,14 @@ app.post('/subscribe/', async (req, res, next) => {
     pending: 'pending',
     cleaned: 'cleaned'
   }
-  const { firstName, lastName, email, telephone, companyName, companyRole, lowEnd, highEnd } = req.body
+  const { email } = req.body
   try {
     const results = await mailchimp.post(`/lists/${listUniqueId}`, {
       update_existing: update !== undefined ? update : true,
       members: [{
         email_address: email.toLowerCase(),
         status: status.subscribed || 'subscribed',
-        merge_fields: {
-          'FNAME': firstName,
-          'LNAME': lastName,
-          'PHONE': telephone,
-          'CMPANYNAME': companyName,
-          'CMPANYROLE': companyRole,
-          'LOWEND': lowEnd,
-          'HIGHEND': highEnd
-        }
+        merge_fields: {}
       }]
     })
     res.status(200).json(results)

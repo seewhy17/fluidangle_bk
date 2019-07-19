@@ -19,8 +19,8 @@
           <div class="subscribe">
             <form action="" class="form">
               <div class="input-block">
-                <input type="text" placeholder="Sign up for our weekly newsletter">
-                <button class="subscribe">
+                <input v-model="subscribeEmail" type="text" placeholder="Sign up for our weekly newsletter">
+                <button class="subscribe" type="submit" @click="subscribe">
                   Subscribe
                 </button>
               </div>
@@ -174,7 +174,6 @@
             <div class="filter">
               <a href="" class="filter-options selected" @click.prevent="">Latest</a>
               <a href="" class="filter-options" @click.prevent="">Popular</a>
-              <a href="" class="filter-options" @click.prevent="">Comment</a>
             </div>
             <div class="new-posts">
               <div v-for="newPost in whatsNew" :key="newPost.key" class="new-post flex dir-row">
@@ -236,7 +235,8 @@ export default {
   data: () => ({
     posts: [],
     stPosts: [],
-    whatsNew: []
+    whatsNew: [],
+    subscribeEmail: ''
   }),
   computed: {
     ...mapGetters([
@@ -260,9 +260,11 @@ export default {
             category{
               name
             }
+            tags
             backgroundUrl
             duration
             priority
+            createdAt
           }
         }`
       }
@@ -376,6 +378,15 @@ export default {
       'emptyMostPopular',
       'saveMostPopular'
     ]),
+    async subscribe() {
+      try {
+        await this.$axios.$post('/api/subscribe', this.subscribeEmail)
+        this.subscribeEmail = ''
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log(`Unable to Complete`)
+      }
+    },
     getImageUrl(url) {
       return this.$cloudinary
         .url(url)
