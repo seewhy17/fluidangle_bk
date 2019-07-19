@@ -180,12 +180,13 @@ nav {
     }
     a{
       text-align: left;
-      font-size: 3rem;
+      font-size: 1.5rem;
       border-bottom:solid thin $light-gray;
       width: 100%;
       color:$dark-grey;
       padding: {
         left:5%;
+        top:5%
       };
     }
   }
@@ -196,10 +197,11 @@ nav {
     };
     padding: {
       left: 5%;
+      right: 5%;
     };
     a{
-      font-size: 1.5rem;
-      color: $light;
+      font-size: 1.2rem;
+      color: $dark-grey;
     }
   }
   .social-media{

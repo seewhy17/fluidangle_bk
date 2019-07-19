@@ -39,6 +39,14 @@ const strapi = new Strapi(apiUrl)
 
 export default {
   name: 'Post01',
+  head() {
+    return {
+      title: 'Fluidangle Post',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Post' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer
@@ -68,8 +76,6 @@ export default {
         }`
       }
     })
-    // eslint-disable-next-line no-console
-    console.log(post)
     return {
       post: post.data.post
     }
