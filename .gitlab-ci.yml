@@ -15,20 +15,22 @@ deploy:
   only:
    - staging
   script:
-  - now --token=${NOW_TOKEN}
+#  - now --token=${NOW_TOKEN}
   - echo "Deploying to now... wait for 60 before setting alias to https://dev.fluidangle.com"
-  - now alias --token=${NOW_TOKEN} ${pbpaste} dev.fluidangle.com
+  - now --target staging --token=${NOW_TOKEN}
 deploy_live:
   stage: deploy_live
   only:
    - master
   script:
-  - now --token=${NOW_TOKEN}
+#  - now --token=${NOW_TOKEN}
   - echo "Deploying to now... wait for 60 before setting alias to https://redesign.fluidangle.com"
-  - now alias --token=${NOW_TOKEN} redesign.fluidangle.com
+#  - now alias --token=${NOW_TOKEN} redesign.fluidangle.com
+  - now --target production --token=${NOW_TOKEN}
 manualDeploy:
   stage: manualDeploy
   when: manual
   script:
-  - now --token=${NOW_TOKEN}
-  - now alias --token=${NOW_TOKEN} ${pbpaste} test.fluidangle.com
+#  - now --token=${NOW_TOKEN}
+  #- now alias --token=${NOW_TOKEN} ${pbpaste} test.fluidangle.com
+  - now --target staging --token=${NOW_TOKEN}

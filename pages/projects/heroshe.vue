@@ -89,7 +89,7 @@
               <div class="image-part flex">
                 <img src="/svg/monitor.svg" alt="">
               </div>
-              <a href="https://heroshe.com" class="flex">Visit Website</a>
+              <a href="https://heroshe.com" target="_blank" class="flex">Visit Website</a>
             </div>
             <div class="link grid">
               <div class="image-part flex">
@@ -177,9 +177,6 @@
             output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed
             that I continued working with some of the talents in the next phase of the project.
           </p>
-          <p class="text center-align">
-            If you still have questions, feel free to ask. I'm always here to help.
-          </p>
         </div>
         <p class="role">
           Co-Founder & CEO, Osi Ukomadu
@@ -240,6 +237,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Heroshe',
+  head() {
+    return {
+      title: 'Fluidangle --Heroshe',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Heroshe Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

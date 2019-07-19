@@ -362,6 +362,10 @@ export default {
       .shortcut{
         height: 100%;
         .shortcut-content{
+          padding: {
+            left:1rem;
+            right: 1rem;
+          };
           height: 100%;
           display: flex;
           flex-direction:column ;
