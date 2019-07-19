@@ -76,8 +76,6 @@ export default {
         }`
       }
     })
-    // eslint-disable-next-line no-console
-    console.log(post)
     return {
       post: post.data.post
     }

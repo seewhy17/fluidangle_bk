@@ -20,7 +20,7 @@
             <form action="" class="form">
               <div class="input-block">
                 <input v-model="subscribeEmail" type="text" placeholder="Sign up for our weekly newsletter">
-                <button class="subscribe" type="submit" @click="subscribe">
+                <button class="subscribe" type="submit" @click.prevent="subscribe">
                   Subscribe
                 </button>
               </div>
@@ -117,7 +117,7 @@
               </h2>
             </div>
             <div class="wrapper">
-              <div v-for="popular in getMostPopular" :id="popular._id" :key="popular._id" class="content-box">
+              <div v-for="popular in getPostsByTags('popular')" :id="popular._id" :key="popular._id" class="content-box">
                 <div class="content">
                   <a :href="`/posts/${popular._id}`" class="link-wrapper">
                     <h3 class="title">
@@ -140,26 +140,26 @@
               </h2>
             </div>
             <div class="posts grid equal-two full-mobile">
-              <div v-for="post in posts" :key="post.id" class="post">
+              <div v-for="post in getPostsByTags('trending')" :key="post._id" class="post">
                 <div class="image-part">
-                  <img :src="post.image" alt="">
+                  <img :src="post.backgroundUrl" alt="">
                 </div>
-                <div class="content-box">
-                  <div class="content">
-                    <a href="" class="link-wrapper">
-                      <h3 class="title">
-                        {{ post.title }}
-                      </h3>
-                    </a>
-                    <p class="description">
-                      {{ post.description }}
-                    </p>
-                  </div>
-                  <div class="action-box flex dir-row">
-                    <a href="">{{ post.type }}</a>
-                    <p>{{ post.minutes }} mins read</p>
-                  </div>
+                <!--                <div class="content-box">-->
+                <div class="content">
+                  <a :href="`/posts/${post._id}`" class="link-wrapper">
+                    <h3 class="title">
+                      {{ post.title }}
+                    </h3>
+                  </a>
+                  <p class="description">
+                    {{ post.summary }}
+                  </p>
                 </div>
+                <div class="action-box flex dir-row">
+                  <a href="">{{ post.category.name }}</a>
+                  <p>{{ post.duration }} mins read</p>
+                </div>
+                <!--                </div>-->
               </div>
             </div>
           </div>
@@ -234,7 +234,6 @@ export default {
   },
   data: () => ({
     posts: [],
-    stPosts: [],
     whatsNew: [],
     subscribeEmail: ''
   }),
@@ -245,6 +244,30 @@ export default {
       'getByPriority',
       'getMostPopular'
     ])
+  },
+  async asyncData() {
+    const posts = await strapi.request('post', '/graphql', {
+      data: {
+        query: `query {
+        posts {
+            _id
+            title
+            summary
+            category{
+              name
+            }
+            tags
+            backgroundUrl
+            duration
+            priority
+            createdAt
+          }
+        }`
+      }
+    })
+    return {
+      posts: posts.data.posts
+    }
   },
   async fetch({ store }) {
     await store.dispatch('emptyPosts')
@@ -303,8 +326,7 @@ export default {
         }`
       }
     })
-    // eslint-disable-next-line no-console
-    // console.log(mostPopular.data.mostpopulars[0])
+
     await mostPopular.data.mostpopulars.forEach(async popular => {
       await store.dispatch('saveMostPopular', {
         id: popular._id, ...popular
@@ -312,25 +334,6 @@ export default {
     })
   },
   mounted() {
-    this.stPosts = this.$store.getters.getPosts
-    this.posts = [
-      {
-        id: 'post01',
-        title: 'The 3 Things Women Over 50 Can Do to Keep Their Jobs',
-        description: 'Workers will no longer tolerate the punishing schedules of technology giants Workers will no longer tolerate the punishing schedules of technology giants',
-        type: 'Development',
-        minutes: '7',
-        image: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_1744.png')
-      },
-      {
-        id: 'post01',
-        title: 'The 3 Things Women Over 50 Can Do to Keep Their Jobs',
-        description: 'Workers will no longer tolerate the punishing schedules of technology giants Workers will no longer tolerate the punishing schedules of technology giants',
-        type: 'Development',
-        minutes: '7',
-        image: this.getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Rectangle_1745.png')
-      }
-    ]
     this.whatsNew = [
       {
         id: 'new-01',
@@ -378,6 +381,9 @@ export default {
       'emptyMostPopular',
       'saveMostPopular'
     ]),
+    getPostsByTags(tag) {
+      return this.posts.filter(post => post.tags.split(',').includes(tag))
+    },
     async subscribe() {
       try {
         await this.$axios.$post('/api/subscribe', this.subscribeEmail)
@@ -749,9 +755,27 @@ export default {
 
       .trending {
         margin-top: 3rem;
+        .post{
+          align-content: stretch;
+          grid-template-rows: auto 1fr auto;
+          .content {
+            margin:{
+              top: 1rem;
+            }
+            width: 100%;
+          }
 
-        .title {
-          padding-bottom: 1rem;
+          .title {
+            padding-bottom: 1rem;
+            font-weight: 500;
+            width: 85%;
+
+          }
+
+          p {
+            width: 80%;
+            font-size: .9rem;
+          }
         }
       }
 
