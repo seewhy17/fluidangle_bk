@@ -15,7 +15,7 @@
         </div>
         <div class="project-amount">
           <p class="flex dir-column">
-            <span>Featured</span> Works
+            <span>Feature</span> Works
           </p>
         </div>
       </div>
