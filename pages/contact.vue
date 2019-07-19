@@ -53,29 +53,15 @@
             <label for="telephone">Telephone</label>
             <input id="telephone" v-model="user.telephone" type="text" placeholder="Enter your telephone number" name="telephone">
           </div>
-          <div class="grid equal-two project-budget">
-            <div class="input-block flex dir-column">
-              <label for="project">Project</label>
-              <v-select id="project" v-model="user.project" placeholder="Select Project type" name="project" :options="projectOptions" />
-            </div>
-            <div class="input-block flex dir-column">
-              <label for="budget">Budget</label>
-              <v-select
-                id="budget"
-                v-model="user.budget"
-                type="text"
-                placeholder="Enter Your budget"
-                name="budget"
-                :options="budgetOptions"
-                required
-              />
-            </div>
+          <div class="input-block flex dir-column">
+            <label for="project">Project</label>
+            <v-select id="project" v-model="user.project" placeholder="Select Project type" name="project" :options="projectOptions" />
           </div>
           <div class="input-block flex dir-column">
             <label for="messages">Messages</label>
             <textarea id="messages" v-model="user.messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
-          <button class="send-button" @click.prevent type="submit">
+          <button class="send-button" type="submit" @click.prevent>
             Send Message
           </button>
         </form>
@@ -159,7 +145,6 @@ export default {
       name: '',
       email: '',
       project: [],
-      budget: [],
       telephone: '',
       messages: ''
     }
