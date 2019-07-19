@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.902" height="35.902" viewBox="0 0 35.902 35.902">
+    <defs>
+        <style>
+            .cls-1{fill:#d22215}.cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="youtube">
+        <ellipse id="Ellipse_72" cx="17.951" cy="17.951" class="cls-1" data-name="Ellipse 72" rx="17.951" ry="17.951"/>
+        <path id="Path_410" d="M125.778 152.333h-12.012a4.267 4.267 0 0 0-4.266 4.267v6a4.267 4.267 0 0 0 4.267 4.267h12.012a4.267 4.267 0 0 0 4.267-4.267v-6a4.267 4.267 0 0 0-4.267-4.267zm-2.886 7.562l-5.618 2.68a.226.226 0 0 1-.323-.2v-5.527a.226.226 0 0 1 .327-.2l5.618 2.847a.225.225 0 0 1 0 .4z" class="cls-2" data-name="Path 410" transform="translate(-101.821 -141.651)"/>
+    </g>
+</svg>

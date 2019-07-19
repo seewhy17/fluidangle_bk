@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div id="page" class="page">
     <div class="banner">
       <span class="bg" />
       <nav-bar />
@@ -8,43 +8,49 @@
           <h1>
             We
             <span class="build">
-              <!-- <span class="replace">Fluid</span> -->
+              <span class="replace">Fluid</span>
               <span class="text">build</span>
             </span>
             & Develop <br>
             Digital Products
           </h1>
-          <p>We design and develop awesome products for Web and Mobile from User Research to Product Design to Development.</p>
-          <button>See our work</button>
+          <p>
+            We design and develop awesome products for Web and Mobile from User Research to Product Design to
+            Development.
+          </p>
+          <a href="/work" class="header-link">See our work</a>
         </div>
-        <div class="banner-img">
+        <div class="banner-img hide-on-small">
           <img src="/img/expo_demo.png" alt="expo-demo">
         </div>
       </div>
     </div>
+
     <section class="section our-offer grid equal-two">
-      <div class="img-part">
+      <div class="img-part hide-on-small">
         <div class="img-box">
-          <img src="/svg/laptop.svg" alt="laptop">
+          <img src="/svg/laptop.svg" alt="laptop" class="img-laptop">
         </div>
         <div class="img-box">
-          <img src="/svg/smartphone.svg" alt="smartphone">
+          <img src="/svg/smartphone.svg" alt="smartphone" class="img-smartphone">
         </div>
       </div>
       <div class="content-part">
-        <span class="fancy-heading">
+        <span class="fancy-heading bold">
           What we offer
         </span>
         <p class="flow-text">
           We develop user-centered digital products <br> and services for your customers
         </p>
         <p>
-          Our team comprises of brilliant web and mobile app developers. We deliver projects on time and maintain the top-notch code standards. We offer you the best concepts and ideas.
+          Our team comprises of brilliant web and mobile app developers. We deliver projects on time and maintain the
+          top-notch code standards. We offer you the best concepts and ideas.
         </p>
       </div>
     </section>
+
     <section class="section our-work">
-      <span class="fancy-heading">
+      <span class="fancy-heading bold">
         our Work
       </span>
       <div class="content-grid">
@@ -54,17 +60,17 @@
             <p class="work-headline">
               We ship from any US <br> Online Store
             </p>
-            <span class="action-word">View case study</span>
+            <a class="action-word" href="/projects/heroshe">View case study
+              <chevron-right />
+            </a>
           </div>
           <div class="image-part">
-            <!-- <img src="/img/heroshe_hero.jpg" alt="heroshe-image"> -->
             <img src="/img/herose_hero.png" alt="heroshe-image">
           </div>
         </div>
 
         <div class="a-work grid equal-two">
           <div class="image-part">
-            <!-- <img src="/img/plinkd_hero.jpg" alt="heroshe-image"> -->
             <img src="/img/plinkd_hero.png" alt="heroshe-image">
           </div>
           <div class="content-part">
@@ -72,71 +78,212 @@
             <p class="work-headline">
               One Location <br> Connecting Friends
             </p>
-            <span class="action-word">View case study</span>
+            <a class="action-word" href="/projects/plinkd">View case study
+              <chevron-right />
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section our-services">
+      <div class="arrow-up flex">
+        <a class="bold" @click.prevent="scrollToView('#page')"><img src="/svg/keyboard-right-arrow-button.svg" alt=""></a>
+      </div>
+      <div class="wrapper">
+        <span class="fancy-heading bold">
+          Our Services
+        </span>
+        <div class="content-grid grid equal-two">
+          <div class="services-part">
+            <div class="services-grid container grid equal-two no-gap">
+              <div class="service">
+                <p class="service-title">
+                  Web
+                </p>
+                <div class="service-options">
+                  <p>Frontend</p>
+                  <p>Backend</p>
+                </div>
+              </div>
+              <div class="service">
+                <p class="service-title">
+                  Mobile
+                </p>
+                <div class="service-options">
+                  <p>iOS Platform</p>
+                  <p>Android</p>
+                </div>
+              </div>
+              <div class="service">
+                <p class="service-title">
+                  Design
+                </p>
+                <div class="service-options">
+                  <p>UI/UX</p>
+                  <p>Sketching</p>
+                  <p>Prototyping</p>
+                </div>
+              </div>
+              <div class="service">
+                <p class="service-title">
+                  Testing
+                </p>
+                <div class="service-options">
+                  <p>Usability Test</p>
+                  <p>Performance</p>
+                  <p>Security</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-part hide-on-small">
+            <img
+              src="/img/shutterstock_758031970.png"
+              alt="services"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <statistics />
+    <start-project />
+    <Footer />
   </div>
 </template>
-
 <script>
 import NavBar from '~/components/partials/navBar.vue'
+import Footer from '~/components/partials/Footer.vue'
+
 export default {
+  name: 'Index',
+  head() {
+    return {
+      title: 'Welcome',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle' }
+      ]
+    }
+  },
   components: {
-    NavBar
+    NavBar,
+    Footer,
+    ChevronRight: () => ({ component: import('vue-material-design-icons/ChevronRight.vue') }),
+    'Statistics': () => ({ component: import('~/components/statistics.vue') }),
+    'StartProject': () => ({ component: import('~/components/startProject.vue') })
+  },
+  data: () => ({}),
+  methods: {
+    scrollToView(id) {
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.page {
-  .banner {
-    padding-top: 2rem;
-    position: relative;
+<style scoped lang="scss">
+  .three {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .bg {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: $primary;
-      height: 85vh;
-      z-index: -1;
-    }
+  .page {
+    .banner {
+      padding-top: 2rem;
+      position: relative;
 
-    .banner-grid {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      padding: 4rem 5vw 0;
-      overflow-x: hidden;
+      .bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: {
+          color: $primary;
+          image: url('/img/bg-lines.png');
+          size: cover;
+          repeat: no-repeat;
+          position: center center;
+        }
+        height: 90%;
+        z-index: -1;
+        @include breakpoint($min: 1440px){
+          height: 80%;
+        }
+      }
+
+      .banner-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        padding:{
+          left:5vw;
+        }
+        overflow-x: hidden;
+        @include for-phone-only {
+          grid-template-columns: 1fr;
+        }
+      }
 
       .content {
         text-transform: capitalize;
         color: white;
-        padding-top: 1.5rem;
+        padding-top: 4.5rem;
 
         h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: 1rem;
+          @include breakpoint($max: 768px) {
+            font-size: 2rem;
+          }
+          span{
+            font-family: 'sailecbold', serif
+          }
+        }
+
+        .build {
+          position: relative;
+
+          .replace {
+            position: absolute;
+            top: -3.5rem;
+            font-family: 'satisfactionregular', cursive;
+            color: #ffb102;
+            left: -20%;
+          }
+
+          .text {
+            text-decoration: {
+              style: solid;
+              line: line-through;
+              color: #ffb102;
+            };
+          }
         }
 
         p {
-          font-size: .85rem;
+          font-size: 1rem;
           line-height: 2;
         }
 
-        button {
+        .header-link {
+          display: inline-block;
           color: $primary;
           background: white;
           border: none;
           padding: .9rem 2.25rem;
-          font-weight: 500;
           font-size: .9rem;
           margin: 3rem 0;
+          transition: {
+            timing-function: ease-in-out;
+          };
 
           &:focus {
             outline: none;
+          }
+
+          &:hover {
+            background: $primary;
+            color: white;
+            border: solid 2px $light;
           }
         }
       }
@@ -146,116 +293,304 @@ export default {
         position: relative;
 
         img {
-          position: absolute;
+          height:85vh;
+          object-fit: contain;
           width: 135%;
           max-width: unset;
           z-index: 5;
           position: relative;
-        }
-      }
-    }
-  }
-  .section {
-    .fancy-heading {
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      color: $primary;
-      font-size: .9rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-
-      &:before {
-        content: '';
-        height: 1.8px;
-        width: 6rem;
-        margin-right: 1rem;
-        background: $primary;
-      }
-    }
-
-    &.our-offer {
-      margin-top: 5rem;
-      padding-bottom: 3rem;
-
-      .img-part {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .img-box {
-          border: 2px solid $pale-purple;
-          border-radius: 10px;
-          display: inline-flex;
-          height: 8rem;
-          width: 10rem;
-          justify-content: center;
-          align-items: center;
-          margin-right: 2vw;
-
-          img {
-            width: 30%;
-          }
-        }
-      }
-      .content-part {
-        padding-right: 10vw;
-
-        .flow-text {
-          font-size: 1.15rem;
-          margin-bottom: 1rem;
-
-          &+p {
-            font-size: .75rem;
-            color: $gray;
-          }
+          top: 0;
+          //right: -11rem;
         }
       }
     }
 
-    &.our-work {
-      padding: 4rem 10vw;
-
-      .a-work {
-        margin-bottom: 10rem;
-      }
-
+    .section {
       .fancy-heading {
-        margin-bottom: 4rem;
-      }
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $primary;
+        font-size: .9rem;
+        margin-bottom: 1rem;
 
-      .partner-logo {
-        margin-bottom: 1.5rem;
-
-        &.plinkd {
-          height: 3rem;
+        &:before {
+          content: '';
+          height: 1.8px;
+          width: 6rem;
+          margin-right: 1rem;
+          background: $primary;
         }
       }
 
-      .work-headline {
-        font-size: 1.15rem;
-        font-weight: 500;
-      }
-      .action-word {
-        text-transform: uppercase;
-        font-size: .8rem;
-        margin-top: 1.5rem;
-        display: block;
-        font-weight: 500;
-        color: $primary;
+      &.our-offer {
+        margin-top: 5rem;
+        padding-bottom: 3rem;
+        @include breakpoint($max: 768px) {
+          grid-template-columns: auto;
+          padding: {
+            left: 5%;
+          };
+        }
+
+        .img-part {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding-left: 10vw;
+
+          .img-box {
+            border: 2px solid $pale-purple;
+            border-radius: 10px;
+            display: inline-flex;
+            height: 10rem;
+            width: 10.8rem;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2vw;
+
+            .img-smartphone {
+              width: 20%;
+            }
+
+            .img-laptop {
+              width: 35%;
+            }
+          }
+        }
+
+        .content-part {
+          padding-right: 10vw;
+
+          .flow-text {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            & + p {
+              width: 80%;
+              font-size: 1rem;
+              color: $gray;
+            }
+          }
+        }
       }
 
-      .image-part {
-        img {
-          height: 20rem;
-          margin-top: -3.5rem;
-          object-fit: cover;
+      &.our-work {
+        padding: 4rem 10vw;
+
+        .a-work {
+          margin-bottom: 10rem;
+
+          .content-part {
+            padding-left: 5rem;
+          }
+        }
+
+        .fancy-heading {
+          margin-bottom: 4rem;
+        }
+
+        .partner-logo {
+          margin-bottom: 1.5rem;
+
+          &.plinkd {
+            height: 3rem;
+          }
+        }
+
+        .work-headline {
+          font-size: 1.15rem;
+          font-weight: 500;
+        }
+
+        .action-word {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1rem;
+          margin-top: 1.5rem;
+          display: inline-flex;
+          align-content: center;
+          color: $primary;
+
+          & > span {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        .image-part {
+          img {
+            height: 25rem;
+            margin-top: -3.5rem;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &.our-services {
+        background-color: rgba(#e3e8f1, 0.25);
+        position: relative;
+
+        .wrapper {
+          padding: {
+            top: 4rem;
+            bottom: 4rem
+          };
+        }
+
+        .fancy-heading {
+          margin: {
+            left: 10vw;
+          };
+        }
+
+        .content-grid {
+          @include breakpoint($max: 768px) {
+            grid-template-columns: auto;
+          }
+        }
+
+        .services-grid {
+          margin: {
+            top: 5%;
+          }
+          height: 80%;
+          min-width: 50%;
+          width: 50%;
+          @include for-phone-only{
+            width: auto;
+            grid-template-columns: 1fr;
+            padding: {
+              left:10%;
+            };
+          }
+        }
+
+        .service {
+          padding: {
+            top: 3rem;
+            right: 1.5rem;
+            bottom: 2rem;
+          }
+
+          &:nth-child(odd) {
+            border: {
+              right: solid 1px $light-purple;
+            }
+          }
+
+          &:nth-child(even) {
+            padding-left: 3rem;
+            border: {
+              left: solid 1px $light-purple;
+            }
+          }
+
+          &:nth-child(-n+2) {
+            border: {
+              bottom: solid 1px $light-purple;
+            }
+          }
+
+          &:nth-child(n+3) {
+            border: {
+              top: solid 1px $light-purple;
+            }
+          }
+
+          .service-title {
+            color: $gray;
+            font-size: 1.5rem;
+            margin: {
+              bottom: 2.1rem;
+            }
+          }
+
+          .service-options {
+            color: $dark-gray;
+          }
+        }
+
+        .image-part {
+          img {
+            height: 30rem;
+            object-fit: cover;
+          }
         }
       }
     }
   }
-}
 
-.partner-logo {
-  height: 2rem;
-}
+  .arrow-up {
+    color: $primary;
+    font-size: 1.8rem;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+      padding: 1rem 1.5rem 2rem;
+      background: linear-gradient(rgba(#e3e8f1, 0.25) 50%, rgba($light, 0) 55%);
+      @include for-phone-only {
+        background: linear-gradient(rgba(#e3e8f1, 0.25) 40%, rgba($light, 0) 55%);
+      }
+      border-radius: 100%;
+      position: absolute;
+      top: -7%;
+    }
+  }
+
+  .partner-logo {
+    height: 2rem;
+  }
+
+  footer {
+    padding: {
+      top: 3rem;
+    };
+
+    .footer-grid {
+      height: 18rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      .title {
+        border: {
+          bottom: solid 2px $light-purple;
+        }
+        padding: {
+          bottom: 1.6rem;
+        }
+        margin: {
+          bottom: 1.8rem;
+        }
+      }
+
+      .links {
+        color: $light-gray;
+
+        a {
+          margin: {
+            bottom: 0.8rem;
+          }
+        }
+
+        img {
+          margin-right: .2rem;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 1.8rem 0;
+      justify-content: space-between;
+
+      .links {
+        flex-direction: row;
+        color: $grey;
+
+        a {
+          margin-left: .8rem;
+        }
+      }
+    }
+  }
 </style>
