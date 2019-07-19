@@ -151,7 +151,9 @@ export default {
     'v-select': vSelect
   },
   data: () => ({
-    projectOptions: [],
+    projectOptions: [
+      'Website Development', 'IOS/Android APP', 'Cross Platform', 'Enterprise Solution', 'UI/UX', 'Deployment/Server Maintenance'
+    ],
     budgetOptions: [],
     user: {
       name: '',
