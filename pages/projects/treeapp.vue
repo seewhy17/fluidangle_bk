@@ -193,6 +193,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Tree',
+  head() {
+    return {
+      title: 'Fluidangle --Tree',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Tree Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

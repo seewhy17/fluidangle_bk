@@ -923,6 +923,9 @@ export default {
           margin: {
             bottom: .5rem;
           };
+          @include for-phone-only{
+            font-size: 2rem;
+          }
         }
 
         margin: {

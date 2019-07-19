@@ -31,13 +31,6 @@
               connect with every individual within their location. Plinkd was created for users to be a tool for
               everyone.
             </p>
-            <br>
-            <p>
-              A tool to establish a single place for users around the world to receive first hand all the
-              answers for their who? what? when? And where questions on things to do 24/7, 365. Also, Plinkd will
-              simplify the process and decrease the time it takes to plan a trip months in advance or even an
-              individual's last minute plans for a night out with friends.
-            </p>
           </div>
           <div class="stats grid">
             <div class="stat">
@@ -131,14 +124,10 @@
           <div class="content-box">
             <div class="content">
               <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
+                A tool to establish a single place for users around the world to receive first hand all the
+                answers for their who? what? when? And where questions on things to do 24/7, 365. Also, Plinkd will
+                simplify the process and decrease the time it takes to plan a trip months in advance or even an
+                individual's last minute plans for a night out with friends.
               </p>
             </div>
           </div>
@@ -153,7 +142,7 @@
     </div>
     <div class="testimonials">
       <div class="image-part flex">
-        <img src="https://www.plinkd.app/src/images/team/CEO.jpg" alt="">
+        <img src="https://res.cloudinary.com/nazarick/image/upload/q_auto:eco/v1563542258/fluidangle/img/Image_from_iOS.png" alt="">
       </div>
       <div class="content-box flex dir-column">
         <p class="title">
@@ -219,6 +208,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'ProntoCare',
+  head() {
+    return {
+      title: 'Fluidangle --Plinkd',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Plinkd Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,

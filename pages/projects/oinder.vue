@@ -188,6 +188,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Oinder',
+  head() {
+    return {
+      title: 'Fluidangle --Oinder',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Oinder Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
