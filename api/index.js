@@ -122,12 +122,12 @@ app.post('/subscribe/', async (req, res, next) => {
     pending: 'pending',
     cleaned: 'cleaned'
   }
-  const { email } = req.body
+  const { subscribeEmail } = req.body
   try {
     const results = await mailchimp.post(`/lists/${listUniqueId}`, {
       update_existing: update !== undefined ? update : true,
       members: [{
-        email_address: email.toLowerCase(),
+        email_address: subscribeEmail.toLowerCase(),
         status: status.subscribed || 'subscribed',
         merge_fields: {}
       }]
