@@ -82,7 +82,6 @@ export default {
       dev: true
     }],
     ['@nuxtjs/sitemap', {
-      path: '/sitemap.xml',
       gzip: true,
       cacheTime: 1000 * 60 * 15,
       generate: true,
