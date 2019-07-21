@@ -81,19 +81,20 @@ export default {
       pageTracking: false,
       dev: true
     }],
-    ['@nuxtjs/sitemap', {
-      hostname: 'https://test.fluidangle.com',
-      path: '/sitemap.xml',
-      gzip: true,
-      cacheTime: 1000 * 60 * 15,
-      generate: true,
-      exclude: [
-        '/secret',
-        '/admin/**'
-      ],
-      routes: ['/', '/work', '/about', '/contact', '/app-estimator', '/blog', '/privacy-policy', '/terms-of-use']
-    }]
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'https://test.fluidangle.com',
+    path: '/sitemap.xml',
+    gzip: true,
+    cacheTime: 1000 * 60 * 15,
+    generate: true,
+    exclude: [
+      '/secret',
+      '/admin/**'
+    ],
+    routes: ['/', '/work', '/about', '/contact', '/app-estimator', '/blog', '/privacy-policy', '/terms-of-use']
+  },
   /*
   ** Axios module configuration
   */
