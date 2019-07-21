@@ -84,7 +84,6 @@ export default {
     ['@nuxtjs/sitemap', {
       gzip: true,
       cacheTime: 1000 * 60 * 15,
-      generate: true,
       exclude: [
         '/secret',
         '/admin/**'
