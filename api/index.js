@@ -19,11 +19,11 @@ const mailchimpApiKey = process.env.MAILCHIMP_API_KEY
 const mailchimp = new Mailchimp(mailchimpApiKey)
 
 const rejectFunctions = new Map([
-  ['firstName', v => v.length < 4],
-  ['lastName', v => v.length < 4],
+  ['firstName', v => v.length < 2],
+  ['lastName', v => v.length < 2],
   ['email', v => !validator.isEmail(v)],
-  ['companyName', v => v.length < 4],
-  ['companyRole', v => v.length < 4],
+  ['companyName', v => v.length < 2],
+  ['companyRole', v => v.length < 2],
   ['telephone', v => v.length < 1],
   ['lowEnd', v => v < 0],
   ['highEnd', v => v < 0]
