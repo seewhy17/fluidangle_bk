@@ -81,18 +81,18 @@ export default {
       pageTracking: false,
       dev: true
     }],
-    ['@nuxtjs/sitemap',{
-    hostname: process.env.BASE_URL || 'http://localhost:3000',
-    path: '/sitemap.xml',
-    gzip: true,
-    cacheTime: 1000 * 60 * 15,
-    generate: true,
-    exclude: [
-      '/secret',
-      '/admin/**'
-    ],
-    routes: ['/', '/work', '/about', '/contact', '/app-estimator','/blog','/privacy-policy','/terms-of-use']
-  }]
+    ['@nuxtjs/sitemap', {
+      hostname: process.env.BASE_URL || 'http://localhost:3000',
+      path: '/sitemap.xml',
+      gzip: true,
+      cacheTime: 1000 * 60 * 15,
+      generate: true,
+      exclude: [
+        '/secret',
+        '/admin/**'
+      ],
+      routes: ['/', '/work', '/about', '/contact', '/app-estimator', '/blog', '/privacy-policy', '/terms-of-use']
+    }]
   ],
   /*
   ** Axios module configuration
