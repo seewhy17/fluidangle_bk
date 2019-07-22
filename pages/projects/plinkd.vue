@@ -23,13 +23,11 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Plinkd App
+            Plinkd
           </p>
           <div class="content introduction">
             <p>
-              Plinkd was created for businesses to create a platform where they can directly market advertise and
-              connect with every individual within their location. Plinkd was created for users to be a tool for
-              everyone.
+              Plinkd was created for businesses to create a platform where they can directly market/advertise and connect with every individual within their location. Plinkd was created for users to interact with and connect with friends, business, and events.
             </p>
           </div>
           <div class="stats grid">
@@ -84,27 +82,19 @@
               The Challenge
             </h2>
             <p class="text">
-              There were approximately 1/2 million total active mobile app developers in leading app
-              stores as of January 2017 - 724,99 who developed a Google Play app and 494,400 who developed an Apple app.
+              Having a unique mobile app idea is difficult but FluidAngle will work one on one with you to create your perfect blueprint for your new website/app.
             </p>
             <br>
-            <p class="text">
-              Having a unique mobile app idea is difficult, but finding the right mobile app development team for the
-              project is even more challenging. There are many mobile app developers. How do you find the right mobile
-              app development team for your project? A team that is invested in your vision and not just to make
-              money.
-            </p>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>UI UX Research</li>
-              <li>UI UX Design</li>
-              <li>Android App Development</li>
-              <li>iOS Development</li>
-            </ul>
+            <div class="content">
+              <p>
+                FluidAngle was able to simplify that process and transform that idea into reality.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -145,8 +135,7 @@
         <img src="https://res.cloudinary.com/nazarick/image/upload/q_auto:eco/v1563542258/fluidangle/img/Image_from_iOS.png" alt="">
       </div>
       <div class="content-box flex dir-column">
-        <p class="title">
-        </p>
+        <p class="title" />
         <div class="container text-container">
           <p class="text center-align">
             Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks. The sky is the limit from here and ALL the praise goes to Terry and his team. I can guarantee they have my business for life.
@@ -196,7 +185,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'Oinder',url:'/projects/oinder'}" :right-menu="{image:'/img/tree.png',url:'/projects/treeapp'}" />
+    <shortcut-menus :left-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" :right-menu="{image:'/img/tree.png',url:'/projects/treeapp'}" />
     <start-project />
     <Footer />
   </div>

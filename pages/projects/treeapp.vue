@@ -22,10 +22,10 @@
           </p>
           <div class="content introduction">
             <p>
-              Tree is a community connect app for believers. This is the place to meet Christians, connectwith people in your church congregation, and find or post events. This is a social network builtspecifically based on principles of Christianity and Jesus culture for every Christian communityand churches around the world! Every church has their own private Christian chat room whereyou can receive encouragement, post prayer request, discuss things, or just have fun in thisChristian mingle place. All Christians and churches are welcomed, whether you are Baptists,Catholic, Methodists, etc. or from non-denominational churches.
+              Tree is a community connect app for Christians. This is the place to meet other Christians, connect with people in your church congregation, and find or post events. This is a social network built specifically based on principles of Christianity for every church community around the world!
             </p>
             <p>
-              Tree was founded to help believers find friendship, community and build genuine connectionwith other Christians. We empower our community to connect and engage  building healthyChristian relationships with other believers so that we can live a positive, productive life in ourwalk as a Christ’ disciple. Tree focuses on building a clean, supportive, and healthy Christiancommunity based on the principle of Christianity.
+              Every church has their own private chat room where you can receive encouragement, post prayer request, discuss things, or just have fun in this Christian mingle place. All denominations are welcome.
             </p>
           </div>
           <div class="stats grid">
@@ -97,7 +97,7 @@
               The Challenge
             </h2>
             <p class="text">
-              Tree was created to solve was the lack of genuine connection and communitywithin the church and the body of Christ as a whole
+              Tree was created to solve the lack of genuine connection and community within the church and the body of Christ as a whole.
             </p>
           </div>
           <div class="what-we-did">
@@ -126,10 +126,10 @@
           <div class="content-box">
             <div class="content">
               <p class="text">
-                Tree provides a place where churches can grow their community through exclusive chat rooms,groups and connection identifiers for the church congregation. We connect believers together around the world through our open chat rooms, life groups, and events map to help increase the opportunity for communication and growth together.
+                Tree provides a place where churches can grow their community through exclusive chat rooms, groups and events.
               </p>
               <p class="text">
-                Tree also provides those wanting to know more about Christ a place to come and get connected to other believers and gain true community as they transition into their relationship with Christ because we were never called todo life alone
+                Tree also provides those wanting to know more about Christ, a place to come and get connected with other believers and gain true community as they transition into their relationship with Christ.
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" />
+    <shortcut-menus :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" :right-menu="{title:'Oinder',url:'/projects/oinder'}" />
     <start-project />
     <Footer />
   </div>
