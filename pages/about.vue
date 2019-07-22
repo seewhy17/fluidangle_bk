@@ -15,12 +15,11 @@
           </div>
           <div class="about-text">
             <p>
-              We are doers. Our team of developers, designers, and devops engineers aims to see your ideas fly.
-              Our products can get a new venture up and running or boost your existing business with great uptime.
+              Our team of developers, designers, and engineers aim to see your ideas come to life.
             </p>
             <p>
-              Your brand matters to us! Trust FluidAngle to show your customers
-              your company’s best angle as we develop your custom product in line with your marketing.
+              Your brand matters to us! FluidAngle will show the customers
+              your company’s best angle as we develop and customize your website/app.
             </p>
             <p>
               Your success is our success. We’re committed to bringing you a product that will satisfy you and your customers.
@@ -58,10 +57,8 @@
                 Web Development
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We can create a custom designed website that is built around your business, products or services.<br>
+                We can develop custom features for front or backends of websites, E-Commerce Stores, Enterprise Solutions and more.
               </small>
             </div>
             <ul>
@@ -79,10 +76,7 @@
                 Mobile App Development
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We design and develop custom applications and software solutions that help businesses focus less on busywork and more on growth.
               </small>
             </div>
             <ul>
@@ -106,10 +100,7 @@
                 UI UX Design
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We can design Responsive and Mobile-First User Interfaces for your websites or application that are optimized for all view ports.<br>With wireframing and prototyping we can create a custom User Experience that will guide your visitors down a specific pathway.
               </small>
             </div>
             <ul>
