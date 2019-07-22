@@ -15,7 +15,7 @@
             Digital Products
           </h1>
           <p>
-            We design and develop awesome products for Web and Mobile from User Research to Product Design to
+            We design and develop amazing products for Web and Mobile Use. Everything From User Research, to Product Design, to
             Development.
           </p>
           <a href="/work" class="header-link">See our work</a>
@@ -40,11 +40,11 @@
           What we offer
         </span>
         <p class="flow-text">
-          We develop user-centered digital products <br> and services for your customers
+          We develop user-centered digital products <br> and services for your customers.
         </p>
         <p>
-          Our team comprises of brilliant web and mobile app developers. We deliver projects on time and maintain the
-          top-notch code standards. We offer you the best concepts and ideas.
+          Our team is comprised of brilliant web and mobile app developers. We deliver projects on time and maintain
+          top-notch code standards.
         </p>
       </div>
     </section>

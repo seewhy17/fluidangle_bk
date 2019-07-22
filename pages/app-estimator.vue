@@ -1648,7 +1648,7 @@ export default {
       this.emptyPrice()
       this.emptyOptions()
       this.emptyUserForm()
-      if(this.user.lowEnd > 0 ){
+      if (this.user.lowEnd > 0) {
         this.user.highEnd = this.user.lowEnd + 5000
       }
       const pricing = {

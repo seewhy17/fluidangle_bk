@@ -21,13 +21,11 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Oinder App
+            Oinder
           </p>
           <div class="content introduction">
             <p>
-              Oinder is a problem sharing and solving community that enables people share personal day
-              to day challenges while also keeping them anonymous by providing them with aliases or different
-              identities.
+              Oinder is a problem sharing and solving community that enables people share personal day to day challenges while also keeping them anonymous by providing them with aliases or different identities.
             </p>
             <br>
           </div>
@@ -83,9 +81,8 @@
               The Challenge
             </h2>
             <p class="text">
-              The client noticed that at one point or the other people got depressed while facing personal
-              challenges that they felt was too difficult to share with their loved ones or relatives. They wanted to
-              create a place where individual could share their problems without being judge
+              The client noticed that at one point or the other people got depressed while facing personal challenges that they felt was too difficult to share with their loved ones or relatives.</p>
+            <p class="text">They wanted to create a place where individual could share their problems without being judged.
             </p>
           </div>
           <div class="what-we-did">
@@ -93,11 +90,11 @@
               What we did
             </h2>
             <div class="content">
-              <p>
-                The App is designed to eliminate the fear of one’s own identity, by allowing people to share their
-                concerns or provide advice, recommendations or answers where necessary and anonymously too. Users on
-                Oinder can ask or answer questions which allows people to create a stream of information aligned with
-                their audience's interests.
+              <p class="text">
+                The App is designed to eliminate the fear of one’s own identity, by allowing people to share their concerns or provide advice, recommendations or answers where necessary and anonymously too.
+              </p>
+              <p class="text">
+                Users on Oinder can ask or answer questions which allows people to create a stream of information aligned with their audience's interests.
               </p>
             </div>
           </div>
