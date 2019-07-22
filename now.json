@@ -2,7 +2,7 @@
   "name": "fluidangle-redesign",
   "version": 2,
   "env": {
-    "BASE_URL": "https://test.fluidangle.com",
+    "BASE_URL": "https://fluidangle.com",
     "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
     "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
     "mail_host": "@fluidangle_v1_mail_host",
@@ -13,7 +13,7 @@
   },
   "build": {
     "env": {
-      "BASE_URL": "https://test.fluidangle.com",
+      "BASE_URL": "https://fluidangle.com",
       "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
       "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
       "mail_host": "@fluidangle_v1_mail_host",

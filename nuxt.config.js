@@ -84,11 +84,10 @@ export default {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://test.fluidangle.com',
+    hostname: process.env.BASE_URL,
     path: '/sitemap.xml',
     gzip: true,
     cacheTime: 1000 * 60 * 15,
-    generate: true,
     exclude: [
       '/secret',
       '/admin/**'
