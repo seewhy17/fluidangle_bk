@@ -102,9 +102,9 @@
         <nuxt-link to="/privacy-policy">
           Privacy Policy
         </nuxt-link>
-        <nuxt-link to="/sitemap.xml">
+        <a href="/sitemap.xml">
           Sitemap
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </footer>

@@ -27,9 +27,8 @@
           </p>
           <div class="content introduction">
             <p>
-              In 2005, Heroshe Co-founder Chichi Ukomadu moved to America to pursue her version of the American dream.
-              Before she left Nigeria, she was overjoyed at the prospect of all that was ahead of her. She wasn’t
-              prepared for the hardships she would face before she founded Heroshe.
+              Heroshe Co-founder Chichi Ukomadu moved to America to pursue her vision to connect Africans with quality
+              US products at affordable costs to them.
             </p>
             <br>
             <p>
@@ -95,7 +94,11 @@
               <div class="image-part flex">
                 <img src="/svg/pdf.svg" alt="">
               </div>
-              <a href="https://docs.google.com/document/d/1a14-UmqCIrGM6QEOt0vGyg4B-lGwPcDWSSX7beES34g/edit?usp=sharing" target="_blank" class="flex">Download Case study</a>
+              <a
+                href="https://docs.google.com/document/d/1a14-UmqCIrGM6QEOt0vGyg4B-lGwPcDWSSX7beES34g/edit?usp=sharing"
+                target="_blank"
+                class="flex"
+              >Download Case study</a>
             </div>
           </div>
         </div>
@@ -107,17 +110,12 @@
               The Challenge
             </h2>
             <p class="text">
-              Heroshe build their initial MVP (minimum viable product) on Wordpress. Wordpress is the largest CMS on
-              the market that powers up to 27% of website on the internet (Netcraft ) The flexibility of WordPress lets
-              you turn your content, images, video and more into a functional website.
+              Heroshe built their initial MVP (minimum viable product) on Wordpress.
             </p>
             <br>
             <p class="text">
-              As their business continue to grow, they kept on building Plugins upon Plugins (where you can download and
-              “plug-in” third-party pieces
-              of software to make your site look, act, and feel exactly the way you want) to suit their business needs.
-              The problem with that is that too many plugins from different designers who did not interact together well
-              made the site less effect and slow down their site.
+              As their business continue to grow, Heroshe experienced issue with websites crashes because of too many
+              plugins.
             </p>
           </div>
           <div class="what-we-did">
@@ -126,14 +124,12 @@
             </h2>
             <div class="content">
               <p>
-                We build a Custom Enterprise Solution for their Shop for and Ship for me platform. With a custom
-                website, there is no theme which allowed Heroshe to build a site around their customer journey by
-                focusing the design and development on the narrative that their customers is most likely to follow.
+                FluidAngle built a Custom Enterprise Solution for Heroshe. Heroshe CES focused on their customer and
+                their needs.
               </p>
               <br>
               <p>
-                Custom building Heroshe allowed us to completely avoid unnecessary functionality which reduce load
-                time.
+                FluidAngle created the site map around their customer journey.
               </p>
             </div>
           </div>
@@ -172,7 +168,8 @@
           <p class="text center-align">
             It was a wonderful experience working with the fluidangle team. When we started, I had doubts whether the
             team would understand the scope and complexity of our project. Our initial conversations started building my
-            confidence. After much thought and research on the team; seeing their pedigree and accomplishments, I decided to
+            confidence. After much thought and research on the team; seeing their pedigree and accomplishments, I
+            decided to
             move forward. I was impressed by the depth of knowledge and expertise exhibited on the project. The final
             output exceeded my expectations. The team was very flexible and responsive to our needs. I was so impressed
             that I continued working with some of the talents in the next phase of the project.
@@ -513,6 +510,7 @@ export default {
       .gallery {
         margin-top: 5rem;
         margin-bottom: 5rem;
+
         .other-images {
           /*height: 20rem;*/
           .image {
@@ -701,6 +699,7 @@ export default {
             left: 1.5rem;
           }
         }
+
         .integrations-grid {
           flex-wrap: wrap;
         }
