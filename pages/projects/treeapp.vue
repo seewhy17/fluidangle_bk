@@ -297,6 +297,9 @@ export default {
           justify-content: center;
           img{
             width: 60%;
+            @include breakpoint($max: 768px){
+              width:100%;
+            }
           }
         }
       }

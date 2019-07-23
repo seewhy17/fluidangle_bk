@@ -81,6 +81,9 @@ export default {
       }
       .left-menu,
       .right-menu{
+        &>div{
+          height: 100%;
+        }
         .wrapper{
           height: 100%;
           justify-content: center;
@@ -91,6 +94,10 @@ export default {
           }
         }
         img{
+          max-width: 30%;
+          @include breakpoint($max: 768px){
+            max-width: 75%;
+          }
           cursor: pointer;
         }
       }
@@ -111,15 +118,6 @@ export default {
       .left-menu{
         p{
           font-weight: 600;
-        }
-      }
-      .right-menu,
-      .left-menu{
-        img{
-          max-width: 30%;
-          @include breakpoint($max: 768px){
-            max-width: 75%;
-          }
         }
       }
     }

@@ -287,6 +287,9 @@ export default {
 
           img {
             width: 60%;
+            @include breakpoint($max: 768px){
+              width:100%;
+            }
           }
         }
       }
