@@ -372,11 +372,17 @@ export default {
           .challenge {
             .text {
               width: 70%;
+              @include breakpoint($max: 768px){
+                width: 90%;
+              }
             }
           }
 
           .what-we-did {
             padding-right: 5rem;
+            @include breakpoint($max: 768px){
+              padding-right: 1.5rem
+            }
           }
         }
       }
@@ -486,6 +492,10 @@ export default {
           .text {
             color: $dark-gray;
             line-height: 1.39;
+            padding: {
+              left:.5rem;
+              right: 1rem;
+            };
           }
         }
 
@@ -517,7 +527,10 @@ export default {
           }
 
           img {
-            width: 60%
+            width: 60%;
+            @include breakpoint($max: 768px){
+              width:100%;
+            }
           }
         }
       }
