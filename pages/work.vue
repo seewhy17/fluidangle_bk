@@ -110,7 +110,7 @@ export default {
         id: 'treeapp',
         title: 'Tree',
         titleImage: '',
-        text: 'We ship from any US Online Store',
+        text: 'CONNECT, ENGAGE, GROW',
         img: 'https://res.cloudinary.com/nazarick/image/upload/v1562273978/fluidangle/img/xd/Image_65.png',
         action: '/projects/treeapp',
         type: 'mobile',
