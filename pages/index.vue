@@ -54,7 +54,7 @@
         our Work
       </span>
       <div class="content-grid">
-        <div class="a-work grid equal-two">
+        <div class="a-work grid equal-two heroshe-work">
           <div class="content-part">
             <img src="/svg/heroshe-colored.svg" class="partner-logo" alt="heroshe">
             <p class="work-headline">
@@ -69,7 +69,7 @@
           </div>
         </div>
 
-        <div class="a-work grid equal-two">
+        <div class="a-work grid equal-two plinkd-work">
           <div class="image-part">
             <img src="/img/plinkd_hero.png" alt="heroshe-image">
           </div>
@@ -380,12 +380,24 @@ export default {
 
         .a-work {
           margin-bottom: 10rem;
-
+          @include for-phone-only{
+            grid-template-columns: auto;
+          }
           .content-part {
             padding-left: 5rem;
+            @include for-phone-only{
+                padding-left: 2rem;
+            }
           }
         }
-
+        .heroshe-work{
+          .content-part{
+            order:2;
+          }
+          .image-part{
+            order:1;
+          }
+        }
         .fancy-heading {
           margin-bottom: 4rem;
         }
