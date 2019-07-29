@@ -1,5 +1,5 @@
 <template>
-  <scroll-fixed-header :fixed.sync="status" :threshold="200">
+  <scroll-fixed-header :fixed.sync="status" :threshold="50">
     <nav>
       <nuxt-link to="/" class="brand">
         <img src="/svg/fluid-angle_white.svg" alt="fluid-logo">
@@ -23,7 +23,8 @@
         </a>
       </div>
       <div class="menu-bar">
-        <Menu fill-color="#e3e8f1" @click="toggleMobile" />
+        <Menu v-if="mobile === false" fill-color="#e3e8f1" @click="toggleMobile" />
+        <MenuOpen v-else fill-color="#e3e8f1" @click="toggleMobile" />
       </div>
     </nav>
     <transition name="mobile-transition">
@@ -89,7 +90,8 @@
 export default {
   name: 'Navbar',
   components: {
-    Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') })
+    Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') }),
+    MenuOpen: () => ({ component: import('vue-material-design-icons/MenuOpen.vue') })
   },
   data: () => ({
     status: true,
@@ -165,6 +167,8 @@ export default {
   .mobile-nav {
     z-index: 9999;
     width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
     min-height: 100vh;
     height: 100vh;
     overflow-y: scroll;
