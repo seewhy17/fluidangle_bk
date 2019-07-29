@@ -15,7 +15,7 @@
         </div>
         <div class="project-amount">
           <p class="flex dir-column">
-            <span>23</span> Projects
+            <span>Featured</span> Work
           </p>
         </div>
       </div>
@@ -26,11 +26,10 @@
           <li><a class="" :class="{selected:isSelected('all')}" href="" @click.prevent="filterWorks('all')">ALL</a></li>
           <li><a class="" :class="{selected:isSelected('web')}" href="" @click.prevent="filterWorks('web')">WEB</a></li>
           <li><a class="" :class="{selected:isSelected('mobile')}" href="" @click.prevent="filterWorks('mobile')">MOBILE</a></li>
-          <li><a class="" :class="{selected:isSelected('our products')}" href="" @click.prevent="filterWorks('our products')">OUR PRODUCTS</a></li>
         </ul>
       </div>
       <div class="projects-grid container grid equal-two">
-        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id">
+        <div v-for="work in filteredWorks" :key="work.id" class="project" :class="work.id" :style="{backgroundColor:work.color}">
           <div class="grid equal-two">
             <div class="image-part">
               <img
@@ -70,6 +69,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'Work',
+  head() {
+    return {
+      title: 'Our Works',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Fluidangle Projects' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
@@ -86,7 +93,8 @@ export default {
         text: 'We ship from any US Online Store',
         img: '/img/heroshe.png',
         action: '/projects/heroshe',
-        type: 'web'
+        type: 'web',
+        color: '#47b6d2'
       },
       {
         id: 'plinkd',
@@ -95,16 +103,28 @@ export default {
         text: 'One Location Connecting Friends mobile app',
         img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
         action: '/projects/plinkd',
-        type: 'mobile'
+        type: 'mobile',
+        color: '#f9872b'
       },
       {
-        id: 'prontocare',
-        title: 'ProntoCare',
+        id: 'treeapp',
+        title: 'Tree',
         titleImage: '',
-        text: 'We ship from any US Online Store',
-        img: '/img/Screenshot 2019-05-01 at 6.07.27 AM copy.png',
-        action: '/projects/prontocare',
-        type: 'web'
+        text: 'CONNECT, ENGAGE, GROW',
+        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562273978/fluidangle/img/xd/Image_65.png',
+        action: '/projects/treeapp',
+        type: 'mobile',
+        color: '#6caa49'
+      },
+      {
+        id: 'oinder',
+        title: 'Oinder',
+        titleImage: '',
+        text: 'Making Living & Traveling More Affordable for Everyone',
+        img: 'https://res.cloudinary.com/nazarick/image/upload/v1562445160/fluidangle/img/xd/Image_71.png',
+        action: '/projects/oinder',
+        type: 'mobile',
+        color: '#877afb'
       }
     ],
     filteredWorks: []
@@ -192,7 +212,7 @@ export default {
         }
 
         span {
-          font-size: 3rem;
+          font-size: 2rem;
           line-height: 1.45;
           font-weight: 700;
           color: $primary
@@ -236,7 +256,7 @@ export default {
       .projects-grid {
         margin-top: 3rem;
         padding: {
-          top: 10vh;
+          top: 5rem;
           bottom: 3rem;
         }
         grid-gap: 5em 1em;
@@ -250,9 +270,59 @@ export default {
           background-color: $gray;
           margin-bottom: 3rem;
           position: relative;
+          @include for-phone-only{
+            height: 100vmin;
+            margin: {
+              top: 24rem;
+            };
+            &.heroshe{
+              margin: {
+                top:16rem;
+              };
+            }
+            &>.grid{
+              grid-template-columns: auto;
+              .image-part{
+                padding: 0;
+                top: -60%;
+                z-index: -1;
+                img{
+                  position: relative;
+                  width: 100%;
+                  top:0
+                }
+              }
+              .content{
+                position: absolute;
+                justify-items: center;
+                width: 100%;
+                padding: 0;
+                .content-box{
+                  text-align: center;
+                  padding: {
+                    left:1rem;
+                    right:1rem;
+                  };
+                  .title{
+                    font-size: 2.8rem;
+                  }
+                  .text{
+                    font-size: 1.5rem;
+                    width: 100%;
+                  }
+                  .action-word{
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+            .cover{
+              height: calc(100% - 25rem);
+            }
+          }
 
           &.heroshe {
-            background-color: #47b6d2;
+            /*background-color: #47b6d2;*/
             .image-part{
               padding:{
                 left:0.5rem;
@@ -265,11 +335,6 @@ export default {
               padding-left: 2rem;
             }
           }
-
-          &.ponos {
-            background-color: $gray;
-          }
-
           &.plinkd {
             background-color: #f9872b;
           }
@@ -277,7 +342,6 @@ export default {
           &.prontocare {
             background-color: #0254a3;
           }
-
           .equal-two {
             height: 100%;
           }
@@ -291,7 +355,7 @@ export default {
             img {
               width: 70%;
               position: absolute;
-              top: -20%;
+              top: -15%;
             }
           }
 
@@ -309,7 +373,7 @@ export default {
             }
 
             .text {
-              font-size: .8rem;
+              font-size: 1rem;
               color:$light;
               font-weight: 600;
               width:80%;

@@ -1,19 +1,49 @@
 {
   "name": "fluidangle-redesign",
   "version": 2,
+  "env": {
+    "BASE_URL": "https://fluidangle.com",
+    "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
+    "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
+    "mail_host": "@fluidangle_v1_mail_host",
+    "mail_user": "@fluidangle_v1_contact_mail-address",
+    "mail_port": "@fluidangle_v1_mail_port",
+    "mail_pass": "@fluidangle_v1_contact_mail-pass",
+    "mail_secure": "@fluidangle_v1_mail_secure"
+  },
+  "build": {
+    "env": {
+      "BASE_URL": "https://fluidangle.com",
+      "MAILCHIMP_API_KEY": "@fluidangle_v1_mailchimp_api_key",
+      "MAILING_LIST_ID": "@fluidangle_v1_mailing_list_id",
+      "mail_host": "@fluidangle_v1_mail_host",
+      "mail_user": "@fluidangle_v1_contact_mail-address",
+      "mail_port": "@fluidangle_v1_mail_port",
+      "mail_pass": "@fluidangle_v1_contact_mail-pass",
+      "mail_secure": "@fluidangle_v1_mail_secure"
+    }
+  },
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
-      "config": {}
+      "config": {
+        "serverFiles": [
+          "api/**"
+        ]
+      }
     }
   ],
-  "alias": [
-    "redesign.fluidangle.com",
-    "new.fluidangle.com"
-  ],
   "routes": [
-    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/_nuxt/.+",
+      "headers": {
+        "cache-control": "s-maxage=31536000"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }

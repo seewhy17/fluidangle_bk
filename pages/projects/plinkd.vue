@@ -23,20 +23,11 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Plinkd App
+            Plinkd
           </p>
           <div class="content introduction">
             <p>
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <br>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
-              ””Lorem ipsum dolor sit amet, ”
+              Plinkd was created for businesses to create a platform where they can directly market/advertise and connect with every individual within their location. Plinkd was created for users to interact with and connect with friends, business, and events.
             </p>
           </div>
           <div class="stats grid">
@@ -73,34 +64,13 @@
           </div>
         </div>
         <div class="info-box">
-          <div class="links">
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/monitor.svg" alt="">
-              </div>
-              <a href="" class="flex">Visit Website</a>
-            </div>
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/pdf.svg" alt="">
-              </div>
-              <a href="" class="flex">Download Case study</a>
-            </div>
-          </div>
-          <div class="app-stores grid equal-two">
+          <div class="links" />
+          <div class="app-stores grid">
             <div class="image flex">
-              <img src="/img/Image 21.png" alt="">
+              <img src="/img/coming_soon_appstore.png" alt="">
             </div>
             <div class="image flex">
-              <img src="/img/Image 20.png" alt="">
-            </div>
-          </div>
-          <div class="project-team">
-            <p class="title">
-              PROJECT TEAM
-            </p>
-            <div class="image-part flex">
-              <img src="/img/Screenshot 2019-05-01 at 8.24.44 AM.png" alt="">
+              <img src="/img/coming_soon_playstore.png" alt="">
             </div>
           </div>
         </div>
@@ -112,21 +82,19 @@
               The Challenge
             </h2>
             <p class="text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Having a unique mobile app idea is difficult but FluidAngle will work one on one with you to create your perfect blueprint for your new website/app.
             </p>
+            <br>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>UI UX Research</li>
-              <li>UI UX Design</li>
-              <li>Android App Development</li>
-              <li>iOS Development</li>
-            </ul>
+            <div class="content">
+              <p>
+                FluidAngle was able to simplify that process and transform that idea into reality.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -146,29 +114,11 @@
           <div class="content-box">
             <div class="content">
               <p class="text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br>
-                <br>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.””Lorem ipsum dolor sit amet, ”
+                A tool to establish a single place for users around the world to receive first hand all the
+                answers for their who? what? when? And where questions on things to do 24/7, 365. Also, Plinkd will
+                simplify the process and decrease the time it takes to plan a trip months in advance or even an
+                individual's last minute plans for a night out with friends.
               </p>
-            </div>
-            <div class="charts grid equal-two container">
-              <div class="flex dir-column list">
-                <p class="text">
-                  Customers
-                </p>
-                <img src="/svg/pie-chart (1).svg" alt="">
-              </div>
-              <div class="flex dir-column list">
-                <p class="text">
-                  Story Chart
-                </p>
-                <img src="/svg/profits.svg" alt="">
-              </div>
             </div>
           </div>
         </div>
@@ -180,8 +130,21 @@
         </div>
       </div>
     </div>
-    <div class="video-section">
-      <video src="" controls />
+    <div class="testimonials">
+      <div class="image-part flex">
+        <img src="https://res.cloudinary.com/nazarick/image/upload/q_auto:eco/v1563542258/fluidangle/img/Image_from_iOS.png" alt="">
+      </div>
+      <div class="content-box flex dir-column">
+        <p class="title" />
+        <div class="container text-container">
+          <p class="text center-align">
+            Fluidangles work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks. The sky is the limit from here and ALL the praise goes to Terry and his team. I can guarantee they have my business for life.
+          </p>
+        </div>
+        <p class="role">
+          Gabriel Middlebrook
+        </p>
+      </div>
     </div>
     <div class="tools-used">
       <div class="header">
@@ -222,7 +185,7 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{title:'PLINKD'}" :right-menu="{image:'/img/Image 7.png'}" />
+    <shortcut-menus :left-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}" :right-menu="{image:'/img/tree.png',url:'/projects/treeapp'}" />
     <start-project />
     <Footer />
   </div>
@@ -234,6 +197,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'ProntoCare',
+  head() {
+    return {
+      title: 'Fluidangle --Plinkd',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Plinkd Work By Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
@@ -243,41 +214,36 @@ export default {
   data: () => ({
     technologies: [
       {
-        id: 'tech01',
-        text: 'HTML 5 \t CSS3',
-        image: '/img/HTML5CSS3Logos.png'
-      },
-      {
-        id: 'tech02',
-        text: 'Javascript',
-        image: '/img/Image 38.png'
-      },
-      {
-        id: 'tech03',
-        text: 'VueJS',
-        image: '/img/Image 39.png'
-      },
-      {
-        id: 'tech04',
+        id: 'flutter',
         text: '',
-        image: '/img/Image 37.png'
+        image: 'https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg'
       },
       {
-        id: 'tech05',
+        id: 'dart',
         text: '',
-        image: '/img/Image 42.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563191800/fluidangle/svg/dart.svg'
+      },
+      {
+        id: 'kotlin',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292713/fluidangle/svg/kotlinlang-ar21.svg'
+      },
+      {
+        id: 'swift',
+        text: '',
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563292723/fluidangle/svg/swift-ar21.svg'
       }
     ],
     integrations: [
       {
-        id: 'int01',
-        text: 'Amazon AWS3',
-        image: '/img/Image 40.png'
+        id: 'firebase',
+        text: '',
+        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
       },
       {
-        id: 'int02',
+        id: 'cloud',
         text: '',
-        image: '/img/Image 41.png'
+        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
       }
     ]
   }),
@@ -321,6 +287,9 @@ export default {
 
           img {
             width: 60%;
+            @include breakpoint($max: 768px){
+              width:100%;
+            }
           }
         }
       }
@@ -381,12 +350,15 @@ export default {
           margin-bottom: 3rem;
 
           p {
-            font-size: .9rem;
+            font-size: 1rem;
           }
         }
       }
 
       .process {
+        margin:{
+          bottom:5rem;
+        }
         .content-box {
           justify-items: end;
           @include breakpoint($max: 768px) {
@@ -541,7 +513,6 @@ export default {
 
           img {
             object-fit: contain;
-            height: 100%;
             width: 75%;
           }
         }
@@ -677,7 +648,7 @@ export default {
         }
 
         .technology {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -707,9 +678,11 @@ export default {
         padding: {
           left: 5rem;
         };
-
+        .integrations-grid{
+          flex-wrap: wrap;
+        }
         .integration {
-          width: 25%;
+          width: 30%;
           display: flex;
           flex-direction: column;
           align-items: center;

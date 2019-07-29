@@ -8,7 +8,10 @@
           <div class="title-block center-align">
             <h1 class="title" />
             <div class="image-part flex">
-              <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_10_1_cropped.png')" alt="">
+              <img
+                :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder.png')"
+                alt=""
+              >
             </div>
           </div>
         </div>
@@ -18,21 +21,19 @@
       <section class="summary grid">
         <div class="content-box">
           <p class="title">
-            Tree
+            Oinder
           </p>
           <div class="content introduction">
             <p>
-              Tree is a community connect app for Christians. This is the place to meet other Christians, connect with people in your church congregation, and find or post events. This is a social network built specifically based on principles of Christianity for every church community around the world!
+              Oinder is a problem sharing and solving community that enables people share personal day to day challenges while also keeping them anonymous by providing them with aliases or different identities.
             </p>
-            <p>
-              Every church has their own private chat room where you can receive encouragement, post prayer request, discuss things, or just have fun in this Christian mingle place. All denominations are welcome.
-            </p>
+            <br>
           </div>
           <div class="stats grid">
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  70
+                  30
                 </p>
                 <p class="comment center-align">
                   SCREENS
@@ -42,7 +43,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  1.2k
+                  0.9k
                 </p>
                 <p class="comment center-align">
                   HOURS SPENT
@@ -52,7 +53,7 @@
             <div class="stat">
               <div class="content-box">
                 <p class="amount">
-                  5
+                  3
                 </p>
                 <p class="comment center-align">
                   PEOPLE INVOLVED
@@ -63,27 +64,10 @@
         </div>
         <div class="info-box">
           <div class="links">
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/monitor.svg" alt="">
-              </div>
-              <a href="https://www.yourtreeapp.com/website/home" class="flex" target="_blank" title="TreeApp">Visit Website</a>
-            </div>
-            <div class="link grid">
-              <div class="image-part flex">
-                <img src="/svg/pdf.svg" alt="">
-              </div>
-              <a href="" class="flex">Download Case study</a>
-            </div>
           </div>
-          <div class="app-stores grid equal-two">
+          <div class="app-stores grid">
             <div class="image flex">
-              <a href="https://apps.apple.com/us/app/tree-christian-social-network/id1437700451" title="IOS Store" target="_blank">
-                <img src="/img/Image 21.png" alt="">
-              </a>
-            </div>
-            <div class="image flex">
-              <a href="https://play.google.com/store/apps/details?id=com.tree_app" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=com.oinder" target="_blank">
                 <img src="/img/Image 20.png" alt="">
               </a>
             </div>
@@ -97,50 +81,55 @@
               The Challenge
             </h2>
             <p class="text">
-              Tree was created to solve the lack of genuine connection and community within the church and the body of Christ as a whole.
+              The client noticed that at one point or the other people got depressed while facing personal challenges that they felt was too difficult to share with their loved ones or relatives.</p>
+            <p class="text">They wanted to create a place where individual could share their problems without being judged.
             </p>
           </div>
           <div class="what-we-did">
             <h2 class="title">
               What we did
             </h2>
-            <ul>
-              <li>UI UX Research</li>
-              <li>UI UX Design</li>
-              <li>Android App Development</li>
-              <li>iOS Development</li>
-            </ul>
+            <div class="content">
+              <p class="text">
+                The App is designed to eliminate the fear of one’s own identity, by allowing people to share their concerns or provide advice, recommendations or answers where necessary and anonymously too.
+              </p>
+              <p class="text">
+                Users on Oinder can ask or answer questions which allows people to create a stream of information aligned with their audience's interests.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="gallery">
       <div class="main-image">
-        <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_3_2.png')" alt="">
+        <img
+          :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_02.png')"
+          alt=""
+        >
       </div>
       <div class="container details grid equal-two full-mobile">
         <div class="wrapper">
           <h2 class="title">
-            Tree
+            Oinder App
           </h2>
           <div class="content-box">
             <div class="content">
-              <p class="text">
-                Tree provides a place where churches can grow their community through exclusive chat rooms, groups and events.
-              </p>
-              <p class="text">
-                Tree also provides those wanting to know more about Christ, a place to come and get connected with other believers and gain true community as they transition into their relationship with Christ.
-              </p>
+              <p class="text">Oinder is designed to enable you share your personal problems without the fear of your real identity been revealed. Your privacy is our priority, so we keep everyone in the community anonymous. Without fear of revealing your real identity, you can easily open up and share with the community any personal issue or problem that really bothers you. After which you receive advice and opinion from various people within the community. </p>
+              <br>
+              <p class="text">Oinder is the safest place you can share your personal problems online and receive great
+                advice. Join us today, share your story, and hopefully find a possible solution. The world is a better
+                place when we come together.</p>
             </div>
           </div>
         </div>
         <div class="image-part hide-on-small">
-          <img :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Component_9_1.png')" alt="">
+          <img
+            :src="getImageUrl('https://res.cloudinary.com/nazarick/image/upload/q_auto:good/v1561570109/fluidangle/img/xd/Oinder_01.png')"
+            alt=""
+          >
         </div>
       </div>
-    </div>
-    <div class="video-section">
-      <youtube :video-id="player.id" :player-width="player.width" :player-height="player.height" />
     </div>
     <div class="tools-used">
       <div class="header">
@@ -181,7 +170,10 @@
         </div>
       </div>
     </div>
-    <shortcut-menus :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}" :right-menu="{title:'Oinder',url:'/projects/oinder'}" />
+    <shortcut-menus
+      :left-menu="{image:'/img/LOGO text_colored.png',url:'/projects/plinkd'}"
+      :right-menu="{image:'/img/heroshe-colored.png',url:'/projects/heroshe'}"
+    />
     <start-project />
     <Footer />
   </div>
@@ -192,12 +184,12 @@ import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
 
 export default {
-  name: 'Tree',
+  name: 'Oinder',
   head() {
     return {
-      title: 'Fluidangle --Tree',
+      title: 'Fluidangle --Oinder',
       meta: [
-        { hid: 'description', name: 'description', content: 'Tree Work By Fluidangle' }
+        { hid: 'description', name: 'description', content: 'Oinder Work By Fluidangle' }
       ]
     }
   },
@@ -208,11 +200,6 @@ export default {
     'StartProject': () => ({ component: import('~/components/startProject.vue') })
   },
   data: () => ({
-    player: {
-      id: 'YnWrA0DDRyk',
-      width: '100%',
-      height: '600'
-    },
     technologies: [
       {
         id: 'flutter',
@@ -240,21 +227,6 @@ export default {
         id: 'firebase',
         text: '',
         image: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg'
-      },
-      {
-        id: 'cloud',
-        text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563194323/fluidangle/svg/google_cloud-ar21.svg'
-      },
-      {
-        id: 'stripe',
-        text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192756/fluidangle/svg/stripe-ar21.svg'
-      },
-      {
-        id: 'cloudinary',
-        text: '',
-        image: 'https://res.cloudinary.com/nazarick/image/upload/v1563192854/fluidangle/svg/cloudinary-seeklogo.com.svg'
       }
     ]
   }),
@@ -279,7 +251,7 @@ export default {
         top: 0;
         left: 0;
         background: {
-          color: #6caa49;
+          color: #877afb;
           image: url('/img/bg-lines.png');
           size: cover;
           repeat: no-repeat;
@@ -295,11 +267,9 @@ export default {
 
         .image-part {
           justify-content: center;
-          img{
+
+          img {
             width: 60%;
-            @include breakpoint($max: 768px){
-              width:100%;
-            }
           }
         }
       }
@@ -363,6 +333,8 @@ export default {
       }
 
       .process {
+        margin-bottom: 2rem;
+
         .content-box {
           justify-items: end;
           @include breakpoint($max: 768px) {
@@ -397,8 +369,20 @@ export default {
             font-weight: 500
           }
 
+          .challenge {
+            .text {
+              width: 70%;
+              @include breakpoint($max: 768px){
+                width: 90%;
+              }
+            }
+          }
+
           .what-we-did {
             padding-right: 5rem;
+            @include breakpoint($max: 768px){
+              padding-right: 1.5rem
+            }
           }
         }
       }
@@ -508,13 +492,18 @@ export default {
           .text {
             color: $dark-gray;
             line-height: 1.39;
+            padding: {
+              left:.5rem;
+              right: 1rem;
+            };
           }
         }
 
         & > .image-part {
           display: flex;
           justify-content: flex-end;
-          img{
+
+          img {
             object-fit: contain;
             width: 75%;
           }
@@ -525,17 +514,23 @@ export default {
         width: 55%;
         min-width: 55%;
         margin-top: 3rem;
-        &>div{
+
+        & > div {
           padding: 1.5rem 1rem;
           align-items: center;
           border-radius: 16px;
           box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.08);
           background-color: $light;
-          .text{
+
+          .text {
             margin-bottom: 2rem;
           }
-          img{
-            width:60%
+
+          img {
+            width: 60%;
+            @include breakpoint($max: 768px){
+              width:100%;
+            }
           }
         }
       }
@@ -643,6 +638,7 @@ export default {
           }
           border: 0;
         }
+
         .technologies-grid {
           flex-wrap: wrap;
         }
@@ -686,7 +682,6 @@ export default {
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100%;
           margin-right: 5%;
           margin-bottom: 5%;
 

@@ -29,31 +29,39 @@
         <form action="" class="form">
           <div class="input-block flex dir-column">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Enter Your Name" name="name">
+            <input
+              id="name"
+              v-model="user.name"
+              type="text"
+              placeholder="Enter Your Name"
+              name="name"
+              required
+            >
           </div>
           <div class="input-block flex dir-column">
             <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Enter Your Email Address" name="email">
+            <input
+              id="email"
+              v-model="user.email"
+              type="email"
+              placeholder="Enter Your Email Address"
+              name="email"
+              required
+            >
           </div>
           <div class="input-block flex dir-column">
             <label for="telephone">Telephone</label>
-            <input id="telephone" type="text" placeholder="Enter your telephone number" name="telephone">
+            <input id="telephone" v-model="user.telephone" type="text" placeholder="Enter your telephone number" name="telephone">
           </div>
-          <div class="grid equal-two project-budget">
-            <div class="input-block flex dir-column">
-              <label for="project">Project</label>
-              <input id="project" type="text" placeholder="Select Project type" name="project">
-            </div>
-            <div class="input-block flex dir-column">
-              <label for="budget">Budget</label>
-              <input id="budget" type="text" placeholder="Enter Your budget" name="budget">
-            </div>
+          <div class="input-block flex dir-column">
+            <label for="project">Project</label>
+            <v-select id="project" v-model="user.project" placeholder="Select Project type" name="project" :options="projectOptions" />
           </div>
           <div class="input-block flex dir-column">
             <label for="messages">Messages</label>
-            <textarea id="messages" placeholder="Description" name="description" />
+            <textarea id="messages" v-model="user.messages" placeholder="Description" name="description" style="resize: vertical" />
           </div>
-          <button class="send-button" @click.prevent>
+          <button class="send-button" type="submit" @click.prevent="sendContactMail()">
             Send Message
           </button>
         </form>
@@ -75,16 +83,23 @@
           <div class="social-media">
             <small>SOCIAL MEDIA</small>
             <div class="social-media">
-              <a href="https://www.facebook.com/fluidangle/">
+              <a href="https://www.facebook.com/fluidangle/" title="facebook">
                 <img
                   src="/img/facebook-logo-button.png"
                   alt="facebook"
                 >
               </a>
-              <a href="https://twitter.com/fluidangle">
+              <a href="https://twitter.com/fluidangle" title="twitter">
                 <img
                   src="/img/twitter.png"
                   alt="twitter"
+                >
+              </a>
+              <a href="https://www.instagram.com/fluidangle/" title="instagram" target="_blank">
+                <img
+                  src="https://image.flaticon.com/icons/svg/1409/1409946.svg"
+                  alt="instagram"
+                  style="width: 39px;height:39px;"
                 >
               </a>
             </div>
@@ -101,13 +116,56 @@
 <script>
 import NavBar from '~/components/partials/navBar.vue'
 import Footer from '~/components/partials/Footer.vue'
+import vSelect from 'vue-select'
+import '~/assets/scss/vue-select.scss'
+
 export default {
   name: 'ContactVue',
+  head() {
+    return {
+      title: 'Contact Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Contact Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
     'Statistics': () => ({ component: import('~/components/statistics.vue') }),
-    'StartProject': () => ({ component: import('~/components/startProject.vue') })
+    'StartProject': () => ({ component: import('~/components/startProject.vue') }),
+    'v-select': vSelect
+  },
+  data: () => ({
+    projectOptions: [
+      'Website Development', 'IOS/Android APP', 'Cross Platform', 'Enterprise Solution', 'UI/UX', 'Deployment/Server Maintenance'
+    ],
+    budgetOptions: [],
+    user: {
+      name: '',
+      email: '',
+      project: [],
+      telephone: '',
+      messages: ''
+    }
+  }),
+  methods: {
+    async sendContactMail() {
+      const resetUser = {
+        name: '',
+        email: '',
+        project: [],
+        telephone: '',
+        messages: ''
+      }
+      try {
+        await this.$axios.$post('/api/contact', this.user)
+        this.user = resetUser
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log(`Unable to Complete: ${e}`)
+      }
+    }
   }
 }
 </script>
@@ -211,7 +269,7 @@ export default {
             }
             label{
               font:{
-                size:.75rem;
+                size:1rem;
                 weight: 500;
               }
             }

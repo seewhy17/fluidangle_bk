@@ -15,12 +15,11 @@
           </div>
           <div class="about-text">
             <p>
-              We are doers. Our team of developers, designers, and devops engineers aims to see your ideas fly.
-              Our products can get a new venture up and running or boost your existing business with great uptime.
+              Our team of developers, designers, and engineers aim to see your ideas come to life.
             </p>
             <p>
-              Your brand matters to us! Trust FluidAngle to show your customers
-              your company’s best angle as we develop your custom product in line with your marketing.
+              Your brand matters to us! FluidAngle will show the customers
+              your company’s best angle as we develop and customize your website/app.
             </p>
             <p>
               Your success is our success. We’re committed to bringing you a product that will satisfy you and your customers.
@@ -47,8 +46,8 @@
           </li>
         </ul>
       </div>
-      <div class="options-container">
-        <div class="web-development grid equal-two option-box">
+      <div id="options" class="options-container">
+        <div id="web-development" class="web-development grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:54:27.png" alt="">
           </div>
@@ -58,10 +57,8 @@
                 Web Development
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We can create a custom designed website that is built around your business, products or services.<br>
+                We can develop custom features for front or backends of websites, E-Commerce Stores, Enterprise Solutions and more.
               </small>
             </div>
             <ul>
@@ -72,17 +69,14 @@
             <a>View Our Works</a>
           </div>
         </div>
-        <div class="mobile-app grid equal-two option-box">
+        <div id="mobile-app" class="mobile-app grid equal-two option-box">
           <div class="content-box">
             <div class="title-box">
               <p class="title">
                 Mobile App Development
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We design and develop custom applications and software solutions that help businesses focus less on busywork and more on growth.
               </small>
             </div>
             <ul>
@@ -96,7 +90,7 @@
             <img src="/img/custom/Screenshot from 2019-06-20 00:30:56.png" alt="">
           </div>
         </div>
-        <div class="ui-ux grid equal-two option-box">
+        <div id="ui-ux" class="ui-ux grid equal-two option-box">
           <div class="image-part">
             <img src="/img/custom/Screenshot from 2019-06-20 00:56:12.png" alt="">
           </div>
@@ -106,10 +100,7 @@
                 UI UX Design
               </p>
               <small class="description">
-                We trust that making client driven encounters
-                In light of UI/UX best practices. Branding, and
-                Product Design is the most idea approach to
-                Accomplish result
+                We can design Responsive and Mobile-First User Interfaces for your websites or application that are optimized for all view ports.<br>With wireframing and prototyping we can create a custom User Experience that will guide your visitors down a specific pathway.
               </small>
             </div>
             <ul>
@@ -150,6 +141,14 @@ import Footer from '~/components/partials/Footer.vue'
 
 export default {
   name: 'About',
+  head() {
+    return {
+      title: 'About Us',
+      meta: [
+        { hid: 'description', name: 'description', content: 'About Fluidangle' }
+      ]
+    }
+  },
   components: {
     NavBar,
     Footer,
@@ -272,10 +271,21 @@ export default {
         }
       }
       .options-container{
+        margin:{
+          top: 5%;
+          bottom: 5%;
+        }
         .option-box{
           margin:{
-            bottom: 8%;
-            top:4rem;
+            top:2rem;
+          }
+          padding: {
+            top:8%;
+          };
+          &.web-development{
+            padding: {
+              top: 5%;
+            }
           }
           @include for-phone-only{
             grid-template-columns: auto;
@@ -343,6 +353,10 @@ export default {
       .shortcut{
         height: 100%;
         .shortcut-content{
+          padding: {
+            left:1rem;
+            right: 1rem;
+          };
           height: 100%;
           display: flex;
           flex-direction:column ;
@@ -361,6 +375,7 @@ export default {
           font-size: 1rem;
           color:$light-gray;
           align-items: center;
+          cursor:pointer;
           img{
             margin-left: 2rem;
             width: 15%;
