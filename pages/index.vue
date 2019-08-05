@@ -218,7 +218,7 @@ export default {
           left: 5vw;
         }
         overflow-x: hidden;
-        @include for-phone-only {
+        @include breakpoint($max: 768px) {
           grid-template-columns: 1fr;
         }
       }
@@ -275,7 +275,9 @@ export default {
           transition: {
             timing-function: ease-in-out;
           };
-
+          @include breakpoint($max: 769px){
+            border: solid 1px $primary
+          }
           &:focus {
             outline: none;
           }
