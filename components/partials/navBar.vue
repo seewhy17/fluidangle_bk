@@ -23,8 +23,10 @@
         </a>
       </div>
       <div class="menu-bar">
-        <Menu v-if="mobile === false" fill-color="#e3e8f1" @click="toggleMobile" />
-        <MenuOpen v-else fill-color="#e3e8f1" @click="toggleMobile" />
+        <!-- <Menu v-if="mobile === false" fill-color="#e3e8f1" @click="toggleMobile" /> -->
+        <img v-if="mobile === false" src="/svg/menu.svg" alt="menu" class="menu-icon" @click="toggleMobile">
+        <img v-else src="/svg/close.svg" class="menu-icon" alt="close" @click="toggleMobile">
+        <!-- <MenuOpen fill-color="#e3e8f1" /> -->
       </div>
     </nav>
     <transition name="mobile-transition">
@@ -86,8 +88,8 @@
 export default {
   name: 'Navbar',
   components: {
-    Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') }),
-    MenuOpen: () => ({ component: import('vue-material-design-icons/MenuOpen.vue') })
+    // Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') }),
+    // MenuOpen: () => ({ component: import('vue-material-design-icons/MenuOpen.vue') })
   },
   data: () => ({
     status: true,
@@ -157,6 +159,13 @@ export default {
       span{
         font-size: 3rem;
       }
+      .menu-icon {
+        width: 2rem;
+        filter: invert(1) grayscale(1);
+      }
+      .close-icon {
+        width: 1.5rem;
+      }
     }
   }
 
@@ -177,7 +186,7 @@ export default {
     };
     .links{
       width: 100%;
-      margin:{
+      margin: {
         bottom: 10%;
       }
       a{
@@ -186,20 +195,26 @@ export default {
         border-bottom:solid thin $light-gray;
         width: 100%;
         color:$light;
+
         padding: {
           left:5%;
           top: 5%;
+          bottom: 1%;
+          right: 2%;
         };
       }
     }
     .sub-links{
       width: 100%;
+      text-align: center;
       margin: {
-        bottom: 10%;
+        bottom: 5%;
+        top: 10%;
       };
       padding: {
-        left: 5%;
-        right: 5%;
+        left: 1%;
+        top: 10%;
+        right: 1%;
       };
       a{
         font-size: 1.2rem;

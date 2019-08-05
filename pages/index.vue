@@ -214,8 +214,8 @@ export default {
       .banner-grid {
         display: grid;
         grid-template-columns: 1.5fr 2fr;
-        padding:{
-          left:5vw;
+        padding: {
+          left: 5vw;
         }
         overflow-x: hidden;
         @include for-phone-only {
