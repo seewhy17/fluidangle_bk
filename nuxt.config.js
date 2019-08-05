@@ -99,7 +99,7 @@ export default {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: process.env.BASE_URL || 'http://localhost:3000/'
+    baseURL: '/' || 'http://localhost:3000/'
   },
   router: {
     linkExactActiveClass: 'active'
