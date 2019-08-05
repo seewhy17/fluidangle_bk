@@ -140,7 +140,7 @@ nav {
       padding: 0 1rem;
       text-transform: uppercase;
       line-height: 1.19;
-      font-size: 1rem;
+      font-size: .8rem;
       font-weight: 500;
     }
   }

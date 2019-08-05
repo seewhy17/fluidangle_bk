@@ -275,7 +275,7 @@ export default {
           transition: {
             timing-function: ease-in-out;
           };
-          @include breakpoint($max: 768px){
+          @include breakpoint($max: 769px){
             border: solid 1px $primary
           }
           &:focus {
