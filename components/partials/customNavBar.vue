@@ -19,8 +19,10 @@
         </nuxt-link>
       </div>
       <div class="menu-bar">
-        <Menu v-if="mobile === false" fill-color="#e3e8f1" @click="toggleMobile" />
-        <MenuOpen v-else fill-color="#e3e8f1" @click="toggleMobile" />
+        <!--        <Menu v-if="mobile === false" fill-color="#e3e8f1" @click="toggleMobile" />-->
+        <img v-if="mobile === false" src="/svg/menu.svg" alt="menu" class="menu-icon" @click="toggleMobile">
+        <img v-else src="/svg/close.svg" class="menu-icon" alt="close" @click="toggleMobile">
+        <!--        <MenuOpen v-else fill-color="#e3e8f1" @click="toggleMobile" />-->
       </div>
     </nav>
     <transition name="mobile-transition">
@@ -82,8 +84,8 @@
 export default {
   name: 'CustomNavbar',
   components: {
-    Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') }),
-    MenuOpen: () => ({ component: import('vue-material-design-icons/MenuOpen.vue') })
+    // Menu: () => ({ component: import('vue-material-design-icons/Menu.vue') }),
+    // MenuOpen: () => ({ component: import('vue-material-design-icons/MenuOpen.vue') })
   },
   data: () => ({
     status: true,
