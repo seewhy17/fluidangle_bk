@@ -152,6 +152,10 @@ nav {
       display: flex;
       align-items: center;
     }
+    .menu-icon {
+      width: 2rem;
+      filter: none;
+    }
     span{
       font-size: 3rem;
     }

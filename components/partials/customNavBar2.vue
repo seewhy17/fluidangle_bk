@@ -153,6 +153,14 @@ export default {
         display: flex;
         align-items: center;
       }
+      .menu-icon {
+        width: 2rem;
+        filter: none;
+      }
+      .menu-icon {
+      width: 2rem;
+      filter: none;
+    }
       span {
         font-size: 3rem;
       }
@@ -168,7 +176,7 @@ export default {
     position: sticky;
     overflow-y: scroll;
     background: {
-      color: rgba($light, .9);
+      color: rgba($light, .5);
       image: url('/img/bg-lines.png');
       size: cover;
       repeat: no-repeat;
