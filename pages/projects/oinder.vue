@@ -63,8 +63,7 @@
           </div>
         </div>
         <div class="info-box">
-          <div class="links">
-          </div>
+          <div class="links" />
           <div class="app-stores grid">
             <div class="image flex">
               <a href="https://play.google.com/store/apps/details?id=com.oinder" target="_blank">
@@ -81,8 +80,10 @@
               The Challenge
             </h2>
             <p class="text">
-              The client noticed that at one point or the other people got depressed while facing personal challenges that they felt was too difficult to share with their loved ones or relatives.</p>
-            <p class="text">They wanted to create a place where individual could share their problems without being judged.
+              The client noticed that at one point or the other people got depressed while facing personal challenges that they felt was too difficult to share with their loved ones or relatives.
+            </p>
+            <p class="text">
+              They wanted to create a place where individual could share their problems without being judged.
             </p>
           </div>
           <div class="what-we-did">
@@ -115,11 +116,15 @@
           </h2>
           <div class="content-box">
             <div class="content">
-              <p class="text">Oinder is designed to enable you share your personal problems without the fear of your real identity been revealed. Your privacy is our priority, so we keep everyone in the community anonymous. Without fear of revealing your real identity, you can easily open up and share with the community any personal issue or problem that really bothers you. After which you receive advice and opinion from various people within the community. </p>
+              <p class="text">
+                Oinder is designed to enable you share your personal problems without the fear of your real identity been revealed. Your privacy is our priority, so we keep everyone in the community anonymous. Without fear of revealing your real identity, you can easily open up and share with the community any personal issue or problem that really bothers you. After which you receive advice and opinion from various people within the community.
+              </p>
               <br>
-              <p class="text">Oinder is the safest place you can share your personal problems online and receive great
+              <p class="text">
+                Oinder is the safest place you can share your personal problems online and receive great
                 advice. Join us today, share your story, and hopefully find a possible solution. The world is a better
-                place when we come together.</p>
+                place when we come together.
+              </p>
             </div>
           </div>
         </div>

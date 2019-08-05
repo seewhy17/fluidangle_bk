@@ -1728,8 +1728,13 @@ export default {
       .banner-grid {
         .content {
           padding: {
-            top: 2%;
+            top: 5%;
           };
+          @include breakpoint($max: 768px){
+            padding: {
+              top: 10%;
+            };
+          }
         }
 
         .title-block {
@@ -1850,6 +1855,7 @@ export default {
               }
               @include breakpoint ($max: 767px) {
                 width: 100%;
+                padding: 2% 5%;
               }
 
               &:hover {
