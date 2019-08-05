@@ -1471,7 +1471,7 @@
       <p class="title center-align">
         Enter your details to get price estimation
       </p>
-      <form action="" class="container">
+      <form action="" class="container form">
         <div class="input-container grid equal-two">
           <div class="input-block">
             <input
@@ -1896,14 +1896,14 @@ export default {
 
                 input[type="radio"] + span,
                 input[type="checkbox"] + span {
-                  background: url("~static/svg/uncheck-mark.svg") 0 -1px no-repeat;
+                  background: url("~static/svg/uncheck-mark.svg") 0 0 no-repeat;
                   height: 33.4px;
                   padding: 0 0 0 33.4px;
                 }
 
                 input[type="radio"]:checked + span,
                 input[type="checkbox"]:checked + span {
-                  background: url("~static/svg/check-mark.svg") 0 -1px no-repeat;
+                  background: url("~static/svg/check-mark.svg") 0 0 no-repeat;
                 }
               }
             }
