@@ -6,8 +6,6 @@
       <div class="blocks-container">
         <img
           src="/img/app-estimator/Image 3.png"
-          srcset="/img/app-estimator/Image 3@2x.png 2x,
-             /img/app-estimator/Image 3@3x.png 3x"
           alt=""
           class="Image-3"
         >
