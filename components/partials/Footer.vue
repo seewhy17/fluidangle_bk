@@ -67,16 +67,12 @@
             <a href="https://www.facebook.com/fluidangle/" title="facebook" target="_blank">
               <img
                 src="/img/facebook-logo-button.png"
-                srcset="/img/facebook-logo-button@2x.png 2x,
-             /img/facebook-logo-button@3x.png 3x"
                 alt="facebook"
               >
             </a>
             <a href="https://twitter.com/fluidangle" title="twitter" target="_blank">
               <img
                 src="/img/twitter.png"
-                srcset="/img/twitter@2x.png 2x,
-             /img/twitter@3x.png 3x"
                 alt="twitter"
               >
             </a>
