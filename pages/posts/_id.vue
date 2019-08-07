@@ -14,7 +14,7 @@
       <nav-bar />
     </div>
     <div class="section container post">
-      <div v-html="post.paragraph"></div>
+      <div v-html="post.paragraph" />
       <div class="share flex dir-row list">
         <span>Share</span>
         <ul class="flex list dir-row">

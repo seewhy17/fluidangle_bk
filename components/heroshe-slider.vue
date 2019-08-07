@@ -8,9 +8,9 @@
       </hooper>
     </div>
     <div class="controls flex list dir-row">
-      <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev"/>
+      <CheckboxBlankCircle fill-color="#d5d5d5" title="previous" class="prev" @click.prevent="slidePrev" />
       <CheckboxBlankCircle fill-color="#d5d5d5" class="middle-control" />
-      <CheckboxBlankCircle fill-color="#d5d5d5" title="next" class="next" @click.prevent="slideNext"/>
+      <CheckboxBlankCircle fill-color="#d5d5d5" title="next" class="next" @click.prevent="slideNext" />
     </div>
   </div>
 </template>

@@ -214,11 +214,11 @@ export default {
       .banner-grid {
         display: grid;
         grid-template-columns: 1.5fr 2fr;
-        padding:{
-          left:5vw;
+        padding: {
+          left: 5vw;
         }
         overflow-x: hidden;
-        @include for-phone-only {
+        @include breakpoint($max: 768px) {
           grid-template-columns: 1fr;
         }
       }
@@ -275,7 +275,9 @@ export default {
           transition: {
             timing-function: ease-in-out;
           };
-
+          @include breakpoint($max: 769px){
+            border: solid 1px $primary
+          }
           &:focus {
             outline: none;
           }
