@@ -143,7 +143,7 @@ export default {
       },
       {
         img: 'https://res.cloudinary.com/nazarick/image/upload/q_auto:eco/v1563542258/fluidangle/img/Image_from_iOS.png',
-        text: 'Fluidangles' work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks.',
+        text: "Fluidangles' work speaks for itself. I never dreamed of being anywhere near where I am today with Plinkd and cannot wait to launch my app in a couple weeks.",
         role: 'CEO, Gabriel Middlebrook'
       }
     ],
